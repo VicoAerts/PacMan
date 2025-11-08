@@ -1,4 +1,4 @@
 .idea
 cmake-build-debug
 cmake-build-release
-Documentation/docs/
+docs/documentation/
