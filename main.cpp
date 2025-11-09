@@ -1,3 +1,10 @@
-#include <iostream>
+#include "src/view/Game.h"
 
-int main() { return 0; }
+#include <iostream>
+using namespace view;
+
+int main() {
+    Game game;
+    game.run();
+    return 0;
+}
