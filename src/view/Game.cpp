@@ -19,8 +19,8 @@ void view::Game::run() {
     while (window->isOpen()) {
         window->clear(sf::Color::Blue);
 
-        double deltaTime = logic::Clock::getInstance()->getDeltaTime();
-        //std::cout << "Delta Time: " << deltaTime << " seconds" << std::endl; //test for clock
+        const double deltaTime = logic::Clock::getInstance()->getDeltaTime();
+        // std::cout << "Delta Time: " << deltaTime << " seconds" << std::endl; //test for clock
 
         window->display();
     }
