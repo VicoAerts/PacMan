@@ -17,10 +17,11 @@ view::Game::~Game() {}
 void view::Game::run() {
     logic::Clock::getInstance()->start();
     while (window->isOpen()) {
-        window->clear(sf::Color::Blue);
-
         const double deltaTime = logic::Clock::getInstance()->getDeltaTime();
         // std::cout << "Delta Time: " << deltaTime << " seconds" << std::endl; //test for clock
+        // Process events
+        // statemanager.handlevents()
+        // render()
 
         window->display();
     }

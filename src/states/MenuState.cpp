@@ -3,3 +3,6 @@
 //
 
 #include "MenuState.h"
+void view::state::MenuState::handleEvents() {}
+void view::state::MenuState::update() {}
+void view::state::MenuState::render() {}

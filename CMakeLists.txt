@@ -7,6 +7,16 @@ FIND_PACKAGE(SFML 2 COMPONENTS system window graphics)
 SET(LOGIC_SRC
         src/model/World.cpp
         src/model/World.h
+        src/model/Clock.cpp
+        src/model/Clock.h
+
+)
+ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
+
+
+SET(VIEW_SRC
+        src/view/Game.cpp
+        src/view/Game.h
         src/states/LevelState.cpp
         src/states/LevelState.h
         src/states/PausedState.cpp
@@ -19,18 +29,10 @@ SET(LOGIC_SRC
         src/states/MenuState.h
         src/states/State.cpp
         src/states/State.h
-        src/model/Clock.cpp
-        src/model/Clock.h
-
-)
-ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
-
-
-SET(VIEW_SRC
-        src/view/Game.cpp
-        src/view/Game.h
         src/events/Event.cpp
         src/events/Event.h
+        src/states/StateManager.cpp
+        src/states/StateManager.h
 
 )
 
