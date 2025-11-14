@@ -30,7 +30,16 @@ void view::Game::close() {
     window->close();
     std::cout << "Game closed" << std::endl;
 }
-void view::Game::handleEvents() { stateManager->handleEvents(); }
+void view::Game::handleEvents() {
+    sf::Event event;
+    while (window->pollEvent(event)) {
+        if (event.type == sf::Event::Closed) {
+            close();
+        } else {
+            stateManager->handleEvents(event);
+        }
+    }
+}
 void view::Game::render() {
     window->clear();
     stateManager->render(*window);

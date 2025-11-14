@@ -38,13 +38,13 @@ public:
     void switchState(std::unique_ptr<State> state);
 
     /** handle events by delegating to the current state */
-    void handleEvents();
+    void handleEvents(const sf::Event& event);
 
     /** render the current state */
     void render(sf::RenderWindow& window);
 
     /** update the current state */
-    void update(double deltaTime);
+    void update(const double deltaTime);
 };
 } // namespace view::state
 

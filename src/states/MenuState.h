@@ -12,9 +12,9 @@ public:
     explicit MenuState(StateManager& stateManager) : State(stateManager) {}
     ~MenuState() override = default;
 
-    void handleEvents() override;
+    void handleEvents(const sf::Event& event) override;
 
-    void update(double deltaTime) override;
+    void update(const double deltaTime) override;
 
     void render(sf::RenderWindow& window) override;
 };

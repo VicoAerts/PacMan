@@ -29,9 +29,9 @@ void StateManager::switchState(std::unique_ptr<State> state) {
         // throw exception ofzo
     }
 }
-void StateManager::handleEvents() {
+void StateManager::handleEvents(const sf::Event& event) {
     if (!statesStack.empty()) {
-        statesStack.top()->handleEvents();
+        statesStack.top()->handleEvents(event);
     } else {
         // Handle the case where there are no states to handle events
         // throw exception ofzo
@@ -45,7 +45,7 @@ void StateManager::render(sf::RenderWindow& window) {
         // throw exception ofzo
     }
 }
-void StateManager::update(double deltaTime) {
+void StateManager::update(const double deltaTime) {
     if (!statesStack.empty()) {
         statesStack.top()->update(deltaTime);
     } else {

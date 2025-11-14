@@ -19,10 +19,10 @@ public:
     virtual ~State() = default;
 
     /** pure virtual function to handle events in the state */
-    virtual void handleEvents() = 0;
+    virtual void handleEvents(const sf::Event& event) = 0;
 
     /** pure virtual function to update the state */
-    virtual void update(double deltaTime) = 0;
+    virtual void update(const double deltaTime) = 0;
 
     /** pure virtual function to render the state */
     virtual void render(sf::RenderWindow& window) = 0;
