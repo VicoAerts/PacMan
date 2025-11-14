@@ -29,4 +29,12 @@ void StateManager::switchState(std::unique_ptr<State> state) {
         // throw exception ofzo
     }
 }
+void StateManager::handleEvents() {
+    if (!statesStack.empty()) {
+        statesStack.top()->handleEvents();
+    } else {
+        // Handle the case where there are no states to handle events
+        // throw exception ofzo
+    }
+}
 } // namespace view::state

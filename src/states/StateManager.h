@@ -36,6 +36,9 @@ public:
      * @param state pointer to the new state to be added
      */
     void switchState(std::unique_ptr<State> state);
+
+    /** handle events by delegating to the current state */
+    void handleEvents();
 };
 } // namespace view::state
 

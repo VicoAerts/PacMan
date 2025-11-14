@@ -6,6 +6,7 @@
 #ifndef PACMAN_GAME_H
 #define PACMAN_GAME_H
 
+#include "../states/StateManager.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <memory>
@@ -26,6 +27,7 @@ class Game {
     std::unique_ptr<logic::World> world;
 
     // state manager, elke state heeft pointer naar deze statemanager
+    std::unique_ptr<view::state::StateManager> stateManager;
 
 public:
     /**
@@ -43,6 +45,12 @@ public:
      * runs the main game loop
      */
     void run();
+
+    /** close the game window */
+    void close();
+
+    /** handle events */
+    void handleEvents();
 };
 } // namespace view
 #endif // PACMAN_GAME_H

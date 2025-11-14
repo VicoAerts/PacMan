@@ -18,11 +18,16 @@ void view::Game::run() {
     logic::Clock::getInstance()->start();
     while (window->isOpen()) {
         const double deltaTime = logic::Clock::getInstance()->getDeltaTime();
-        // std::cout << "Delta Time: " << deltaTime << " seconds" << std::endl; //test for clock
+
         // Process events
-        // statemanager.handlevents()
+        handleEvents();
         // render()
 
         window->display();
     }
 }
+void view::Game::close() {
+    window->close();
+    std::cout << "Game closed" << std::endl;
+}
+void view::Game::handleEvents() { stateManager->handleEvents(); }
