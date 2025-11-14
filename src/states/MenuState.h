@@ -14,9 +14,9 @@ public:
 
     void handleEvents() override;
 
-    void update() override;
+    void update(double deltaTime) override;
 
-    void render() override;
+    void render(sf::RenderWindow& window) override;
 };
 } // namespace view::state
 

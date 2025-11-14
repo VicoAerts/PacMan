@@ -39,6 +39,12 @@ public:
 
     /** handle events by delegating to the current state */
     void handleEvents();
+
+    /** render the current state */
+    void render(sf::RenderWindow& window);
+
+    /** update the current state */
+    void update(double deltaTime);
 };
 } // namespace view::state
 

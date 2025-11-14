@@ -4,5 +4,5 @@
 
 #include "MenuState.h"
 void view::state::MenuState::handleEvents() {}
-void view::state::MenuState::update() {}
-void view::state::MenuState::render() {}
+void view::state::MenuState::update(double deltaTime) {}
+void view::state::MenuState::render(sf::RenderWindow& window) {}

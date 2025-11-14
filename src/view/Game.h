@@ -36,14 +36,10 @@ public:
      */
     Game();
 
-    /**
-     * destructor of the game
-     */
+    /** destructor of the game*/
     ~Game();
 
-    /**
-     * runs the main game loop
-     */
+    /** runs the main game loop */
     void run();
 
     /** close the game window */
@@ -51,6 +47,12 @@ public:
 
     /** handle events */
     void handleEvents();
+
+    /** render the game */
+    void render();
+
+    /** update the game  */
+    void update(double deltaTime);
 };
 } // namespace view
 #endif // PACMAN_GAME_H

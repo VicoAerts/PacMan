@@ -4,7 +4,7 @@
  */
 #ifndef PACMAN_STATE_H
 #define PACMAN_STATE_H
-
+#include <SFML/Graphics.hpp>
 namespace view::state {
 class StateManager; // Forward declaration
 
@@ -22,10 +22,10 @@ public:
     virtual void handleEvents() = 0;
 
     /** pure virtual function to update the state */
-    virtual void update() = 0;
+    virtual void update(double deltaTime) = 0;
 
     /** pure virtual function to render the state */
-    virtual void render() = 0;
+    virtual void render(sf::RenderWindow& window) = 0;
 };
 } // namespace view::state
 #endif // PACMAN_STATE_H

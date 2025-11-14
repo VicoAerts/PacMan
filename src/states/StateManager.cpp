@@ -37,4 +37,20 @@ void StateManager::handleEvents() {
         // throw exception ofzo
     }
 }
+void StateManager::render(sf::RenderWindow& window) {
+    if (!statesStack.empty()) {
+        statesStack.top()->render(window);
+    } else {
+        // Handle the case where there are no states to render
+        // throw exception ofzo
+    }
+}
+void StateManager::update(double deltaTime) {
+    if (!statesStack.empty()) {
+        statesStack.top()->update(deltaTime);
+    } else {
+        // Handle the case where there are no states to handle events
+        // throw exception ofzo
+    }
+}
 } // namespace view::state
