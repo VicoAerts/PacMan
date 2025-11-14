@@ -9,7 +9,7 @@
 namespace view::state {
 class MenuState : public State {
 public:
-    explicit MenuState(StateManager& stateManager) : State(stateManager) {}
+    explicit MenuState(StateManager& stateManager);
     ~MenuState() override = default;
 
     void handleEvents(const sf::Event& event) override;
@@ -17,6 +17,10 @@ public:
     void update(const double deltaTime) override;
 
     void render(sf::RenderWindow& window) override;
+
+private:
+    sf::Texture backgroundTexture;
+    sf::Sprite backgroundSprite;
 };
 } // namespace view::state
 

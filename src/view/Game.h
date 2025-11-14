@@ -27,7 +27,7 @@ class Game {
     std::unique_ptr<logic::World> world;
 
     // state manager, elke state heeft pointer naar deze statemanager
-    std::unique_ptr<view::state::StateManager> stateManager;
+    std::unique_ptr<state::StateManager> stateManager;
 
 public:
     /**

@@ -11,6 +11,7 @@ view::Game::Game() {
     window = std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "Pacman");
     window->setFramerateLimit(60);
     world = std::make_unique<logic::World>();
+    stateManager = std::make_unique<view::state::StateManager>();
 }
 view::Game::~Game() {}
 
@@ -35,12 +36,18 @@ void view::Game::handleEvents() {
     while (window->pollEvent(event)) {
         if (event.type == sf::Event::Closed) {
             close();
+        } else if (event.type == sf::Event::Resized) {
+            // Zorg dat de view-coördinaten altijd 0..width / 0..height blijven
+            sf::View view(
+                sf::FloatRect(0.f, 0.f, static_cast<float>(event.size.width), static_cast<float>(event.size.height)));
+            window->setView(view);
         } else {
             stateManager->handleEvents(event);
         }
     }
 }
 void view::Game::render() {
+
     window->clear();
     stateManager->render(*window);
     window->display();
