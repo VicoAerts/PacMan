@@ -9,6 +9,7 @@ SET(LOGIC_SRC
         src/model/World.h
         src/model/Clock.cpp
         src/model/Clock.h
+        config/config.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
