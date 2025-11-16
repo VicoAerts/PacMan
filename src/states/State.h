@@ -4,7 +4,13 @@
  */
 #ifndef PACMAN_STATE_H
 #define PACMAN_STATE_H
-#include <SFML/Graphics.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Window/Event.hpp>
+
+/**
+ * @namespace view::state
+ * @brief Contains all game state classes.
+ */
 namespace view::state {
 class StateManager; // Forward declaration
 
