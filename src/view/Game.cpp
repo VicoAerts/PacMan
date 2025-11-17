@@ -4,12 +4,13 @@
 
 #include "Game.h"
 
-#include "../model/Clock.h"
+#include "../../config/config.h"
 #include "../model/World.h"
+#include "../util/Clock.h"
 
 view::Game::Game() {
-    window = std::make_shared<sf::RenderWindow>(sf::VideoMode(800, 600), "Pacman");
-    window->setFramerateLimit(60);
+    window = std::make_shared<sf::RenderWindow>(sf::VideoMode(config::window_width, config::window_height), "Pacman");
+    window->setFramerateLimit(config::max_fps);
     world = std::make_unique<logic::World>();
     stateManager = std::make_unique<view::state::StateManager>();
 }

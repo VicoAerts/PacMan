@@ -7,9 +7,9 @@
 namespace config {
 
 // --- Window / rendering ---
-// constexpr unsigned int window_width = 1920;
-// constexpr unsigned int window_height = 1080;
-// constexpr unsigned int max_fps = 60;
+constexpr unsigned int window_width = 800;
+constexpr unsigned int window_height = 700;
+constexpr unsigned int max_fps = 60;
 //
 // // --- World / camera ---
 // constexpr float world_min_x = -1.0f;

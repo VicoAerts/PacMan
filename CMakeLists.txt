@@ -7,9 +7,17 @@ FIND_PACKAGE(SFML 2 COMPONENTS system window graphics)
 SET(LOGIC_SRC
         src/model/World.cpp
         src/model/World.h
-        src/model/Clock.cpp
-        src/model/Clock.h
+        src/util/Clock.cpp
+        src/util/Clock.h
         config/config.h
+        src/model/Camera.cpp
+        src/model/Camera.h
+        src/model/EnityModel.cpp
+        src/model/EnityModel.h
+        src/model/Subject.cpp
+        src/model/Subject.h
+        src/model/Observer.cpp
+        src/model/Observer.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
