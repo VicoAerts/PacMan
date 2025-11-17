@@ -38,7 +38,6 @@ SET(VIEW_SRC
         src/states/MenuState.h
         src/states/State.cpp
         src/states/State.h
-        src/events/Event.cpp
         src/events/Event.h
         src/states/StateManager.cpp
         src/states/StateManager.h
