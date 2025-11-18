@@ -52,6 +52,16 @@ SET(VIEW_SRC
         src/events/Event.h
         src/states/StateManager.cpp
         src/states/StateManager.h
+        src/view/EntityView.cpp
+        src/view/EntityView.h
+        src/view/PacManView.cpp
+        src/view/PacManView.h
+        src/view/GhostView.cpp
+        src/view/GhostView.h
+        src/view/WallView.cpp
+        src/view/WallView.h
+        src/view/CollectableView.cpp
+        src/view/CollectableView.h
 
 )
 
