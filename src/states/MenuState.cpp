@@ -1,10 +1,10 @@
 //
 // Created by gebruiker on 9/11/2025.
 //
-
 #include "MenuState.h"
+
 namespace view::state {
-MenuState::MenuState(StateManager& manager) : State(manager) {
+MenuState::MenuState(StateManager& stateManager) : State(stateManager) {
     if (!backgroundTexture.loadFromFile("../assets/pacmenu.png")) {
         throw std::runtime_error("Failed to load assets/pacmenu.png");
     }
@@ -12,7 +12,14 @@ MenuState::MenuState(StateManager& manager) : State(manager) {
     backgroundSprite.setTexture(backgroundTexture);
 }
 
-void MenuState::handleEvents(const sf::Event& event) {}
+void MenuState::handleEvents(const sf::Event& event) {
+    if (event.type == sf::Event::KeyPressed) {
+        if (event.key.code == sf::Keyboard::Enter) {
+            // Switch to the playing state when Enter is pressed
+            stateManager.switchState(std::make_unique<LevelState>(stateManager));
+        }
+    }
+}
 void MenuState::update(const double deltaTime) {}
 void MenuState::render(sf::RenderWindow& window) {
     // FULLSCREEN SCALE

@@ -4,7 +4,10 @@
  */
 #ifndef PACMAN_MENUSTATE_H
 #define PACMAN_MENUSTATE_H
+#include "LevelState.h"
 #include "State.h"
+#include "StateManager.h"
+#include <memory>
 
 namespace view::state {
 class MenuState : public State {

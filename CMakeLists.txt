@@ -12,12 +12,23 @@ SET(LOGIC_SRC
         config/config.h
         src/model/Camera.cpp
         src/model/Camera.h
-        src/model/EnityModel.cpp
-        src/model/EnityModel.h
+        src/model/Entity.h
         src/model/Subject.cpp
         src/model/Subject.h
         src/model/Observer.cpp
         src/model/Observer.h
+        src/model/PacMan.cpp
+        src/model/PacMan.h
+        src/model/Ghost.cpp
+        src/model/Ghost.h
+        src/model/Wall.cpp
+        src/model/Wall.h
+        src/model/Collectable.cpp
+        src/model/Collectable.h
+        src/util/Random.cpp
+        src/util/Random.h
+        src/model/AbstractFactory.cpp
+        src/model/AbstractFactory.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
