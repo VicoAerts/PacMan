@@ -7,7 +7,7 @@
 #ifndef PACMAN_CLOCK_H
 #define PACMAN_CLOCK_H
 #include <chrono>
-namespace logic {
+namespace model {
 class Clock {
 private:
     static Clock* _instance;

@@ -6,11 +6,11 @@
 #ifndef PACMAN_WORLD_H
 #define PACMAN_WORLD_H
 
-namespace logic {
+namespace model {
 class World {
 public:
     World() = default;
     ~World() = default;
 };
-} // namespace logic
+} // namespace model
 #endif // PACMAN_WORLD_H

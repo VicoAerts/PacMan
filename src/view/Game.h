@@ -10,7 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <memory>
-namespace logic {
+namespace model {
 class World;
 }
 
@@ -24,7 +24,7 @@ class Game {
      * game world using logic world world class will handle all game logic
      */
 
-    std::unique_ptr<logic::World> world;
+    std::unique_ptr<model::World> world;
 
     // state manager, elke state heeft pointer naar deze statemanager
     std::unique_ptr<state::StateManager> stateManager;

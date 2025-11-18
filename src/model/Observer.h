@@ -1,10 +1,20 @@
-//
-// Created by gebruiker on 17/11/2025.
-//
+/**
+ * @file Observer.h
+ * @brief Declaration of the Observer interface for observer pattern. Observer is gate between Model and View.
+ */
 
 #ifndef PACMAN_OBSERVER_H
 #define PACMAN_OBSERVER_H
+#include "../events/Event.h"
 
-class Observer {};
+namespace model {
+class Observer {
+public:
+    ~Observer() = default;
+
+    /** pure virtual function called by subject when event happens */
+    virtual void onNotify(const events::Event& event) = 0;
+};
+} // namespace model
 
 #endif // PACMAN_OBSERVER_H

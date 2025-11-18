@@ -6,10 +6,10 @@
 #ifndef PACMAN_CAMERA_H
 #define PACMAN_CAMERA_H
 
-namespace logic {
+namespace model {
 class Camera {
 public:
 };
-} // namespace logic
+} // namespace model
 
 #endif // PACMAN_CAMERA_H

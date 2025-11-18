@@ -11,17 +11,17 @@
 view::Game::Game() {
     window = std::make_shared<sf::RenderWindow>(sf::VideoMode(config::window_width, config::window_height), "Pacman");
     window->setFramerateLimit(config::max_fps);
-    world = std::make_unique<logic::World>();
+    world = std::make_unique<model::World>();
     stateManager = std::make_unique<view::state::StateManager>();
 }
 view::Game::~Game() {}
 
 void view::Game::run() {
-    logic::Clock::getInstance()->start();
+    model::Clock::getInstance()->start();
     while (window->isOpen()) {
 
-        const double deltaTime = logic::Clock::getInstance()->getDeltaTime();
-        logic::Clock::getInstance()->start();
+        const double deltaTime = model::Clock::getInstance()->getDeltaTime();
+        model::Clock::getInstance()->start();
 
         handleEvents();
         update(deltaTime);
