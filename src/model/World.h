@@ -5,12 +5,12 @@
 
 #ifndef PACMAN_WORLD_H
 #define PACMAN_WORLD_H
+class AbstractFactory;
+#include "GridMap.h"
 
 namespace model {
 class World {
-public:
-    World() = default;
-    ~World() = default;
+
 };
 } // namespace model
 #endif // PACMAN_WORLD_H

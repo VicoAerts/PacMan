@@ -29,6 +29,8 @@ SET(LOGIC_SRC
         src/util/Random.h
         src/model/AbstractFactory.cpp
         src/model/AbstractFactory.h
+        src/model/GridMap.cpp
+        src/model/GridMap.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
