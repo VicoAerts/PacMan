@@ -2,4 +2,4 @@
 // Created by gebruiker on 17/11/2025.
 //
 
-#include "Camera.h"
+#include "../view/Camera.h"

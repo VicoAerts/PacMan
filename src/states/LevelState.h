@@ -4,8 +4,9 @@
  */
 #ifndef PACMAN_LEVELSTATE_H
 #define PACMAN_LEVELSTATE_H
-#include "../model/Camera.h"
 #include "../model/World.h"
+#include "../view/Camera.h"
+#include "../view/ConcreteFactory.h"
 #include "../view/EntityView.h"
 #include "State.h"
 #include "StateManager.h"
@@ -24,11 +25,13 @@ public:
 
 private:
     /** game world for this level */
-    model::World m_world;
+    std::unique_ptr<model::World> m_world;
     /** camera for this level */
-    model::Camera m_camera;
+    view::Camera m_camera;
     /** vector of all entity views in this level */
     std::vector<std::unique_ptr<view::entity::EntityView>> m_entityViews;
+    /** concrete factory for creating entities */
+    view::ConcreteFactory m_factory;
 };
 } // namespace view::state
 

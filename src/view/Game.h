@@ -20,11 +20,6 @@ class Game {
      * game window using sfml
      */
     std::shared_ptr<sf::RenderWindow> window;
-    /**
-     * game world using logic world world class will handle all game logic
-     */
-
-    std::unique_ptr<model::World> world;
 
     // state manager, elke state heeft pointer naar deze statemanager
     std::unique_ptr<state::StateManager> stateManager;

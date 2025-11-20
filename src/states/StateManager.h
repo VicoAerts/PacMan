@@ -15,9 +15,12 @@ class StateManager {
     /** stack of states to manage different game states */
     std::stack<std::unique_ptr<State>> statesStack;
 
+    /** allow states to access render window if needed */
+    sf::RenderWindow& window;
+
 public:
     /** constructor of statemanager that starts of with the menustate*/
-    StateManager();
+    explicit StateManager(sf::RenderWindow& window);
 
     /** destructor of statemanager that cleans up all states */
     ~StateManager() = default;
@@ -45,6 +48,9 @@ public:
 
     /** update the current state */
     void update(const double deltaTime);
+
+    /** get the render window */
+    [[nodiscard]] sf::RenderWindow& getWindow() { return window; }
 };
 } // namespace view::state
 

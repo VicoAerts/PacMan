@@ -7,7 +7,7 @@
 
 namespace view::state {
 
-StateManager::StateManager() { pushState(std::make_unique<MenuState>(*this)); }
+StateManager::StateManager(sf::RenderWindow& window) : window(window) { pushState(std::make_unique<MenuState>(*this)); }
 
 // use move because unique_ptr
 void StateManager::pushState(std::unique_ptr<State> state) { statesStack.push(std::move(state)); }

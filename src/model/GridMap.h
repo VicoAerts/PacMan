@@ -20,6 +20,10 @@ public:
 
     [[nodiscard]] CellType getCellType(int row, int col) const;
 
+    [[nodiscard]] int getWidth() const { return width; }
+
+    [[nodiscard]] int getHeight() const { return height; }
+
     void setCellType(int row, int col, CellType cellType);
 
     void removeCellType(int row, int col);

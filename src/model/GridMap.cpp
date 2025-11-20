@@ -5,7 +5,7 @@
 #include "GridMap.h"
 
 void GridMap::loadMazeFromFile(const std::string& filename) {
-    std::ifstream file(filename);
+    std::ifstream file("../config/" + filename);
     if (!file.is_open()) {
         throw std::runtime_error("Could not open file: " + filename);
     }

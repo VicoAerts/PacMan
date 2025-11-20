@@ -16,18 +16,20 @@ struct Vec2D {
 };
 
 class Entity {
+
 protected:
     /** Constructor to initialize entity on position */
     explicit Entity(const Vec2D& pos) : m_position(pos) {}
+
     /** Position of the entity itself so member position in 2D space  */
     Vec2D m_position;
 
-private:
-    /** Entity destructor */
-    virtual ~Entity() = default;
-
+public:
     /**update entity*/
     virtual void update(const double deltaTime, World& world) = 0;
+
+    /** Entity destructor */
+    virtual ~Entity() = default;
 
     /** get position of entity */
     [[nodiscard]] Vec2D getPosition() const { return m_position; }

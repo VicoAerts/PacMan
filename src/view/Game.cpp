@@ -11,8 +11,7 @@
 view::Game::Game() {
     window = std::make_shared<sf::RenderWindow>(sf::VideoMode(config::window_width, config::window_height), "Pacman");
     window->setFramerateLimit(config::max_fps);
-    world = std::make_unique<model::World>();
-    stateManager = std::make_unique<view::state::StateManager>();
+    stateManager = std::make_unique<view::state::StateManager>(*window);
 }
 view::Game::~Game() {}
 

@@ -10,8 +10,8 @@ SET(LOGIC_SRC
         src/util/Clock.cpp
         src/util/Clock.h
         config/config.h
-        src/model/Camera.cpp
-        src/model/Camera.h
+        src/view/Camera.cpp
+        src/view/Camera.h
         src/model/Entity.h
         src/model/Subject.cpp
         src/model/Subject.h
@@ -64,6 +64,8 @@ SET(VIEW_SRC
         src/view/WallView.h
         src/view/CollectableView.cpp
         src/view/CollectableView.h
+        src/view/ConcreteFactory.cpp
+        src/view/ConcreteFactory.h
 
 )
 
