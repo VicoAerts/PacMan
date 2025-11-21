@@ -7,13 +7,14 @@
 #include "../../config/config.h"
 
 namespace view::state {
-LevelState::LevelState(StateManager& stateManager) : State(stateManager), m_factory(stateManager.getWindow()) {
+LevelState::LevelState(StateManager& stateManager)
+    : State(stateManager), m_factory(stateManager.getWindow()),
+      m_camera(Camera(stateManager.getWindow().getSize().x, stateManager.getWindow().getSize().y)) {
+    // 1. load maze from file
+    // 2. make world
+    // 3. make camera
+    // 4. create factory
 
-    // 1. make world check
-    // 2. make coins walls ghosts pacman etc via AbstractFactory
-    // world.initializeLevel();
-    // 3. cam opzetten
-    // map laden
     GridMap map;
     map.loadMazeFromFile("Maze.txt");
     m_world = std::make_unique<model::World>(map, m_factory);

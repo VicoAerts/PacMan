@@ -5,7 +5,6 @@
 #ifndef PACMAN_LEVELSTATE_H
 #define PACMAN_LEVELSTATE_H
 #include "../model/World.h"
-#include "../view/Camera.h"
 #include "../view/ConcreteFactory.h"
 #include "../view/EntityView.h"
 #include "State.h"
