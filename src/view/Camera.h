@@ -8,10 +8,7 @@
 #ifndef PACMAN_CAMERA_H
 #define PACMAN_CAMERA_H
 /** 2D Vector structure */
-struct Vec2D {
-    float x = {0.f};
-    float y = {0.f};
-};
+#include "../util/Vec2D.h"
 
 namespace view {
 class Camera {

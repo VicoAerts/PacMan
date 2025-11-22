@@ -16,15 +16,20 @@
 #include "../model/Ghost.h"
 #include "../model/PacMan.h"
 #include "../model/Wall.h"
+#include "../util/Vec2D.h"
 #include "Camera.h"
+#include "EntityView.h"
+#include "PacManView.h"
 namespace view {
 class ConcreteFactory : public model::AbstractFactory {
 private:
-    sf::RenderWindow* m_window;
+    sf::RenderWindow& window;
+    Camera& camera;
+    std::vector<std::unique_ptr<entity::EntityView>> entityViews;
 
 public:
     /**constructor**/
-    explicit ConcreteFactory(sf::RenderWindow& window);
+    explicit ConcreteFactory(sf::RenderWindow& window, Camera& camera);
 
     /** Destructor of the EntityFactory*/
     ~ConcreteFactory() override = default;
@@ -35,6 +40,9 @@ public:
     std::unique_ptr<model::Entity> createCoin(int row, int col) override;
     std::unique_ptr<model::Entity> createFruit(int row, int col) override;
     std::unique_ptr<model::Entity> createWall(int row, int col) override;
+
+    /** Get all entity views created by this factory */
+    [[nodiscard]] const std::vector<std::unique_ptr<entity::EntityView>>& getEntityViews() const { return entityViews; }
 };
 } // namespace view
 

@@ -31,6 +31,7 @@ SET(LOGIC_SRC
         src/model/AbstractFactory.h
         src/model/GridMap.cpp
         src/model/GridMap.h
+        src/util/Vec2D.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
@@ -54,7 +55,6 @@ SET(VIEW_SRC
         src/events/Event.h
         src/states/StateManager.cpp
         src/states/StateManager.h
-        src/view/EntityView.cpp
         src/view/EntityView.h
         src/view/PacManView.cpp
         src/view/PacManView.h

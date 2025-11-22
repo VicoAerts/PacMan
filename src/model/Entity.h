@@ -5,17 +5,16 @@
 
 #ifndef PACMAN_ENITYMODEL_H
 #define PACMAN_ENITYMODEL_H
+#include "../events/Event.h"
+#include "../util/Vec2D.h"
+#include "Subject.h"
 namespace model {
 /** Forward declaration of World class */
 class World;
 
 /** 2D Vector structure */
-struct Vec2D {
-    float x = {0.f};
-    float y = {0.f};
-};
 
-class Entity {
+class Entity : public Subject {
 
 protected:
     /** Constructor to initialize entity on position */
@@ -35,7 +34,11 @@ public:
     [[nodiscard]] Vec2D getPosition() const { return m_position; }
 
     /** set position of entity */
-    void setPosition(const Vec2D& pos) { m_position = pos; }
+    void setPosition(const Vec2D& pos) {
+        m_position = pos;
+        events::Event event{events::EventType::PositionChanged};
+        notify(event);
+    }
 };
 } // namespace model
 #endif // PACMAN_ENITYMODEL_H

@@ -3,8 +3,19 @@
 //
 
 #include "ConcreteFactory.h"
-view::ConcreteFactory::ConcreteFactory(sf::RenderWindow& window) {}
-std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int col) { return nullptr; }
+
+view::ConcreteFactory::ConcreteFactory(sf::RenderWindow& window, Camera& camera) : window(window), camera(camera) {}
+
+std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int col) {
+    Vec2D pos = camera.gridToWorld(row, col);
+    auto model = std::make_unique<model::PacMan>(pos);
+
+    auto view = std::make_unique<view::entity::PacManView>(*model);
+    entityViews.push_back(std::move(view));
+    model->attach(*view);
+    return model;
+}
+
 std::unique_ptr<model::Entity> view::ConcreteFactory::createGhost(int row, int col) { return nullptr; }
 std::unique_ptr<model::Entity> view::ConcreteFactory::createCoin(int row, int col) { return nullptr; }
 std::unique_ptr<model::Entity> view::ConcreteFactory::createFruit(int row, int col) { return nullptr; }

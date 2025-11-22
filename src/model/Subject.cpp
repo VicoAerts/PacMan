@@ -16,8 +16,8 @@ void Subject::detach(Observer& observer) {
     }
 }
 void Subject::notify(const events::Event& event) {
-    for (Observer& observer : observers) {
-        observer.onNotify(event);
+    for (auto& observer : observers) {
+        observer.get().onNotify(event);
     }
 }
 
