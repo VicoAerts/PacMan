@@ -17,6 +17,8 @@ LevelState::LevelState(StateManager& stateManager)
     m_world = std::make_unique<model::World>(map, m_factory);
     // 3. set camera grid size
     m_camera.setGridSize(map.getHeight(), map.getWidth());
+    // 4. set texture manager
+    util::TextureManager::init("level", "../assets/sprites.png");
     // 4. get views to render later
     for (auto& entity : m_factory.getEntityViews()) {
         m_entityViews.push_back(std::move(const_cast<std::unique_ptr<view::entity::EntityView>&>(entity)));

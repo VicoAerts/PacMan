@@ -6,6 +6,7 @@
 #ifndef PACMAN_ENTITYVIEW_H
 #define PACMAN_ENTITYVIEW_H
 #include "../model/Entity.h"
+#include "../util/TextureManager.h"
 #include "Camera.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>

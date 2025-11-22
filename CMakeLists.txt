@@ -32,6 +32,9 @@ SET(LOGIC_SRC
         src/model/GridMap.cpp
         src/model/GridMap.h
         src/util/Vec2D.h
+        src/util/TextureManager.cpp
+        src/util/TextureManager.h
+        src/util/Direction.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})

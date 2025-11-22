@@ -17,30 +17,30 @@ void model::World::spawnEntities(AbstractFactory& factory) {
         for (int col = 0; col < worldGrid.getWidth(); col++) {
 
             CellType type = worldGrid.getCellType(row, col);
+            std::unique_ptr<Entity> e;
 
             switch (type) {
             case PACMAN_START:
-                entities.push_back(factory.createPacman(row, col));
+                e = factory.createPacman(row, col);
                 break;
-
             case GHOST_START:
-                entities.push_back(factory.createGhost(row, col));
+                e = factory.createGhost(row, col);
                 break;
-
             case COIN:
-                entities.push_back(factory.createCoin(row, col));
+                e = factory.createCoin(row, col);
                 break;
-
             case FRUIT:
-                entities.push_back(factory.createFruit(row, col));
+                e = factory.createFruit(row, col);
                 break;
-
             case WALL:
-                entities.push_back(factory.createWall(row, col));
+                e = factory.createWall(row, col);
                 break;
-
             default:
                 break;
+            }
+
+            if (e) { // ⬅️ alleen als niet null
+                entities.push_back(std::move(e));
             }
         }
     }

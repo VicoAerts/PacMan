@@ -4,12 +4,13 @@
  */
 #ifndef PACMAN_PACMAN_H
 #define PACMAN_PACMAN_H
+#include "../util/Direction.h"
 #include "Entity.h"
 
 #include <SFML/Graphics/Glsl.hpp>
 
 namespace model {
-enum class Direction { Left, Right, Up, Down };
+
 class PacMan : public Entity {
 public:
     /** pacman constructor*/
