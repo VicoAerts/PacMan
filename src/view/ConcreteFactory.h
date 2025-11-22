@@ -20,6 +20,7 @@
 #include "Camera.h"
 #include "EntityView.h"
 #include "PacManView.h"
+#include "WallView.h"
 namespace view {
 class ConcreteFactory : public model::AbstractFactory {
 private:

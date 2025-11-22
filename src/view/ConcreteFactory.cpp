@@ -19,4 +19,12 @@ std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int 
 std::unique_ptr<model::Entity> view::ConcreteFactory::createGhost(int row, int col) { return nullptr; }
 std::unique_ptr<model::Entity> view::ConcreteFactory::createCoin(int row, int col) { return nullptr; }
 std::unique_ptr<model::Entity> view::ConcreteFactory::createFruit(int row, int col) { return nullptr; }
-std::unique_ptr<model::Entity> view::ConcreteFactory::createWall(int row, int col) { return nullptr; }
+std::unique_ptr<model::Entity> view::ConcreteFactory::createWall(int row, int col) {
+    Vec2D pos = camera.gridToWorld(row, col);
+    auto model = std::make_unique<model::Wall>(pos);
+
+    auto view = std::make_unique<view::entity::WallView>(*model);
+    entityViews.push_back(std::move(view));
+    model->attach(*view);
+    return model;
+}

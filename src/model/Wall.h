@@ -12,6 +12,10 @@ class Wall : public Entity {
 public:
     /** Wall constructor*/
     explicit Wall(const Vec2D& pos) : Entity(pos) {}
+    void update(const double, World&) override {
+        // walls do not have any update logic  because they dont move
+        // keep it for posibility to add moving walls
+    }
 };
 } // namespace model
 #endif // PACMAN_WALL_H

@@ -37,6 +37,11 @@ public:
     /** world height in pixels to calculate the size of sprites*/
     [[nodiscard]] float worldHeightToPixels(float worldHeight) const;
 
+    /** get columns*/
+    [[nodiscard]] int getCols() const { return m_cols; }
+    /** get rows*/
+    [[nodiscard]] int getRows() const { return m_rows; }
+
 private:
     int m_windowWidth;
     int m_windowHeight;

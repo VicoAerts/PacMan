@@ -15,9 +15,5 @@ void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
     pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, dir);
     pacmanSprite.setPosition(pixelPos.x, pixelPos.y);
 
-    // test
-    auto size = window.getSize();
-    pacmanSprite.setPosition(size.x / 2.f, size.y / 2.f);
-
     window.draw(pacmanSprite);
 }
