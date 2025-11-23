@@ -35,6 +35,8 @@ SET(LOGIC_SRC
         src/util/TextureManager.cpp
         src/util/TextureManager.h
         src/util/Direction.h
+        src/model/Coin.cpp
+        src/model/Coin.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})
@@ -69,6 +71,8 @@ SET(VIEW_SRC
         src/view/CollectableView.h
         src/view/ConcreteFactory.cpp
         src/view/ConcreteFactory.h
+        src/view/CoinView.cpp
+        src/view/CoinView.h
 
 )
 

@@ -19,7 +19,7 @@ public:
     /** draw wall on screen */
     void draw(sf::RenderWindow& window, Camera& camera) override;
 
-protected:
+private:
     model::Wall& wallModel;
     sf::RectangleShape wallRect;
 };

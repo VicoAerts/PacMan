@@ -21,7 +21,7 @@ public:
     void draw(sf::RenderWindow& window, Camera& camera) override;
     /** load pacman texture */
 
-protected:
+private:
     model::PacMan& pacmanModel;
     sf::Sprite pacmanSprite;
 };
