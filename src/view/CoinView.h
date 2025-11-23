@@ -18,6 +18,10 @@ public:
     void onNotify(const events::Event& event) override;
     /** draw coin on screen */
     void draw(sf::RenderWindow& window, Camera& camera) override;
+
+private:
+    model::Coin& coinModel;
+    sf::Sprite coinSprite;
 };
 } // namespace view::entity
 

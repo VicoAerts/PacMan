@@ -11,6 +11,7 @@
 #include <memory>
 
 #include "../model/AbstractFactory.h"
+#include "../model/Coin.h"
 #include "../model/Collectable.h"
 #include "../model/Entity.h"
 #include "../model/Ghost.h"
@@ -18,6 +19,7 @@
 #include "../model/Wall.h"
 #include "../util/Vec2D.h"
 #include "Camera.h"
+#include "CoinView.h"
 #include "EntityView.h"
 #include "PacManView.h"
 #include "WallView.h"

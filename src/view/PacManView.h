@@ -19,7 +19,6 @@ public:
     void onNotify(const events::Event& event) override;
     /** draw pacman on screen */
     void draw(sf::RenderWindow& window, Camera& camera) override;
-    /** load pacman texture */
 
 private:
     model::PacMan& pacmanModel;
