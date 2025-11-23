@@ -3,6 +3,9 @@
 //
 
 #include "PacMan.h"
+model::PacMan::PacMan(const Vec2D& startpos, float speed)
+    : Entity(startpos), m_position(startpos), m_speed(speed), m_direction(Direction::Right),
+      m_requestedDirection(Direction::None) {}
 void model::PacMan::update(const double deltaTime, World& world) {
     // todo: implement movement and collision logic
 }
@@ -14,3 +17,4 @@ void model::PacMan::setDirection(Direction dir) {
         notify(event);
     }
 }
+void model::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }

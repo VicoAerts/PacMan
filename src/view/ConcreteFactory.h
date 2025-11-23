@@ -10,6 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <memory>
 
+#include "../../config/config.h"
 #include "../model/AbstractFactory.h"
 #include "../model/Coin.h"
 #include "../model/Collectable.h"

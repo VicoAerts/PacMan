@@ -10,6 +10,7 @@ namespace config {
 constexpr unsigned int window_width = 778;
 constexpr unsigned int window_height = 900;
 constexpr unsigned int max_fps = 60;
+
 //
 // // --- World / camera ---
 // constexpr float world_min_x = -1.0f;
@@ -18,7 +19,7 @@ constexpr unsigned int max_fps = 60;
 // constexpr float world_max_y = 1.0f;
 
 // --- Gameplay ---
-//  constexpr float pacman_speed = ;
+constexpr float pacman_speed = 0.1f;
 //  constexpr float ghost_base_speed = ;
 //  constexpr float fear_duration_s = ;
 

@@ -5,6 +5,8 @@
 #ifndef PACMAN_PACMAN_H
 #define PACMAN_PACMAN_H
 #include "../util/Direction.h"
+#include "../util/TextureManager.h"
+#include "../util/Vec2D.h"
 #include "Entity.h"
 
 #include <SFML/Graphics/Glsl.hpp>
@@ -14,16 +16,21 @@ namespace model {
 class PacMan : public Entity {
 public:
     /** pacman constructor*/
-    explicit PacMan(const Vec2D& pos) : Entity(pos), m_direction(Direction::Right) {}
+    explicit PacMan(const Vec2D& startpos, float speed);
     /** update pacman position and state*/
     void update(const double deltaTime, World& world) override;
     /** get current direction of pacman*/
     [[nodiscard]] Direction getDirection() const;
     /** set current direction of pacman*/
     void setDirection(Direction dir);
+    /** set requested direction of pacman*/
+    void setRequestedDirection(Direction direction);
 
 private:
     Direction m_direction;
+    float m_speed;
+    Direction m_requestedDirection;
+    Vec2D m_position;
 };
 } // namespace model
 #endif // PACMAN_PACMAN_H
