@@ -15,6 +15,8 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
     // coordinates on the sprite sheet
     int col = 0;
     int row = 0;
+    sf::Sprite sprite;
+    sprite.setTexture(textureSheet);
     // basis no direction
     switch (type) {
     case spriteType::PACMAN:
@@ -48,6 +50,19 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
         case Direction::None:
             break;
         }
+        int left = 3;
+        int top = 5;
+        int right = 14;
+        int bottom = 12;
+
+        int width = TileSize - left - right;
+        int height = TileSize - top - bottom;
+
+        sf::IntRect rect(col * TileSize + left, row * TileSize + top, width, height);
+
+        sprite.setTextureRect(rect);
+        sprite.setOrigin(width / 2.f, height / 2.f);
+        return sprite;
     }
     // adjust row based on direction for ghost
     if (type == spriteType::RED_GHOST /* of alle andere ghots want op zelfde rij zelfde kant*/) {
@@ -70,8 +85,7 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
     }
 
     sf::IntRect rect(col * TileSize, row * TileSize, TileSize, TileSize);
-    sf::Sprite sprite;
-    sprite.setTexture(textureSheet);
+
     sprite.setTextureRect(rect);
     // center
     sprite.setOrigin(TileSize / 2.0f, TileSize / 2.0f);

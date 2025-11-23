@@ -6,6 +6,8 @@
 
 #include "../../config/config.h"
 
+#include <iostream>
+
 namespace view::state {
 LevelState::LevelState(StateManager& stateManager)
     : State(stateManager), m_camera(Camera(stateManager.getWindow().getSize().x, stateManager.getWindow().getSize().y)),
@@ -13,13 +15,15 @@ LevelState::LevelState(StateManager& stateManager)
     // 1. load maze from file
     GridMap map;
     map.loadMazeFromFile("Maze.txt");
-    // 2. make world
-    m_world = std::make_unique<model::World>(map, m_factory);
-    // 3. set camera grid size
+    // 2. set camera grid size
     m_camera.setGridSize(map.getHeight(), map.getWidth());
+
+    // 3. make world
+    m_world = std::make_unique<model::World>(map, m_factory);
+
     // 4. set texture manager
     util::TextureManager::init("level", "../assets/sprites.png");
-    // 4. get views to render later
+    // 5. get views to render later
     for (auto& entity : m_factory.getEntityViews()) {
         m_entityViews.push_back(std::move(const_cast<std::unique_ptr<view::entity::EntityView>&>(entity)));
     }

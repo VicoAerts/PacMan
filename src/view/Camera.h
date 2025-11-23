@@ -41,6 +41,10 @@ public:
     [[nodiscard]] int getCols() const { return m_cols; }
     /** get rows*/
     [[nodiscard]] int getRows() const { return m_rows; }
+    /** get tile width in pixels*/
+    [[nodiscard]] float getTileWidthPixels() const;
+    /** get tile height in pixels*/
+    [[nodiscard]] float getTileHeightPixels() const;
 
 private:
     int m_windowWidth;
