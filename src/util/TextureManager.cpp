@@ -50,19 +50,6 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
         case Direction::None:
             break;
         }
-        int left = 3;
-        int top = 5;
-        int right = 14;
-        int bottom = 12;
-
-        int width = TileSize - left - right;
-        int height = TileSize - top - bottom;
-
-        sf::IntRect rect(col * TileSize + left, row * TileSize + top, width, height);
-
-        sprite.setTextureRect(rect);
-        sprite.setOrigin(width / 2.f, height / 2.f);
-        return sprite;
     }
     // adjust row based on direction for ghost
     if (type == spriteType::RED_GHOST /* of alle andere ghots want op zelfde rij zelfde kant*/) {
@@ -84,10 +71,19 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
         }
     }
 
-    sf::IntRect rect(col * TileSize, row * TileSize, TileSize, TileSize);
+    // cropping parameters
+    int left = 3;
+    int top = 5;
+    int right = 14;
+    int bottom = 12;
 
+    int width = TileSize - left - right;
+    int height = TileSize - top - bottom;
+
+    sf::IntRect rect(col * TileSize + left, row * TileSize + top, width, height);
+
+    // set texture rect and origin
     sprite.setTextureRect(rect);
-    // center
-    sprite.setOrigin(TileSize / 2.0f, TileSize / 2.0f);
+    sprite.setOrigin(width / 2.f, height / 2.f);
     return sprite;
 }
