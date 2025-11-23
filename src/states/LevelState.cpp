@@ -28,7 +28,27 @@ LevelState::LevelState(StateManager& stateManager)
         m_entityViews.push_back(std::move(const_cast<std::unique_ptr<view::entity::EntityView>&>(entity)));
     }
 }
-void LevelState::handleEvents(const sf::Event& event) {}
+void LevelState::handleEvents(const sf::Event& event) {
+    if (event.type == sf::Event::KeyPressed) {
+        switch (event.key.code) {
+            // case esc for pause menu can be added here
+        case sf::Keyboard::Left:
+            m_world->handleInput(Direction::Left);
+            break;
+        case sf::Keyboard::Right:
+            m_world->handleInput(Direction::Right);
+            break;
+        case sf::Keyboard::Up:
+            m_world->handleInput(Direction::Up);
+            break;
+        case sf::Keyboard::Down:
+            m_world->handleInput(Direction::Down);
+            break;
+        default:
+            m_world->handleInput(Direction::None);
+        }
+    }
+}
 void LevelState::update(const double deltaTime) {
     if (m_world) {
         m_world->update(deltaTime);

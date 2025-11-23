@@ -12,6 +12,19 @@ void model::World::update(double deltaTime) {
         entity->update(deltaTime, *this);
     }
 }
+void World::handleInput(Direction dir) {
+    // avoid Pacman*
+    for (auto& entity : entities) {
+        try {
+            // cast to refernece
+            PacMan& pac = dynamic_cast<PacMan&>(*entity);
+            pac.setRequestedDirection(dir);
+            return;
+        } catch (const std::bad_cast&) {
+            // this is no Pacman, continue searching
+        }
+    }
+}
 void model::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {
         for (int col = 0; col < worldGrid.getWidth(); col++) {
