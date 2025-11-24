@@ -33,14 +33,8 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
     next.x = position.x + step.x;
     next.y = position.y + step.y;
     // determine grid cell
-    // wereld → grid: inverse van wat je bij spawn doet
-    int col = static_cast<int>(std::floor(next.x + worldGrid.getWidth() / 2.f));
-    int row = static_cast<int>(std::floor(next.y + worldGrid.getHeight() / 2.f));
-    std::cout << col << " " << row << std::endl;
-    if (row < 0 || row >= worldGrid.getHeight() || col < 0 || col >= worldGrid.getWidth()) {
-        return false;
-    }
-    char cell = worldGrid.getCellType(row, col);
+
+    CellType cell = worldGrid.getCellType(next.x, next.y);
 
     // check wall
     // std::cout << "is wall?" << (cell == WALL) << std::endl;

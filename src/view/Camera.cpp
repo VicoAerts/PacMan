@@ -40,19 +40,7 @@ Vec2D view::Camera::gridToPixel(int row, int col) const {
     Vec2D worldPos = gridToWorld(row, col);
     return worldToPixel(worldPos.x, worldPos.y);
 }
-Vec2D view::Camera::worldToGrid(float normX, float normY) const {
-    float tileWidth = 2.f / m_cols;
-    float tileHeight = 2.f / m_rows;
 
-    float colF = (normX + 1.f) / tileWidth - 0.5f;
-    float rowF = (1.f - normY) / tileHeight - 0.5f;
-
-    // naar INTEGER tiles
-    int col = static_cast<int>(std::round(colF));
-    int row = static_cast<int>(std::round(rowF));
-
-    return Vec2D{static_cast<float>(col), static_cast<float>(row)};
-}
 float view::Camera::worldWidthToPixels(float worldWidth) const {
     // worldwidth van -1 to 1 is 2 so we need to scale by 0.5
     return worldWidth * 0.5f * m_windowWidth;

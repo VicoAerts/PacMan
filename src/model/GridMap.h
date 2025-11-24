@@ -20,6 +20,8 @@ public:
 
     [[nodiscard]] CellType getCellType(int row, int col) const;
 
+    [[nodiscard]] CellType getCellType(float worldX, float worldY) const;
+
     [[nodiscard]] int getWidth() const { return width; }
 
     [[nodiscard]] int getHeight() const { return height; }

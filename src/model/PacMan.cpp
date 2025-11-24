@@ -40,7 +40,6 @@ void model::PacMan::update(const double deltaTime, World& world) {
     } else {
         // we hit a wall, stop moving
         m_direction = Direction::None;
-        m_requestedDirection = Direction::None;
     }
     // std::cout << "Pacman position: (" << m_position.x << ", " << m_position.y << ")\n";
 }
