@@ -45,27 +45,40 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
     // do we move horizontally or vertically?
     bool horizontalMove = (step.x != 0.f);
     bool verticalMove = (step.y != 0.f);
-
+    float halfHScaled = halfH * 0.75f;
+    float halfWScaled = halfW * 0.75f;
     std::vector<Vec2D> hitboxPoints;
-
     if (horizontalMove) {
         bool rightMove = step.x > 0;
         bool leftMove = step.x < 0;
         if (rightMove) {
+            // middle
             hitboxPoints.push_back(Vec2D{next.x + halfW, next.y});
+            // corners
+            hitboxPoints.push_back(Vec2D{next.x + halfW, next.y + halfHScaled});
+            hitboxPoints.push_back(Vec2D{next.x + halfW, next.y - halfHScaled});
         }
         if (leftMove) {
+            // middle
             hitboxPoints.push_back(Vec2D{next.x - halfW, next.y});
+            // corners
+            hitboxPoints.push_back(Vec2D{next.x - halfW, next.y + halfHScaled});
+            hitboxPoints.push_back(Vec2D{next.x - halfW, next.y - halfHScaled});
         }
     }
     if (verticalMove) {
         bool downMove = step.y > 0;
         bool upMove = step.y < 0;
         if (downMove) {
+
             hitboxPoints.push_back(Vec2D{next.x, next.y + halfH});
+            hitboxPoints.push_back(Vec2D{next.x - halfWScaled, next.y + halfH});
+            hitboxPoints.push_back(Vec2D{next.x + halfWScaled, next.y + halfH});
         }
         if (upMove) {
             hitboxPoints.push_back(Vec2D{next.x, next.y - halfH});
+            hitboxPoints.push_back(Vec2D{next.x - halfWScaled, next.y - halfH});
+            hitboxPoints.push_back(Vec2D{next.x + halfWScaled, next.y - halfH});
         }
     }
 

@@ -18,9 +18,12 @@ void model::PacMan::update(const double deltaTime, World& world) {
     if (m_requestedDirection != Direction::None && m_requestedDirection != m_direction) {
         wantedMove = Vec2D{dirToVector(m_requestedDirection).x * static_cast<float>(m_speed * deltaTime),
                            dirToVector(m_requestedDirection).y * static_cast<float>(m_speed * deltaTime)};
+        if (world.isMoveValid(m_position, wantedMove, *this)) {
+            m_direction = m_requestedDirection;
+        }
     }
-    if (world.isMoveValid(m_position, wantedMove, *this)) {
-        m_direction = m_requestedDirection;
+    if (m_direction == Direction::None) {
+        return;
     }
 
     Vec2D dirVec = dirToVector(m_direction);

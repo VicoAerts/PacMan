@@ -41,6 +41,7 @@ void LevelState::handleEvents(const sf::Event& event) {
             m_world->handleInput(Direction::Right);
             break;
         case sf::Keyboard::Up:
+            std::cout << "Up" << std::endl;
             m_world->handleInput(Direction::Up);
             break;
         case sf::Keyboard::Down:
