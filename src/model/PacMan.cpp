@@ -36,7 +36,7 @@ void model::PacMan::update(const double deltaTime, World& world) {
     // check if move is valid
     if (world.isMoveValid(m_position, move, *this)) {
         m_position.x += move.x;
-        m_position.y -= move.y;
+        m_position.y += move.y;
     } else {
         // we hit a wall, stop moving
         m_direction = Direction::None;

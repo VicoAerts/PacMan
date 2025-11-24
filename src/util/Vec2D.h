@@ -19,9 +19,9 @@ static Vec2D dirToVector(Direction d) {
     case Direction::Right:
         return {1.f, 0.f};
     case Direction::Up:
-        return {0.f, -1.f};
-    case Direction::Down:
         return {0.f, 1.f};
+    case Direction::Down:
+        return {0.f, -1.f};
     default:
         return {0.f, 0.f};
     }
