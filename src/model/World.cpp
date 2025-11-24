@@ -32,7 +32,7 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
     // new position of center of model after move
     Vec2D next;
     next.x = position.x + step.x;
-    next.y = position.y - step.y;
+    next.y = position.y + step.y;
     // tile size in world coordinates
     float tileW = 2.f / worldGrid.getWidth();
     float tileH = 2.f / worldGrid.getHeight();
@@ -45,8 +45,8 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
     // do we move horizontally or vertically?
     bool horizontalMove = (step.x != 0.f);
     bool verticalMove = (step.y != 0.f);
-    float halfHScaled = halfH * 0.75f;
-    float halfWScaled = halfW * 0.75f;
+    float halfHScaled = halfH * 0.8f;
+    float halfWScaled = halfW * 0.8f;
     std::vector<Vec2D> hitboxPoints;
     if (horizontalMove) {
         bool rightMove = step.x > 0;
