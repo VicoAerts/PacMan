@@ -8,7 +8,7 @@
 
 /* Forward declaration */
 namespace model {
-class EntityModel;
+class Entity;
 }
 
 /* Event namespace */
@@ -23,10 +23,10 @@ public:
     /* Event type */
     EventType type;
     /* Entity that triggered event */
-    std::shared_ptr<model::EntityModel> entity;
+    std::shared_ptr<model::Entity> entity;
 
     /* Constructor that makes event depending on the type and the entity that triggered the event */
-    Event(EventType t, std::shared_ptr<model::EntityModel> e = nullptr) : type(t), entity(std::move(e)) {}
+    Event(EventType t, std::shared_ptr<model::Entity> e = nullptr) : type(t), entity(std::move(e)) {}
 };
 
 } // namespace events

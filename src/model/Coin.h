@@ -5,17 +5,13 @@
 
 #ifndef PACMAN_COIN_H
 #define PACMAN_COIN_H
-#include "Entity.h"
+#include "Collectable.h"
 
 namespace model {
-class Coin : public Entity {
+class Coin : public Collectable {
 public:
     /** Coin constructor */
-    explicit Coin(const Vec2D& pos) : Entity(pos) {}
-
-    void update(const double, World&) override {
-        // Coins do not have any update logic as they are static collectibles.
-    }
+    explicit Coin(const Vec2D& pos) : Collectable(pos) {}
 };
 } // namespace model
 

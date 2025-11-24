@@ -88,10 +88,6 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
         if (cell == CellType::WALL) {
             return false;
         }
-        // handle coin
-        // if (cell == CellType::COIN) {
-        //     pass;
-        // }
     }
     return true;
 }
