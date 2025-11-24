@@ -27,6 +27,8 @@ public:
     void handleInput(Direction dir);
     /** check if move is valid in the gridmap*/
     bool isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const;
+    /** let snap to corridor/center of tile*/
+    void snapToCorridor(Vec2D& pos, const Direction dir) const;
 
 private:
     GridMap worldGrid;

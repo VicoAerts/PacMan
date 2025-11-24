@@ -18,7 +18,12 @@ void model::PacMan::update(const double deltaTime, World& world) {
     if (m_requestedDirection != Direction::None && m_requestedDirection != m_direction) {
         wantedMove = Vec2D{dirToVector(m_requestedDirection).x * static_cast<float>(m_speed * deltaTime),
                            dirToVector(m_requestedDirection).y * static_cast<float>(m_speed * deltaTime)};
-        if (world.isMoveValid(m_position, wantedMove, *this)) {
+
+        // first pull position to center to smooth turns
+        Vec2D testPos = m_position;
+        world.snapToCorridor(testPos, m_requestedDirection);
+        if (world.isMoveValid(testPos, wantedMove, *this)) {
+            m_position = testPos;
             m_direction = m_requestedDirection;
         }
     }
@@ -44,7 +49,7 @@ void model::PacMan::update(const double deltaTime, World& world) {
         // we hit a wall, stop moving
         m_direction = Direction::None;
     }
-    // std::cout << "Pacman position: (" << m_position.x << ", " << m_position.y << ")\n";
+    world.snapToCorridor(m_position, m_direction);
 }
 Direction model::PacMan::getDirection() const { return m_direction; }
 void model::PacMan::setDirection(Direction dir) {

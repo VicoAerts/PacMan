@@ -45,8 +45,8 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
     // do we move horizontally or vertically?
     bool horizontalMove = (step.x != 0.f);
     bool verticalMove = (step.y != 0.f);
-    float halfHScaled = halfH * 0.8f;
-    float halfWScaled = halfW * 0.8f;
+    float halfHScaled = halfH * 0.80f;
+    float halfWScaled = halfW * 0.80f;
     std::vector<Vec2D> hitboxPoints;
     if (horizontalMove) {
         bool rightMove = step.x > 0;
@@ -88,8 +88,49 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
         if (cell == CellType::WALL) {
             return false;
         }
+        // handle coin
+        // if (cell == CellType::COIN) {
+        //     pass;
+        // }
     }
     return true;
+}
+void World::snapToCorridor(Vec2D& pos, const Direction dir) const {
+    float tileW = 2.f / worldGrid.getWidth();
+    float tileH = 2.f / worldGrid.getHeight();
+
+    // current tile
+    int col = static_cast<int>((pos.x + 1.f) / tileW);
+    int row = static_cast<int>((pos.y + 1.f) / tileH);
+
+    float centerX = -1.f + (col + 0.5f) * tileW;
+    float centerY = -1.f + (row + 0.5f) * tileH;
+
+    // offset to middle of tile
+    float dx = pos.x - centerX;
+    float dy = pos.y - centerY;
+
+    // max offset to still snap
+    float maxOffsetX = tileW * 0.35f;
+    float maxOffsetY = tileH * 0.35f;
+
+    // avoid jittering by smoothing the snap
+    const float pull = 0.25f; // probeer 0.2–0.3
+    auto smoothSnap = [pull](float pos, float center) { return pos + (center - pos) * pull; };
+
+    // moving horizontal pulls y to center
+    if (dir == Direction::Left || dir == Direction::Right) {
+        if (std::fabs(dy) < maxOffsetY) {
+            pos.y = smoothSnap(pos.y, centerY);
+        }
+    }
+
+    // moving vertical pulls x to center
+    if (dir == Direction::Up || dir == Direction::Down) {
+        if (std::fabs(dx) < maxOffsetX) {
+            pos.x = smoothSnap(pos.x, centerX);
+        }
+    }
 }
 
 void model::World::spawnEntities(AbstractFactory& factory) {
