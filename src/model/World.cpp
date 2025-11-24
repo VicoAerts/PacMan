@@ -99,35 +99,47 @@ void World::snapToCorridor(Vec2D& pos, const Direction dir) const {
     float tileW = 2.f / worldGrid.getWidth();
     float tileH = 2.f / worldGrid.getHeight();
 
-    // current tile
     int col = static_cast<int>((pos.x + 1.f) / tileW);
     int row = static_cast<int>((pos.y + 1.f) / tileH);
 
     float centerX = -1.f + (col + 0.5f) * tileW;
     float centerY = -1.f + (row + 0.5f) * tileH;
 
-    // offset to middle of tile
     float dx = pos.x - centerX;
     float dy = pos.y - centerY;
 
-    // max offset to still snap
+    // max offset
     float maxOffsetX = tileW * 0.35f;
     float maxOffsetY = tileH * 0.35f;
 
-    // avoid jittering by smoothing the snap
-    const float pull = 0.25f; // probeer 0.2–0.3
+    // MIN offset if its closer than this, no need to snap
+    float deadZoneX = tileW * 0.02f;
+    float deadZoneY = tileH * 0.02f;
+
+    // smooth snap factor avoid jumpy behavior
+    const float pull = 0.25f;
     auto smoothSnap = [pull](float pos, float center) { return pos + (center - pos) * pull; };
 
-    // moving horizontal pulls y to center
+    // horizontal movement → y center
     if (dir == Direction::Left || dir == Direction::Right) {
-        if (std::fabs(dy) < maxOffsetY) {
+        float ady = std::fabs(dy);
+
+        if (ady <= deadZoneY) {
+            // in deadzone no need to snap
+        } else if (ady < maxOffsetY) {
+            // in snap zone
             pos.y = smoothSnap(pos.y, centerY);
         }
     }
 
-    // moving vertical pulls x to center
+    // vertical movement → x center
     if (dir == Direction::Up || dir == Direction::Down) {
-        if (std::fabs(dx) < maxOffsetX) {
+        float adx = std::fabs(dx);
+
+        if (adx <= deadZoneX) {
+            // in deadzone no need to snap
+        } else if (adx < maxOffsetX) {
+            // in snap zone
             pos.x = smoothSnap(pos.x, centerX);
         }
     }
