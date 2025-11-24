@@ -29,17 +29,52 @@ void World::handleInput(Direction dir) {
     }
 }
 bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const {
+    // new position of center of model after move
     Vec2D next;
     next.x = position.x + step.x;
-    next.y = position.y + step.y;
-    // determine grid cell
+    next.y = position.y - step.y;
+    // tile size in world coordinates
+    float tileW = 2.f / worldGrid.getWidth();
+    float tileH = 2.f / worldGrid.getHeight();
 
-    CellType cell = worldGrid.getCellType(next.x, next.y);
+    // hitbox half sizes: use same scaling as in the View!
 
-    // check wall
-    // std::cout << "is wall?" << (cell == WALL) << std::endl;
-    if (cell == CellType::WALL) {
-        return false;
+    float halfW = tileW * 0.5f;
+    float halfH = tileH * 0.5f;
+
+    // do we move horizontally or vertically?
+    bool horizontalMove = (step.x != 0.f);
+    bool verticalMove = (step.y != 0.f);
+
+    std::vector<Vec2D> hitboxPoints;
+
+    if (horizontalMove) {
+        bool rightMove = step.x > 0;
+        bool leftMove = step.x < 0;
+        if (rightMove) {
+            hitboxPoints.push_back(Vec2D{next.x + halfW, next.y});
+        }
+        if (leftMove) {
+            hitboxPoints.push_back(Vec2D{next.x - halfW, next.y});
+        }
+    }
+    if (verticalMove) {
+        bool downMove = step.y > 0;
+        bool upMove = step.y < 0;
+        if (downMove) {
+            hitboxPoints.push_back(Vec2D{next.x, next.y + halfH});
+        }
+        if (upMove) {
+            hitboxPoints.push_back(Vec2D{next.x, next.y - halfH});
+        }
+    }
+
+    // Check each corner
+    for (auto& p : hitboxPoints) {
+        CellType cell = worldGrid.getCellType(p.x, p.y);
+        if (cell == CellType::WALL) {
+            return false;
+        }
     }
     return true;
 }

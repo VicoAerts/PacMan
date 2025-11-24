@@ -43,8 +43,8 @@ CellType GridMap::getCellType(float worldX, float worldY) const {
     const float tileWidth = 2.f / static_cast<float>(width);
     const float tileHeight = 2.f / static_cast<float>(height);
 
-    float colF = (worldX + 1.f) / tileWidth - 0.5f;
-    float rowF = (1.f - worldY) / tileHeight - 0.5f;
+    float colF = (worldX + 1.f) / tileWidth;
+    float rowF = (1.f - worldY) / tileHeight;
     int col = static_cast<int>(std::floor(colF));
     int row = static_cast<int>(std::floor(rowF));
 
