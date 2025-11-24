@@ -3,6 +3,9 @@
 //
 
 #include "World.h"
+
+#include <cmath>
+#include <iostream>
 namespace model {
 
 model::World::World(const GridMap& grid, AbstractFactory& factory) : worldGrid(grid) { spawnEntities(factory); }
@@ -25,6 +28,28 @@ void World::handleInput(Direction dir) {
         }
     }
 }
+bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const {
+    Vec2D next;
+    next.x = position.x + step.x;
+    next.y = position.y + step.y;
+    // determine grid cell
+    // wereld → grid: inverse van wat je bij spawn doet
+    int col = static_cast<int>(std::floor(next.x + worldGrid.getWidth() / 2.f));
+    int row = static_cast<int>(std::floor(next.y + worldGrid.getHeight() / 2.f));
+    std::cout << col << " " << row << std::endl;
+    if (row < 0 || row >= worldGrid.getHeight() || col < 0 || col >= worldGrid.getWidth()) {
+        return false;
+    }
+    char cell = worldGrid.getCellType(row, col);
+
+    // check wall
+    // std::cout << "is wall?" << (cell == WALL) << std::endl;
+    if (cell == CellType::WALL) {
+        return false;
+    }
+    return true;
+}
+
 void model::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {
         for (int col = 0; col < worldGrid.getWidth(); col++) {
@@ -34,6 +59,7 @@ void model::World::spawnEntities(AbstractFactory& factory) {
 
             switch (type) {
             case PACMAN_START:
+
                 e = factory.createPacman(row, col);
                 break;
             case GHOST_START:

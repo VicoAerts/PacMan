@@ -31,6 +31,9 @@ public:
     /** gridmap to pixel converts grid coordinates to pixel coordinates*/
     [[nodiscard]] Vec2D gridToPixel(int row, int col) const;
 
+    /**world to grid converts world normalised coordinates to grid coordinates*/
+    [[nodiscard]] Vec2D worldToGrid(float normX, float normY) const;
+
     /** world width in pixels to calculate the size of sprites*/
     [[nodiscard]] float worldWidthToPixels(float worldWidth) const;
 

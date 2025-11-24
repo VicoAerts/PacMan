@@ -33,9 +33,11 @@ void LevelState::handleEvents(const sf::Event& event) {
         switch (event.key.code) {
             // case esc for pause menu can be added here
         case sf::Keyboard::Left:
+            std::cout << "Left" << std::endl;
             m_world->handleInput(Direction::Left);
             break;
         case sf::Keyboard::Right:
+            std::cout << "Right" << std::endl;
             m_world->handleInput(Direction::Right);
             break;
         case sf::Keyboard::Up:

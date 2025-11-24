@@ -30,7 +30,6 @@ private:
     Direction m_direction;
     float m_speed;
     Direction m_requestedDirection;
-    Vec2D m_position;
 };
 } // namespace model
 #endif // PACMAN_PACMAN_H

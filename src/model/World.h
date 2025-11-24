@@ -25,6 +25,8 @@ public:
     [[nodiscard]] const GridMap& getGridMap() const { return worldGrid; }
     /**handle input for pacman*/
     void handleInput(Direction dir);
+    /** check if move is valid in the gridmap*/
+    bool isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const;
 
 private:
     GridMap worldGrid;
