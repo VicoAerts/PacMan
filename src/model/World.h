@@ -14,7 +14,7 @@
 #include <memory>
 #include <vector>
 
-namespace model {
+namespace util {
 class World {
 public:
     /**constructor for world taking a gridmap and a factory to spawn entities*/
@@ -39,5 +39,5 @@ private:
 
     void spawnEntities(AbstractFactory& factory);
 };
-} // namespace model
+} // namespace util
 #endif // PACMAN_WORLD_H

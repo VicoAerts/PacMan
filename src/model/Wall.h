@@ -7,7 +7,7 @@
 #define PACMAN_WALL_H
 #include "Entity.h"
 
-namespace model {
+namespace util {
 class Wall : public Entity {
 public:
     /** Wall constructor*/
@@ -17,5 +17,5 @@ public:
         // keep it for posibility to add moving walls
     }
 };
-} // namespace model
+} // namespace util
 #endif // PACMAN_WALL_H

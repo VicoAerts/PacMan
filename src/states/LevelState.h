@@ -25,7 +25,7 @@ public:
 
 private:
     /** game world for this level */
-    std::unique_ptr<model::World> m_world;
+    std::unique_ptr<util::World> m_world;
     /** camera for this level */
     view::Camera m_camera;
     /** vector of all entity views in this level */

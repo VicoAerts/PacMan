@@ -6,8 +6,10 @@
 
 #include <iostream>
 view::entity::PacManView::PacManView(Vec2D startPos, Direction startDir)
-    : EntityView(), currentPos(startPos), currentDir(startDir) {}
-void view::entity::PacManView::onNotify(const events::Event& event, model::Entity& enitity) {
+    : EntityView(), currentPos(startPos), currentDir(startDir) {
+    frames = util::TextureManager::getPacManFrames(currentDir);
+}
+void view::entity::PacManView::onNotify(const events::Event& event, util::Entity& enitity) {
     switch (event.type) {
     case events::EventType::PositionChanged:
         currentPos = enitity.getPosition();
@@ -15,6 +17,11 @@ void view::entity::PacManView::onNotify(const events::Event& event, model::Entit
         break;
     case events::EventType::DirectionChanged:
         currentDir = event.direction;
+        // update frames for new direction
+        frames = util::TextureManager::getPacManFrames(currentDir);
+        currentFrameIndex = 0;
+        timer = 0.f;
+        needsUpdate = true;
         break;
     default:
         break;
@@ -22,20 +29,35 @@ void view::entity::PacManView::onNotify(const events::Event& event, model::Entit
 }
 void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
     // only do calculations if model changed
-    if (needsUpdate) {
-        auto pixelPos = camera.worldToPixel(currentPos.x, currentPos.y);
-
+    if (!isInitialized) {
         pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, currentDir);
 
-        float tileW = camera.getTileWidthPixels();
         float tileH = camera.getTileHeightPixels();
-
         sf::FloatRect bounds = pacmanSprite.getLocalBounds();
-
         float scale = tileH / bounds.height * 0.75f;
         pacmanSprite.setScale(scale, scale);
-        pacmanSprite.setOrigin(bounds.width / 2, bounds.height / 2);
+        pacmanSprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
+        isInitialized = true;
+        needsUpdate = true;
+    }
+    if (frames.empty()) {
+        window.draw(pacmanSprite);
+    }
 
+    // animation update
+    float deltaTime = util::Clock::getInstance()->getDeltaTime();
+    timer += deltaTime;
+
+    if (timer >= 0.005f) {
+        // use modulo to cycle through frames
+        timer -= 0.005f;
+        currentFrameIndex = (currentFrameIndex + 1) % frames.size();
+    }
+
+    pacmanSprite.setTextureRect(frames[currentFrameIndex]);
+
+    if (needsUpdate) {
+        auto pixelPos = camera.worldToPixel(currentPos.x, currentPos.y);
         pacmanSprite.setPosition(pixelPos.x, pixelPos.y);
         needsUpdate = false;
     }

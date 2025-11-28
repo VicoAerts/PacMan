@@ -6,11 +6,11 @@
 
 #include <cmath>
 #include <iostream>
-namespace model {
+namespace util {
 
-model::World::World(const GridMap& grid, AbstractFactory& factory) : worldGrid(grid) { spawnEntities(factory); }
+util::World::World(const GridMap& grid, AbstractFactory& factory) : worldGrid(grid) { spawnEntities(factory); }
 
-void model::World::update(double deltaTime) {
+void util::World::update(double deltaTime) {
     for (auto& entity : entities) {
         entity->update(deltaTime, *this);
     }
@@ -152,7 +152,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
     }
 }
 
-void model::World::spawnEntities(AbstractFactory& factory) {
+void util::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {
         for (int col = 0; col < worldGrid.getWidth(); col++) {
 
@@ -186,4 +186,4 @@ void model::World::spawnEntities(AbstractFactory& factory) {
         }
     }
 }
-} // namespace model
+} // namespace util

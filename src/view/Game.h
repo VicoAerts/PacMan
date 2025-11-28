@@ -10,7 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <memory>
-namespace model {
+namespace util {
 class World;
 }
 

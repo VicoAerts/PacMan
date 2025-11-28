@@ -7,13 +7,13 @@
 #include "World.h"
 
 #include <iostream>
-model::PacMan::PacMan(const Vec2D& startpos, float speed)
+util::PacMan::PacMan(const Vec2D& startpos, float speed)
     : Entity(startpos), m_speed(speed), m_direction(Direction::None), m_requestedDirection(Direction::None) {
     notify(events::Event{events::EventType::PositionChanged}, *this);
     notify(events::Event{events::EventType::DirectionChanged}, *this);
 }
 
-void model::PacMan::update(const double deltaTime, World& world) {
+void util::PacMan::update(const double deltaTime, World& world) {
     // try to change to the requested direction if possible
     Vec2D currentPos = m_position;
     Vec2D wantedMove;
@@ -58,12 +58,12 @@ void model::PacMan::update(const double deltaTime, World& world) {
     }
     world.handlePacManCollisions(currentPos);
 }
-Direction model::PacMan::getDirection() const { return m_direction; }
-void model::PacMan::setDirection(Direction dir) {
+Direction util::PacMan::getDirection() const { return m_direction; }
+void util::PacMan::setDirection(Direction dir) {
     if (dir != m_direction) {
         m_direction = dir;
         notify(events::Event{events::EventType::DirectionChanged, getDirection()}, *this);
     }
 }
-void model::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }
-void model::PacMan::handleInput(Direction dir) { setRequestedDirection(dir); }
+void util::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }
+void util::PacMan::handleInput(Direction dir) { setRequestedDirection(dir); }

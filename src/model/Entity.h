@@ -8,7 +8,7 @@
 #include "../events/Event.h"
 #include "../util/Vec2D.h"
 #include "Subject.h"
-namespace model {
+namespace util {
 /** Forward declaration of World class */
 class World;
 
@@ -45,5 +45,5 @@ public:
     /** virtual function for collisions*/
     virtual void onCollideWithPacMan() {};
 };
-} // namespace model
+} // namespace util
 #endif // PACMAN_ENITYMODEL_H

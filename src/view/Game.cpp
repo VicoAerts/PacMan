@@ -16,11 +16,11 @@ view::Game::Game() {
 view::Game::~Game() {}
 
 void view::Game::run() {
-    model::Clock::getInstance()->start();
+    util::Clock::getInstance()->start();
     while (window->isOpen()) {
 
-        const double deltaTime = model::Clock::getInstance()->getDeltaTime();
-        model::Clock::getInstance()->start();
+        const double deltaTime = util::Clock::getInstance()->getDeltaTime();
+        util::Clock::getInstance()->start();
 
         handleEvents();
         update(deltaTime);

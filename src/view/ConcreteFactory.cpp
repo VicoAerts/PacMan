@@ -6,9 +6,9 @@
 
 view::ConcreteFactory::ConcreteFactory(sf::RenderWindow& window, Camera& camera) : window(window), camera(camera) {}
 
-std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int col) {
+std::unique_ptr<util::Entity> view::ConcreteFactory::createPacman(int row, int col) {
     Vec2D pos = camera.gridToWorld(row, col);
-    auto model = std::make_unique<model::PacMan>(pos, config::pacman_speed);
+    auto model = std::make_unique<util::PacMan>(pos, config::pacman_speed);
 
     auto view = std::make_unique<view::entity::PacManView>(pos, Direction::None);
     model->attach(*view);
@@ -17,10 +17,10 @@ std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int 
     return model;
 }
 
-std::unique_ptr<model::Entity> view::ConcreteFactory::createGhost(int row, int col) { return nullptr; }
-std::unique_ptr<model::Entity> view::ConcreteFactory::createCoin(int row, int col) {
+std::unique_ptr<util::Entity> view::ConcreteFactory::createGhost(int row, int col) { return nullptr; }
+std::unique_ptr<util::Entity> view::ConcreteFactory::createCoin(int row, int col) {
     Vec2D pos = camera.gridToWorld(row, col);
-    auto model = std::make_unique<model::Coin>(pos);
+    auto model = std::make_unique<util::Coin>(pos);
 
     auto view = std::make_unique<view::entity::CoinView>(pos);
     model->attach(*view);
@@ -28,10 +28,10 @@ std::unique_ptr<model::Entity> view::ConcreteFactory::createCoin(int row, int co
 
     return model;
 }
-std::unique_ptr<model::Entity> view::ConcreteFactory::createFruit(int row, int col) { return nullptr; }
-std::unique_ptr<model::Entity> view::ConcreteFactory::createWall(int row, int col) {
+std::unique_ptr<util::Entity> view::ConcreteFactory::createFruit(int row, int col) { return nullptr; }
+std::unique_ptr<util::Entity> view::ConcreteFactory::createWall(int row, int col) {
     Vec2D pos = camera.gridToWorld(row, col);
-    auto model = std::make_unique<model::Wall>(pos);
+    auto model = std::make_unique<util::Wall>(pos);
 
     auto view = std::make_unique<view::entity::WallView>(pos);
     model->attach(*view);

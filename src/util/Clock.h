@@ -7,7 +7,7 @@
 #ifndef PACMAN_CLOCK_H
 #define PACMAN_CLOCK_H
 #include <chrono>
-namespace model {
+namespace util {
 class Clock {
 private:
     static Clock* _instance;
@@ -29,5 +29,5 @@ public:
 
     Clock& operator=(const Clock&) = delete;
 };
-} // namespace logic
+} // namespace util
 #endif // PACMAN_CLOCK_H

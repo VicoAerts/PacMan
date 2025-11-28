@@ -22,6 +22,9 @@ public:
     /** get textures */
     static sf::Sprite getSprite(spriteType type, Direction dir = Direction::None);
 
+    /** get animation frames for a sprite type and direction */
+    static std::vector<sf::IntRect> getPacManFrames(Direction dir = Direction::None);
+
 private:
     static sf::Texture textureSheet;
     static constexpr int TileSize = 50;

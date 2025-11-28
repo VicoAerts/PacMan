@@ -25,7 +25,7 @@
 #include "PacManView.h"
 #include "WallView.h"
 namespace view {
-class ConcreteFactory : public model::AbstractFactory {
+class ConcreteFactory : public util::AbstractFactory {
 private:
     sf::RenderWindow& window;
     Camera& camera;
@@ -39,11 +39,11 @@ public:
     ~ConcreteFactory() override = default;
 
     /** override all creations from AbstractFactory */
-    std::unique_ptr<model::Entity> createPacman(int row, int col) override;
-    std::unique_ptr<model::Entity> createGhost(int row, int col) override;
-    std::unique_ptr<model::Entity> createCoin(int row, int col) override;
-    std::unique_ptr<model::Entity> createFruit(int row, int col) override;
-    std::unique_ptr<model::Entity> createWall(int row, int col) override;
+    std::unique_ptr<util::Entity> createPacman(int row, int col) override;
+    std::unique_ptr<util::Entity> createGhost(int row, int col) override;
+    std::unique_ptr<util::Entity> createCoin(int row, int col) override;
+    std::unique_ptr<util::Entity> createFruit(int row, int col) override;
+    std::unique_ptr<util::Entity> createWall(int row, int col) override;
 
     /** Get all entity views created by this factory */
     [[nodiscard]] const std::vector<std::unique_ptr<entity::EntityView>>& getEntityViews() const { return entityViews; }

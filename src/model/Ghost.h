@@ -5,7 +5,7 @@
 #ifndef PACMAN_GHOST_H
 #define PACMAN_GHOST_H
 
-namespace model {
+namespace util {
 class Ghost {};
 } // namespace model
 #endif // PACMAN_GHOST_H

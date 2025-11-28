@@ -12,7 +12,7 @@
 #include <functional>
 #include <vector>
 
-namespace model {
+namespace util {
 class Subject {
 private:
     /** subject holds references to all observers, we use reference wrapper because normal pointers Observer* is not

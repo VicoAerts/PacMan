@@ -11,7 +11,7 @@
 
 #include <SFML/Graphics/Glsl.hpp>
 
-namespace model {
+namespace util {
 
 class PacMan : public Entity {
 public:
@@ -33,5 +33,5 @@ private:
     float m_speed;
     Direction m_requestedDirection;
 };
-} // namespace model
+} // namespace util
 #endif // PACMAN_PACMAN_H

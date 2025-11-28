@@ -8,7 +8,7 @@
 view::entity::CoinView::CoinView(Vec2D startPos) : EntityView(), pos(startPos) {
     coinSprite = util::TextureManager::getSprite(spriteType::COIN, Direction::None);
 }
-void view::entity::CoinView::onNotify(const events::Event& event, model::Entity& enitity) {
+void view::entity::CoinView::onNotify(const events::Event& event, util::Entity& enitity) {
     switch (event.type) {
     case events::EventType::CoinEaten:
         isCollected = true;

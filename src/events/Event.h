@@ -9,7 +9,7 @@
 #include <optional>
 
 /* Forward declaration */
-namespace model {
+namespace util {
 class Entity;
 }
 

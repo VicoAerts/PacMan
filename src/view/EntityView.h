@@ -13,7 +13,7 @@
 
 namespace view::entity {
 
-class EntityView : public model::Observer {
+class EntityView : public util::Observer {
 
 public:
     /** Constructor initializing the entity view with its model */
