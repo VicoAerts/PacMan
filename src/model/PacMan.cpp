@@ -14,17 +14,20 @@ model::PacMan::PacMan(const Vec2D& startpos, float speed)
 
 void model::PacMan::update(const double deltaTime, World& world) {
     // try to change to the requested direction if possible
+    Vec2D currentPos = m_position;
     Vec2D wantedMove;
     if (m_requestedDirection != Direction::None && m_requestedDirection != m_direction) {
         wantedMove = Vec2D{dirToVector(m_requestedDirection).x * static_cast<float>(m_speed * deltaTime),
                            dirToVector(m_requestedDirection).y * static_cast<float>(m_speed * deltaTime)};
 
         // first pull position to center to smooth turns
-        Vec2D testPos = m_position;
+        Vec2D testPos = currentPos;
         world.snapToCorridor(testPos, m_requestedDirection);
         if (world.isMoveValid(testPos, wantedMove, *this)) {
-            m_position = testPos;
-            m_direction = m_requestedDirection;
+            currentPos = testPos;
+            world.snapToCorridor(currentPos, m_requestedDirection);
+            setPosition(currentPos);
+            setDirection(m_requestedDirection);
         }
     }
     if (m_direction == Direction::None) {
@@ -43,13 +46,15 @@ void model::PacMan::update(const double deltaTime, World& world) {
     }
     // check if move is valid
     if (world.isMoveValid(m_position, move, *this)) {
-        m_position.x += move.x;
-        m_position.y += move.y;
+        currentPos.x += move.x;
+        currentPos.y += move.y;
+        world.snapToCorridor(currentPos, m_direction);
+        setPosition(currentPos);
+
     } else {
         // we hit a wall, stop moving
         m_direction = Direction::None;
     }
-    world.snapToCorridor(m_position, m_direction);
 }
 Direction model::PacMan::getDirection() const { return m_direction; }
 void model::PacMan::setDirection(Direction dir) {

@@ -9,25 +9,39 @@ view::entity::PacManView::PacManView(model::PacMan& pacmanModel) : EntityView(pa
     pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, pacmanModel.getDirection());
     std::cout << "PacManView pacmanModel addr = " << &pacmanModel << '\n';
 }
-void view::entity::PacManView::onNotify(const events::Event& event) {}
+void view::entity::PacManView::onNotify(const events::Event& event) {
+    switch (event.type) {
+    case events::EventType::PositionChanged:
+    case events::EventType::DirectionChanged:
+        // model changed, we need to update the view
+        needsUpdate = true;
+        break;
+    default:
+        break;
+    }
+}
 void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
-    auto worldPos = pacmanModel.getPosition();
-    // std::cout << "Pacman world pos: (" << worldPos.x << ", " << worldPos.y << ")\n";
-    auto pixelPos = camera.worldToPixel(worldPos.x, worldPos.y);
+    // only do calculations if model changed
+    if (needsUpdate) {
+        auto worldPos = pacmanModel.getPosition();
+        // std::cout << "Pacman world pos: (" << worldPos.x << ", " << worldPos.y << ")\n";
+        auto pixelPos = camera.worldToPixel(worldPos.x, worldPos.y);
 
-    Direction dir = pacmanModel.getDirection();
-    pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, dir);
+        Direction dir = pacmanModel.getDirection();
+        pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, dir);
 
-    float tileW = camera.getTileWidthPixels();
-    float tileH = camera.getTileHeightPixels();
+        float tileW = camera.getTileWidthPixels();
+        float tileH = camera.getTileHeightPixels();
 
-    sf::FloatRect bounds = pacmanSprite.getLocalBounds();
+        sf::FloatRect bounds = pacmanSprite.getLocalBounds();
 
-    float scale = tileH / bounds.height * 0.75f;
-    pacmanSprite.setScale(scale, scale);
-    pacmanSprite.setOrigin(bounds.width / 2, bounds.height / 2);
+        float scale = tileH / bounds.height * 0.75f;
+        pacmanSprite.setScale(scale, scale);
+        pacmanSprite.setOrigin(bounds.width / 2, bounds.height / 2);
 
-    pacmanSprite.setPosition(pixelPos.x, pixelPos.y);
+        pacmanSprite.setPosition(pixelPos.x, pixelPos.y);
+        needsUpdate = false;
+    }
 
     window.draw(pacmanSprite);
 }

@@ -23,6 +23,7 @@ public:
 private:
     model::PacMan& pacmanModel;
     sf::Sprite pacmanSprite;
+    bool needsUpdate = true;
 };
 } // namespace view::entity
 
