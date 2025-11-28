@@ -37,7 +37,7 @@ public:
     void setPosition(const Vec2D& pos) {
         m_position = pos;
         events::Event event{events::EventType::PositionChanged};
-        notify(event);
+        notify(event, *this);
     }
 };
 } // namespace model

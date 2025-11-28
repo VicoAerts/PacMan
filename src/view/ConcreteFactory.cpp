@@ -10,7 +10,7 @@ std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int 
     Vec2D pos = camera.gridToWorld(row, col);
     auto model = std::make_unique<model::PacMan>(pos, config::pacman_speed);
 
-    auto view = std::make_unique<view::entity::PacManView>(*model);
+    auto view = std::make_unique<view::entity::PacManView>(pos, Direction::None);
     model->attach(*view);
     entityViews.push_back(std::move(view));
 
@@ -22,7 +22,7 @@ std::unique_ptr<model::Entity> view::ConcreteFactory::createCoin(int row, int co
     Vec2D pos = camera.gridToWorld(row, col);
     auto model = std::make_unique<model::Coin>(pos);
 
-    auto view = std::make_unique<view::entity::CoinView>(*model);
+    auto view = std::make_unique<view::entity::CoinView>(pos);
     model->attach(*view);
     entityViews.push_back(std::move(view));
 
@@ -33,7 +33,7 @@ std::unique_ptr<model::Entity> view::ConcreteFactory::createWall(int row, int co
     Vec2D pos = camera.gridToWorld(row, col);
     auto model = std::make_unique<model::Wall>(pos);
 
-    auto view = std::make_unique<view::entity::WallView>(*model);
+    auto view = std::make_unique<view::entity::WallView>(pos);
     model->attach(*view);
     entityViews.push_back(std::move(view));
 

@@ -28,7 +28,7 @@ public:
 
 protected:
     /** notify observer about event */
-    void notify(const events::Event& event);
+    void notify(const events::Event& event, Entity& entity);
 };
 } // namespace model
 

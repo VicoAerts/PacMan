@@ -5,15 +5,17 @@
 #include "WallView.h"
 
 #include <iostream>
-view::entity::WallView::WallView(model::Wall& wallModel) : EntityView(wallModel), wallModel(wallModel) {
+view::entity::WallView::WallView(Vec2D startPos) : EntityView(), pos(startPos) {
     // Initialize the wall rectangle shape
     // let the size depend on world size
     wallRect.setFillColor(sf::Color::Blue);
 }
-void view::entity::WallView::onNotify(const events::Event& event) {}
+void view::entity::WallView::onNotify(const events::Event& event,
+                                      model::Entity& enitity) { // no need to handle events for static wall}
+}
 void view::entity::WallView::draw(sf::RenderWindow& window, Camera& camera) {
-    Vec2D worldPos = wallModel.getPosition();
-    Vec2D pixelPos = camera.worldToPixel(worldPos.x, worldPos.y);
+
+    Vec2D pixelPos = camera.worldToPixel(pos.x, pos.y);
 
     // how many pixels per tile
     float width = camera.getTileWidthPixels();

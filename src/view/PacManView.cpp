@@ -5,15 +5,15 @@
 #include "PacManView.h"
 
 #include <iostream>
-view::entity::PacManView::PacManView(model::PacMan& pacmanModel) : EntityView(pacmanModel), pacmanModel(pacmanModel) {
-    pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, pacmanModel.getDirection());
-    std::cout << "PacManView pacmanModel addr = " << &pacmanModel << '\n';
-}
-void view::entity::PacManView::onNotify(const events::Event& event) {
+view::entity::PacManView::PacManView(Vec2D startPos, Direction startDir)
+    : EntityView(), currentPos(startPos), currentDir(startDir) {}
+void view::entity::PacManView::onNotify(const events::Event& event, model::Entity& enitity) {
     switch (event.type) {
     case events::EventType::PositionChanged:
+        currentPos = enitity.getPosition();
+        needsUpdate = true;
     case events::EventType::DirectionChanged:
-        // model changed, we need to update the view
+        currentDir = static_cast<model::PacMan&>(enitity).getDirection();
         needsUpdate = true;
         break;
     default:
@@ -23,12 +23,9 @@ void view::entity::PacManView::onNotify(const events::Event& event) {
 void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
     // only do calculations if model changed
     if (needsUpdate) {
-        auto worldPos = pacmanModel.getPosition();
-        // std::cout << "Pacman world pos: (" << worldPos.x << ", " << worldPos.y << ")\n";
-        auto pixelPos = camera.worldToPixel(worldPos.x, worldPos.y);
+        auto pixelPos = camera.worldToPixel(currentPos.x, currentPos.y);
 
-        Direction dir = pacmanModel.getDirection();
-        pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, dir);
+        pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, currentDir);
 
         float tileW = camera.getTileWidthPixels();
         float tileH = camera.getTileHeightPixels();

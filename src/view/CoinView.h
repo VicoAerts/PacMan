@@ -13,14 +13,15 @@ namespace view::entity {
 class CoinView : public EntityView {
 public:
     /** Constructor initializing the Coin view with its model */
-    explicit CoinView(model::Coin& coinModel);
+    explicit CoinView(Vec2D startPos);
     /** notify coin view about changes in model */
-    void onNotify(const events::Event& event) override;
+    void onNotify(const events::Event& event, model::Entity& entity) override;
     /** draw coin on screen */
     void draw(sf::RenderWindow& window, Camera& camera) override;
 
 private:
-    model::Coin& coinModel;
+    Vec2D pos;
+    bool isCollected = false;
     sf::Sprite coinSprite;
 };
 } // namespace view::entity

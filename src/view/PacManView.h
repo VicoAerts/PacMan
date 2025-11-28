@@ -14,14 +14,15 @@ namespace view::entity {
 class PacManView : public EntityView {
 public:
     /** Constructor initializing the PacMan view with its model */
-    explicit PacManView(model::PacMan& pacmanModel);
+    explicit PacManView(Vec2D startPos, Direction startDir);
     /** notify pacman view about changes in model */
-    void onNotify(const events::Event& event) override;
+    void onNotify(const events::Event& event, model::Entity& entity) override;
     /** draw pacman on screen */
     void draw(sf::RenderWindow& window, Camera& camera) override;
 
 private:
-    model::PacMan& pacmanModel;
+    Vec2D currentPos;
+    Direction currentDir = Direction::None;
     sf::Sprite pacmanSprite;
     bool needsUpdate = true;
 };

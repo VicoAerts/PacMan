@@ -8,12 +8,14 @@
 #include "../events/Event.h"
 
 namespace model {
+class Subject;
+
 class Observer {
 public:
     ~Observer() = default;
 
     /** pure virtual function called by subject when event happens */
-    virtual void onNotify(const events::Event& event) = 0;
+    virtual void onNotify(const events::Event& event, Entity& entity) = 0;
 };
 } // namespace model
 

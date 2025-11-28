@@ -14,12 +14,10 @@
 namespace view::entity {
 
 class EntityView : public model::Observer {
-protected:
-    model::Entity& m_entityModel;
 
 public:
     /** Constructor initializing the entity view with its model */
-    EntityView(model::Entity& entity) : m_entityModel(entity){};
+    EntityView() = default;
     /** Virtual destructor */
     virtual ~EntityView() = default;
     /** Pure virtual draw method to be implemented by derived classes */

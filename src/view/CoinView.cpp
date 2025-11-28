@@ -5,14 +5,16 @@
 #include "CoinView.h"
 
 #include <iostream>
-view::entity::CoinView::CoinView(model::Coin& coinModel) : EntityView(coinModel), coinModel(coinModel) {
-    coinSprite = util::TextureManager::getSprite(spriteType::COIN);
+view::entity::CoinView::CoinView(Vec2D startPos) : EntityView(), pos(startPos) {
+    coinSprite = util::TextureManager::getSprite(spriteType::COIN, Direction::None);
 }
-void view::entity::CoinView::onNotify(const events::Event& event) {}
+void view::entity::CoinView::onNotify(const events::Event& event, model::Entity& enitity) {}
 void view::entity::CoinView::draw(sf::RenderWindow& window, Camera& camera) {
-    if (!coinModel.isCollected()) {
-        auto worldPos = coinModel.getPosition();
-        auto pixelPos = camera.worldToPixel(worldPos.x, worldPos.y);
+
+    if (!isCollected) {
+        std::cout << "CoinView::draw" << !isCollected << std::endl;
+
+        auto pixelPos = camera.worldToPixel(pos.x, pos.y);
 
         float tileW = camera.getTileWidthPixels();
         float tileH = camera.getTileHeightPixels();

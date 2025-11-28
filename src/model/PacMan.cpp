@@ -9,7 +9,8 @@
 #include <iostream>
 model::PacMan::PacMan(const Vec2D& startpos, float speed)
     : Entity(startpos), m_speed(speed), m_direction(Direction::None), m_requestedDirection(Direction::None) {
-    std::cout << "PacMan MODEL addr = " << this << '\n';
+    notify(events::Event{events::EventType::PositionChanged}, *this);
+    notify(events::Event{events::EventType::DirectionChanged}, *this);
 }
 
 void model::PacMan::update(const double deltaTime, World& world) {
@@ -61,7 +62,7 @@ void model::PacMan::setDirection(Direction dir) {
     if (dir != m_direction) {
         m_direction = dir;
         events::Event event{events::EventType::DirectionChanged};
-        notify(event);
+        notify(event, *this);
     }
 }
 void model::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }
