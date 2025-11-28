@@ -19,8 +19,7 @@ void World::handleInput(Direction dir) {
     // avoid Pacman*
     for (auto& entity : entities) {
         try {
-            // cast to refernece
-            PacMan& pac = dynamic_cast<PacMan&>(*entity);
+            PacMan& pac = static_cast<PacMan&>(*entity);
             pac.setRequestedDirection(dir);
             return;
         } catch (const std::bad_cast&) {
