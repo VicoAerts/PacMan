@@ -8,13 +8,15 @@
 view::entity::PacManView::PacManView(Vec2D startPos, Direction startDir)
     : EntityView(), currentPos(startPos), currentDir(startDir) {}
 void view::entity::PacManView::onNotify(const events::Event& event, model::Entity& enitity) {
+    std::cout << "PacManView::onNotify EventType -> " << static_cast<int>(event.type) << '\n';
     switch (event.type) {
     case events::EventType::PositionChanged:
         currentPos = enitity.getPosition();
         needsUpdate = true;
+        break;
     case events::EventType::DirectionChanged:
-        currentDir = static_cast<model::PacMan&>(enitity).getDirection();
-        needsUpdate = true;
+        std::cout << "PacManView::onNotify DirectionChanged -> " << (int)event.direction << '\n';
+        currentDir = event.direction;
         break;
     default:
         break;

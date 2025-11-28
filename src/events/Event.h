@@ -4,7 +4,9 @@
  */
 #ifndef PACMAN_EVENT_H
 #define PACMAN_EVENT_H
+#include "../util/Direction.h"
 #include <memory>
+#include <optional>
 
 /* Forward declaration */
 namespace model {
@@ -22,11 +24,11 @@ class Event {
 public:
     /* Event type */
     EventType type;
-    /* Entity that triggered event */
-    std::shared_ptr<model::Entity> entity;
+    /* optional direction associated with the event */
+    Direction direction;
 
     /* Constructor that makes event depending on the type and the entity that triggered the event */
-    Event(EventType t, std::shared_ptr<model::Entity> e = nullptr) : type(t), entity(std::move(e)) {}
+    Event(EventType t, Direction direction = Direction::None) : type(t), direction(direction){};
 };
 
 } // namespace events

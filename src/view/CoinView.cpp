@@ -12,7 +12,6 @@ void view::entity::CoinView::onNotify(const events::Event& event, model::Entity&
 void view::entity::CoinView::draw(sf::RenderWindow& window, Camera& camera) {
 
     if (!isCollected) {
-        std::cout << "CoinView::draw" << !isCollected << std::endl;
 
         auto pixelPos = camera.worldToPixel(pos.x, pos.y);
 
