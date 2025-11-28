@@ -56,6 +56,7 @@ void model::PacMan::update(const double deltaTime, World& world) {
         // we hit a wall, stop moving
         m_direction = Direction::None;
     }
+    world.handlePacManCollisions(currentPos);
 }
 Direction model::PacMan::getDirection() const { return m_direction; }
 void model::PacMan::setDirection(Direction dir) {

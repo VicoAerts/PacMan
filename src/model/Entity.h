@@ -41,6 +41,9 @@ public:
     }
     /** virtual function to help input handling*/
     virtual void handleInput(Direction dir) {};
+
+    /** virtual function for collisions*/
+    virtual void onCollideWithPacMan() {};
 };
 } // namespace model
 #endif // PACMAN_ENITYMODEL_H

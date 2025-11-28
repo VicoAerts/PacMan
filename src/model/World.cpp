@@ -133,6 +133,24 @@ void World::snapToCorridor(Vec2D& pos, const Direction dir) const {
         }
     }
 }
+void World::handlePacManCollisions(const Vec2D& pos) {
+    float tileW = 2.f / worldGrid.getWidth();
+    float tileH = 2.f / worldGrid.getHeight();
+
+    // welke tile is het middelpunt van Pacman?
+    int col = static_cast<int>((pos.x + 1.f) / tileW);
+    int row = static_cast<int>((pos.y + 1.f) / tileH);
+
+    for (auto& entity : entities) {
+        Vec2D ePos = entity->getPosition();
+        int eCol = static_cast<int>((ePos.x + 1.f) / tileW);
+        int eRow = static_cast<int>((ePos.y + 1.f) / tileH);
+
+        if (eCol == col && eRow == row) {
+            entity->onCollideWithPacMan();
+        }
+    }
+}
 
 void model::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {

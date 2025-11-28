@@ -17,10 +17,19 @@ public:
     /** Check if the collectable has been collected */
     [[nodiscard]] bool isCollected() const { return m_collected; }
     /** Set the collectable as collected */
-    void collect() { m_collected = true; };
+    void collect() {
+        m_collected = true;
+        events::Event event{events::EventType::CoinEaten};
+        notify(event, *this);
+    };
     /** Update method for collectable (no-op) */
     void update(const double, World&) override {
         // Coins do not have any update logic as they are static collectibles.
+    }
+    void onCollideWithPacMan() override {
+        if (!m_collected) {
+            collect();
+        }
     }
 };
 } // namespace model

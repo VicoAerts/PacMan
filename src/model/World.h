@@ -29,6 +29,8 @@ public:
     bool isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const;
     /** let snap to corridor/center of tile*/
     void snapToCorridor(Vec2D& pos, const Direction dir) const;
+    /** collect collectable at position*/
+    void handlePacManCollisions(const Vec2D& pos);
 
 private:
     GridMap worldGrid;
