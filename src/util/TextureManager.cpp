@@ -118,15 +118,16 @@ std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
         baseRow = 10;
         break;
     case Direction::None:
-        baseRow = 0;
+        baseRow = 1;
         break;
     }
 
     int left = 3, top = 5, right = 14, bottom = 12;
     std::vector<sf::IntRect> frames;
-    frames.reserve(3);
+    frames.reserve(4);
 
     // 3 rows of animation frames
+    // 4 to make smooth loop close , half open , fully open , half open and again
     for (int i = 0; i < 3; ++i) {
         int row = baseRow + (i - 1);
         int width = TileSize - left - right;
@@ -134,5 +135,12 @@ std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
         sf::IntRect rect(col * TileSize + left, row * TileSize + top, width, height);
         frames.push_back(rect);
     }
+    // add the half open frame again to loop smoothly
+    int row = baseRow + 1;
+    int width = TileSize - left - right;
+    int height = TileSize - top - bottom;
+    sf::IntRect rect(col * TileSize + left, row * TileSize + top, width, height);
+    frames.push_back(rect);
+
     return frames;
 }

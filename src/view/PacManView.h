@@ -23,6 +23,7 @@ public:
 
 private:
     Vec2D currentPos;
+    Vec2D previousPos;
     Direction currentDir = Direction::None;
     sf::Sprite pacmanSprite;
     bool needsUpdate = true;
