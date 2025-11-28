@@ -18,13 +18,7 @@ void model::World::update(double deltaTime) {
 void World::handleInput(Direction dir) {
     // avoid Pacman*
     for (auto& entity : entities) {
-        try {
-            PacMan& pac = static_cast<PacMan&>(*entity);
-            pac.setRequestedDirection(dir);
-            return;
-        } catch (const std::bad_cast&) {
-            // this is no Pacman, continue searching
-        }
+        entity->handleInput(dir);
     }
 }
 bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const {

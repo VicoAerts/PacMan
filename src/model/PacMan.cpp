@@ -66,3 +66,4 @@ void model::PacMan::setDirection(Direction dir) {
     }
 }
 void model::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }
+void model::PacMan::handleInput(Direction dir) { setRequestedDirection(dir); }

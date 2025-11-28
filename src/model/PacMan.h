@@ -25,6 +25,8 @@ public:
     void setDirection(Direction dir);
     /** set requested direction of pacman*/
     void setRequestedDirection(Direction direction);
+    /** hanlde input for pacman*/
+    void handleInput(Direction dir) override;
 
 private:
     Direction m_direction;

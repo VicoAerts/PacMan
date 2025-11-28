@@ -39,6 +39,8 @@ public:
         events::Event event{events::EventType::PositionChanged};
         notify(event, *this);
     }
+    /** virtual function to help input handling*/
+    virtual void handleInput(Direction dir) {};
 };
 } // namespace model
 #endif // PACMAN_ENITYMODEL_H
