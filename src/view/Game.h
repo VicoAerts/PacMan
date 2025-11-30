@@ -6,11 +6,12 @@
 #ifndef PACMAN_GAME_H
 #define PACMAN_GAME_H
 
+#include "../model/Score.h"
 #include "../states/StateManager.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <memory>
-namespace util {
+namespace model {
 class World;
 }
 
@@ -23,6 +24,9 @@ class Game {
 
     // state manager, elke state heeft pointer naar deze statemanager
     std::unique_ptr<state::StateManager> stateManager;
+
+    /** score of the player */
+    model::Score playerScore;
 
 public:
     /**

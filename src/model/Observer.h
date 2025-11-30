@@ -7,7 +7,7 @@
 #define PACMAN_OBSERVER_H
 #include "../events/Event.h"
 
-namespace util {
+namespace model {
 class Subject;
 
 class Observer {

@@ -4,9 +4,9 @@
 
 #include "TextureManager.h"
 
-sf::Texture util::TextureManager::textureSheet;
-constexpr int util::TextureManager::TileSize;
-void util::TextureManager::init(const std::string& id, const std::string& filename) {
+sf::Texture model::TextureManager::textureSheet;
+constexpr int model::TextureManager::TileSize;
+void model::TextureManager::init(const std::string& id, const std::string& filename) {
     if (!textureSheet.loadFromFile("../assets/" + filename)) {
         throw std::runtime_error("Could not load texture sheet: " + filename);
     }
@@ -24,7 +24,7 @@ sf::IntRect cropRect(int col, int row, int TileSize) {
 
     return rect;
 }
-sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
+sf::Sprite model::TextureManager::getSprite(spriteType type, Direction dir) {
     // coordinates on the sprite sheet
     int col = 0;
     int row = 0;
@@ -100,7 +100,7 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
     sprite.setOrigin(width / 2.f, height / 2.f);
     return sprite;
 }
-std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
+std::vector<sf::IntRect> model::TextureManager::getPacManFrames(Direction dir) {
     int col = 17;
 
     int baseRow = 1;

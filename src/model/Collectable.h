@@ -6,7 +6,7 @@
 #define PACMAN_COLLECTABLE_H
 #include "Entity.h"
 
-namespace util {
+namespace model {
 class Collectable : public Entity {
 private:
     bool m_collected;
@@ -32,6 +32,6 @@ public:
         }
     }
 };
-} // namespace util
+} // namespace model
 
 #endif // PACMAN_COLLECTABLE_H

@@ -37,6 +37,8 @@ SET(LOGIC_SRC
         src/util/Direction.h
         src/model/Coin.cpp
         src/model/Coin.h
+        src/model/Score.cpp
+        src/model/Score.h
 
 )
 ADD_LIBRARY(PacMan STATIC ${LOGIC_SRC})

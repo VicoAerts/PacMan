@@ -12,7 +12,7 @@
 #include "Entity.h"
 #include <memory>
 
-namespace util {
+namespace model {
 class AbstractFactory {
 public:
     virtual ~AbstractFactory() = default;

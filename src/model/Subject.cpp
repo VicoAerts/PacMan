@@ -3,7 +3,7 @@
 //
 
 #include "Subject.h"
-namespace util {
+namespace model {
 void Subject::attach(Observer& observer) { observers.push_back(observer); }
 void Subject::detach(Observer& observer) {
     auto it = observers.begin();

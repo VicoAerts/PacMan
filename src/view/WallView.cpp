@@ -11,7 +11,7 @@ view::entity::WallView::WallView(Vec2D startPos) : EntityView(), pos(startPos) {
     wallRect.setFillColor(sf::Color::Blue);
 }
 void view::entity::WallView::onNotify(const events::Event& event,
-                                      util::Entity& enitity) { // no need to handle events for static wall}
+                                      model::Entity& enitity) { // no need to handle events for static wall}
 }
 void view::entity::WallView::draw(sf::RenderWindow& window, Camera& camera) {
 

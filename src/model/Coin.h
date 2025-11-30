@@ -7,12 +7,12 @@
 #define PACMAN_COIN_H
 #include "Collectable.h"
 
-namespace util {
+namespace model {
 class Coin : public Collectable {
 public:
     /** Coin constructor */
     explicit Coin(const Vec2D& pos) : Collectable(pos) {}
 };
-} // namespace util
+} // namespace model
 
 #endif // PACMAN_COIN_H
