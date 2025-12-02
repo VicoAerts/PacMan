@@ -29,6 +29,12 @@ LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
     for (auto& entity : m_factory.getEntityViews()) {
         m_entityViews.push_back(std::move(const_cast<std::unique_ptr<view::entity::EntityView>&>(entity)));
     }
+    // 6. setup score text
+    util::TextureManager::loadScoreFont();
+    scoreText.setFont(util::TextureManager::getScoreFont());
+    scoreText.setCharacterSize(24);
+    scoreText.setFillColor(sf::Color::White);
+    scoreText.setPosition(20.f, 10.f);
 }
 void LevelState::handleEvents(const sf::Event& event) {
     if (event.type == sf::Event::KeyPressed) {
@@ -66,7 +72,8 @@ void LevelState::render(sf::RenderWindow& window) {
     for (const auto& v : m_entityViews) {
         v->draw(window, m_camera);
     }
-
+    scoreText.setString("Score: " + std::to_string(playerScore.getScore()));
+    window.draw(scoreText);
     window.display();
 }
 } // namespace view::state

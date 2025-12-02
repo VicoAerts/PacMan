@@ -6,6 +6,7 @@
 
 sf::Texture util::TextureManager::textureSheet;
 constexpr int util::TextureManager::TileSize;
+sf::Font util::TextureManager::scoreFont;
 void util::TextureManager::init(const std::string& id, const std::string& filename) {
     if (!textureSheet.loadFromFile("../assets/" + filename)) {
         throw std::runtime_error("Could not load texture sheet: " + filename);
@@ -144,3 +145,11 @@ std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
 
     return frames;
 }
+
+void util::TextureManager::loadScoreFont() {
+
+    if (!scoreFont.loadFromFile("../assets/emulogic-font/Emulogic-zrEw.ttf")) {
+        throw std::runtime_error("Could not load score font");
+    }
+}
+const sf::Font& util::TextureManager::getScoreFont() { return scoreFont; }

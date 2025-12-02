@@ -24,9 +24,15 @@ public:
 
     /** get animation frames for a sprite type and direction */
     static std::vector<sf::IntRect> getPacManFrames(Direction dir = Direction::None);
+    /** load the score font */
+    static void loadScoreFont();
+
+    /** get the score font */
+    static const sf::Font& getScoreFont();
 
 private:
     static sf::Texture textureSheet;
+    static sf::Font scoreFont;
     static constexpr int TileSize = 50;
 };
 

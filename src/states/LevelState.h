@@ -32,6 +32,8 @@ private:
     std::vector<std::unique_ptr<view::entity::EntityView>> m_entityViews;
     /** concrete factory for creating entities */
     view::ConcreteFactory m_factory;
+    /** score text to display the player's score */
+    sf::Text scoreText;
 };
 } // namespace view::state
 
