@@ -7,7 +7,7 @@
 #include <iostream>
 view::entity::PacManView::PacManView(Vec2D startPos, Direction startDir)
     : EntityView(), currentPos(startPos), currentDir(startDir), previousPos(startPos) {
-    frames = model::TextureManager::getPacManFrames(currentDir);
+    frames = util::TextureManager::getPacManFrames(currentDir);
 }
 void view::entity::PacManView::onNotify(const events::Event& event, model::Entity& enitity) {
     switch (event.type) {
@@ -18,7 +18,7 @@ void view::entity::PacManView::onNotify(const events::Event& event, model::Entit
     case events::EventType::DirectionChanged:
         currentDir = event.direction;
         // update frames for new direction
-        frames = model::TextureManager::getPacManFrames(currentDir);
+        frames = util::TextureManager::getPacManFrames(currentDir);
         currentFrameIndex = 0;
         timer = 0.f;
         needsUpdate = true;
@@ -30,7 +30,7 @@ void view::entity::PacManView::onNotify(const events::Event& event, model::Entit
 void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
     // only do calculations if model changed
     if (!isInitialized) {
-        pacmanSprite = model::TextureManager::getSprite(spriteType::PACMAN, currentDir);
+        pacmanSprite = util::TextureManager::getSprite(spriteType::PACMAN, currentDir);
 
         float tileH = camera.getTileHeightPixels();
         sf::FloatRect bounds = pacmanSprite.getLocalBounds();
@@ -47,7 +47,7 @@ void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
 
     if (isMoving) {
         // animation update if moving
-        float deltaTime = model::Clock::getInstance()->getDeltaTime();
+        float deltaTime = util::Clock::getInstance()->getDeltaTime();
         timer += deltaTime;
 
         if (timer >= 0.0001f) {

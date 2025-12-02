@@ -20,7 +20,7 @@ class StateManager {
 
 public:
     /** constructor of statemanager that starts of with the menustate*/
-    explicit StateManager(sf::RenderWindow& window);
+    explicit StateManager(sf::RenderWindow& window, model::Score& playerScore);
 
     /** destructor of statemanager that cleans up all states */
     ~StateManager() = default;

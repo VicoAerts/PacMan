@@ -6,7 +6,7 @@
 
 #include <iostream>
 view::entity::CoinView::CoinView(Vec2D startPos) : EntityView(), pos(startPos) {
-    coinSprite = model::TextureManager::getSprite(spriteType::COIN, Direction::None);
+    coinSprite = util::TextureManager::getSprite(spriteType::COIN, Direction::None);
 }
 void view::entity::CoinView::onNotify(const events::Event& event, model::Entity& enitity) {
     switch (event.type) {

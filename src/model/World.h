@@ -15,10 +15,11 @@
 #include <vector>
 
 namespace model {
+class Score;
 class World {
 public:
     /**constructor for world taking a gridmap and a factory to spawn entities*/
-    World(const GridMap& map, AbstractFactory& factory);
+    World(const GridMap& map, AbstractFactory& factory, Score& playerScore);
     /**update all entities in the world*/
     void update(double deltaTime);
     /**get the gridmap of the world*/

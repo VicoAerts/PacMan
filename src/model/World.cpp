@@ -4,11 +4,18 @@
 
 #include "World.h"
 
+#include "Score.h"
+
 #include <cmath>
 #include <iostream>
 namespace model {
 
-model::World::World(const GridMap& grid, AbstractFactory& factory) : worldGrid(grid) { spawnEntities(factory); }
+model::World::World(const GridMap& grid, AbstractFactory& factory, Score& playerScore) : worldGrid(grid) {
+    spawnEntities(factory);
+    for (auto& entity : entities) {
+        entity->attach(playerScore);
+    }
+}
 
 void model::World::update(double deltaTime) {
     for (auto& entity : entities) {

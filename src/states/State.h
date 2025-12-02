@@ -6,6 +6,9 @@
 #define PACMAN_STATE_H
 #include <SFML/Graphics.hpp>
 
+namespace model {
+class Score;
+}
 /**
  * @namespace view::state
  * @brief Contains all game state classes.
@@ -16,10 +19,13 @@ class StateManager; // Forward declaration
 class State {
 protected:
     StateManager& stateManager;
+    /** player score reference for states that need it */
+    model::Score& playerScore;
 
 public:
     /**  constructor */
-    explicit State(StateManager& stateManager) : stateManager(stateManager) {}
+    explicit State(StateManager& stateManager, model::Score& playerScore)
+        : stateManager(stateManager), playerScore(playerScore) {}
     /** Virtual destructor to ensure proper cleanup of derived classes */
     virtual ~State() = default;
 

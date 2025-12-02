@@ -13,7 +13,7 @@ void model::Score::onNotify(const events::Event& event, Entity& entity) {
     }
 }
 void model::Score::handleCoinCollected() {
-    float elapsedTime = model::Clock::getInstance()->getDeltaTime();
+    float elapsedTime = util::Clock::getInstance()->getDeltaTime();
     timeSinceLastCoin += elapsedTime;
 
     // calculate bonus based on time since last coin collected

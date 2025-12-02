@@ -12,7 +12,7 @@
 namespace view::state {
 class MenuState : public State {
 public:
-    explicit MenuState(StateManager& stateManager);
+    explicit MenuState(StateManager& stateManager, model::Score& playerScore);
     ~MenuState() override = default;
 
     void handleEvents(const sf::Event& event) override;

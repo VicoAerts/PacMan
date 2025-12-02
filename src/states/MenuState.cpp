@@ -3,8 +3,10 @@
 //
 #include "MenuState.h"
 
+#include "../model/Score.h"
+
 namespace view::state {
-MenuState::MenuState(StateManager& stateManager) : State(stateManager) {
+MenuState::MenuState(StateManager& stateManager, model::Score& playerScore) : State(stateManager, playerScore) {
     if (!backgroundTexture.loadFromFile("../assets/pacmenu.png")) {
         throw std::runtime_error("Failed to load assets/pacmenu.png");
     }
@@ -16,7 +18,7 @@ void MenuState::handleEvents(const sf::Event& event) {
     if (event.type == sf::Event::KeyPressed) {
         if (event.key.code == sf::Keyboard::Enter) {
             // Switch to the playing state when Enter is pressed
-            stateManager.switchState(std::make_unique<LevelState>(stateManager));
+            stateManager.switchState(std::make_unique<LevelState>(stateManager, playerScore));
         }
     }
 }

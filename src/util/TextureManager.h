@@ -13,7 +13,7 @@
 enum class Direction;
 enum class spriteType { PACMAN, RED_GHOST, COIN, FRUIT, WALL };
 
-namespace model {
+namespace util {
 class TextureManager {
 public:
     /** Load all textures from sprite sheet */
@@ -30,6 +30,6 @@ private:
     static constexpr int TileSize = 50;
 };
 
-} // namespace model
+} // namespace util
 
 #endif // PACMAN_TEXTUREMANAGER_H

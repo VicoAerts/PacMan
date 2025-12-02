@@ -3,11 +3,14 @@
 //
 
 #include "StateManager.h"
+#include "../model/Score.h"
 #include "MenuState.h"
 
 namespace view::state {
 
-StateManager::StateManager(sf::RenderWindow& window) : window(window) { pushState(std::make_unique<MenuState>(*this)); }
+StateManager::StateManager(sf::RenderWindow& window, model::Score& playerScore) : window(window) {
+    pushState(std::make_unique<MenuState>(*this, playerScore));
+}
 
 // use move because unique_ptr
 void StateManager::pushState(std::unique_ptr<State> state) { statesStack.push(std::move(state)); }

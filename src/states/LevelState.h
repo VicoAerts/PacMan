@@ -14,7 +14,7 @@
 namespace view::state {
 class LevelState : public State {
 public:
-    explicit LevelState(StateManager& stateManager);
+    explicit LevelState(StateManager& stateManager, model::Score& playerScore);
     ~LevelState() override = default;
 
     void handleEvents(const sf::Event& event) override;
