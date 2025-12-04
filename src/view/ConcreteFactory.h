@@ -40,7 +40,7 @@ public:
     ~ConcreteFactory() override = default;
 
     /** override all creations from AbstractFactory */
-    std::unique_ptr<model::Entity> createPacman(int row, int col) override;
+    std::unique_ptr<model::PacMan> createPacman(int row, int col) override;
     std::unique_ptr<model::Entity> createGhost(int row, int col, int ghostId) override;
     std::unique_ptr<model::Entity> createCoin(int row, int col) override;
     std::unique_ptr<model::Entity> createFruit(int row, int col) override;

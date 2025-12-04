@@ -32,11 +32,14 @@ public:
     void snapToCorridor(Vec2D& pos, const Direction dir) const;
     /** collect collectable at position*/
     void handlePacManCollisions(const Vec2D& pos);
+    /** get pacman entity*/
+    Entity& getPacMan();
 
 private:
     GridMap worldGrid;
     // Other members like entities, score, lives, etc.
     std::vector<std::unique_ptr<Entity>> entities;
+    std::unique_ptr<PacMan> pacMan;
 
     void spawnEntities(AbstractFactory& factory);
 };

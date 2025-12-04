@@ -15,18 +15,22 @@ model::World::World(const GridMap& grid, AbstractFactory& factory, Score& player
     for (auto& entity : entities) {
         entity->attach(playerScore);
     }
+    // attach score to pacman as well
+    pacMan->attach(playerScore);
 }
 
 void model::World::update(double deltaTime) {
     for (auto& entity : entities) {
         entity->update(deltaTime, *this);
     }
+    // update pacman separately
+    pacMan->update(deltaTime, *this);
 }
 void World::handleInput(Direction dir) {
-    // avoid Pacman*
     for (auto& entity : entities) {
         entity->handleInput(dir);
     }
+    pacMan->handleInput(dir);
 }
 bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& entity) const {
     // new position of center of model after move
@@ -158,6 +162,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
         }
     }
 }
+Entity& World::getPacMan() { return *pacMan; }
 
 void model::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {
@@ -169,7 +174,8 @@ void model::World::spawnEntities(AbstractFactory& factory) {
             switch (type) {
             case PACMAN_START:
 
-                e = factory.createPacman(row, col);
+                pacMan = factory.createPacman(row, col);
+                e = nullptr; // pacman is stored separately
                 break;
             case GHOST_START1:
                 e = factory.createGhost(row, col, 1);
@@ -196,7 +202,7 @@ void model::World::spawnEntities(AbstractFactory& factory) {
                 break;
             }
 
-            if (e) { // ⬅️ alleen als niet null
+            if (e) {
                 entities.push_back(std::move(e));
             }
         }

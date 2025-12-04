@@ -6,7 +6,7 @@
 
 view::ConcreteFactory::ConcreteFactory(sf::RenderWindow& window, Camera& camera) : window(window), camera(camera) {}
 
-std::unique_ptr<model::Entity> view::ConcreteFactory::createPacman(int row, int col) {
+std::unique_ptr<model::PacMan> view::ConcreteFactory::createPacman(int row, int col) {
     Vec2D pos = camera.gridToWorld(row, col);
     auto model = std::make_unique<model::PacMan>(pos, config::pacman_speed);
 
