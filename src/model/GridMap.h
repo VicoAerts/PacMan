@@ -10,7 +10,7 @@
 #include <string>
 #include <vector>
 
-enum CellType { EMPTY, WALL, COIN, FRUIT, PACMAN_START, GHOST_START };
+enum CellType { EMPTY, WALL, COIN, FRUIT, PACMAN_START, GHOST_START1, GHOST_START2, GHOST_START3, GHOST_START4 };
 class GridMap {
 public:
     GridMap() = default;

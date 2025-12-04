@@ -20,7 +20,7 @@ constexpr unsigned int max_fps = 60;
 
 // --- Gameplay ---
 constexpr float pacman_speed = 0.30f;
-//  constexpr float ghost_base_speed = ;
+constexpr float ghost_base_speed = 0.25f;
 //  constexpr float fear_duration_s = ;
 
 // --- highscore files---

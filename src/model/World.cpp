@@ -171,8 +171,17 @@ void model::World::spawnEntities(AbstractFactory& factory) {
 
                 e = factory.createPacman(row, col);
                 break;
-            case GHOST_START:
-                e = factory.createGhost(row, col);
+            case GHOST_START1:
+                e = factory.createGhost(row, col, 1);
+                break;
+            case GHOST_START2:
+                e = factory.createGhost(row, col, 2);
+                break;
+            case GHOST_START3:
+                e = factory.createGhost(row, col, 3);
+                break;
+            case GHOST_START4:
+                e = factory.createGhost(row, col, 4);
                 break;
             case COIN:
                 e = factory.createCoin(row, col);

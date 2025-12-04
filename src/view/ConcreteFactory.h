@@ -22,6 +22,7 @@
 #include "Camera.h"
 #include "CoinView.h"
 #include "EntityView.h"
+#include "GhostView.h"
 #include "PacManView.h"
 #include "WallView.h"
 namespace view {
@@ -40,7 +41,7 @@ public:
 
     /** override all creations from AbstractFactory */
     std::unique_ptr<model::Entity> createPacman(int row, int col) override;
-    std::unique_ptr<model::Entity> createGhost(int row, int col) override;
+    std::unique_ptr<model::Entity> createGhost(int row, int col, int ghostId) override;
     std::unique_ptr<model::Entity> createCoin(int row, int col) override;
     std::unique_ptr<model::Entity> createFruit(int row, int col) override;
     std::unique_ptr<model::Entity> createWall(int row, int col) override;

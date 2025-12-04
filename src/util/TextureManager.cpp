@@ -25,7 +25,7 @@ sf::IntRect cropRect(int col, int row, int TileSize) {
 
     return rect;
 }
-sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
+sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir, int ghostId) {
     // coordinates on the sprite sheet
     int col = 0;
     int row = 0;
@@ -37,9 +37,29 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
         col = 17;
         row = 0;
         break;
-    case spriteType::RED_GHOST:
-        col = 13;
-        row = 0;
+    case spriteType::GHOST:
+        switch (ghostId) {
+        case 1:
+            col = 13;
+            row = 0;
+            break;
+        case 2:
+            col = 14;
+            row = 0;
+            break;
+        case 3:
+            col = 15;
+            row = 0;
+            break;
+        case 4:
+            col = 16;
+            row = 0;
+            break;
+        default:
+            col = 13;
+            row = 0;
+            break;
+        }
         break;
     case spriteType::COIN:
         col = 8;
@@ -67,22 +87,22 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir) {
         }
     }
     // adjust row based on direction for ghost
-    if (type == spriteType::RED_GHOST /* of alle andere ghots want op zelfde rij zelfde kant*/) {
+    if (type == spriteType::GHOST) {
         switch (dir) {
         case Direction::Right:
-            row = 2;
+            row = 0;
             break;
         case Direction::Down:
-            row = 3;
+            row = 2;
             break;
         case Direction::Left:
-            row = 5;
+            row = 4;
             break;
         case Direction::Up:
-            row = 7;
+            row = 6;
             break;
         case Direction::None:
-            row = 1;
+            row = 0;
             break;
         }
     }
@@ -145,6 +165,7 @@ std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
 
     return frames;
 }
+std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int ghostId) {}
 
 void util::TextureManager::loadScoreFont() {
 

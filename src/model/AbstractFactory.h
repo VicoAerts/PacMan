@@ -18,7 +18,7 @@ public:
     virtual ~AbstractFactory() = default;
 
     virtual std::unique_ptr<Entity> createPacman(int row, int col) = 0;
-    virtual std::unique_ptr<Entity> createGhost(int row, int col) = 0;
+    virtual std::unique_ptr<Entity> createGhost(int row, int col, int ghostId) = 0;
     virtual std::unique_ptr<Entity> createCoin(int row, int col) = 0;
     virtual std::unique_ptr<Entity> createFruit(int row, int col) = 0;
     virtual std::unique_ptr<Entity> createWall(int row, int col) = 0;

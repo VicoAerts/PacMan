@@ -11,7 +11,7 @@
 #include <string>
 
 enum class Direction;
-enum class spriteType { PACMAN, RED_GHOST, COIN, FRUIT, WALL };
+enum class spriteType { PACMAN, GHOST, COIN, FRUIT, WALL };
 
 namespace util {
 class TextureManager {
@@ -19,11 +19,13 @@ public:
     /** Load all textures from sprite sheet */
     static void init(const std::string& id, const std::string& filename);
 
-    /** get textures */
-    static sf::Sprite getSprite(spriteType type, Direction dir = Direction::None);
+    /** get textures ghost id and direction are default for textures who dont need these features*/
+    static sf::Sprite getSprite(spriteType type, Direction dir = Direction::None, int ghostId = 0);
 
-    /** get animation frames for a sprite type and direction */
+    /** get animation frames for pacMan*/
     static std::vector<sf::IntRect> getPacManFrames(Direction dir = Direction::None);
+    /** get Ghost animation frames  */
+    static std::vector<sf::IntRect> getGhostFrames(Direction dir = Direction::None, int ghostId = 1);
     /** load the score font */
     static void loadScoreFont();
 

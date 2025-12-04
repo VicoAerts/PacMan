@@ -78,8 +78,14 @@ CellType GridMap::charToCellType(char c) {
         return FRUIT;
     case 'P':
         return PACMAN_START;
-    case 'G':
-        return GHOST_START;
+    case '1':
+        return GHOST_START1;
+    case '2':
+        return GHOST_START2;
+    case '3':
+        return GHOST_START3;
+    case '4':
+        return GHOST_START4;
     default:
         return EMPTY;
     }
