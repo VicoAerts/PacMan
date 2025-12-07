@@ -42,8 +42,19 @@ void model::Ghost::update(const double deltaTime, World& world) {
             return;
         }
         m_waiting = false;
+        m_mode = GhostMode::Leaving;
     }
     std::cout << "Ghost " << m_id << " is waiting " << m_waiting << std::endl;
+
+    if (m_mode == GhostMode::Leaving) {
+        Vec2D exitTarget = world.getGridMap().getExitPosition();
+
+        m_direction = chooseFacingPacmanDirection(world, exitTarget, deltaTime);
+        float distToExit = manhattanDistance(currentPos, exitTarget);
+        if (distToExit < 0.1f) {
+            m_mode = GhostMode::Chase;
+        }
+    }
 
     if (m_mode == GhostMode::Chase) {
         switch (m_type) {
@@ -187,6 +198,14 @@ Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& p
     // initilize on inf distance
     float bestDist = std::numeric_limits<float>::infinity();
     std::vector<Direction> best;
+    // remove opposite direction to avoid going back
+    if (validDirections.size() > 1 && m_direction != Direction::None) {
+        Direction back = opposite(m_direction);
+        auto it = std::remove(validDirections.begin(), validDirections.end(), back);
+        if (it != validDirections.end()) {
+            validDirections.erase(it, validDirections.end());
+        }
+    }
 
     for (Direction dir : validDirections) {
         Vec2D step = dirToVector(dir);

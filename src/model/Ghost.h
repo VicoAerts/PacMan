@@ -11,7 +11,7 @@
 #include "World.h"
 #include <algorithm>
 
-enum class GhostMode { Wait, Chase, Fear, Eaten };
+enum class GhostMode { Wait, Leaving, Chase, Fear, Eaten };
 enum class GhostType { Random, FacingPacman, DirectChase };
 
 namespace model {

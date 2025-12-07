@@ -5,12 +5,13 @@
 
 #ifndef PACMAN_GRIDMAP_H
 #define PACMAN_GRIDMAP_H
+#include "../util/Vec2D.h"
 #include <fstream>
 #include <stdexcept>
 #include <string>
 #include <vector>
 
-enum CellType { EMPTY, WALL, COIN, FRUIT, PACMAN_START, GHOST_START1, GHOST_START2, GHOST_START3, GHOST_START4 };
+enum CellType { EXIT, EMPTY, WALL, COIN, FRUIT, PACMAN_START, GHOST_START1, GHOST_START2, GHOST_START3, GHOST_START4 };
 class GridMap {
 public:
     GridMap() = default;
@@ -33,6 +34,9 @@ public:
     CellType charToCellType(char c);
 
     bool inBounds(int row, int col) const;
+
+    // Voeg deze declaratie toe
+    [[nodiscard]] Vec2D getExitPosition() const;
 
 private:
     /** dimensions of the grid */

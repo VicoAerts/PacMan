@@ -93,8 +93,26 @@ CellType GridMap::charToCellType(char c) {
         return GHOST_START3;
     case '4':
         return GHOST_START4;
+    case 'E':
+        return EXIT;
     default:
         return EMPTY;
     }
 }
 bool GridMap::inBounds(int row, int col) const { return row >= 0 && row < height && col >= 0 && col < width; }
+Vec2D GridMap::getExitPosition() const {
+    for (int r = 0; r < height; ++r) {
+        for (int c = 0; c < width; ++c) {
+            if (grid[r][c] == EXIT) {
+
+                float tileW = 2.f / width;
+                float tileH = 2.f / height;
+                float normX = -1.f + tileW * (c + 0.5f);
+                float normY = 1.f - tileH * (r + 0.5f);
+                return Vec2D{normX, normY};
+            }
+        }
+    }
+    // Fallback if no exit found
+    return Vec2D{0.f, 0.f};
+}
