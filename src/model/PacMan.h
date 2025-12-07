@@ -20,7 +20,7 @@ public:
     /** update pacman position and state*/
     void update(const double deltaTime, World& world) override;
     /** get current direction of pacman*/
-    [[nodiscard]] Direction getDirection() const;
+    [[nodiscard]] Direction getDirection() const override;
     /** set current direction of pacman*/
     void setDirection(Direction dir);
     /** set requested direction of pacman*/

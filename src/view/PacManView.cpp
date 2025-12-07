@@ -9,10 +9,10 @@ view::entity::PacManView::PacManView(Vec2D startPos, Direction startDir)
     : EntityView(), currentPos(startPos), currentDir(startDir), previousPos(startPos) {
     frames = util::TextureManager::getPacManFrames(currentDir);
 }
-void view::entity::PacManView::onNotify(const events::Event& event, model::Entity& enitity) {
+void view::entity::PacManView::onNotify(const events::Event& event, model::Entity& entity) {
     switch (event.type) {
     case events::EventType::PositionChanged:
-        currentPos = enitity.getPosition();
+        currentPos = entity.getPosition();
         needsUpdate = true;
         break;
     case events::EventType::DirectionChanged:
