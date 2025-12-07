@@ -44,7 +44,6 @@ void model::Ghost::update(const double deltaTime, World& world) {
         m_waiting = false;
         m_mode = GhostMode::Leaving;
     }
-    std::cout << "Ghost " << m_id << " is waiting " << m_waiting << std::endl;
 
     if (m_mode == GhostMode::Leaving) {
         Vec2D exitTarget = world.getGridMap().getExitPosition();
@@ -55,22 +54,36 @@ void model::Ghost::update(const double deltaTime, World& world) {
             m_mode = GhostMode::Chase;
         }
     }
+    // calculate middle of tile
+    float tileW = 2.f / world.getGridMap().getWidth();
+    float tileH = 2.f / world.getGridMap().getHeight();
+    // calc col and row
+    int col = static_cast<int>((currentPos.x + 1.f) / tileW);
+    int row = static_cast<int>((1.f - currentPos.y) / tileH);
+    float centerX = -1.f + (col + 0.5f) * tileW;
+    float centerY = 1.f - (row + 0.5f) * tileH;
 
-    if (m_mode == GhostMode::Chase) {
-        switch (m_type) {
-        case GhostType::Random:
-            m_direction = chooseRandomDirection(world, deltaTime);
-            break;
-        case GhostType::FacingPacman:
-            m_direction = chooseFacingPacmanDirection(world, world.getPacMan().getPosition(), deltaTime);
-            break;
-        case GhostType::DirectChase:
-            m_direction = chooseRandomDirection(world, deltaTime);
-            break;
+    float distToCenter = std::sqrt((currentPos.x - centerX) * (currentPos.x - centerX) +
+                                   (currentPos.y - centerY) * (currentPos.y - centerY));
+    // make it also working for small delta times
+    bool atCenter = distToCenter < (m_speed * deltaTime * 1.1f);
+    // only choose new direction at center of tile or if no direction is set
+    if (atCenter || m_direction == Direction::None) {
+        if (m_mode == GhostMode::Chase) {
+            switch (m_type) {
+            case GhostType::Random:
+                m_direction = chooseRandomDirection(world, deltaTime);
+                break;
+            case GhostType::FacingPacman:
+                m_direction = chooseFacingPacmanDirection(world, world.getPacMan().getPosition(), deltaTime);
+                break;
+            case GhostType::DirectChase:
+                m_direction = chooseRandomDirection(world, deltaTime);
+                break;
+            }
         }
     }
     if (m_direction == Direction::None) {
-        std::cout << "Ghost " << m_id << " has no direction to move in." << std::endl;
         return;
     }
     // movement
@@ -94,7 +107,6 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
         world.snapToCorridor(currentPos, m_direction);
         setPosition(currentPos);
-        std::cout << "Ghost " << m_id << " moved" << std::endl;
     } else {
         // we hit a wall, stop moving
         m_direction = Direction::None;

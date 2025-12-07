@@ -19,9 +19,6 @@ Vec2D view::Camera::worldToPixel(float normX, float normY) const {
     float px = (normX + 1.f) * 0.5f * m_windowWidth;
     float py = (1.f - normY) * 0.5f * m_windowHeight;
 
-    // std::cout << "[worldToPixel] norm=(" << normX << ", " << normY << ")" << " | pixel=(" << px << ", " << py << ")"
-    //           << std::endl;
-
     return Vec2D{px, py};
 }
 Vec2D view::Camera::gridToWorld(int row, int col) const {
@@ -31,8 +28,6 @@ Vec2D view::Camera::gridToWorld(int row, int col) const {
 
     float normX = -1.f + tileWidth * (col + 0.5f);
     float normY = 1.f - tileHeight * (row + 0.5f);
-    // std::cout << "[gridToWorld] row=" << row << " col=" << col << " | world=(" << normX << ", " << normY << ")"
-    //           << std::endl;
 
     return Vec2D{normX, normY};
 }

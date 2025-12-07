@@ -41,7 +41,6 @@ CellType GridMap::getCellType(int row, int col) const {
     return grid[row][col];
 }
 CellType GridMap::getCellType(float worldX, float worldY) const {
-    // std::cout << "Getting cell type for world coordinates: (" << worldX << ", " << worldY << ")\n";
     const float tileWidth = 2.f / static_cast<float>(width);
     const float tileHeight = 2.f / static_cast<float>(height);
 
@@ -51,12 +50,7 @@ CellType GridMap::getCellType(float worldX, float worldY) const {
     int row = static_cast<int>(std::floor(rowF));
 
     if (!inBounds(row, col)) {
-        std::cerr << "getCellType out of bounds: row=" << row << " col=" << col << " (height=" << height
-                  << " width=" << width << ")\n";
-        return CellType::EMPTY;
         throw std::out_of_range("Coordinates out of bounds");
-    } else {
-        // std::cout << "this one worked row: " << rowF << "col: " << colF << std::endl;
     }
     return grid[row][col];
 }

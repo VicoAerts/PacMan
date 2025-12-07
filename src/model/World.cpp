@@ -92,11 +92,6 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
 
     // Check each corner
     for (auto& p : hitboxPoints) {
-        if (p.x < -1.f || p.x > 1.f || p.y < -1.f || p.y > 1.f) {
-            std::cerr << "Move out of world bounds: (" << p.x << ", " << p.y << ")" << std::endl;
-            return false;
-        }
-        // std::cout << "Checking point in world: " << p.x << "," << p.y << std::endl;
         CellType cell = worldGrid.getCellType(p.x, p.y);
         if (cell == CellType::WALL) {
             return false;
