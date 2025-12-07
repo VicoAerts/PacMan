@@ -5,7 +5,24 @@
 #include "GhostView.h"
 view::entity::GhostView::GhostView(Vec2D startPos, int ghostId)
     : EntityView(), currentPos(startPos), ghostId(ghostId) {}
-void view::entity::GhostView::onNotify(const events::Event& event, model::Entity& entity) {}
+void view::entity::GhostView::onNotify(const events::Event& event, model::Entity& entity) {
+    switch (event.type) {
+    case events::EventType::PositionChanged:
+        currentPos = entity.getPosition();
+        needsUpdate = true;
+        break;
+    case events::EventType::DirectionChanged:
+        currentDir = event.direction;
+        // update frames for new direction
+        // frames = util::TextureManager::getGhostFrames(currentDir);
+        // currentFrameIndex = 0;
+        // timer = 0.f;
+        needsUpdate = true;
+        break;
+    default:
+        break;
+    }
+}
 void view::entity::GhostView::draw(sf::RenderWindow& window, Camera& camera) {
     if (!isInitialized) {
         ghostSprite = util::TextureManager::getSprite(spriteType::GHOST, currentDir, ghostId);

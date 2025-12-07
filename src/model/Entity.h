@@ -42,6 +42,9 @@ public:
     /** virtual function to help input handling*/
     virtual void handleInput(Direction dir) {};
 
+    /** virtual function to get direction*/
+    virtual Direction getDirection() const { return Direction::None; };
+
     /** virtual function for collisions*/
     virtual void onCollideWithPacMan() {};
 };

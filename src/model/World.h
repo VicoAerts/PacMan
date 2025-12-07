@@ -6,6 +6,7 @@
 #ifndef PACMAN_WORLD_H
 #define PACMAN_WORLD_H
 #include "../util/Direction.h"
+#include "../util/Random.h"
 #include "AbstractFactory.h"
 #include "Entity.h"
 #include "GridMap.h"
@@ -33,7 +34,9 @@ public:
     /** collect collectable at position*/
     void handlePacManCollisions(const Vec2D& pos);
     /** get pacman entity*/
-    Entity& getPacMan();
+    Entity& getPacMan() const;
+    /**rng for the world*/
+    util::Random rng;
 
 private:
     GridMap worldGrid;

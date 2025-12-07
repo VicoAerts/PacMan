@@ -37,6 +37,10 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
     Vec2D next;
     next.x = position.x + step.x;
     next.y = position.y + step.y;
+    if (next.x < -1.f || next.x > 1.f || next.y < -1.f || next.y > 1.f) {
+        std::cerr << "Next position out of world bounds: (" << next.x << ", " << next.y << ")" << std::endl;
+        return false;
+    }
     // tile size in world coordinates
     float tileW = 2.f / worldGrid.getWidth();
     float tileH = 2.f / worldGrid.getHeight();
@@ -88,6 +92,11 @@ bool World::isMoveValid(const Vec2D& position, const Vec2D& step, const Entity& 
 
     // Check each corner
     for (auto& p : hitboxPoints) {
+        if (p.x < -1.f || p.x > 1.f || p.y < -1.f || p.y > 1.f) {
+            std::cerr << "Move out of world bounds: (" << p.x << ", " << p.y << ")" << std::endl;
+            return false;
+        }
+        // std::cout << "Checking point in world: " << p.x << "," << p.y << std::endl;
         CellType cell = worldGrid.getCellType(p.x, p.y);
         if (cell == CellType::WALL) {
             return false;
@@ -162,7 +171,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
         }
     }
 }
-Entity& World::getPacMan() { return *pacMan; }
+Entity& World::getPacMan() const { return *pacMan; }
 
 void model::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {

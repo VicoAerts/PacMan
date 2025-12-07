@@ -9,6 +9,7 @@
 #include "../util/Direction.h"
 #include "Entity.h"
 #include "World.h"
+#include <algorithm>
 
 enum class GhostMode { Wait, Chase, Fear, Eaten };
 enum class GhostType { Random, FacingPacman, DirectChase };
@@ -29,13 +30,13 @@ public:
     /** get ghost id*/
     [[nodiscard]] int getId() const;
     /** get valid directions for the ghost to move in*/
-    std::vector<Direction> getValidDirections(const World& world) const;
+    std::vector<Direction> getValidDirections(const World& world, double deltaTime) const;
 
     /**Choose a new direction for the ghost at random*/
-    Direction chooseRandomDirection(const std::vector<Direction>& validDirections);
+    Direction chooseRandomDirection(World& world, double deltaTime) const;
 
     /**Choose a new direction for the ghost to face Pacman */
-    void chooseFacingPacmanDirection(const World& world, const Vec2D& pacmanPos);
+    Direction chooseFacingPacmanDirection(World& world, const Vec2D& pacmanPos, double deltaTime) const;
 
 private:
     GhostMode m_mode;
@@ -44,6 +45,9 @@ private:
     Direction m_direction;
     Vec2D m_startpos;
     int m_id;
+    bool m_waiting = true;
+    double m_spawnDelay;
+    double m_timeAlive = 0.0;
 };
 } // namespace model
   // namespace model
