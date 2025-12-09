@@ -123,7 +123,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
 GhostMode model::Ghost::getMode() const { return m_mode; }
 
-void model::Ghost::setMode(GhostMode mode) {}
+void model::Ghost::setMode(GhostMode mode) { m_mode = mode; }
 
 GhostType model::Ghost::getType() const { return m_type; }
 
@@ -131,49 +131,31 @@ int model::Ghost::getId() const { return m_id; }
 
 std::vector<Direction> model::Ghost::getValidDirections(const World& world, double deltaTime) const {
     std::vector<Direction> validDirections;
-    Vec2D currentPos = m_position;
-    Vec2D exitPos = world.getGridMap().getExitPosition();
+    const GridMap& grid = world.getGridMap();
+    float tileW = 2.f / grid.getWidth();
+    float tileH = 2.f / grid.getHeight();
+    int col = static_cast<int>((m_position.x + 1.f) / tileW);
+    int row = static_cast<int>((1.f - m_position.y) / tileH);
 
     // lambda helper function
-    auto tryDirection = [&](Direction dir) {
-        Vec2D dirVec = dirToVector(dir);
-        float scale = m_speed * deltaTime;
-
-        Vec2D move;
-        move.x = dirVec.x * scale;
-        move.y = dirVec.y * scale;
-
-        if (move.x == 0.f && move.y == 0.f) {
-            return;
-        }
-
-        if (m_mode == GhostMode::Chase) {
-            double distToExit = manhattanDistance(currentPos, exitPos);
-            if (distToExit < 0.5f) {
-                // does the direction point back to startpos? so in start box
-
-                // Vector door -> Start
-                float toHomeX = m_startpos.x - exitPos.x;
-                float toHomeY = m_startpos.y - exitPos.y;
-
-                // if dot product dirVec · toHome > 0 → going back to home position
-                float dotProduct = (dirVec.x * toHomeX) + (dirVec.y * toHomeY);
-
-                if (dotProduct > 0) {
-                    return; // block going back into start box
-                }
-            }
-        }
-
-        if (world.isMoveValid(currentPos, move, *this)) {
+    auto tryDirection = [&](Direction dir, int dRow, int dCol) {
+        int nextRow = row + dRow;
+        int nextCol = col + dCol;
+        // check bounds
+        if (grid.inBounds(nextRow, nextCol)) {
+            CellType type = grid.getCellType(nextRow, nextCol);
+            if (type == CellType::WALL)
+                return;
+            if (type == CellType::EXIT && m_mode == GhostMode::Chase)
+                return;
             validDirections.push_back(dir);
         }
     };
 
-    tryDirection(Direction::Up);
-    tryDirection(Direction::Down);
-    tryDirection(Direction::Left);
-    tryDirection(Direction::Right);
+    tryDirection(Direction::Up, -1, 0);
+    tryDirection(Direction::Down, 1, 0);
+    tryDirection(Direction::Left, 0, -1);
+    tryDirection(Direction::Right, 0, 1);
 
     return validDirections;
 }
@@ -181,35 +163,24 @@ Direction model::Ghost::chooseRandomDirection(World& world, double deltaTime) co
 
     auto validDirections = getValidDirections(world, deltaTime);
 
-    // is current direction valid?
-    bool currentDirValid =
-        std::find(validDirections.begin(), validDirections.end(), m_direction) != validDirections.end();
-
-    // if more than 2 valid directions we are at a crossroad or junction or if current direction is not valid anymore we
-    // need to choose a new direction
-    bool atJunction = validDirections.size() > 2 || !currentDirValid;
-
-    // if not at junction and current direction is valid, keep moving in the same direction
-    if (!atJunction && currentDirValid) {
-        return m_direction;
+    // choose new random direction
+    // remove opposite direction to avoid going back
+    if (validDirections.size() > 1 && m_direction != Direction::None) {
+        Direction oppositeDir = opposite(m_direction);
+        validDirections.erase(std::remove(validDirections.begin(), validDirections.end(), oppositeDir),
+                              validDirections.end());
     }
 
-    // choose new random direction
-    // remove current direction and its opposite from valid directions to avoid going back when other options exist
-    Direction oppositeDir = opposite(m_direction);
-    validDirections.erase(std::remove(validDirections.begin(), validDirections.end(), oppositeDir),
-                          validDirections.end());
-    validDirections.erase(std::remove(validDirections.begin(), validDirections.end(), m_direction),
-                          validDirections.end());
     if (validDirections.empty()) {
-        // only option is to go back
-        return oppositeDir;
+        // only option is to go back if stuck
+        return (m_direction != Direction::None) ? opposite(m_direction) : Direction::None;
     }
 
     int randomIndex = world.rng.randomInt(0, (int)validDirections.size() - 1);
     return validDirections[randomIndex];
 }
 Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& pacmanPos, double deltaTime) const {
+
     auto validDirections = getValidDirections(world, deltaTime);
 
     if (validDirections.empty()) {
@@ -236,7 +207,6 @@ Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& p
             validDirections.erase(it, validDirections.end());
         }
     }
-
     for (Direction dir : validDirections) {
         Vec2D step = dirToVector(dir);
         Vec2D newPos = ghostPos;
