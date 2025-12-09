@@ -29,7 +29,7 @@ model::Ghost::Ghost(const Vec2D& startpos, float speed, int ghostId)
         break;
     default:
         m_type = GhostType::Random;
-        m_spawnDelay = 0.0;
+        m_spawnDelay = 15.0;
         break;
     }
 }
@@ -37,6 +37,8 @@ model::Ghost::Ghost(const Vec2D& startpos, float speed, int ghostId)
 void model::Ghost::update(const double deltaTime, World& world) {
     Vec2D currentPos = m_position;
     m_timeAlive += deltaTime;
+
+    // handle waiting mode
     if (m_waiting) {
         if (m_timeAlive < m_spawnDelay) {
             return;
@@ -45,15 +47,6 @@ void model::Ghost::update(const double deltaTime, World& world) {
         m_mode = GhostMode::Leaving;
     }
 
-    if (m_mode == GhostMode::Leaving) {
-        Vec2D exitTarget = world.getGridMap().getExitPosition();
-
-        m_direction = chooseFacingPacmanDirection(world, exitTarget, deltaTime);
-        float distToExit = manhattanDistance(currentPos, exitTarget);
-        if (distToExit < 0.1f) {
-            m_mode = GhostMode::Chase;
-        }
-    }
     // calculate middle of tile
     float tileW = 2.f / world.getGridMap().getWidth();
     float tileH = 2.f / world.getGridMap().getHeight();
@@ -66,9 +59,24 @@ void model::Ghost::update(const double deltaTime, World& world) {
     float distToCenter = std::sqrt((currentPos.x - centerX) * (currentPos.x - centerX) +
                                    (currentPos.y - centerY) * (currentPos.y - centerY));
     // make it also working for small delta times
-    bool atCenter = distToCenter < (m_speed * deltaTime * 1.1f);
+    bool atCenter = distToCenter < (m_speed * deltaTime * 1.5f);
     // only choose new direction at center of tile or if no direction is set
     if (atCenter || m_direction == Direction::None) {
+        // handle leaving mode
+        if (m_mode == GhostMode::Leaving) {
+            Vec2D exitPos = world.getGridMap().getExitPosition();
+            float distToExit = manhattanDistance(currentPos, exitPos);
+
+            // if we are close to exit, switch to chase mode
+            if (distToExit < 0.2f) {
+                m_mode = GhostMode::Chase;
+            }
+        }
+
+        // choose direction to exit if we are not in chase mode yet
+        if (m_mode == GhostMode::Leaving) {
+            m_direction = chooseFacingPacmanDirection(world, world.getGridMap().getExitPosition(), deltaTime);
+        }
         if (m_mode == GhostMode::Chase) {
             switch (m_type) {
             case GhostType::Random:
@@ -124,7 +132,7 @@ int model::Ghost::getId() const { return m_id; }
 std::vector<Direction> model::Ghost::getValidDirections(const World& world, double deltaTime) const {
     std::vector<Direction> validDirections;
     Vec2D currentPos = m_position;
-    // world.snapToCorridor(currentPos, m_direction);
+    Vec2D exitPos = world.getGridMap().getExitPosition();
 
     // lambda helper function
     auto tryDirection = [&](Direction dir) {
@@ -137,6 +145,24 @@ std::vector<Direction> model::Ghost::getValidDirections(const World& world, doub
 
         if (move.x == 0.f && move.y == 0.f) {
             return;
+        }
+
+        if (m_mode == GhostMode::Chase) {
+            double distToExit = manhattanDistance(currentPos, exitPos);
+            if (distToExit < 0.5f) {
+                // does the direction point back to startpos? so in start box
+
+                // Vector door -> Start
+                float toHomeX = m_startpos.x - exitPos.x;
+                float toHomeY = m_startpos.y - exitPos.y;
+
+                // if dot product dirVec · toHome > 0 → going back to home position
+                float dotProduct = (dirVec.x * toHomeX) + (dirVec.y * toHomeY);
+
+                if (dotProduct > 0) {
+                    return; // block going back into start box
+                }
+            }
         }
 
         if (world.isMoveValid(currentPos, move, *this)) {
@@ -168,14 +194,6 @@ Direction model::Ghost::chooseRandomDirection(World& world, double deltaTime) co
         return m_direction;
     }
 
-    // 50% chance to keep moving in the same direction if possible
-    // with coinflip
-    if (currentDirValid) {
-        int coin = world.rng.randomInt(0, 1);
-        if (coin == 0) {
-            return m_direction;
-        }
-    }
     // choose new random direction
     // remove current direction and its opposite from valid directions to avoid going back when other options exist
     Direction oppositeDir = opposite(m_direction);
