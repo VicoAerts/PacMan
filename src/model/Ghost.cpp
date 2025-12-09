@@ -62,13 +62,14 @@ void model::Ghost::update(const double deltaTime, World& world) {
     bool atCenter = distToCenter < (m_speed * deltaTime * 1.5f);
     // only choose new direction at center of tile or if no direction is set
     if (atCenter || m_direction == Direction::None) {
+
         // handle leaving mode
         if (m_mode == GhostMode::Leaving) {
             Vec2D exitPos = world.getGridMap().getExitPosition();
             float distToExit = manhattanDistance(currentPos, exitPos);
 
             // if we are close to exit, switch to chase mode
-            if (distToExit < 0.2f) {
+            if (distToExit < 0.005f) {
                 m_mode = GhostMode::Chase;
             }
         }
@@ -115,10 +116,9 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
         world.snapToCorridor(currentPos, m_direction);
         setPosition(currentPos);
-    } else {
-        // we hit a wall, stop moving
-        m_direction = Direction::None;
     }
+
+    
 }
 
 GhostMode model::Ghost::getMode() const { return m_mode; }
@@ -259,4 +259,8 @@ Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& p
 
     int randomIndex = world.rng.randomInt(0, (int)best.size() - 1);
     return best[randomIndex];
+}
+void model::Ghost::setDirection(Direction dir) {
+    m_direction = dir;
+    notify(events::Event{events::EventType::DirectionChanged, getDirection()}, *this);
 }
