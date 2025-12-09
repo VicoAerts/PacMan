@@ -50,6 +50,7 @@ private:
     bool m_waiting = true;
     double m_spawnDelay;
     double m_timeAlive = 0.0;
+    Vec2D last_descision_Tile = {-1.f, -1.f};
 };
 } // namespace model
   // namespace model

@@ -60,8 +60,11 @@ void model::Ghost::update(const double deltaTime, World& world) {
                                    (currentPos.y - centerY) * (currentPos.y - centerY));
     // make it also working for small delta times
     bool atCenter = distToCenter < (m_speed * deltaTime * 1.5f);
+
+    // check if we already made a decision on this tile
+    bool newtile = (col != (int)last_descision_Tile.x || row != (int)last_descision_Tile.y);
     // only choose new direction at center of tile or if no direction is set
-    if (atCenter || m_direction == Direction::None) {
+    if ((atCenter && newtile) || m_direction == Direction::None) {
 
         // handle leaving mode
         if (m_mode == GhostMode::Leaving) {
@@ -71,6 +74,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
             // if we are close to exit, switch to chase mode
             if (distToExit < 0.005f) {
                 m_mode = GhostMode::Chase;
+                last_descision_Tile = Vec2D{-1.f, -1.f};
             }
         }
 
@@ -79,6 +83,10 @@ void model::Ghost::update(const double deltaTime, World& world) {
             m_direction = chooseFacingPacmanDirection(world, world.getGridMap().getExitPosition(), deltaTime);
         }
         if (m_mode == GhostMode::Chase) {
+            if (atCenter) {
+                currentPos = Vec2D{centerX, centerY};
+                setPosition(currentPos);
+            }
             switch (m_type) {
             case GhostType::Random:
                 m_direction = chooseRandomDirection(world, deltaTime);
@@ -90,6 +98,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
                 m_direction = chooseRandomDirection(world, deltaTime);
                 break;
             }
+            last_descision_Tile = Vec2D{(float)col, (float)row};
         }
     }
     if (m_direction == Direction::None) {
@@ -117,8 +126,6 @@ void model::Ghost::update(const double deltaTime, World& world) {
         world.snapToCorridor(currentPos, m_direction);
         setPosition(currentPos);
     }
-
-    
 }
 
 GhostMode model::Ghost::getMode() const { return m_mode; }
