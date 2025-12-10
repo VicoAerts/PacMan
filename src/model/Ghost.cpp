@@ -80,7 +80,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
         // choose direction to exit if we are not in chase mode yet
         if (m_mode == GhostMode::Leaving) {
-            m_direction = chooseFacingPacmanDirection(world, world.getGridMap().getExitPosition(), deltaTime);
+            m_direction = getDirectionToTarget(world, world.getGridMap().getExitPosition(), deltaTime);
         }
         if (m_mode == GhostMode::Chase) {
             if (atCenter) {
@@ -95,7 +95,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
                 m_direction = chooseFacingPacmanDirection(world, world.getPacMan().getPosition(), deltaTime);
                 break;
             case GhostType::DirectChase:
-                m_direction = chooseRandomDirection(world, deltaTime);
+                m_direction = getDirectionToTarget(world, world.getPacMan().getPosition(), deltaTime);
                 break;
             }
             last_descision_Tile = Vec2D{(float)col, (float)row};
@@ -198,14 +198,29 @@ Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& p
     // look 1 tile ahead of pacman
     Direction pacmanDir = world.getPacMan().getDirection();
     Vec2D pacStep = dirToVector(pacmanDir);
+    // scale to 1 tile
+    float tileW = 2.f / world.getGridMap().getWidth();
+    float tileH = 2.f / world.getGridMap().getHeight();
+    // look 4 tiles ahead
+    pacStep.x *= tileW * 4.f;
+    pacStep.y *= tileH * 4.f;
 
     Vec2D pacAheadPos = pacmanPos;
     pacAheadPos.x += pacStep.x;
     pacAheadPos.y += pacStep.y;
 
-    // initilize on inf distance
-    float bestDist = std::numeric_limits<float>::infinity();
-    std::vector<Direction> best;
+    return getDirectionToTarget(world, pacAheadPos, deltaTime);
+}
+void model::Ghost::setDirection(Direction dir) {
+    m_direction = dir;
+    notify(events::Event{events::EventType::DirectionChanged, getDirection()}, *this);
+}
+Direction model::Ghost::getDirectionToTarget(World& world, const Vec2D& targetPos, double deltaTime) const {
+    auto validDirections = getValidDirections(world, deltaTime);
+
+    if (validDirections.empty())
+        return m_direction;
+
     // remove opposite direction to avoid going back
     if (validDirections.size() > 1 && m_direction != Direction::None) {
         Direction back = opposite(m_direction);
@@ -214,30 +229,49 @@ Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& p
             validDirections.erase(it, validDirections.end());
         }
     }
+
+    float tileW = 2.f / world.getGridMap().getWidth();
+    float tileH = 2.f / world.getGridMap().getHeight();
+
+    // initialize best distance at infinity
+    float bestDist = std::numeric_limits<float>::infinity();
+    std::vector<Direction> bestCandidates; // list to hold equally good directions
+
     for (Direction dir : validDirections) {
         Vec2D step = dirToVector(dir);
-        Vec2D newPos = ghostPos;
-        newPos.x += step.x;
-        newPos.y += step.y;
-        float dist = manhattanDistance(newPos, pacAheadPos);
-        if (dist < bestDist - 1e-6f) {
-            bestDist = dist;
-            best.clear();
-            best.push_back(dir);
+        Vec2D nextPos = m_position;
 
-        } else if (std::fabs(dist - bestDist) < 1e-6f) {
-            best.push_back(dir);
+        // Scale step to 1 tile
+        nextPos.x += step.x * tileW;
+        nextPos.y += step.y * tileH;
+
+        // Manhattan distance calculation
+        float dist = manhattanDistance(nextPos, targetPos);
+        // Epsilon for floating point comparison
+        const float epsilon = 1e-6f;
+
+        // chek if this distance is better than the best distance
+        if (dist < bestDist - epsilon) {
+            bestDist = dist;
+            bestCandidates.clear();        // throw away previous best candidates
+            bestCandidates.push_back(dir); // add this direction as the new best
+        }
+        // if distances are equal within epsilon, add to candidates
+        else if (std::abs(dist - bestDist) < epsilon) {
+            bestCandidates.push_back(dir);
         }
     }
-    // safety shouldnt happen
-    if (best.empty()) {
+
+    // Safety check - should not happen
+    if (bestCandidates.empty())
         return m_direction;
+
+    // If multiple best candidates, choose one at random
+    if (bestCandidates.size() > 1) {
+        int randomIndex = world.rng.randomInt(0, (int)bestCandidates.size() - 1);
+        return bestCandidates[randomIndex];
     }
 
-    int randomIndex = world.rng.randomInt(0, (int)best.size() - 1);
-    return best[randomIndex];
-}
-void model::Ghost::setDirection(Direction dir) {
-    m_direction = dir;
-    notify(events::Event{events::EventType::DirectionChanged, getDirection()}, *this);
+    // if only one best candidate, return it
+    return bestCandidates[0];
 }

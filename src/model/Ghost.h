@@ -39,6 +39,8 @@ public:
     Direction chooseFacingPacmanDirection(World& world, const Vec2D& pacmanPos, double deltaTime) const;
     /** set current direction of the ghost*/
     void setDirection(Direction dir);
+    /** get direction to target position*/
+    Direction getDirectionToTarget(World& world, const Vec2D& targetPos, double deltaTime) const;
 
 private:
     GhostMode m_mode;
