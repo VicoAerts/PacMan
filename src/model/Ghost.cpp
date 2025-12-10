@@ -80,22 +80,28 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
         // choose direction to exit if we are not in chase mode yet
         if (m_mode == GhostMode::Leaving) {
-            m_direction = getDirectionToTarget(world, world.getGridMap().getExitPosition(), deltaTime);
+            Direction dir = getDirectionToTarget(world, world.getGridMap().getExitPosition(), deltaTime);
+            setDirection(dir);
         }
         if (m_mode == GhostMode::Chase) {
+            // check this
             if (atCenter) {
                 currentPos = Vec2D{centerX, centerY};
                 setPosition(currentPos);
             }
+            Direction dir;
             switch (m_type) {
             case GhostType::Random:
-                m_direction = chooseRandomDirection(world, deltaTime);
+                dir = chooseRandomDirection(world, deltaTime);
+                setDirection(dir);
                 break;
             case GhostType::FacingPacman:
-                m_direction = chooseFacingPacmanDirection(world, world.getPacMan().getPosition(), deltaTime);
+                dir = chooseFacingPacmanDirection(world, world.getPacMan().getPosition(), deltaTime);
+                setDirection(dir);
                 break;
             case GhostType::DirectChase:
-                m_direction = getDirectionToTarget(world, world.getPacMan().getPosition(), deltaTime);
+                dir = getDirectionToTarget(world, world.getPacMan().getPosition(), deltaTime);
+                setDirection(dir);
                 break;
             }
             last_descision_Tile = Vec2D{(float)col, (float)row};
@@ -212,9 +218,12 @@ Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& p
     return getDirectionToTarget(world, pacAheadPos, deltaTime);
 }
 void model::Ghost::setDirection(Direction dir) {
-    m_direction = dir;
-    notify(events::Event{events::EventType::DirectionChanged, getDirection()}, *this);
+    if (dir != m_direction) {
+        m_direction = dir;
+        notify(events::Event{events::EventType::DirectionChanged, getDirection()}, *this);
+    }
 }
+Direction model::Ghost::getDirection() const { return m_direction; }
 Direction model::Ghost::getDirectionToTarget(World& world, const Vec2D& targetPos, double deltaTime) const {
     auto validDirections = getValidDirections(world, deltaTime);
 

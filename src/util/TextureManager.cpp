@@ -165,7 +165,64 @@ std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
 
     return frames;
 }
-std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int ghostId) {}
+std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int ghostId) {
+    int col;
+    switch (ghostId) {
+    case 1:
+        col = 0;
+        break;
+    case 2:
+        col = 1;
+        break;
+    case 3:
+        col = 2;
+        break;
+    case 4:
+        col = 3;
+        break;
+    default:
+        // green ghost to know if something went wrong
+        col = 5;
+        break;
+    }
+    int baseRow = 0;
+    switch (dir) {
+    case Direction::Right:
+        baseRow = 0;
+        break; // rows 0 & 1
+    case Direction::Down:
+        baseRow = 2;
+        break; // rows 2 & 3
+    case Direction::Left:
+        baseRow = 4;
+        break; // rows 4 & 5
+    case Direction::Up:
+        baseRow = 6;
+        break; // rows 6 & 7
+    case Direction::None:
+        baseRow = 0;
+        break;
+    }
+    int left = 3;
+    int top = 5;
+    int right = 14;
+    int bottom = 12;
+
+    int width = TileSize - left - right;
+    int height = TileSize - top - bottom;
+
+    std::vector<sf::IntRect> frames;
+    frames.reserve(2);
+
+    // 2 rows of animation frames baserow and baserow +1
+    for (int i = 0; i < 2; ++i) {
+        int row = baseRow + i;
+        sf::IntRect rect(col * TileSize + left, row * TileSize + top, width, height);
+        frames.push_back(rect);
+    }
+
+    return frames;
+}
 
 void util::TextureManager::loadScoreFont() {
 

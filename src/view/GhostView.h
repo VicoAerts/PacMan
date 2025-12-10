@@ -4,6 +4,7 @@
  */
 #ifndef PACMAN_GHOSTVIEW_H
 #define PACMAN_GHOSTVIEW_H
+#include "../util/Clock.h"
 #include "EntityView.h"
 
 namespace view::entity {
@@ -17,6 +18,7 @@ public:
 
 private:
     Vec2D currentPos;
+    Vec2D previousPos;
     int ghostId;
     sf::Sprite ghostSprite;
     bool needsUpdate = true;

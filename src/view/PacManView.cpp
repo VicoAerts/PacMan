@@ -52,7 +52,7 @@ void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
 
         if (timer >= 0.0001f) {
             // use modulo to cycle through frames
-            timer -= 0.001f;
+            timer -= 0.0001f;
             currentFrameIndex = (currentFrameIndex + 1) % frames.size();
         }
     }
