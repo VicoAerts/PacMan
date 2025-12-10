@@ -21,15 +21,15 @@ model::Ghost::Ghost(const Vec2D& startpos, float speed, int ghostId)
         break;
     case 3:
         m_type = GhostType::FacingPacman;
-        m_spawnDelay = 5.0;
+        m_spawnDelay = 0.0;
         break;
     case 4:
         m_type = GhostType::DirectChase;
-        m_spawnDelay = 10.0;
+        m_spawnDelay = 0.0;
         break;
     default:
         m_type = GhostType::Random;
-        m_spawnDelay = 15.0;
+        m_spawnDelay = 0.0;
         break;
     }
 }

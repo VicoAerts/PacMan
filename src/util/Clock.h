@@ -16,12 +16,16 @@ private:
 
     std::chrono::time_point<std::chrono::steady_clock> time;
 
+    double deltaTime = 0.0;
+
 public:
     ~Clock() = default;
 
     static Clock* getInstance();
 
     void start();
+
+    void tick();
 
     double getDeltaTime();
 
