@@ -21,15 +21,15 @@ model::Ghost::Ghost(const Vec2D& startpos, float speed, int ghostId)
         break;
     case 3:
         m_type = GhostType::FacingPacman;
-        m_spawnDelay = 0.0;
+        m_spawnDelay = 5.0;
         break;
     case 4:
         m_type = GhostType::DirectChase;
-        m_spawnDelay = 0.0;
+        m_spawnDelay = 10.0;
         break;
     default:
         m_type = GhostType::Random;
-        m_spawnDelay = 0.0;
+        m_spawnDelay = 20.0;
         break;
     }
 }
@@ -63,6 +63,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
     // check if we already made a decision on this tile
     bool newtile = (col != (int)last_descision_Tile.x || row != (int)last_descision_Tile.y);
+
     // only choose new direction at center of tile or if no direction is set
     if ((atCenter && newtile) || m_direction == Direction::None) {
 
@@ -72,7 +73,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
             float distToExit = manhattanDistance(currentPos, exitPos);
 
             // if we are close to exit, switch to chase mode
-            if (distToExit < 0.005f) {
+            if (distToExit < 0.01f) {
                 m_mode = GhostMode::Chase;
                 last_descision_Tile = Vec2D{-1.f, -1.f};
             }

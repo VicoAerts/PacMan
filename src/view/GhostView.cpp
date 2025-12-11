@@ -16,7 +16,6 @@ void view::entity::GhostView::onNotify(const events::Event& event, model::Entity
         break;
     case events::EventType::DirectionChanged:
         currentDir = event.direction;
-        std::cout << "GhostView::onNotify: Direction changed to " << static_cast<int>(currentDir) << std::endl;
         // update frames for new direction
         frames = util::TextureManager::getGhostFrames(currentDir, ghostId);
         currentFrameIndex = 0;
