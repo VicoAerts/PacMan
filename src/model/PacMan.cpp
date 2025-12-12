@@ -33,6 +33,7 @@ void model::PacMan::update(const double deltaTime, World& world) {
         }
     }
     if (m_direction == Direction::None) {
+        world.handlePacManCollisions(currentPos);
         return;
     }
 
@@ -44,6 +45,7 @@ void model::PacMan::update(const double deltaTime, World& world) {
     move.y = dirVec.y * scale;
 
     if (move.x == 0.f && move.y == 0.f) {
+        world.handlePacManCollisions(currentPos);
         return;
     }
     // check if move is valid
