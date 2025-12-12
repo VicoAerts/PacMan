@@ -35,12 +35,11 @@ void model::Score::handleCoinCollected() {
 void model::Score::hanldePacmanDead() {
     if (lives > 1) {
         lives -= 1;
-        // reset ghost en pac pos and their waitinf maybe
     }
     // when pacman dead
     else {
         std::cout << "pacmanDead" << std::endl;
-        // trigger game over and pacman dead frames
+        gameOver = true;
         lives = 0;
     }
 }
@@ -52,3 +51,4 @@ void model::Score::update(float deltaTime) {
     }
 }
 void model::Score::saveToFile() {}
+bool model::Score::isGameOver() const { return gameOver; }

@@ -14,6 +14,7 @@ private:
     int m_score = 0;
     float timeSinceLastCoin = 0.f;
     int lives = 3;
+    bool gameOver = false;
 
 public:
     /** when event occurs , update score accordingly */
@@ -30,6 +31,8 @@ public:
     void update(float deltaTime);
     /** save score to file */
     void saveToFile();
+    /** check if game is over */
+    [[nodiscard]] bool isGameOver() const;
 };
 } // namespace model
 

@@ -6,6 +6,7 @@
 
 #include "../../config/config.h"
 #include "../model/Score.h"
+#include "GameOverState.h"
 
 #include <iostream>
 
@@ -65,9 +66,9 @@ void LevelState::update(const double deltaTime) {
         m_world->update(deltaTime);
     }
     playerScore.update(deltaTime);
-    // if (playerScore.isGameOver()) {
-    //     stateManager.changeState(StateType::GameOver);
-    // }
+    if (playerScore.isGameOver()) {
+        stateManager.switchState(std::make_unique<GameOverState>(stateManager, playerScore));
+    }
 }
 void LevelState::render(sf::RenderWindow& window) {
     window.clear(sf::Color::Black);
