@@ -10,7 +10,8 @@
 #include <iostream>
 namespace model {
 
-model::World::World(const GridMap& grid, AbstractFactory& factory, Score& playerScore) : worldGrid(grid) {
+model::World::World(const GridMap& grid, AbstractFactory& factory, Score& playerScore)
+    : worldGrid(grid), score(playerScore) {
     spawnEntities(factory);
     for (auto& entity : entities) {
         entity->attach(playerScore);
