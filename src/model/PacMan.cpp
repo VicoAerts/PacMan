@@ -8,7 +8,8 @@
 
 #include <iostream>
 model::PacMan::PacMan(const Vec2D& startpos, float speed)
-    : Entity(startpos), m_speed(speed), m_direction(Direction::None), m_requestedDirection(Direction::None) {
+    : Entity(startpos), m_speed(speed), m_direction(Direction::None), m_requestedDirection(Direction::None),
+      m_startpos(startpos) {
     notify(events::Event{events::EventType::PositionChanged}, *this);
     notify(events::Event{events::EventType::DirectionChanged}, *this);
 }
@@ -67,3 +68,8 @@ void model::PacMan::setDirection(Direction dir) {
 }
 void model::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }
 void model::PacMan::handleInput(Direction dir) { setRequestedDirection(dir); }
+void model::PacMan::reset() {
+    setPosition(m_startpos);
+    setDirection(Direction::None);
+    setRequestedDirection(Direction::None);
+}

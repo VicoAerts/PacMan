@@ -27,9 +27,12 @@ public:
     void setRequestedDirection(Direction direction);
     /** hanlde input for pacman*/
     void handleInput(Direction dir) override;
+    /** reset pacman to start position*/
+    void reset() override ;
 
 private:
     Direction m_direction;
+    Vec2D m_startpos;
     float m_speed;
     Direction m_requestedDirection;
 };

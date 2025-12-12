@@ -26,10 +26,12 @@ public:
     void update(const double, World&) override {
         // Coins do not have any update logic as they are static collectibles.
     }
-    void onCollideWithPacMan() override {
+    events::Event onCollideWithPacMan() override {
         if (!m_collected) {
             collect();
+            return {events::EventType::CoinEaten};
         }
+        return {events::EventType::None};
     }
 };
 } // namespace model

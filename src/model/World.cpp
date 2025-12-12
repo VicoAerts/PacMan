@@ -156,17 +156,34 @@ void World::handlePacManCollisions(const Vec2D& pos) {
     int col = static_cast<int>((pos.x + 1.f) / tileW);
     int row = static_cast<int>((pos.y + 1.f) / tileH);
 
+    bool pacmanDied = false;
+
     for (auto& entity : entities) {
         Vec2D ePos = entity->getPosition();
         int eCol = static_cast<int>((ePos.x + 1.f) / tileW);
         int eRow = static_cast<int>((ePos.y + 1.f) / tileH);
 
         if (eCol == col && eRow == row) {
-            entity->onCollideWithPacMan();
+            events::Event event = entity->onCollideWithPacMan();
+            if (event.type == events::EventType::PacManDied) {
+                pacmanDied = true;
+            }
+        }
+    }
+    if (pacmanDied) {
+
+        if (score.getLives() > 0) {
+            resetWorld();
         }
     }
 }
 Entity& World::getPacMan() const { return *pacMan; }
+void World::resetWorld() {
+    for (auto& entity : entities) {
+        entity->reset();
+    }
+    pacMan->reset();
+}
 
 void model::World::spawnEntities(AbstractFactory& factory) {
     for (int row = 0; row < worldGrid.getHeight(); row++) {

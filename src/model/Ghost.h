@@ -6,6 +6,7 @@
 
 #ifndef PACMAN_GHOST_H
 #define PACMAN_GHOST_H
+#include "../events/Event.h"
 #include "../util/Direction.h"
 #include "Entity.h"
 #include "World.h"
@@ -41,9 +42,12 @@ public:
     void setDirection(Direction dir);
     /** get current direction of the ghost*/
     [[nodiscard]] Direction getDirection() const override;
-
     /** get direction to target position*/
     Direction getDirectionToTarget(World& world, const Vec2D& targetPos, double deltaTime) const;
+    /** handle colission with pacman*/
+    events::Event onCollideWithPacMan() override;
+    /** reset ghost to start position*/
+    void reset() override;
 
 private:
     GhostMode m_mode;

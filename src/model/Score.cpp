@@ -3,11 +3,16 @@
 //
 
 #include "Score.h"
+
+#include <iostream>
+#include <ostream>
 void model::Score::onNotify(const events::Event& event, Entity& entity) {
     switch (event.type) {
     case events::EventType::CoinEaten:
         handleCoinCollected();
         break;
+    case events::EventType::PacManDied:
+        hanldePacmanDead();
     default:
         break;
     }
@@ -26,6 +31,18 @@ void model::Score::handleCoinCollected() {
     }
     m_score += baseScore + bonus;
     timeSinceLastCoin = 0.f;
+}
+void model::Score::hanldePacmanDead() {
+    if (lives > 1) {
+        lives -= 1;
+        // reset ghost en pac pos and their waitinf maybe
+    }
+    // when pacman dead
+    else {
+        std::cout << "pacmanDead" << std::endl;
+        // trigger game over and pacman dead frames
+        lives = 0;
+    }
 }
 void model::Score::update(float deltaTime) {
     timeSinceLastCoin += deltaTime;

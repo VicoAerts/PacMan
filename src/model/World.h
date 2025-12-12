@@ -35,6 +35,8 @@ public:
     void handlePacManCollisions(const Vec2D& pos);
     /** get pacman entity*/
     Entity& getPacMan() const;
+    /** reset world if pacman loses a life*/
+    void resetWorld();
     /**rng for the world*/
     util::Random rng;
 
@@ -43,7 +45,7 @@ private:
     // Other members like entities, score, lives, etc.
     std::vector<std::unique_ptr<Entity>> entities;
     std::unique_ptr<PacMan> pacMan;
-
+    Score& score;
     void spawnEntities(AbstractFactory& factory);
 };
 } // namespace model

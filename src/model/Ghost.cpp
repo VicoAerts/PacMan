@@ -285,3 +285,25 @@ Direction model::Ghost::getDirectionToTarget(World& world, const Vec2D& targetPo
     // if only one best candidate, return it
     return bestCandidates[0];
 }
+events::Event model::Ghost::onCollideWithPacMan() {
+    if (m_mode == GhostMode::Chase) {
+        events::Event event{events::EventType::PacManDied};
+        notify(event, *this);
+        return event;
+    } else if (m_mode == GhostMode::Fear) {
+        m_mode = GhostMode::Eaten;
+        events::Event event{events::EventType::GhostEaten};
+        notify(event, *this);
+        return event;
+    } else {
+        return {events::EventType::None};
+    }
+}
+void model::Ghost::reset() {
+    setPosition(m_startpos);
+    setDirection(Direction::None);
+    m_mode = GhostMode::Wait;
+    m_waiting = true;
+    m_timeAlive = 0.0;
+    last_descision_Tile = {-1.f, -1.f};
+}

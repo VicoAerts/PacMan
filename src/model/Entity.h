@@ -46,7 +46,9 @@ public:
     virtual Direction getDirection() const { return Direction::None; };
 
     /** virtual function for collisions*/
-    virtual void onCollideWithPacMan() {};
+    virtual events::Event onCollideWithPacMan() { return {events::EventType::None}; };
+    /** virtual reset function to place entity back to start pos*/
+    virtual void reset() {};
 };
 } // namespace model
 #endif // PACMAN_ENITYMODEL_H
