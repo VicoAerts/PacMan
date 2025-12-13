@@ -56,6 +56,9 @@ void LevelState::handleEvents(const sf::Event& event) {
         case sf::Keyboard::Down:
             m_world->handleInput(Direction::Down);
             break;
+        case sf::Keyboard::K:
+            m_world->debugClearCollectables();
+            break;
         default:
             m_world->handleInput(Direction::None);
         }
@@ -66,8 +69,15 @@ void LevelState::update(const double deltaTime) {
         m_world->update(deltaTime);
     }
     playerScore.update(deltaTime);
+    if (m_world->isWorldCleared()) {
+        // proceed to next level or end game
+        stateManager.switchState(std::make_unique<LevelState>(stateManager, playerScore));
+        return;
+    }
     if (playerScore.isGameOver()) {
+
         stateManager.switchState(std::make_unique<GameOverState>(stateManager, playerScore));
+        return;
     }
 }
 void LevelState::render(sf::RenderWindow& window) {

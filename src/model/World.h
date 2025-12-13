@@ -37,6 +37,10 @@ public:
     Entity& getPacMan() const;
     /** reset world if pacman loses a life*/
     void resetWorld();
+    /** isWorldCleared*/
+    bool isWorldCleared() const;
+    /** debug clear all collectables*/
+    void debugClearCollectables();
     /**rng for the world*/
     util::Random rng;
 
@@ -46,6 +50,7 @@ private:
     std::vector<std::unique_ptr<Entity>> entities;
     std::unique_ptr<PacMan> pacMan;
     Score& score;
+    int m_remainingCollectables;
     void spawnEntities(AbstractFactory& factory);
 };
 } // namespace model

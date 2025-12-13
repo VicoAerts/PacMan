@@ -18,6 +18,16 @@ model::World::World(const GridMap& grid, AbstractFactory& factory, Score& player
     }
     // attach score to pacman as well
     pacMan->attach(playerScore);
+
+    // count collectables
+    m_remainingCollectables = 0;
+    for (int r = 0; r < worldGrid.getHeight(); ++r) {
+        for (int c = 0; c < worldGrid.getWidth(); ++c) {
+            auto t = worldGrid.getCellType(r, c);
+            if (t == COIN || t == FRUIT)
+                m_remainingCollectables++;
+        }
+    }
 }
 
 void model::World::update(double deltaTime) {
@@ -172,6 +182,9 @@ void World::handlePacManCollisions(const Vec2D& pos) {
                 for (auto& entity : entities) {
                     entity->setScared(6.0);
                 }
+                m_remainingCollectables--;
+            } else if (event.type == events::EventType::CoinEaten) {
+                m_remainingCollectables--;
             }
         }
     }
@@ -188,6 +201,20 @@ void World::resetWorld() {
         entity->reset();
     }
     pacMan->reset();
+}
+bool World::isWorldCleared() const { return m_remainingCollectables <= 0; }
+void World::debugClearCollectables() {
+
+    for (int r = 0; r < worldGrid.getHeight(); ++r) {
+        for (int c = 0; c < worldGrid.getWidth(); ++c) {
+            auto t = worldGrid.getCellType(r, c);
+            if (t == COIN || t == FRUIT) {
+                worldGrid.setCellType(r, c, EMPTY);
+            }
+        }
+    }
+    // als je met teller werkt:
+    m_remainingCollectables = 0;
 }
 
 void model::World::spawnEntities(AbstractFactory& factory) {
