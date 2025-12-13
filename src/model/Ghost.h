@@ -13,7 +13,7 @@
 #include "World.h"
 #include <algorithm>
 
-enum class GhostMode { Wait, Leaving, Chase, Fear, Eaten };
+enum class GhostMode { Wait, Leaving, Chase, Eaten };
 enum class GhostType { Random, FacingPacman, DirectChase };
 
 namespace model {
@@ -68,6 +68,7 @@ private:
     double m_timeAlive = 0.0;
     Vec2D last_descision_Tile = {-1.f, -1.f};
     double m_fearTimeLeft = 0.0;
+    bool m_isFeared = false;
 };
 } // namespace model
   // namespace model

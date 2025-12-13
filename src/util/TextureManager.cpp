@@ -210,7 +210,7 @@ std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int
         baseRow = 0;
         break;
     }
-    if (mode == 3) {
+    if (mode == 1) {
         col = 0;      // blue ghost for fear mode
         baseRow = 11; // rows 11 & 12
     }

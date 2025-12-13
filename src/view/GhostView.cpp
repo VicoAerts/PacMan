@@ -18,7 +18,7 @@ void view::entity::GhostView::onNotify(const events::Event& event, model::Entity
         currentDir = event.direction;
         // update frames for new direction
         if (isFeared) {
-            frames = util::TextureManager::getGhostFrames(currentDir, ghostId, 3);
+            frames = util::TextureManager::getGhostFrames(currentDir, ghostId, 1);
         } else {
             frames = util::TextureManager::getGhostFrames(currentDir, ghostId);
         }
@@ -29,9 +29,9 @@ void view::entity::GhostView::onNotify(const events::Event& event, model::Entity
         needsUpdate = true;
         break;
     case events::EventType::GhostModeChanged:
-        isFeared = (entity.getCurrentMode() == 3); // 3 is Fear mode
+        isFeared = (entity.getCurrentMode() == 1); // 1 is Fear mode
         if (isFeared) {
-            frames = util::TextureManager::getGhostFrames(currentDir, ghostId, 3);
+            frames = util::TextureManager::getGhostFrames(currentDir, ghostId, 1);
         } else {
             frames = util::TextureManager::getGhostFrames(currentDir, ghostId);
         }

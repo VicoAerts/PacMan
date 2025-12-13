@@ -38,6 +38,16 @@ void model::Ghost::update(const double deltaTime, World& world) {
     Vec2D currentPos = m_position;
     m_timeAlive += deltaTime;
 
+    // handle fear mode timing
+    if (m_isFeared) {
+        m_fearTimeLeft -= deltaTime;
+        if (m_fearTimeLeft <= 0.0) {
+            m_isFeared = false;
+            events::Event event = events::Event{events::EventType::GhostModeChanged};
+            notify(event, *this);
+            m_speed = config::ghost_base_speed;
+        }
+    }
     // handle waiting mode
     if (m_waiting) {
         if (m_timeAlive < m_spawnDelay) {
@@ -45,14 +55,6 @@ void model::Ghost::update(const double deltaTime, World& world) {
         }
         m_waiting = false;
         setMode(GhostMode::Leaving);
-    }
-    // handle fear mode timing
-    if (m_mode == GhostMode::Fear) {
-        m_fearTimeLeft -= deltaTime;
-        if (m_fearTimeLeft <= 0.0) {
-            setMode(GhostMode::Chase);
-            m_speed = config::ghost_base_speed;
-        }
     }
 
     // calculate middle of tile
@@ -91,7 +93,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
         if (m_mode == GhostMode::Leaving) {
             Direction dir = getDirectionToTarget(world, world.getGridMap().getExitPosition(), deltaTime);
             setDirection(dir);
-        } else if (m_mode == GhostMode::Chase) {
+        } else if (m_mode == GhostMode::Chase && !m_isFeared) {
             // check this
             if (atCenter) {
                 currentPos = Vec2D{centerX, centerY};
@@ -113,7 +115,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
                 break;
             }
             last_descision_Tile = Vec2D{(float)col, (float)row};
-        } else if (m_mode == GhostMode::Fear) {
+        } else if (m_isFeared) {
             // choose random direction away from pacman
             Direction dir = getDirectionAwayFromTarget(world, world.getPacMan().getPosition(), deltaTime);
             setDirection(dir);
@@ -147,7 +149,12 @@ void model::Ghost::update(const double deltaTime, World& world) {
 }
 
 GhostMode model::Ghost::getMode() const { return m_mode; }
-int model::Ghost::getCurrentMode() const { return static_cast<int>(m_mode); }
+int model::Ghost::getCurrentMode() const {
+    if (m_isFeared) {
+        return 1; // Fear mode
+    }
+    return 0; // Normal mode
+}
 
 void model::Ghost::setMode(GhostMode mode) {
     m_mode = mode;
@@ -360,15 +367,16 @@ Direction model::Ghost::getDirectionAwayFromTarget(World& world, const Vec2D& ta
     return bestCandidates[0];
 }
 events::Event model::Ghost::onCollideWithPacMan() {
-    if (m_mode == GhostMode::Chase) {
+    if (m_mode == GhostMode::Chase && !m_isFeared) {
         events::Event event{events::EventType::PacManDied};
         notify(event, *this);
         return event;
-    } else if (m_mode == GhostMode::Fear) {
-        m_mode = GhostMode::Eaten;
-        events::Event event{events::EventType::GhostEaten};
-        notify(event, *this);
-        return event;
+    } else if (m_isFeared) {
+        setPosition(m_startpos);
+        setMode(GhostMode::Leaving);
+        m_isFeared = false;
+        m_speed = config::ghost_base_speed;
+        return events::Event{events::EventType::GhostEaten};
     } else {
         return {events::EventType::None};
     }
@@ -377,7 +385,9 @@ void model::Ghost::reset() {
     setPosition(m_startpos);
     setDirection(Direction::None);
     setMode(GhostMode::Wait);
+    m_isFeared = false;
     m_waiting = true;
+    m_speed = config::ghost_base_speed;
     m_timeAlive = 0.0;
     last_descision_Tile = {-1.f, -1.f};
 }
@@ -385,8 +395,10 @@ void model::Ghost::setScared(double duration) {
     if (m_mode == GhostMode::Eaten)
         return;
 
-    if (m_mode != GhostMode::Fear) {
-        setMode(GhostMode::Fear);
+    if (!m_isFeared) {
+        m_isFeared = true;
+        events::Event event = events::Event{events::EventType::GhostModeChanged};
+        notify(event, *this);
         m_speed = m_speed * 0.7f; // reduce speed when scared
     }
 
