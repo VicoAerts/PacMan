@@ -168,6 +168,10 @@ void World::handlePacManCollisions(const Vec2D& pos) {
             events::Event event = entity->onCollideWithPacMan();
             if (event.type == events::EventType::PacManDied) {
                 pacmanDied = true;
+            } else if (event.type == events::EventType::FruitEaten) {
+                for (auto& entity : entities) {
+                    entity->setScared(6.0);
+                }
             }
         }
     }

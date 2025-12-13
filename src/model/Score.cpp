@@ -13,6 +13,8 @@ void model::Score::onNotify(const events::Event& event, Entity& entity) {
         break;
     case events::EventType::PacManDied:
         hanldePacmanDead();
+    case events::EventType::FruitEaten:
+        handleFruitCollected();
     default:
         break;
     }
@@ -43,6 +45,7 @@ void model::Score::hanldePacmanDead() {
         lives = 0;
     }
 }
+void model::Score::handleFruitCollected() { m_score += 50; }
 void model::Score::update(float deltaTime) {
     timeSinceLastCoin += deltaTime;
     m_score -= deltaTime; // decrease score over time with 1 point per second

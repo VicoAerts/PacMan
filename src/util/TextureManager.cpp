@@ -4,6 +4,8 @@
 
 #include "TextureManager.h"
 
+#include "../model/Ghost.h"
+
 sf::Texture util::TextureManager::textureSheet;
 constexpr int util::TextureManager::TileSize;
 sf::Font util::TextureManager::scoreFont;
@@ -64,6 +66,10 @@ sf::Sprite util::TextureManager::getSprite(spriteType type, Direction dir, int g
     case spriteType::COIN:
         col = 8;
         row = 8;
+        break;
+    case spriteType::FRUIT:
+        col = 12;
+        row = 0;
         break;
     }
     // adjust row based on direction for pacman
@@ -165,7 +171,8 @@ std::vector<sf::IntRect> util::TextureManager::getPacManFrames(Direction dir) {
 
     return frames;
 }
-std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int ghostId) {
+std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int ghostId, int mode) {
+
     int col;
     switch (ghostId) {
     case 1:
@@ -202,6 +209,10 @@ std::vector<sf::IntRect> util::TextureManager::getGhostFrames(Direction dir, int
     case Direction::None:
         baseRow = 0;
         break;
+    }
+    if (mode == 3) {
+        col = 0;      // blue ghost for fear mode
+        baseRow = 11; // rows 11 & 12
     }
     int left = 3;
     int top = 5;

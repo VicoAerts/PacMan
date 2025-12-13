@@ -5,10 +5,11 @@
 #ifndef PACMAN_COLLECTABLE_H
 #define PACMAN_COLLECTABLE_H
 #include "Entity.h"
+#include "GridMap.h"
 
 namespace model {
 class Collectable : public Entity {
-private:
+protected:
     bool m_collected;
 
 public:
@@ -17,22 +18,14 @@ public:
     /** Check if the collectable has been collected */
     [[nodiscard]] bool isCollected() const { return m_collected; }
     /** Set the collectable as collected */
-    void collect() {
-        m_collected = true;
-        events::Event event{events::EventType::CoinEaten};
-        notify(event, *this);
-    };
+    virtual void collect() = 0;
     /** Update method for collectable (no-op) */
     void update(const double, World&) override {
         // Coins do not have any update logic as they are static collectibles.
     }
-    events::Event onCollideWithPacMan() override {
-        if (!m_collected) {
-            collect();
-            return {events::EventType::CoinEaten};
-        }
-        return {events::EventType::None};
-    }
+    events::Event onCollideWithPacMan() override = 0;
+    /** virtual collectable type getter */
+    [[nodiscard]] virtual CellType getCollectableType() const = 0;
 };
 } // namespace model
 

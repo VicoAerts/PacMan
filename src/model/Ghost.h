@@ -6,6 +6,7 @@
 
 #ifndef PACMAN_GHOST_H
 #define PACMAN_GHOST_H
+#include "../../config/config.h"
 #include "../events/Event.h"
 #include "../util/Direction.h"
 #include "Entity.h"
@@ -24,6 +25,8 @@ public:
     void update(const double deltaTime, World& world) override;
     /** get current mode of the ghost*/
     [[nodiscard]] GhostMode getMode() const;
+    /**get current mode of the ghost as int*/
+    [[nodiscard]] int getCurrentMode() const override;
     /** set current mode of the ghost*/
     void setMode(GhostMode mode);
     /** get ghost type*/
@@ -44,10 +47,14 @@ public:
     [[nodiscard]] Direction getDirection() const override;
     /** get direction to target position*/
     Direction getDirectionToTarget(World& world, const Vec2D& targetPos, double deltaTime) const;
+    /** choose direction away from target position*/
+    Direction getDirectionAwayFromTarget(World& world, const Vec2D& targetPos, double deltaTime) const;
     /** handle colission with pacman*/
     events::Event onCollideWithPacMan() override;
     /** reset ghost to start position*/
     void reset() override;
+    /** set ghost to scared mode*/
+    void setScared(double duration) override;
 
 private:
     GhostMode m_mode;
@@ -60,6 +67,7 @@ private:
     double m_spawnDelay;
     double m_timeAlive = 0.0;
     Vec2D last_descision_Tile = {-1.f, -1.f};
+    double m_fearTimeLeft = 0.0;
 };
 } // namespace model
   // namespace model

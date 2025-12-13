@@ -25,7 +25,8 @@ public:
     /** get animation frames for pacMan*/
     static std::vector<sf::IntRect> getPacManFrames(Direction dir = Direction::None);
     /** get Ghost animation frames  */
-    static std::vector<sf::IntRect> getGhostFrames(Direction dir = Direction::None, int ghostId = 1);
+    static std::vector<sf::IntRect> getGhostFrames(Direction dir = Direction::None, int ghostId = 1,
+                                                   int mode = 2); // 2 is chase mode
     /** load the score font */
     static void loadScoreFont();
 

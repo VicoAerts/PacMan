@@ -17,7 +17,17 @@ class Entity;
 namespace events {
 
 /* Event types enumeration */
-enum class EventType { Tick, PositionChanged, DirectionChanged, CoinEaten, FruitEaten, PacManDied, GhostEaten, None };
+enum class EventType {
+    Tick,
+    PositionChanged,
+    DirectionChanged,
+    CoinEaten,
+    FruitEaten,
+    PacManDied,
+    GhostModeChanged,
+    GhostEaten,
+    None
+};
 
 /* Event class definition */
 class Event {

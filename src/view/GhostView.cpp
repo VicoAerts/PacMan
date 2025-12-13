@@ -17,10 +17,30 @@ void view::entity::GhostView::onNotify(const events::Event& event, model::Entity
     case events::EventType::DirectionChanged:
         currentDir = event.direction;
         // update frames for new direction
-        frames = util::TextureManager::getGhostFrames(currentDir, ghostId);
+        if (isFeared) {
+            frames = util::TextureManager::getGhostFrames(currentDir, ghostId, 3);
+        } else {
+            frames = util::TextureManager::getGhostFrames(currentDir, ghostId);
+        }
         currentFrameIndex = 0;
         timer = 0.f;
+        if (!frames.empty())
+            ghostSprite.setTextureRect(frames[0]);
         needsUpdate = true;
+        break;
+    case events::EventType::GhostModeChanged:
+        isFeared = (entity.getCurrentMode() == 3); // 3 is Fear mode
+        if (isFeared) {
+            frames = util::TextureManager::getGhostFrames(currentDir, ghostId, 3);
+        } else {
+            frames = util::TextureManager::getGhostFrames(currentDir, ghostId);
+        }
+        needsUpdate = true;
+        currentFrameIndex = 0;
+        if (!frames.empty())
+            ghostSprite.setTextureRect(frames[0]);
+
+        timer = 0.f;
         break;
     default:
         break;
@@ -35,6 +55,8 @@ void view::entity::GhostView::draw(sf::RenderWindow& window, Camera& camera) {
         float scale = tileH / bounds.height * 0.75f;
         ghostSprite.setScale(scale, scale);
         ghostSprite.setOrigin(bounds.width / 2.f, bounds.height / 2.f);
+        if (!frames.empty())
+            ghostSprite.setTextureRect(frames[0]);
         isInitialized = true;
         needsUpdate = true;
     }

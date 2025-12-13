@@ -23,6 +23,7 @@ private:
     sf::Sprite ghostSprite;
     bool needsUpdate = true;
     Direction currentDir = Direction::None;
+    bool isFeared = false;
 
     // track animation
     bool isInitialized = false;

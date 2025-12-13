@@ -27,6 +27,8 @@ public:
     void handleCoinCollected();
     /**handle pacman getting eaten*/
     void hanldePacmanDead();
+    /** handle fruit collected event */
+    void handleFruitCollected();
     /** update every frame to track time since last coin */
     void update(float deltaTime);
     /** save score to file */

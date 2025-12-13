@@ -49,6 +49,10 @@ public:
     virtual events::Event onCollideWithPacMan() { return {events::EventType::None}; };
     /** virtual reset function to place entity back to start pos*/
     virtual void reset() {};
+    /** virtual function to set entity scared*/
+    virtual void setScared(double duration) {};
+    /** virtual function to get the mode of the entity*/
+    virtual int getCurrentMode() const { return 0; };
 };
 } // namespace model
 #endif // PACMAN_ENITYMODEL_H
