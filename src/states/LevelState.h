@@ -34,6 +34,8 @@ private:
     view::ConcreteFactory m_factory;
     /** score text to display the player's score */
     sf::Text scoreText;
+    /** level count */
+    sf::Text levelText;
 };
 } // namespace view::state
 
