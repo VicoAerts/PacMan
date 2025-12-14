@@ -53,5 +53,38 @@ void model::Score::update(float deltaTime) {
         m_score = 0;
     }
 }
-void model::Score::saveToFile() {}
+void model::Score::saveToFile() {
+    std::string filename = "../config/HighScores.txt";
+    // read existing scores
+    std::vector<int> scores;
+    {
+        std::ifstream inFile(filename);
+        int s;
+        while (inFile >> s) {
+            scores.push_back(s);
+        }
+    }
+
+    // add current score
+    scores.push_back(m_score);
+
+    // sort high to low
+    std::sort(scores.begin(), scores.end(), std::greater<int>());
+
+    // keep only top 5 scores
+    if (scores.size() > 5) {
+        scores.resize(5);
+    }
+
+    // write back to file
+    std::ofstream outFile(filename, std::ios::trunc);
+    if (!outFile.is_open()) {
+        std::cerr << "Unable to open HighScores.txt for writing." << std::endl;
+        return;
+    }
+
+    for (int s : scores) {
+        outFile << s << '\n';
+    }
+}
 bool model::Score::isGameOver() const { return gameOver; }

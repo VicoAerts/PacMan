@@ -8,3 +8,4 @@ To do
 - start bug ghosts exit en random spawn
 - High score save to file
 - menu screen finalize
+- level cleared bonus points

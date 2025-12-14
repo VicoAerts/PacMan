@@ -7,6 +7,9 @@
 #define PACMAN_SCORE_H
 #include "../util/Clock.h"
 #include "Observer.h"
+#include <algorithm>
+#include <fstream>
+#include <vector>
 
 namespace model {
 class Score : public Observer {

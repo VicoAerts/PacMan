@@ -35,9 +35,12 @@ LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
     scoreText.setFont(util::TextureManager::getScoreFont());
     scoreText.setCharacterSize(24);
     scoreText.setFillColor(sf::Color::White);
- levelText.setFont(util::TextureManager::getScoreFont());
+    levelText.setFont(util::TextureManager::getScoreFont());
     levelText.setCharacterSize(24);
     levelText.setFillColor(sf::Color::White);
+    livesText.setFont(util::TextureManager::getScoreFont());
+    livesText.setCharacterSize(24);
+    livesText.setFillColor(sf::Color::White);
 }
 void LevelState::handleEvents(const sf::Event& event) {
     if (event.type == sf::Event::KeyPressed) {
@@ -79,7 +82,9 @@ void LevelState::update(const double deltaTime) {
         return;
     }
     if (playerScore.isGameOver()) {
-
+        // load score in file
+        playerScore.saveToFile();
+        // switch to game over state
         stateManager.switchState(std::make_unique<GameOverState>(stateManager, playerScore));
         return;
     }
@@ -92,11 +97,14 @@ void LevelState::render(sf::RenderWindow& window) {
     }
     scoreText.setString("Score: " + std::to_string(playerScore.getScore()));
     levelText.setString("Level: " + std::to_string(stateManager.getCurrentLevel()));
-    levelText.setPosition(400.f, 10.f);
+    livesText.setString("Lives: " + std::to_string(playerScore.getLives()));
+    levelText.setPosition(250.f, 10.f);
     scoreText.setPosition(20.f, 10.f);
+    livesText.setPosition(450.f, 10.f);
 
     window.draw(levelText);
     window.draw(scoreText);
+    window.draw(livesText);
     window.display();
 }
 } // namespace view::state

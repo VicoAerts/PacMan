@@ -36,6 +36,8 @@ private:
     sf::Text scoreText;
     /** level count */
     sf::Text levelText;
+    /** lives text to display the player's lives */
+    sf::Text livesText;
 };
 } // namespace view::state
 
