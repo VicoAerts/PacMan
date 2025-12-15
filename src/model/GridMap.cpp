@@ -22,6 +22,10 @@ void GridMap::loadMazeFromFile(const std::string& filename) {
     }
     // Set dimensions
     // Assuming all lines have the same length and height is number of lines
+    bool pacmanFound = false;
+    bool exitFound = false;
+    int ghostCount = 0;
+    bool coinFound = false;
     height = lines.size();
     width = lines[0].length();
     // Resize grid
@@ -30,7 +34,33 @@ void GridMap::loadMazeFromFile(const std::string& filename) {
     for (int row = 0; row < height; row++) {
         for (int col = 0; col < width; col++) {
             grid[row][col] = charToCellType(lines[row][col]);
+            if (grid[row][col] == PACMAN_START) {
+                pacmanFound = true;
+            }
+            if (grid[row][col] == EXIT) {
+                exitFound = true;
+            }
+            if (grid[row][col] == GHOST_START1 || grid[row][col] == GHOST_START2 || grid[row][col] == GHOST_START3 ||
+                grid[row][col] == GHOST_START4) {
+                ghostCount++;
+            }
+            if (grid[row][col] == COIN) {
+                coinFound = true;
+            }
         }
+    }
+    // crucial checks
+    if (!pacmanFound) {
+        throw std::runtime_error("Maze file must contain a symbol P for PacMan start position");
+    }
+    if (!exitFound) {
+        throw std::runtime_error("Maze file must contain a symbol E for Exit position of the ghost house");
+    }
+    if (ghostCount < 4) {
+        throw std::runtime_error("Maze file must contain at least 4 ghost start positions (1,2,3,4)");
+    }
+    if (!coinFound) {
+        throw std::runtime_error("Maze file must contain at least 1 coin (.)");
     }
 }
 

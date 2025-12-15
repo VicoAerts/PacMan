@@ -6,4 +6,4 @@ To do
 - start bug ghosts exit en random spawn
 - errors for invalid maze configurations
 - menu screen finalize
-- level cleared bonus points
+
