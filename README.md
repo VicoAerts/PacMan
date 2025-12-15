@@ -4,6 +4,6 @@ To do
 - pacman dead animation
 - make levels harder speed ghosts more scores? fear duration lower etc.
 - start bug ghosts exit en random spawn
-- errors for invalid maze configurations
 - menu screen finalize
+- make work for all frame rates
 

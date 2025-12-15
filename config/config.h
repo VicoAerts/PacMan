@@ -23,8 +23,8 @@ constexpr unsigned int UI_RIGHT = 50;
 // constexpr float world_max_y = 1.0f;
 
 // --- Gameplay ---
-constexpr float pacman_speed = 0.30f;
-constexpr float ghost_base_speed = 0.25f;
+constexpr float pacman_speed = 0.3f;
+constexpr float ghost_base_speed = 0.28f;
 //  constexpr float fear_duration_s = ;
 
 // --- highscore files---

@@ -14,7 +14,7 @@ namespace view::state {
 LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
     : State(stateManager, playerScore),
       m_camera(Camera(stateManager.getWindow().getSize().x, stateManager.getWindow().getSize().y)),
-      m_factory(stateManager.getWindow(), m_camera) {
+      m_factory(stateManager.getWindow(), m_camera, playerScore.getCurrentLevel()) {
     // 1. load maze from file
     GridMap map;
     map.loadMazeFromFile("Maze.txt");

@@ -79,8 +79,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
                                    (currentPos.y - centerY) * (currentPos.y - centerY));
     // make it also working for small delta times
     Vec2D step = scaledMoveFromDir(m_direction == Direction::None ? Direction::Right : m_direction);
-    float stepLen = std::sqrt(step.x * step.x + step.y * step.y);
-    bool atCenter = distToCenter < (stepLen * 1.5f);
+    bool atCenter = distToCenter < 0.01;
 
     // check if we already made a decision on this tile
     bool newtile = (col != (int)last_descision_Tile.x || row != (int)last_descision_Tile.y);
@@ -107,7 +106,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
         } else if (m_mode == GhostMode::Chase && !m_isFeared) {
             // check this
             if (atCenter) {
-                currentPos = Vec2D{centerX, centerY};
+                world.snapToCorridor(currentPos, m_direction);
                 setPosition(currentPos);
             }
             Direction dir;

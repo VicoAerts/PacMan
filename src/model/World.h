@@ -51,6 +51,7 @@ private:
     std::unique_ptr<PacMan> pacMan;
     Score& score;
     int m_remainingCollectables;
+    int currentLevel;
     void spawnEntities(AbstractFactory& factory);
 };
 } // namespace model

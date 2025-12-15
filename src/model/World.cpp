@@ -11,7 +11,7 @@
 namespace model {
 
 model::World::World(const GridMap& grid, AbstractFactory& factory, Score& playerScore)
-    : worldGrid(grid), score(playerScore) {
+    : worldGrid(grid), score(playerScore), currentLevel(playerScore.getCurrentLevel()) {
     spawnEntities(factory);
     for (auto& entity : entities) {
         entity->attach(playerScore);
@@ -118,6 +118,7 @@ void World::snapToCorridor(Vec2D& pos, const Direction dir) const {
     int row = static_cast<int>((pos.y + 1.f) / tileH);
 
     float centerX = -1.f + (col + 0.5f) * tileW;
+    double fear = 6.0 - 0.35 * (currentLevel - 1);
     float centerY = -1.f + (row + 0.5f) * tileH;
 
     float dx = pos.x - centerX;
@@ -180,7 +181,9 @@ void World::handlePacManCollisions(const Vec2D& pos) {
                 pacmanDied = true;
             } else if (event.type == events::EventType::FruitEaten) {
                 for (auto& entity : entities) {
-                    entity->setScared(6.0);
+                    // calc scared time based on level
+                    double fear = 6.0 - 0.35 * (currentLevel - 1);
+                    entity->setScared(fear);
                 }
                 m_remainingCollectables--;
             } else if (event.type == events::EventType::CoinEaten) {

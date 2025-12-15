@@ -33,10 +33,12 @@ private:
     sf::RenderWindow& window;
     Camera& camera;
     std::vector<std::unique_ptr<entity::EntityView>> entityViews;
+    // keep track of current level to make levels harder
+    int currentLevel;
 
 public:
     /**constructor**/
-    explicit ConcreteFactory(sf::RenderWindow& window, Camera& camera);
+    explicit ConcreteFactory(sf::RenderWindow& window, Camera& camera, int currentLevel);
 
     /** Destructor of the EntityFactory*/
     ~ConcreteFactory() override = default;
