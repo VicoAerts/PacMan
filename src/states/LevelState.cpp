@@ -94,7 +94,8 @@ void LevelState::update(const double deltaTime) {
     playerScore.update(deltaTime);
     if (m_world->isWorldCleared()) {
         // proceed to next level
-        stateManager.nextLevel();
+
+        playerScore.nextLevelSet();
         stateManager.switchState(std::make_unique<LevelState>(stateManager, playerScore));
 
         return;
@@ -114,7 +115,7 @@ void LevelState::render(sf::RenderWindow& window) {
         v->draw(window, m_camera);
     }
     scoreText.setString("Score: " + std::to_string(playerScore.getScore()));
-    levelText.setString("Level: " + std::to_string(stateManager.getCurrentLevel()));
+    levelText.setString("Level: " + std::to_string(playerScore.getCurrentLevel()));
     livesText.setString("Lives: " + std::to_string(playerScore.getLives()));
     levelText.setPosition(250.f, 10.f);
     scoreText.setPosition(20.f, 10.f);

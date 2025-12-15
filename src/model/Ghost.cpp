@@ -379,6 +379,7 @@ Direction model::Ghost::getDirectionAwayFromTarget(World& world, const Vec2D& ta
     return bestCandidates[0];
 }
 events::Event model::Ghost::onCollideWithPacMan() {
+    std::cout << "is feared? " << m_isFeared;
     if (m_mode == GhostMode::Chase && !m_isFeared) {
         events::Event event{events::EventType::PacManDied};
         notify(event, *this);
@@ -388,7 +389,9 @@ events::Event model::Ghost::onCollideWithPacMan() {
         setMode(GhostMode::Leaving);
         m_isFeared = false;
         m_speed = config::ghost_base_speed;
-        return events::Event{events::EventType::GhostEaten};
+        events::Event event{events::EventType::GhostEaten};
+        notify(event, *this);
+        return event;
     } else {
         return {events::EventType::None};
     }

@@ -18,6 +18,8 @@ private:
     float timeSinceLastCoin = 0.f;
     int lives = 3;
     bool gameOver = false;
+    int amountOfGhostsEaten = 0;
+    int currentLevel = 1;
 
 public:
     /** when event occurs , update score accordingly */
@@ -38,6 +40,12 @@ public:
     void saveToFile();
     /** check if game is over */
     [[nodiscard]] bool isGameOver() const;
+    /** next level set */
+    void nextLevelSet();
+    /**handle ghost eaten event*/
+    void handleGhostEaten();
+    /** get current level*/
+    [[nodiscard]] int getCurrentLevel() const { return currentLevel; }
 };
 } // namespace model
 

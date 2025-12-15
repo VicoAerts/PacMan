@@ -56,5 +56,5 @@ void StateManager::update(const double deltaTime) {
         // throw exception ofzo
     }
 }
-void StateManager::nextLevel() { levelCounter++; }
+
 } // namespace view::state

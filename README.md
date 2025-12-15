@@ -7,4 +7,3 @@ To do
 - errors for invalid maze configurations
 - menu screen finalize
 - level cleared bonus points
-- cherry juist croppen

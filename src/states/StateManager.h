@@ -18,9 +18,6 @@ class StateManager {
     /** allow states to access render window if needed */
     sf::RenderWindow& window;
 
-    /** level counter to track current level */
-    int levelCounter = 1;
-
 public:
     /** constructor of statemanager that starts of with the menustate*/
     explicit StateManager(sf::RenderWindow& window, model::Score& playerScore);
@@ -51,10 +48,6 @@ public:
 
     /** update the current state */
     void update(const double deltaTime);
-    /** get the current level */
-    [[nodiscard]] int getCurrentLevel() const { return levelCounter; }
-    /** increment the level counter */
-    void nextLevel();
 
     /** get the render window */
     [[nodiscard]] sf::RenderWindow& getWindow() { return window; }

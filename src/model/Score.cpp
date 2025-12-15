@@ -13,8 +13,14 @@ void model::Score::onNotify(const events::Event& event, Entity& entity) {
         break;
     case events::EventType::PacManDied:
         hanldePacmanDead();
+        break;
     case events::EventType::FruitEaten:
         handleFruitCollected();
+        break;
+    case events::EventType::GhostEaten:
+        std::cout << "ghost eaten" << std::endl;
+        handleGhostEaten();
+        break;
     default:
         break;
     }
@@ -45,7 +51,11 @@ void model::Score::hanldePacmanDead() {
         lives = 0;
     }
 }
-void model::Score::handleFruitCollected() { m_score += 50; }
+void model::Score::handleFruitCollected() {
+    m_score += 50;
+    // reset ghossts eaten counter
+    amountOfGhostsEaten = 0;
+}
 void model::Score::update(float deltaTime) {
     timeSinceLastCoin += deltaTime;
     m_score -= deltaTime; // decrease score over time with 1 point per second
@@ -88,3 +98,14 @@ void model::Score::saveToFile() {
     }
 }
 bool model::Score::isGameOver() const { return gameOver; }
+void model::Score::nextLevelSet() {
+    // reset time since last coin for next level
+    timeSinceLastCoin = 0.f;
+    currentLevel++;
+}
+void model::Score::handleGhostEaten() {
+    amountOfGhostsEaten++;
+    int ghostScore = 200 * (1 << (amountOfGhostsEaten - 1)); // 200, 400, 800, 1600
+    m_score += ghostScore;
+    std::cout << "Ghost eaten! Score +" << ghostScore << std::endl;
+}
