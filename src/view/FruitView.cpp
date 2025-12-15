@@ -23,7 +23,7 @@ void view::entity::FruitView::draw(sf::RenderWindow& window, Camera& camera) {
         float tileW = camera.getTileWidthPixels();
         float tileH = camera.getTileHeightPixels();
         sf::FloatRect bounds = fruitSprite.getLocalBounds();
-        float scale = tileH / bounds.height * 0.7f;
+        float scale = tileH / bounds.height * 0.5f;
         fruitSprite.setScale(scale, scale);
         fruitSprite.setOrigin(bounds.width / 2, bounds.height / 2);
         fruitSprite.setPosition(pixelPos.x, pixelPos.y);
