@@ -10,6 +10,10 @@ namespace config {
 constexpr unsigned int window_width = 778;
 constexpr unsigned int window_height = 900;
 constexpr unsigned int max_fps = 60;
+constexpr unsigned int UI_TOP = 80;
+constexpr unsigned int UI_BOTTOM = 80;
+constexpr unsigned int UI_LEFT = 50;
+constexpr unsigned int UI_RIGHT = 50;
 
 //
 // // --- World / camera ---

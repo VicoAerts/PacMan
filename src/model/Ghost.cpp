@@ -58,6 +58,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
     }
 
     // calculate middle of tile
+
     float tileW = 2.f / world.getGridMap().getWidth();
     float tileH = 2.f / world.getGridMap().getHeight();
     // calc col and row

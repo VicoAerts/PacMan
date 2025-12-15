@@ -16,8 +16,8 @@ public:
     /** camera constructor using window width and height*/
     Camera(int windowWidth, int windowHeight);
 
-    /** update window size (for example when window is resized)*/
-    void setWindowSize(int windowWidth, int windowHeight);
+    // /** update window size (for example when window is resized)*/
+    // void setWindowSize(int windowWidth, int windowHeight);
 
     /** set world size (for example when level is changed)*/
     void setGridSize(int rows, int cols);
@@ -45,6 +45,8 @@ public:
     [[nodiscard]] float getTileWidthPixels() const;
     /** get tile height in pixels*/
     [[nodiscard]] float getTileHeightPixels() const;
+    /** resize window*/
+    void resizeWindow(int width, int height);
 
 private:
     int m_windowWidth;
@@ -53,6 +55,9 @@ private:
     /** row and column count of the world grid*/
     int m_rows;
     int m_cols;
+    /**playfield*/
+    int m_playW;
+    int m_playH;
 };
 } // namespace view
 

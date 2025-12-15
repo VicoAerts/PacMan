@@ -17,9 +17,18 @@ LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
       m_factory(stateManager.getWindow(), m_camera) {
     // 1. load maze from file
     GridMap map;
-    map.loadMazeFromFile("Maze.txt");
+    map.loadMazeFromFile("Mze1.txt");
     // 2. set camera grid size
     m_camera.setGridSize(map.getHeight(), map.getWidth());
+    // set window size in case of resize
+    int TileSizeW = m_camera.getTileWidthPixels();
+    int TileSizeH = m_camera.getTileHeightPixels();
+    unsigned int windowW = config::UI_LEFT + (map.getWidth() * TileSizeW) + config::UI_RIGHT;
+    unsigned int windowH = config::UI_TOP + (map.getHeight() * TileSizeH) + config::UI_BOTTOM;
+    m_camera.resizeWindow(windowW, windowH);
+    auto& window = stateManager.getWindow();
+    sf::Vector2u windowSize = {windowW, windowH};
+    window.setSize(windowSize);
 
     // 3. make world
     m_world = std::make_unique<model::World>(map, m_factory, playerScore);
