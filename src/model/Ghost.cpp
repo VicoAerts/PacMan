@@ -45,7 +45,10 @@ void model::Ghost::update(const double deltaTime, World& world) {
             m_isFeared = false;
             events::Event event = events::Event{events::EventType::GhostModeChanged};
             notify(event, *this);
-            m_speed = config::ghost_base_speed;
+            float mul = 1.0f + 0.05f * (world.getCurrentLevel() - 1);
+            if (mul > 1.2667f)
+                mul = 1.2667f;
+            m_speed = config::ghost_base_speed * mul;
         }
     }
     // handle waiting mode

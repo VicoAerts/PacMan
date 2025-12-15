@@ -43,6 +43,8 @@ public:
     void debugClearCollectables();
     /**rng for the world*/
     util::Random rng;
+    /** get current level*/
+    [[nodiscard]] int getCurrentLevel() const { return currentLevel; }
 
 private:
     GridMap worldGrid;
