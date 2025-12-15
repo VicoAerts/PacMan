@@ -209,7 +209,7 @@ std::vector<Direction> model::Ghost::getValidDirections(const World& world) cons
 }
 Direction model::Ghost::chooseRandomDirection(World& world, double deltaTime) const {
 
-    auto validDirections = getValidDirections(world, deltaTime);
+    auto validDirections = getValidDirections(world);
 
     // choose new random direction
     // remove opposite direction to avoid going back
@@ -229,7 +229,7 @@ Direction model::Ghost::chooseRandomDirection(World& world, double deltaTime) co
 }
 Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& pacmanPos, double deltaTime) const {
 
-    auto validDirections = getValidDirections(world, deltaTime);
+    auto validDirections = getValidDirections(world);
 
     if (validDirections.empty()) {
         return m_direction;
@@ -260,7 +260,7 @@ void model::Ghost::setDirection(Direction dir) {
 }
 Direction model::Ghost::getDirection() const { return m_direction; }
 Direction model::Ghost::getDirectionToTarget(World& world, const Vec2D& targetPos, double deltaTime) const {
-    auto validDirections = getValidDirections(world, deltaTime);
+    auto validDirections = getValidDirections(world);
 
     if (validDirections.empty())
         return m_direction;
@@ -320,7 +320,7 @@ Direction model::Ghost::getDirectionToTarget(World& world, const Vec2D& targetPo
     return bestCandidates[0];
 }
 Direction model::Ghost::getDirectionAwayFromTarget(World& world, const Vec2D& targetPos, double deltaTime) const {
-    auto validDirections = getValidDirections(world, deltaTime);
+    auto validDirections = getValidDirections(world);
 
     if (validDirections.empty())
         return m_direction;
