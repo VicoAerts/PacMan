@@ -177,7 +177,7 @@ GhostType model::Ghost::getType() const { return m_type; }
 
 int model::Ghost::getId() const { return m_id; }
 
-std::vector<Direction> model::Ghost::getValidDirections(const World& world, double deltaTime) const {
+std::vector<Direction> model::Ghost::getValidDirections(const World& world) const {
     std::vector<Direction> validDirections;
     const GridMap& grid = world.getGridMap();
     float tileW = 2.f / grid.getWidth();

@@ -34,7 +34,7 @@ public:
     /** get ghost id*/
     [[nodiscard]] int getId() const;
     /** get valid directions for the ghost to move in*/
-    std::vector<Direction> getValidDirections(const World& world, double deltaTime) const;
+    [[nodiscard]] std::vector<Direction> getValidDirections(const World& world) const;
 
     /**Choose a new direction for the ghost at random*/
     Direction chooseRandomDirection(World& world, double deltaTime) const;
