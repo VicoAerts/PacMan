@@ -17,10 +17,20 @@ model::PacMan::PacMan(const Vec2D& startpos, float speed)
 void model::PacMan::update(const double deltaTime, World& world) {
     // try to change to the requested direction if possible
     Vec2D currentPos = m_position;
+    float tileW = 2.f / world.getGridMap().getWidth();
+    float tileH = 2.f / world.getGridMap().getHeight();
+
+    auto scaledMoveFromDir = [&](Direction d) {
+        Vec2D v = dirToVector(d);
+        float base = m_speed * deltaTime;
+        Vec2D m;
+        m.x = v.x * base;
+        m.y = v.y * base * (tileH / tileW); // scale vertical speed to tile aspect ratio
+        return m;
+    };
     Vec2D wantedMove;
     if (m_requestedDirection != Direction::None && m_requestedDirection != m_direction) {
-        wantedMove = Vec2D{dirToVector(m_requestedDirection).x * static_cast<float>(m_speed * deltaTime),
-                           dirToVector(m_requestedDirection).y * static_cast<float>(m_speed * deltaTime)};
+        wantedMove = wantedMove = scaledMoveFromDir(m_requestedDirection);
 
         // first pull position to center to smooth turns
         Vec2D testPos = currentPos;
@@ -36,13 +46,7 @@ void model::PacMan::update(const double deltaTime, World& world) {
         world.handlePacManCollisions(currentPos);
         return;
     }
-
-    Vec2D dirVec = dirToVector(m_direction);
-    float scale = m_speed * deltaTime;
-
-    Vec2D move;
-    move.x = dirVec.x * scale;
-    move.y = dirVec.y * scale;
+    Vec2D move = scaledMoveFromDir(m_direction);
 
     if (move.x == 0.f && move.y == 0.f) {
         world.handlePacManCollisions(currentPos);

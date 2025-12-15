@@ -61,6 +61,14 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
     float tileW = 2.f / world.getGridMap().getWidth();
     float tileH = 2.f / world.getGridMap().getHeight();
+    auto scaledMoveFromDir = [&](Direction d) {
+        Vec2D v = dirToVector(d);
+        float base = m_speed * deltaTime;
+        Vec2D m;
+        m.x = v.x * base;
+        m.y = v.y * base * (tileH / tileW);
+        return m;
+    };
     // calc col and row
     int col = static_cast<int>((currentPos.x + 1.f) / tileW);
     int row = static_cast<int>((1.f - currentPos.y) / tileH);
@@ -70,7 +78,9 @@ void model::Ghost::update(const double deltaTime, World& world) {
     float distToCenter = std::sqrt((currentPos.x - centerX) * (currentPos.x - centerX) +
                                    (currentPos.y - centerY) * (currentPos.y - centerY));
     // make it also working for small delta times
-    bool atCenter = distToCenter < (m_speed * deltaTime * 1.5f);
+    Vec2D step = scaledMoveFromDir(m_direction == Direction::None ? Direction::Right : m_direction);
+    float stepLen = std::sqrt(step.x * step.x + step.y * step.y);
+    bool atCenter = distToCenter < (stepLen * 1.5f);
 
     // check if we already made a decision on this tile
     bool newtile = (col != (int)last_descision_Tile.x || row != (int)last_descision_Tile.y);
@@ -132,9 +142,10 @@ void model::Ghost::update(const double deltaTime, World& world) {
     Vec2D dirVec = dirToVector(m_direction);
     float scale = m_speed * deltaTime;
 
-    Vec2D move;
-    move.x = dirVec.x * scale;
-    move.y = dirVec.y * scale;
+    // Vec2D move;
+    // move.x = dirVec.x * scale;
+    // move.y = dirVec.y * scale;
+    Vec2D move = scaledMoveFromDir(m_direction);
 
     if (move.x == 0.f && move.y == 0.f) {
         return;
