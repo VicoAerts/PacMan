@@ -17,18 +17,27 @@ LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
       m_factory(stateManager.getWindow(), m_camera) {
     // 1. load maze from file
     GridMap map;
-    map.loadMazeFromFile("Mze1.txt");
+    map.loadMazeFromFile("Maze1.txt");
     // 2. set camera grid size
     m_camera.setGridSize(map.getHeight(), map.getWidth());
     // set window size in case of resize
-    int TileSizeW = m_camera.getTileWidthPixels();
-    int TileSizeH = m_camera.getTileHeightPixels();
-    unsigned int windowW = config::UI_LEFT + (map.getWidth() * TileSizeW) + config::UI_RIGHT;
-    unsigned int windowH = config::UI_TOP + (map.getHeight() * TileSizeH) + config::UI_BOTTOM;
-    m_camera.resizeWindow(windowW, windowH);
     auto& window = stateManager.getWindow();
-    sf::Vector2u windowSize = {windowW, windowH};
-    window.setSize(windowSize);
+    auto curSize = window.getSize();
+
+    float cols = static_cast<float>(map.getWidth());
+    float rows = static_cast<float>(map.getHeight());
+    float mazeRatio = cols / rows;
+
+    float playH = static_cast<float>(curSize.y) - config::UI_TOP - config::UI_BOTTOM;
+
+    // calc playW based on maze ratio
+    float playW = playH * mazeRatio;
+    unsigned int windowW = static_cast<unsigned int>(config::UI_LEFT + playW + config::UI_RIGHT);
+    unsigned int windowH = static_cast<unsigned int>(config::UI_TOP + playH + config::UI_BOTTOM);
+
+    // apply
+    window.setSize({windowW, windowH});
+    m_camera.resizeWindow(windowW, windowH);
 
     // 3. make world
     m_world = std::make_unique<model::World>(map, m_factory, playerScore);
