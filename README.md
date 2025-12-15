@@ -9,3 +9,4 @@ To do
 - High score save to file
 - menu screen finalize
 - level cleared bonus points
+- cherry juist croppen
