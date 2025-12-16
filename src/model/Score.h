@@ -46,6 +46,10 @@ public:
     void handleGhostEaten();
     /** get current level*/
     [[nodiscard]] int getCurrentLevel() const { return currentLevel; }
+    /** reset score and lives */
+    void reset();
+    /** check if current score is a high score */
+    [[nodiscard]] bool isHighScore() const;
 };
 } // namespace model
 

@@ -7,7 +7,6 @@
 #include "MenuState.h"
 
 namespace view::state {
-
 StateManager::StateManager(sf::RenderWindow& window, model::Score& playerScore) : window(window) {
     pushState(std::make_unique<MenuState>(*this, playerScore));
 }
@@ -56,5 +55,13 @@ void StateManager::update(const double deltaTime) {
         // throw exception ofzo
     }
 }
-
+void StateManager::clearStates() {
+    if (statesStack.empty()) {
+        return;
+    } else {
+        while (!statesStack.empty()) {
+            statesStack.pop();
+        }
+    }
+}
 } // namespace view::state

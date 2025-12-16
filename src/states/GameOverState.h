@@ -6,6 +6,7 @@
 #define PACMAN_GAMEOVERSTATE_H
 #include "../util/TextureManager.h"
 #include "State.h"
+#include "StateManager.h"
 namespace view::state {
 class GameOverState : public State {
 public:

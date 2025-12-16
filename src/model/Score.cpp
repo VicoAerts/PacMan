@@ -107,5 +107,31 @@ void model::Score::handleGhostEaten() {
     amountOfGhostsEaten++;
     int ghostScore = 200 * (1 << (amountOfGhostsEaten - 1)); // 200, 400, 800, 1600
     m_score += ghostScore;
-    std::cout << "Ghost eaten! Score +" << ghostScore << std::endl;
+}
+void model::Score::reset() {
+    m_score = 0;
+    lives = 3;
+    gameOver = false;
+    timeSinceLastCoin = 0.f;
+    amountOfGhostsEaten = 0;
+    currentLevel = 1;
+}
+bool model::Score::isHighScore() const {
+    std::string filename = "../config/HighScores.txt";
+
+    int highScore = 0;
+    std::ifstream inFile(filename);
+    if (!inFile.is_open()) {
+        std::cerr << "Unable to open HighScores.txt for reading." << std::endl;
+        return false;
+    }
+    int maxScore = 0;
+    int s;
+    while (inFile >> s) {
+        if (s > maxScore) {
+            maxScore = s;
+        }
+    }
+
+    return m_score >= maxScore;
 }

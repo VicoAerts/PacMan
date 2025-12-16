@@ -7,6 +7,7 @@
 #include "../../config/config.h"
 #include "../model/Score.h"
 #include "GameOverState.h"
+#include "PausedState.h"
 
 #include <iostream>
 
@@ -82,6 +83,9 @@ void LevelState::handleEvents(const sf::Event& event) {
         case sf::Keyboard::K:
             m_world->debugClearCollectables();
             break;
+        case sf::Keyboard::Escape:
+            stateManager.pushState(std::make_unique<PausedState>(stateManager, playerScore));
+            break;
         default:
             m_world->handleInput(Direction::None);
         }
@@ -108,18 +112,50 @@ void LevelState::update(const double deltaTime) {
         return;
     }
 }
+// helper functions to set origin of text
+static void setOriginLeftTop(sf::Text& t) {
+    sf::FloatRect b = t.getLocalBounds();
+    t.setOrigin(b.left, b.top);
+}
+
+static void setOriginCenterTop(sf::Text& t) {
+    sf::FloatRect b = t.getLocalBounds();
+    t.setOrigin(b.left + b.width / 2.f, b.top);
+}
+
+static void setOriginRightTop(sf::Text& t) {
+    sf::FloatRect b = t.getLocalBounds();
+    t.setOrigin(b.left + b.width, b.top);
+}
 void LevelState::render(sf::RenderWindow& window) {
     window.clear(sf::Color::Black);
     // render all entity views
     for (const auto& v : m_entityViews) {
         v->draw(window, m_camera);
     }
-    scoreText.setString("Score: " + std::to_string(playerScore.getScore()));
-    levelText.setString("Level: " + std::to_string(playerScore.getCurrentLevel()));
-    livesText.setString("Lives: " + std::to_string(playerScore.getLives()));
-    levelText.setPosition(250.f, 10.f);
-    scoreText.setPosition(20.f, 10.f);
-    livesText.setPosition(450.f, 10.f);
+    const float padX = 25.f;
+    const float topY = 10.f;
+    const float bottomY = 70.f;
+
+    sf::Font font = util::TextureManager::getScoreFont();
+
+    // TOP: Level
+    sf::Text levelText("LEVEL: " + std::to_string(playerScore.getCurrentLevel()), font, 54);
+    levelText.setFillColor(sf::Color::White);
+    setOriginCenterTop(levelText);
+    levelText.setPosition(window.getSize().x / 2.f, topY);
+
+    // BOTTOM LEFT: Score
+    sf::Text scoreText("SCORE: " + std::to_string(playerScore.getScore()), font, 20);
+    scoreText.setFillColor(sf::Color::White);
+    setOriginLeftTop(scoreText);
+    scoreText.setPosition(config::UI_LEFT, window.getSize().y - config::UI_BOTTOM + 10.f);
+
+    // BOTTOM RIGHT: Lives
+    sf::Text livesText("LIVES: " + std::to_string(playerScore.getLives()), font, 20);
+    livesText.setFillColor(sf::Color::White);
+    setOriginRightTop(livesText);
+    livesText.setPosition(window.getSize().x - config::UI_RIGHT, window.getSize().y - config::UI_BOTTOM + 10.f);
 
     window.draw(levelText);
     window.draw(scoreText);

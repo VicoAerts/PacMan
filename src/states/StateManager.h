@@ -51,6 +51,8 @@ public:
 
     /** get the render window */
     [[nodiscard]] sf::RenderWindow& getWindow() { return window; }
+    /** clear all states from the stack */
+    void clearStates();
 };
 } // namespace view::state
 
