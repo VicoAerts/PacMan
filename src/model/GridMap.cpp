@@ -26,18 +26,30 @@ void GridMap::loadMazeFromFile(const std::string& filename) {
     bool exitFound = false;
     int ghostCount = 0;
     bool coinFound = false;
+    for (auto& ln : lines) {
+        if (!ln.empty() && ln.back() == '\r')
+            ln.pop_back();
+    }
     height = lines.size();
-    width = lines[0].length();
+    width = 0;
+    for (auto& ln : lines)
+        width = std::max(width, (int)ln.size());
     // Resize grid
-    grid.resize(height, std::vector<CellType>(width, EMPTY));
+    grid.assign(height, std::vector<CellType>(width, EMPTY));
     // Fill grid
     for (int row = 0; row < height; row++) {
+        if ((int)lines[row].size() < width)
+            lines[row].resize(width, ' ');
         for (int col = 0; col < width; col++) {
             grid[row][col] = charToCellType(lines[row][col]);
             if (grid[row][col] == PACMAN_START) {
                 pacmanFound = true;
             }
             if (grid[row][col] == EXIT) {
+                if (exitFound == true) {
+                    throw std::runtime_error(
+                        "Maze file must contain only one symbol E for Exit position of the ghost house");
+                }
                 exitFound = true;
             }
             if (grid[row][col] == GHOST_START1 || grid[row][col] == GHOST_START2 || grid[row][col] == GHOST_START3 ||
@@ -128,7 +140,6 @@ Vec2D GridMap::getExitPosition() const {
     for (int r = 0; r < height; ++r) {
         for (int c = 0; c < width; ++c) {
             if (grid[r][c] == EXIT) {
-
                 float tileW = 2.f / width;
                 float tileH = 2.f / height;
                 float normX = -1.f + tileW * (c + 0.5f);
@@ -138,5 +149,6 @@ Vec2D GridMap::getExitPosition() const {
         }
     }
     // Fallback if no exit found
+    std::cerr << "Warning: No exit found in the grid map!" << std::endl;
     return Vec2D{0.f, 0.f};
 }
