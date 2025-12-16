@@ -82,7 +82,10 @@ void model::Ghost::update(const double deltaTime, World& world) {
                                    (currentPos.y - centerY) * (currentPos.y - centerY));
     // make it also working for small delta times
     Vec2D step = scaledMoveFromDir(m_direction == Direction::None ? Direction::Right : m_direction);
-    bool atCenter = distToCenter < 0.01;
+    float maxStep = m_speed * deltaTime;
+
+    // if can reach center in one step so one frame, consider at center
+    bool atCenter = distToCenter <= maxStep * 1.1f;
 
     // check if we already made a decision on this tile
     bool newtile = (col != (int)last_descision_Tile.x || row != (int)last_descision_Tile.y);
