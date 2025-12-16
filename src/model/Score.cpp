@@ -18,7 +18,6 @@ void model::Score::onNotify(const events::Event& event, Entity& entity) {
         handleFruitCollected();
         break;
     case events::EventType::GhostEaten:
-        std::cout << "ghost eaten" << std::endl;
         handleGhostEaten();
         break;
     default:
@@ -46,7 +45,6 @@ void model::Score::hanldePacmanDead() {
     }
     // when pacman dead
     else {
-        std::cout << "pacmanDead" << std::endl;
         gameOver = true;
         lives = 0;
     }

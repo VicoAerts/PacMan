@@ -18,7 +18,7 @@ LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
       m_factory(stateManager.getWindow(), m_camera, playerScore.getCurrentLevel()) {
     // 1. load maze from file
     GridMap map;
-    map.loadMazeFromFile("Maze.txt");
+    map.loadMazeFromFile("Maze1.txt");
     // 2. set camera grid size
     m_camera.setGridSize(map.getHeight(), map.getWidth());
     // set window size in case of resize
@@ -66,15 +66,12 @@ void LevelState::handleEvents(const sf::Event& event) {
         switch (event.key.code) {
             // case esc for pause menu can be added here
         case sf::Keyboard::Left:
-            std::cout << "Left" << std::endl;
             m_world->handleInput(Direction::Left);
             break;
         case sf::Keyboard::Right:
-            std::cout << "Right" << std::endl;
             m_world->handleInput(Direction::Right);
             break;
         case sf::Keyboard::Up:
-            std::cout << "Up" << std::endl;
             m_world->handleInput(Direction::Up);
             break;
         case sf::Keyboard::Down:
