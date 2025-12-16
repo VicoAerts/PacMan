@@ -135,3 +135,19 @@ bool model::Score::isHighScore() const {
 
     return m_score >= maxScore;
 }
+std::vector<int> model::Score::getHighScores() const {
+    std::string filename = "../config/HighScores.txt";
+
+    int highScore = 0;
+    std::ifstream inFile(filename);
+    if (!inFile.is_open()) {
+        std::cerr << "Unable to open HighScores.txt for reading." << std::endl;
+        return {};
+    }
+    std::vector<int> scores;
+    int s;
+    while (inFile >> s) {
+        scores.push_back(s);
+    }
+    return std::sort(std::begin(scores), std::end(scores), std::greater<int>()), scores;
+}

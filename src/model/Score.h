@@ -50,6 +50,8 @@ public:
     void reset();
     /** check if current score is a high score */
     [[nodiscard]] bool isHighScore() const;
+    /** get high scores from file */
+    [[nodiscard]] std::vector<int> getHighScores() const;
 };
 } // namespace model
 
