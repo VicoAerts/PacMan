@@ -18,6 +18,13 @@ class PacMan;
 } // namespace model
 
 namespace model {
+/**
+ * @brief Abstract factory class for creating game entities.
+ *
+ * This class defines the interface for creating various game entities such as PacMan, Ghosts,
+ * Coins, Fruits, and Walls. Concrete implementations of this factory will provide the actual
+ * creation logic for these entities.
+ */
 class AbstractFactory {
 public:
     /** Virtual destructor */

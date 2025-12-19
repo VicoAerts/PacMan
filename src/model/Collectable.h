@@ -10,7 +10,7 @@
 #include "GridMap.h"
 
 namespace model {
-/** Abstract class for collectable items in the game */
+/**@brief Abstract class for collectable items in the game */
 class Collectable : public Entity {
 protected:
     bool m_collected;

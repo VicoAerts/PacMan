@@ -7,6 +7,11 @@
 #ifndef PACMAN_CLOCK_H
 #define PACMAN_CLOCK_H
 #include <chrono>
+/**
+ * @namespace  util
+ * @brief Contains utility classes and functions used across the project.
+ * This namespace provides general-purpose tools that assist in various tasks,
+ */
 namespace util {
 /** @brief Singleton clock providing delta time between update ticks. */
 class Clock {

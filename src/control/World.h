@@ -15,8 +15,16 @@
 #include <memory>
 #include <vector>
 
+/**
+ * @namespace model
+ * @brief Contains all classes related to the game model and logic.
+ * This namespace is responsible for the core functionality of the game,
+ * including entities, game rules, and state management. It does not contain any rendering code,
+ * which is handled in the view namespace.
+ */
 namespace model {
 class Score;
+/** @brief World class that holds all entities and game logic */
 class World {
 public:
     /**constructor for world taking a gridmap and a factory to spawn entities*/
@@ -34,7 +42,7 @@ public:
     /** collect collectable at position*/
     void handlePacManCollisions(const Vec2D& pos);
     /** get pacman entity*/
-    Entity& getPacMan() const;
+    [[nodiscard]] Entity& getPacMan() const;
     /** reset world if pacman loses a life*/
     void resetWorld();
     /** isWorldCleared*/

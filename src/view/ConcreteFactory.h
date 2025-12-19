@@ -27,8 +27,14 @@
 #include "GhostView.h"
 #include "PacManView.h"
 #include "WallView.h"
+/**
+ * @namespace view
+ * @brief Contains all classes related to the game view and rendering.
+ * This namespace is responsible for displaying the game entities
+ * and managing the visual aspects of the game.
+ */
 namespace view {
-/** Concrete Factory class for creating game entities and their views */
+/** @brief Concrete Factory class for creating game entities and their views */
 class ConcreteFactory : public model::AbstractFactory {
 private:
     sf::RenderWindow& window;

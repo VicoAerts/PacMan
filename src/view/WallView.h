@@ -10,6 +10,7 @@
 #include "EntityView.h"
 #include <SFML/Graphics.hpp>
 namespace view::entity {
+/** @brief WallView class responsible for rendering Wall entity */
 class WallView : public EntityView {
 public:
     /** Constructor initializing the Wall view with its model */

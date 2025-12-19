@@ -11,7 +11,8 @@ namespace model {
 class Entity;
 }
 
-/** Namespace for all event-related classes and enumerations */
+/**@namespace events
+ *@brief Namespace for all event-related classes and enumerations */
 namespace events {
 
 /** Event types enumeration processed and used by all observer patterns */
@@ -27,7 +28,7 @@ enum class EventType {
     None
 };
 
-/** Event class definition */
+/**@brief  Event class definition */
 class Event {
 public:
     /** Event type */

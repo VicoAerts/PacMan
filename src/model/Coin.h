@@ -8,7 +8,7 @@
 #include "Collectable.h"
 
 namespace model {
-/** collectable coin entity that increases score when collected */
+/** @brief collectable coin entity that increases score when collected */
 class Coin : public Collectable {
 public:
     /** Coin constructor */

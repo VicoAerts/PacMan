@@ -15,7 +15,7 @@ enum class Direction;
 enum class spriteType { PACMAN, GHOST, COIN, FRUIT, WALL };
 
 namespace util {
-/** TextureManager class for loading and managing game textures */
+/**@brief TextureManager class for loading and managing game textures */
 class TextureManager {
 public:
     /** Load all textures from sprite sheet */

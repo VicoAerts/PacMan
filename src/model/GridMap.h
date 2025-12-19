@@ -12,6 +12,8 @@
 
 /** Enumeration for different cell types in the grid map */
 enum CellType { EXIT, EMPTY, WALL, COIN, FRUIT, PACMAN_START, GHOST_START1, GHOST_START2, GHOST_START3, GHOST_START4 };
+/** @brief GridMap class representing the game world as a grid of cells with a specific character representing a
+ * celltype */
 class GridMap {
 public:
     /** Default constructor */
@@ -41,7 +43,7 @@ public:
 
 private:
     /** dimensions of the grid */
-    int width, height;
+    int width, height = 0;
     /** 2D vector representing the grid map */
     std::vector<std::vector<CellType>> grid;
 };

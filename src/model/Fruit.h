@@ -8,7 +8,7 @@
 #define PACMAN_FRUIT_H
 #include "Collectable.h"
 namespace model {
-/** collectable fruit entity that increases score when collected and triggers event*/
+/**@brief collectable fruit entity that increases score when collected and triggers event*/
 class Fruit : public Collectable {
 public:
     /** Fruit constructor */

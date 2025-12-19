@@ -11,7 +11,7 @@
 #include "../util/Vec2D.h"
 
 namespace view {
-/** Camera class for converting grid coordinates to  world coordinates to screen coordinates and vice versa */
+/** @brief Camera class for converting grid coordinates to  world coordinates to screen coordinates and vice versa */
 class Camera {
 public:
     /** camera constructor using window width and height*/

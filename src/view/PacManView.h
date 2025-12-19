@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 
 namespace view::entity {
+/** @brief PacManView class responsible for rendering PacMan entity */
 class PacManView : public EntityView {
 public:
     /** Constructor initializing the PacMan view  */

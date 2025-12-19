@@ -10,9 +10,12 @@
 #include "Camera.h"
 
 #include <SFML/Graphics/RenderWindow.hpp>
-
+/**
+ * @namespace view::entity
+ * @brief Contains all classes related to the visual representation of game entities.
+ */
 namespace view::entity {
-/** Abstract base class for all entity views. */
+/**@brief Abstract base class for all entity views. */
 class EntityView : public model::Observer {
 
 public:
