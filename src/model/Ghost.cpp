@@ -133,8 +133,13 @@ void model::Ghost::update(const double deltaTime, World& world) {
             last_descision_Tile = Vec2D{(float)col, (float)row};
         } else if (m_isFeared) {
             // choose random direction away from pacman
+            if (atCenter) {
+                world.snapToCorridor(currentPos, m_direction);
+                setPosition(currentPos);
+            }
             Direction dir = getDirectionAwayFromTarget(world, world.getPacMan().getPosition(), deltaTime);
             setDirection(dir);
+            last_descision_Tile = Vec2D{(float)col, (float)row};
         }
     }
     if (m_direction == Direction::None) {
@@ -162,6 +167,10 @@ void model::Ghost::update(const double deltaTime, World& world) {
 
         world.snapToCorridor(currentPos, m_direction);
         setPosition(currentPos);
+    } else {
+        // force choose new direction next frame
+        last_descision_Tile = Vec2D{-1.f, -1.f};
+        m_direction = Direction::None;
     }
 }
 
@@ -330,7 +339,7 @@ Direction model::Ghost::getDirectionAwayFromTarget(World& world, const Vec2D& ta
     if (validDirections.empty())
         return m_direction;
 
-    // allow going back for escaping??
+    // remove opposite direction to avoid going back
     if (validDirections.size() > 1 && m_direction != Direction::None) {
         Direction back = opposite(m_direction);
         auto it = std::remove(validDirections.begin(), validDirections.end(), back);
@@ -410,7 +419,7 @@ void model::Ghost::reset() {
     m_timeAlive = 0.0;
     last_descision_Tile = {-1.f, -1.f};
 }
-void model::Ghost::setScared(double duration) {
+void model::Ghost::setScared(double duration, World& world) {
     if (m_mode == GhostMode::Eaten)
         return;
 
@@ -419,6 +428,24 @@ void model::Ghost::setScared(double duration) {
         events::Event event = events::Event{events::EventType::GhostModeChanged};
         notify(event, *this);
         m_speed = m_speed * 0.7f; // reduce speed when scared
+        // turn to opposite direction
+        Vec2D p = m_position;
+        world.snapToCorridor(p, m_direction);
+        setPosition(p);
+        auto validDirs = getValidDirections(world);
+        Direction dir = opposite(m_direction);
+        if (std::find(validDirs.begin(), validDirs.end(), dir) == validDirs.end()) {
+            // opposite direction not valid, choose random valid direction
+            if (!validDirs.empty()) {
+                int randomIndex = world.rng.randomInt(0, (int)validDirs.size() - 1);
+                dir = validDirs[randomIndex];
+
+            } else {
+                std::cerr << "Ghost " << m_id << " has no valid directions when scared!" << std::endl;
+                dir = m_direction; // keep current direction
+            }
+        }
+        setDirection(dir);
     }
 
     // reset fear time if already scared

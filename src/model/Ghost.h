@@ -54,7 +54,7 @@ public:
     /** reset ghost to start position*/
     void reset() override;
     /** set ghost to scared mode*/
-    void setScared(double duration) override;
+    void setScared(double duration, World& world) override;
 
 private:
     GhostMode m_mode;

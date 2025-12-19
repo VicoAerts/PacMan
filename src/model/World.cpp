@@ -185,7 +185,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
                     double fear = 6.0 - 0.35 * (currentLevel - 1);
                     if (fear < 0.5)
                         fear = 0.5; // min fear time
-                    entity->setScared(fear);
+                    entity->setScared(fear, *this);
                 }
                 m_remainingCollectables--;
             } else if (event.type == events::EventType::CoinEaten) {
