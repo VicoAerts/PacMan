@@ -136,6 +136,7 @@ std::vector<int> model::Score::getHighScores() const {
     std::ifstream inFile(filename);
     if (!inFile.is_open()) {
         std::cerr << "Unable to open HighScores.txt for reading." << std::endl;
+        return {0, 0, 0, 0, 0};
     } else {
         int s;
         while (inFile >> s) {
