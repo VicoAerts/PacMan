@@ -96,6 +96,7 @@ void model::Score::nextLevelSet() {
     // reset time since last coin for next level
     timeSinceLastCoin = 0.f;
     currentLevel++;
+    m_score += 500; // bonus for completing level
 }
 void model::Score::handleGhostEaten() {
     amountOfGhostsEaten++;
