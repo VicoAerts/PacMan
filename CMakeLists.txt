@@ -75,6 +75,8 @@ SET(VIEW_SRC
         src/view/Camera.h
         src/util/TextureManager.cpp
         src/util/TextureManager.h
+        src/states/VictoryState.cpp
+        src/states/VictoryState.h
 
 )
 

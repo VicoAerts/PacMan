@@ -4,6 +4,7 @@
 #include "../model/Score.h"
 #include "GameOverState.h"
 #include "PausedState.h"
+#include "VictoryState.h"
 
 #include <iostream>
 
@@ -93,7 +94,7 @@ void LevelState::update(const double deltaTime) {
         // proceed to next level
 
         playerScore.nextLevelSet();
-        stateManager.switchState(std::make_unique<LevelState>(stateManager, playerScore));
+        stateManager.switchState(std::make_unique<VictoryState>(stateManager, playerScore));
 
         return;
     }
