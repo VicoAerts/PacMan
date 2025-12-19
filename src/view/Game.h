@@ -22,8 +22,9 @@ namespace view {
 class Game {
     /**
      * game window using sfml
+     * can be shared with entityviews to change the view
      */
-    std::shared_ptr<sf::RenderWindow> window;
+    std::unique_ptr<sf::RenderWindow> window;
 
     /** @brief State stack/controller handling state transitions. */
     std::unique_ptr<state::StateManager> stateManager;

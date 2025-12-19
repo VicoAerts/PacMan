@@ -5,7 +5,7 @@
 #include "../util/Clock.h"
 
 view::Game::Game() {
-    window = std::make_shared<sf::RenderWindow>(sf::VideoMode(config::window_width, config::window_height), "Pacman");
+    window = std::make_unique<sf::RenderWindow>(sf::VideoMode(config::window_width, config::window_height), "Pacman");
     window->setFramerateLimit(config::max_fps);
     playerScore = std::make_shared<model::Score>();
     stateManager = std::make_unique<view::state::StateManager>(*window, playerScore);
