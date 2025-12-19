@@ -234,7 +234,7 @@ Direction model::Ghost::chooseRandomDirection(World& world, double deltaTime) co
         return (m_direction != Direction::None) ? opposite(m_direction) : Direction::None;
     }
 
-    int randomIndex = world.rng.randomInt(0, (int)validDirections.size() - 1);
+    int randomIndex = util::Random::getInstance().randomInt(0, (int)validDirections.size() - 1);
     return validDirections[randomIndex];
 }
 Direction model::Ghost::chooseFacingPacmanDirection(World& world, const Vec2D& pacmanPos, double deltaTime) const {
@@ -322,7 +322,7 @@ Direction model::Ghost::getDirectionToTarget(World& world, const Vec2D& targetPo
 
     // If multiple best candidates, choose one at random
     if (bestCandidates.size() > 1) {
-        int randomIndex = world.rng.randomInt(0, (int)bestCandidates.size() - 1);
+        int randomIndex = util::Random::getInstance().randomInt(0, (int)bestCandidates.size() - 1);
         return bestCandidates[randomIndex];
     }
 
@@ -381,7 +381,7 @@ Direction model::Ghost::getDirectionAwayFromTarget(World& world, const Vec2D& ta
 
     // If multiple best candidates, choose one at random
     if (bestCandidates.size() > 1) {
-        int randomIndex = world.rng.randomInt(0, (int)bestCandidates.size() - 1);
+        int randomIndex = util::Random::getInstance().randomInt(0, (int)bestCandidates.size() - 1);
         return bestCandidates[randomIndex];
     }
 
@@ -431,7 +431,7 @@ void model::Ghost::setScared(double duration, World& world) {
         if (std::find(validDirs.begin(), validDirs.end(), dir) == validDirs.end()) {
             // opposite direction not valid, choose random valid direction
             if (!validDirs.empty()) {
-                int randomIndex = world.rng.randomInt(0, (int)validDirs.size() - 1);
+                int randomIndex = util::Random::getInstance().randomInt(0, (int)validDirs.size() - 1);
                 dir = validDirs[randomIndex];
 
             } else {
