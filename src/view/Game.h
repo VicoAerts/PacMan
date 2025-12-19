@@ -29,7 +29,7 @@ class Game {
     std::unique_ptr<state::StateManager> stateManager;
 
     /** score of the player */
-    model::Score playerScore;
+    std::shared_ptr<model::Score> playerScore;
 
 public:
     /**Constructs the game and initializes window and initial state. */

@@ -1,7 +1,7 @@
 #include "PausedState.h"
 
 #include "../model/Score.h"
-view::state::PausedState::PausedState(StateManager& stateManager, model::Score& playerScore)
+view::state::PausedState::PausedState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore)
     : State(stateManager, playerScore) {}
 void view::state::PausedState::handleEvents(const sf::Event& event) {
     // resume on esc press
@@ -21,7 +21,7 @@ void view::state::PausedState::render(sf::RenderWindow& window) {
     sf::Font font;
     font = util::TextureManager::getScoreFont();
     sf::Text paused("Game Paused", font, 50);
-    sf::Text score("current score: " + std::to_string(playerScore.getScore()), font, 20);
+    sf::Text score("current score: " + std::to_string(playerScore->getScore()), font, 20);
     sf::Text instructions("press esc to resume", font, 10);
     instructions.setFillColor(sf::Color::Cyan);
     paused.setFillColor(sf::Color::Yellow);

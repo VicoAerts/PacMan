@@ -5,6 +5,7 @@
 #ifndef PACMAN_STATE_H
 #define PACMAN_STATE_H
 #include <SFML/Graphics.hpp>
+#include <memory>
 
 namespace model {
 class Score;
@@ -24,11 +25,11 @@ class StateManager;
 class State {
 protected:
     StateManager& stateManager;
-    model::Score& playerScore;
+    std::shared_ptr<model::Score> playerScore;
 
 public:
     /**  constructor */
-    explicit State(StateManager& stateManager, model::Score& playerScore)
+    explicit State(StateManager& stateManager, std::shared_ptr<model::Score> playerScore)
         : stateManager(stateManager), playerScore(playerScore) {}
     /** Virtual destructor to ensure proper cleanup of derived classes */
     virtual ~State() = default;

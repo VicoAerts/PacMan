@@ -28,7 +28,7 @@ class Score;
 class World {
 public:
     /**constructor for world taking a gridmap and a factory to spawn entities*/
-    World(const GridMap& map, AbstractFactory& factory, Score& playerScore);
+    World(const GridMap& map, AbstractFactory& factory, std::shared_ptr<model::Score> playerScore);
     /**update all entities in the world*/
     void update(double deltaTime);
     /**get the gridmap of the world*/
@@ -57,7 +57,7 @@ private:
     // Other members like entities, score, lives, etc.
     std::vector<std::unique_ptr<Entity>> entities;
     std::unique_ptr<PacMan> pacMan;
-    Score& score;
+    std::shared_ptr<model::Score> score;
     int m_remainingCollectables;
     int currentLevel;
     void spawnEntities(AbstractFactory& factory);

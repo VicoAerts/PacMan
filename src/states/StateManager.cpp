@@ -3,7 +3,7 @@
 #include "MenuState.h"
 
 namespace view::state {
-StateManager::StateManager(sf::RenderWindow& window, model::Score& playerScore) : window(window) {
+StateManager::StateManager(sf::RenderWindow& window, std::shared_ptr<model::Score> playerScore) : window(window) {
     pushState(std::make_unique<MenuState>(*this, playerScore));
 }
 

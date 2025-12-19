@@ -7,8 +7,8 @@
 #include <iostream>
 namespace model {
 
-model::World::World(const GridMap& grid, AbstractFactory& factory, Score& playerScore)
-    : worldGrid(grid), score(playerScore), currentLevel(playerScore.getCurrentLevel()) {
+model::World::World(const GridMap& grid, AbstractFactory& factory, std::shared_ptr<model::Score> playerScore)
+    : worldGrid(grid), score(playerScore), currentLevel(playerScore->getCurrentLevel()) {
     spawnEntities(factory);
     for (auto& entity : entities) {
         entity->attach(playerScore);
@@ -192,7 +192,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
     }
     if (pacmanDied) {
 
-        if (score.getLives() > 0) {
+        if (score->getLives() > 0) {
             resetWorld();
         }
     }

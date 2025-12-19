@@ -9,10 +9,10 @@
 #include <iostream>
 
 namespace view::state {
-LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
+LevelState::LevelState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore)
     : State(stateManager, playerScore),
       m_camera(Camera(stateManager.getWindow().getSize().x, stateManager.getWindow().getSize().y)),
-      m_factory(stateManager.getWindow(), m_camera, playerScore.getCurrentLevel()) {
+      m_factory(stateManager.getWindow(), m_camera, playerScore->getCurrentLevel()) {
     // 1. load maze from file
     GridMap map;
     map.loadMazeFromFile("Maze.txt");
@@ -44,7 +44,7 @@ LevelState::LevelState(StateManager& stateManager, model::Score& playerScore)
     util::TextureManager::init("level", "../assets/sprites.png");
     // 5. get views to render later
     for (auto& entity : m_factory.getEntityViews()) {
-        m_entityViews.push_back(std::move(const_cast<std::unique_ptr<view::entity::EntityView>&>(entity)));
+        m_entityViews.push_back(std::move(const_cast<std::shared_ptr<view::entity::EntityView>&>(entity)));
     }
     // 6. setup score text
     util::TextureManager::loadScoreFont();
@@ -89,18 +89,18 @@ void LevelState::update(const double deltaTime) {
     if (m_world) {
         m_world->update(deltaTime);
     }
-    playerScore.update(deltaTime);
+    playerScore->update(deltaTime);
     if (m_world->isWorldCleared()) {
         // proceed to next level
 
-        playerScore.nextLevelSet();
+        playerScore->nextLevelSet();
         stateManager.switchState(std::make_unique<VictoryState>(stateManager, playerScore));
 
         return;
     }
-    if (playerScore.isGameOver()) {
+    if (playerScore->isGameOver()) {
         // load score in file
-        playerScore.saveToFile();
+        playerScore->saveToFile();
         // switch to game over state
         stateManager.switchState(std::make_unique<GameOverState>(stateManager, playerScore));
         return;
@@ -134,19 +134,19 @@ void LevelState::render(sf::RenderWindow& window) {
     sf::Font font = util::TextureManager::getScoreFont();
 
     // TOP: Level
-    sf::Text levelText("LEVEL: " + std::to_string(playerScore.getCurrentLevel()), font, 54);
+    sf::Text levelText("LEVEL: " + std::to_string(playerScore->getCurrentLevel()), font, 54);
     levelText.setFillColor(sf::Color::White);
     setOriginCenterTop(levelText);
     levelText.setPosition(window.getSize().x / 2.f, topY);
 
     // BOTTOM LEFT: Score
-    sf::Text scoreText("SCORE: " + std::to_string(playerScore.getScore()), font, 20);
+    sf::Text scoreText("SCORE: " + std::to_string(playerScore->getScore()), font, 20);
     scoreText.setFillColor(sf::Color::White);
     setOriginLeftTop(scoreText);
     scoreText.setPosition(config::UI_LEFT, window.getSize().y - config::UI_BOTTOM + 10.f);
 
     // BOTTOM RIGHT: Lives
-    sf::Text livesText("LIVES: " + std::to_string(playerScore.getLives()), font, 20);
+    sf::Text livesText("LIVES: " + std::to_string(playerScore->getLives()), font, 20);
     livesText.setFillColor(sf::Color::White);
     setOriginRightTop(livesText);
     livesText.setPosition(window.getSize().x - config::UI_RIGHT, window.getSize().y - config::UI_BOTTOM + 10.f);

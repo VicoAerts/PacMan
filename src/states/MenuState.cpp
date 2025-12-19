@@ -4,7 +4,8 @@
 #include "../model/Score.h"
 
 namespace view::state {
-MenuState::MenuState(StateManager& stateManager, model::Score& playerScore) : State(stateManager, playerScore) {
+MenuState::MenuState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore)
+    : State(stateManager, playerScore) {
     if (!backgroundTexture.loadFromFile("../assets/pacmenu.png")) {
         throw std::runtime_error("Failed to load assets/pacmenu.png");
     }
@@ -63,7 +64,7 @@ void MenuState::render(sf::RenderWindow& window) {
     // scale font size with window size
     unsigned int charSize = (unsigned int)(60.f * std::min(scaleX, scaleY));
 
-    const auto& scores = playerScore.getHighScores();
+    const auto& scores = playerScore->getHighScores();
     // display high score
     sf::Text highScoreText(std::to_string(scores[0]), util::TextureManager::getScoreFont(), charSize);
     highScoreText.setFillColor(sf::Color::White);

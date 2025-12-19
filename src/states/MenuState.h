@@ -19,7 +19,7 @@ namespace view::state {
 class MenuState : public State {
 public:
     /** Constructor for MenuState */
-    explicit MenuState(StateManager& stateManager, model::Score& playerScore);
+    explicit MenuState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore);
     /** Destructor for MenuState */
     ~MenuState() override = default;
     /** Handle events specific to the menu state

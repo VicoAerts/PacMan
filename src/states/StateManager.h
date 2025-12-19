@@ -25,9 +25,11 @@ class StateManager {
     /** allow states to access render window if needed */
     sf::RenderWindow& window;
 
+    std::shared_ptr<model::Score> m_playerScore;
+
 public:
     /** constructor of statemanager that starts of with the menustate*/
-    explicit StateManager(sf::RenderWindow& window, model::Score& playerScore);
+    explicit StateManager(sf::RenderWindow& window, std::shared_ptr<model::Score> playerScore);
 
     /** destructor of statemanager that cleans up all states */
     ~StateManager() = default;

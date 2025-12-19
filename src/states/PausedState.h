@@ -18,7 +18,7 @@ namespace view::state {
 class PausedState : public State {
 public:
     /** Constructor for PausedState */
-    explicit PausedState(StateManager& stateManager, model::Score& playerScore);
+    explicit PausedState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore);
     /** Destructor for PausedState */
     ~PausedState() override = default;
     /** Handle events specific to the paused state

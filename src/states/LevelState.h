@@ -25,7 +25,7 @@ public:
      * including loading the maze, creating the world,
      * setting up the camera, and preparing entity views for rendering.
      */
-    explicit LevelState(StateManager& stateManager, model::Score& playerScore);
+    explicit LevelState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore);
     /** Destructor for LevelState */
     ~LevelState() override = default;
     /** Handle events specific to the level state
@@ -49,7 +49,7 @@ private:
     /** camera for this level */
     view::Camera m_camera;
     /** vector of all entity views in this level */
-    std::vector<std::unique_ptr<view::entity::EntityView>> m_entityViews;
+    std::vector<std::shared_ptr<view::entity::EntityView>> m_entityViews;
     /** concrete factory for creating entities */
     view::ConcreteFactory m_factory;
     /** score text to display the player's score */

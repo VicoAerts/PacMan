@@ -2,7 +2,7 @@
 
 #include "../model/Score.h"
 #include "MenuState.h"
-view::state::GameOverState::GameOverState(StateManager& stateManager, model::Score& playerScore)
+view::state::GameOverState::GameOverState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore)
     : State(stateManager, playerScore) {}
 void view::state::GameOverState::handleEvents(const sf::Event& event) {
     // enter to go bvack to main menu
@@ -37,11 +37,11 @@ void view::state::GameOverState::render(sf::RenderWindow& window) {
     gameOverText.setFillColor(sf::Color::Red);
     centerOrigin(gameOverText);
 
-    sf::Text scoreText("SCORE: " + std::to_string(playerScore.getScore()), font, 40);
+    sf::Text scoreText("SCORE: " + std::to_string(playerScore->getScore()), font, 40);
     scoreText.setFillColor(sf::Color::White);
     centerOrigin(scoreText);
 
-    bool isHighScore = playerScore.isHighScore();
+    bool isHighScore = playerScore->isHighScore();
     sf::Text highScoreText("NEW HIGH SCORE!", font, 32);
     highScoreText.setFillColor(sf::Color::White);
     centerOrigin(highScoreText);

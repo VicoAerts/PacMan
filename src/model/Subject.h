@@ -10,6 +10,7 @@
 #define PACMAN_SUBJECT_H
 #include "Observer.h"
 #include <functional>
+#include <memory>
 #include <vector>
 
 namespace model {
@@ -18,14 +19,14 @@ class Entity;
 class Subject {
 private:
     /** subject holds references to all observers*/
-    std::vector<std::reference_wrapper<Observer>> observers;
+    std::vector<std::weak_ptr<Observer>> observers;
 
 public:
     /** attach observer to subject */
-    void attach(Observer& observer);
+    void attach(std::shared_ptr<Observer> observer);
 
     /** detach observer from subject */
-    void detach(Observer& observer);
+    void detach(std::shared_ptr<Observer> observer);
 
 protected:
     /** notify observer about event */

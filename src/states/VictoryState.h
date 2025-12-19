@@ -16,7 +16,7 @@ namespace view::state {
 class VictoryState : public State {
 public:
     /** Constructor for VictoryState */
-    explicit VictoryState(StateManager& stateManager, model::Score& playerScore);
+    explicit VictoryState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore);
     /** Destructor for VictoryState */
     ~VictoryState() override = default;
     /** Handle events specific to the victory state */

@@ -7,7 +7,7 @@
 #include "../model/Score.h"
 #include "LevelState.h"
 #include "StateManager.h"
-view::state::VictoryState::VictoryState(StateManager& stateManager, model::Score& playerScore)
+view::state::VictoryState::VictoryState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore)
     : State(stateManager, playerScore) {}
 void view::state::VictoryState::handleEvents(const sf::Event& event) {
     // enter to proceed to next level
@@ -36,7 +36,7 @@ void view::state::VictoryState::render(sf::RenderWindow& window) {
     victoryText.setFillColor(sf::Color::Green);
     centerOrigin(victoryText);
 
-    sf::Text scoreText("SCORE: " + std::to_string(playerScore.getScore()), font, 40);
+    sf::Text scoreText("SCORE: " + std::to_string(playerScore->getScore()), font, 40);
     scoreText.setFillColor(sf::Color::White);
     centerOrigin(scoreText);
 

@@ -17,7 +17,7 @@ namespace view::state {
 class GameOverState : public State {
 public:
     /** Constructor for GameOverState */
-    explicit GameOverState(StateManager& stateManager, model::Score& playerScore);
+    explicit GameOverState(StateManager& stateManager, std::shared_ptr<model::Score> playerScore);
     /** Destructor for GameOverState */
     ~GameOverState() override = default;
     /** Handle events specific to the game over state */

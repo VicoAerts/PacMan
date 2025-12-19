@@ -39,7 +39,7 @@ class ConcreteFactory : public model::AbstractFactory {
 private:
     sf::RenderWindow& window;
     Camera& camera;
-    std::vector<std::unique_ptr<entity::EntityView>> entityViews;
+    std::vector<std::shared_ptr<entity::EntityView>> entityViews;
     // keep track of current level to make levels harder
     int currentLevel;
 
@@ -58,7 +58,7 @@ public:
     std::unique_ptr<model::Entity> createWall(int row, int col) override;
 
     /** Get all entity views created by this factory */
-    [[nodiscard]] const std::vector<std::unique_ptr<entity::EntityView>>& getEntityViews() const { return entityViews; }
+    [[nodiscard]] const std::vector<std::shared_ptr<entity::EntityView>>& getEntityViews() const { return entityViews; }
 };
 } // namespace view
 
