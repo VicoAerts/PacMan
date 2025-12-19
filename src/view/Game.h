@@ -1,6 +1,6 @@
 /**
- *@file Game.h
- *@brief creates renderwindow, starts the game loop, sets up stateManager , passes events to stateManager,
+ * @file Game.h
+ * @brief Top-level game class that owns the render window and runs the main loop.
  */
 
 #ifndef PACMAN_GAME_H
@@ -11,28 +11,28 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <memory>
-namespace model {
-class World;
-}
 
 namespace view {
+/**
+ * @brief Manages the main game loop and delegates logic to the active State.
+ *
+ * Creates the SFML window, initializes the StateManager, and forwards input,
+ * update ticks, and rendering to the current state.
+ */
 class Game {
     /**
      * game window using sfml
      */
     std::shared_ptr<sf::RenderWindow> window;
 
-    // state manager, elke state heeft pointer naar deze statemanager
+    /** @brief State stack/controller handling state transitions. */
     std::unique_ptr<state::StateManager> stateManager;
 
     /** score of the player */
     model::Score playerScore;
 
 public:
-    /**
-     * constructor
-     * sets up the game window and world ....
-     */
+    /**Constructs the game and initializes window and initial state. */
     Game();
 
     /** destructor of the game*/

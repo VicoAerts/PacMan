@@ -11,9 +11,11 @@
 #include <string>
 
 enum class Direction;
+/** Enumeration for different sprite types */
 enum class spriteType { PACMAN, GHOST, COIN, FRUIT, WALL };
 
 namespace util {
+/** TextureManager class for loading and managing game textures */
 class TextureManager {
 public:
     /** Load all textures from sprite sheet */

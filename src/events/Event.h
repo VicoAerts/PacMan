@@ -1,22 +1,20 @@
 /**
- *file Event.h
- *brief event class for all custom events
+ *@file Event.h
+ *@brief event class for all custom events used in the game.
+ *Supports the observer pattern for notifying entities about events.
  */
 #ifndef PACMAN_EVENT_H
 #define PACMAN_EVENT_H
 #include "../util/Direction.h"
-#include <memory>
-#include <optional>
 
-/* Forward declaration */
 namespace model {
 class Entity;
 }
 
-/* Event namespace */
+/** Namespace for all event-related classes and enumerations */
 namespace events {
 
-/* Event types enumeration */
+/** Event types enumeration processed and used by all observer patterns */
 enum class EventType {
     Tick,
     PositionChanged,
@@ -29,15 +27,15 @@ enum class EventType {
     None
 };
 
-/* Event class definition */
+/** Event class definition */
 class Event {
 public:
-    /* Event type */
+    /** Event type */
     EventType type;
-    /* optional direction associated with the event */
+    /** direction associated with the event, if the event has nothing to do with direction it will be set to None*/
     Direction direction;
 
-    /* Constructor that makes event depending on the type and the entity that triggered the event */
+    /** Constructor that makes event depending on the type and the entity that triggered the event */
     Event(EventType t, Direction direction = Direction::None) : type(t), direction(direction){};
 };
 

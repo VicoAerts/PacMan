@@ -13,10 +13,11 @@
 #include <vector>
 
 namespace model {
+class Entity;
+/** @brief Subject base class for observer pattern */
 class Subject {
 private:
-    /** subject holds references to all observers, we use reference wrapper because normal pointers Observer* is not
-     * allowed*/
+    /** subject holds references to all observers*/
     std::vector<std::reference_wrapper<Observer>> observers;
 
 public:

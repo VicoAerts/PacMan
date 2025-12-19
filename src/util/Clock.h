@@ -8,10 +8,10 @@
 #define PACMAN_CLOCK_H
 #include <chrono>
 namespace util {
+/** @brief Singleton clock providing delta time between update ticks. */
 class Clock {
 private:
-    static Clock* _instance;
-
+    /** Private constructor for singleton pattern */
     Clock() = default;
 
     std::chrono::time_point<std::chrono::steady_clock> time;
@@ -19,18 +19,18 @@ private:
     double deltaTime = 0.0;
 
 public:
+    /** Get the singleton instance of the Clock */
+    static Clock& getInstance();
+    /** Destructor */
     ~Clock() = default;
-
-    static Clock* getInstance();
-
+    /** Start the clock by recording the current time */
     void start();
-
+    /** Update the clock and calculate delta time since last tick */
     void tick();
-
-    double getDeltaTime();
-
+    /** Get the delta time since the last tick */
+    [[nodiscard]] double getDeltaTime();
+    /** Delete copy constructor and assignment operator to enforce singleton */
     Clock(const Clock&) = delete;
-
     Clock& operator=(const Clock&) = delete;
 };
 } // namespace util

@@ -1,6 +1,6 @@
 /**
  * @file Coin.h
- * @brief Definition of the Coin class representing a collectible item in the game.
+ * @brief Definition of the Coin class representing a collectible coin item in the game.
  */
 
 #ifndef PACMAN_COIN_H
@@ -8,6 +8,7 @@
 #include "Collectable.h"
 
 namespace model {
+/** collectable coin entity that increases score when collected */
 class Coin : public Collectable {
 public:
     /** Coin constructor */

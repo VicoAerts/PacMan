@@ -1,17 +1,26 @@
-//
-// Created by gebruiker on 22/11/2025.
-//
+/**
+ * @file Vec2D.h
+ * @brief Defines a simple 2D vector structure and direction conversion utility.
+ */
 
 #ifndef PACMAN_VEC2D_H
 #define PACMAN_VEC2D_H
 #include "Direction.h"
 
+/**
+ * @brief Simple 2D vector used for positions and directions.
+ */
 struct Vec2D {
     float x{0.f};
     float y{0.f};
 };
 
-// Convert Direction to Vec2D
+/**
+ * @brief Converts a Direction enum value to a 2D direction vector.
+ *
+ * @param d Direction to convert
+ * @return Corresponding unit vector, or (0,0) if Direction::None
+ */
 static Vec2D dirToVector(Direction d) {
     switch (d) {
     case Direction::Left:

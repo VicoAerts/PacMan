@@ -1,10 +1,6 @@
-//
-// Created by gebruiker on 18/11/2025.
-//
-
 #include "PacMan.h"
 
-#include "World.h"
+#include "../control/World.h"
 
 #include <iostream>
 model::PacMan::PacMan(const Vec2D& startpos, float speed)

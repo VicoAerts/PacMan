@@ -5,12 +5,12 @@
 
 #ifndef PACMAN_WORLD_H
 #define PACMAN_WORLD_H
+#include "../model/AbstractFactory.h"
+#include "../model/Entity.h"
+#include "../model/GridMap.h"
+#include "../model/PacMan.h"
 #include "../util/Direction.h"
 #include "../util/Random.h"
-#include "AbstractFactory.h"
-#include "Entity.h"
-#include "GridMap.h"
-#include "PacMan.h"
 
 #include <memory>
 #include <vector>

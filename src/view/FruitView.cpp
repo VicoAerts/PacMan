@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 13/12/2025.
-//
-
 #include "FruitView.h"
 view::entity::FruitView::FruitView(Vec2D startPos) : EntityView(), pos(startPos) {
     fruitSprite = util::TextureManager::getSprite(spriteType::FRUIT, Direction::None);

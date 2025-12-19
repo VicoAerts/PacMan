@@ -8,6 +8,7 @@
 #include "Entity.h"
 
 namespace model {
+/** @brief Wall entity representing immovable obstacles in the game world.*/
 class Wall : public Entity {
 public:
     /** Wall constructor*/

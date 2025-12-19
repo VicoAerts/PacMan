@@ -1,10 +1,7 @@
-//
-// Created by gebruiker on 9/11/2025.
-//
-
 #include "World.h"
 
-#include "Score.h"
+#include "../../config/config.h"
+#include "../model/Score.h"
 
 #include <cmath>
 #include <iostream>
@@ -182,7 +179,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
             } else if (event.type == events::EventType::FruitEaten) {
                 for (auto& entity : entities) {
                     // calc scared time based on level
-                    double fear = 6.0 - 0.35 * (currentLevel - 1);
+                    double fear = config::fear_base_duration_s - 0.35 * (currentLevel - 1);
                     if (fear < 0.5)
                         fear = 0.5; // min fear time
                     entity->setScared(fear, *this);

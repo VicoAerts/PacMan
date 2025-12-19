@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 FIND_PACKAGE(SFML 2 COMPONENTS system window graphics)
 
 SET(LOGIC_SRC
-        src/model/World.cpp
-        src/model/World.h
+        src/control/World.cpp
+        src/control/World.h
         src/util/Clock.cpp
         src/util/Clock.h
         config/config.h
@@ -53,8 +53,6 @@ SET(VIEW_SRC
         src/states/LevelState.h
         src/states/PausedState.cpp
         src/states/PausedState.h
-        src/states/VictoryState.cpp
-        src/states/VictoryState.h
         src/states/GameOverState.cpp
         src/states/GameOverState.h
         src/states/MenuState.cpp
@@ -71,8 +69,6 @@ SET(VIEW_SRC
         src/view/GhostView.h
         src/view/WallView.cpp
         src/view/WallView.h
-        src/view/CollectableView.cpp
-        src/view/CollectableView.h
         src/view/ConcreteFactory.cpp
         src/view/ConcreteFactory.h
         src/view/CoinView.cpp

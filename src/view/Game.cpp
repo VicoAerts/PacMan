@@ -1,11 +1,7 @@
-//
-// Created by gebruiker on 9/11/2025.
-//
-
 #include "Game.h"
 
 #include "../../config/config.h"
-#include "../model/World.h"
+#include "../control/World.h"
 #include "../util/Clock.h"
 
 view::Game::Game() {
@@ -17,11 +13,10 @@ view::Game::Game() {
 view::Game::~Game() {}
 
 void view::Game::run() {
-    auto clock = util::Clock::getInstance();
-    clock->start();
+    util::Clock::getInstance().start();
     while (window->isOpen()) {
-        clock->tick();
-        const double deltaTime = clock->getDeltaTime();
+        util::Clock::getInstance().tick();
+        const double deltaTime = util::Clock::getInstance().getDeltaTime();
 
         handleEvents();
         update(deltaTime);

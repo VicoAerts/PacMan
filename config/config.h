@@ -1,6 +1,7 @@
-//
-// Created by gebruiker on 16/11/2025.
-//
+/**
+ * @file config.h
+ * @brief Configuration constants for the Pacman game.
+ */
 
 #pragma once
 
@@ -15,18 +16,9 @@ constexpr unsigned int UI_BOTTOM = 80;
 constexpr unsigned int UI_LEFT = 50;
 constexpr unsigned int UI_RIGHT = 50;
 
-//
-// // --- World / camera ---
-// constexpr float world_min_x = -1.0f;
-// constexpr float world_max_x = 1.0f;
-// constexpr float world_min_y = -1.0f;
-// constexpr float world_max_y = 1.0f;
-
 // --- Gameplay ---
 constexpr float pacman_speed = 0.3f;
 constexpr float ghost_base_speed = 0.28f;
-//  constexpr float fear_duration_s = ;
-
-// --- highscore files---
+constexpr double fear_base_duration_s = 6.0;
 
 } // namespace config

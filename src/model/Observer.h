@@ -9,10 +9,15 @@
 
 namespace model {
 class Subject;
+class Entity;
 
+/**
+ * @brief Observer interface for receiving game events.
+ */
 class Observer {
 public:
-    ~Observer() = default;
+    /** Virtual destructor */
+    virtual ~Observer() = default;
 
     /** pure virtual function called by subject when event happens */
     virtual void onNotify(const events::Event& event, Entity& entity) = 0;

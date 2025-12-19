@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 18/11/2025.
-//
-
 #include "GhostView.h"
 
 #include <iostream>
@@ -67,7 +63,7 @@ void view::entity::GhostView::draw(sf::RenderWindow& window, Camera& camera) {
     // animation update
     bool isMoving = (previousPos.x != currentPos.x || previousPos.y != currentPos.y);
     if (isMoving) {
-        float deltaTime = util::Clock::getInstance()->getDeltaTime();
+        float deltaTime = util::Clock::getInstance().getDeltaTime();
         timer += deltaTime;
         if (timer >= 0.0001f) {
             // use modulo to cycle through frames

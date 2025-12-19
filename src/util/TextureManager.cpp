@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 22/11/2025.
-//
-
 #include "TextureManager.h"
 
 #include "../model/Ghost.h"

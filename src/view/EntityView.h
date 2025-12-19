@@ -12,7 +12,7 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 namespace view::entity {
-
+/** Abstract base class for all entity views. */
 class EntityView : public model::Observer {
 
 public:

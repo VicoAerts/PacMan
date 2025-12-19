@@ -1,6 +1,6 @@
 /**
  * @file ConcreteFactory.h
- * @brief Concrete Factory for creating game entities and managing the camera.
+ * @brief Concrete Factory for creating views and game entities.
 
  */
 
@@ -28,6 +28,7 @@
 #include "PacManView.h"
 #include "WallView.h"
 namespace view {
+/** Concrete Factory class for creating game entities and their views */
 class ConcreteFactory : public model::AbstractFactory {
 private:
     sf::RenderWindow& window;

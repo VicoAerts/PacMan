@@ -14,7 +14,7 @@ class WallView : public EntityView {
 public:
     /** Constructor initializing the Wall view with its model */
     explicit WallView(Vec2D pos);
-    /** notify wall view about changes in model */
+    /** notify wall view about changes in model currently not used */
     void onNotify(const events::Event& event, model::Entity& entity) override;
     /** draw wall on screen */
     void draw(sf::RenderWindow& window, Camera& camera) override;

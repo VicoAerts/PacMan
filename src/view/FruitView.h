@@ -8,9 +8,10 @@
 #include "EntityView.h"
 
 namespace view::entity {
+/** @brief View class for rendering Fruit entities. */
 class FruitView : public EntityView {
 public:
-    /** Constructor initializing the Fruit view with its model */
+    /** Constructor initializing the Fruit view */
     explicit FruitView(Vec2D startPos);
     /** notify fruit view about changes in model */
     void onNotify(const events::Event& event, model::Entity& entity) override;

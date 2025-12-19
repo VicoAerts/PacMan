@@ -10,9 +10,10 @@
 #include "EntityView.h"
 #include <SFML/Graphics.hpp>
 namespace view::entity {
+/** @brief View class for rendering Coin entities. */
 class CoinView : public EntityView {
 public:
-    /** Constructor initializing the Coin view with its model */
+    /** Constructor initializing the Coin view*/
     explicit CoinView(Vec2D startPos);
     /** notify coin view about changes in model */
     void onNotify(const events::Event& event, model::Entity& entity) override;

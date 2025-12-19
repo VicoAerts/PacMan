@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 18/11/2025.
-//
-
 #include "Ghost.h"
 
 #include <iostream>
@@ -174,7 +170,7 @@ void model::Ghost::update(const double deltaTime, World& world) {
     }
 }
 
-GhostMode model::Ghost::getMode() const { return m_mode; }
+model::GhostMode model::Ghost::getMode() const { return m_mode; }
 int model::Ghost::getCurrentMode() const {
     if (m_isFeared) {
         return 1; // Fear mode
@@ -187,7 +183,7 @@ void model::Ghost::setMode(GhostMode mode) {
     notify(events::Event{events::EventType::GhostModeChanged}, *this);
 }
 
-GhostType model::Ghost::getType() const { return m_type; }
+model::GhostType model::Ghost::getType() const { return m_type; }
 
 int model::Ghost::getId() const { return m_id; }
 
@@ -420,8 +416,6 @@ void model::Ghost::reset() {
     last_descision_Tile = {-1.f, -1.f};
 }
 void model::Ghost::setScared(double duration, World& world) {
-    if (m_mode == GhostMode::Eaten)
-        return;
 
     if (!m_isFeared) {
         m_isFeared = true;

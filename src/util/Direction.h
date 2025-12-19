@@ -1,11 +1,18 @@
-//
-// Created by gebruiker on 22/11/2025.
-//
-
+/**
+ * @file Direction.h
+ * @brief Defines movement directions and related helper functions.
+ */
 #ifndef PACMAN_DIRECTION_H
 #define PACMAN_DIRECTION_H
+/** Enumeration for movement directions */
 enum class Direction { Left, Right, Up, Down, None };
 
+/**
+ * @brief Returns the opposite of a given direction.
+ *
+ * @param d Direction for which the opposite is requested
+ * @return Opposite direction, or Direction::None if undefined
+ */
 inline Direction opposite(Direction d) {
     switch (d) {
     case Direction::Up:

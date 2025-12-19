@@ -1,18 +1,21 @@
 /**
  *@file PacMan.h
  *@brief Declaration of the PacMan class representing the PacMan entity in the game.
+ *
  */
 #ifndef PACMAN_PACMAN_H
 #define PACMAN_PACMAN_H
 #include "../util/Direction.h"
-#include "../util/TextureManager.h"
 #include "../util/Vec2D.h"
 #include "Entity.h"
 
-#include <SFML/Graphics/Glsl.hpp>
-
 namespace model {
-
+/**
+ * @brief Pac-Man entity controlled by the player.
+ *
+ * Contains movement logic and collision handling.
+ * Part of the game logic layer (no rendering code).
+ */
 class PacMan : public Entity {
 public:
     /** pacman constructor*/
@@ -28,7 +31,7 @@ public:
     /** hanlde input for pacman*/
     void handleInput(Direction dir) override;
     /** reset pacman to start position*/
-    void reset() override ;
+    void reset() override;
 
 private:
     Direction m_direction;

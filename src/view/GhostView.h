@@ -8,8 +8,10 @@
 #include "EntityView.h"
 
 namespace view::entity {
+/** @brief View class for rendering Ghost entities. */
 class GhostView : public EntityView {
 public:
+    /** Constructor initializing the Ghost view and gets the frames from texture manager */
     explicit GhostView(Vec2D startPos, int ghostId);
     /** notify ghost view about changes in model */
     void onNotify(const events::Event& event, model::Entity& entity) override;

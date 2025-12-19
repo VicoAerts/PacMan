@@ -1,22 +1,33 @@
 /**
- *@file Ghost.h
- *@brief Declaration of the Ghost class representing the Ghost entity in the game.
- * ghost uses 4 modes: wait, chase, fear, eaten
+ * @file Ghost.h
+ * @brief Declaration of the Ghost entity and its AI behavior.
+ *
+ * Ghosts have movement modes (Wait, Leaving, Chase) and can additionally
+ * enter a temporary fear state when Pac-Man eats a fruit.
  */
 
 #ifndef PACMAN_GHOST_H
 #define PACMAN_GHOST_H
 #include "../../config/config.h"
+#include "../control/World.h"
 #include "../events/Event.h"
 #include "../util/Direction.h"
 #include "Entity.h"
-#include "World.h"
-#include <algorithm>
-
-enum class GhostMode { Wait, Leaving, Chase, Eaten };
-enum class GhostType { Random, FacingPacman, DirectChase };
 
 namespace model {
+/** Enumeration for ghost movement modes */
+enum class GhostMode { Wait, Leaving, Chase };
+/**
+ * Enumeration for ghost AI types
+ * where facing pacman tries to cut pacman off
+ * and direct chase goes straight towards pacman
+ */
+enum class GhostType { Random, FacingPacman, DirectChase };
+/**
+ * @brief Ghost entity with AI movement and fear behavior.
+ *
+ * Part of the game logic layer (no rendering code).
+ */
 class Ghost : public Entity {
 public:
     /** current mode of the ghost */
@@ -71,5 +82,4 @@ private:
     bool m_isFeared = false;
 };
 } // namespace model
-  // namespace model
 #endif // PACMAN_GHOST_H

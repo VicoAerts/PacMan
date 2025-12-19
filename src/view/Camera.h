@@ -11,13 +11,11 @@
 #include "../util/Vec2D.h"
 
 namespace view {
+/** Camera class for converting grid coordinates to  world coordinates to screen coordinates and vice versa */
 class Camera {
 public:
     /** camera constructor using window width and height*/
     Camera(int windowWidth, int windowHeight);
-
-    // /** update window size (for example when window is resized)*/
-    // void setWindowSize(int windowWidth, int windowHeight);
 
     /** set world size (for example when level is changed)*/
     void setGridSize(int rows, int cols);

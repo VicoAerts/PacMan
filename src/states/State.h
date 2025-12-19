@@ -14,12 +14,16 @@ class Score;
  * @brief Contains all game state classes.
  */
 namespace view::state {
-class StateManager; // Forward declaration
-
+class StateManager;
+/**
+ * @brief Abstract base class for all game states.
+ *
+ * Defines the interface for handling events, updating, and rendering
+ * in different game states (e.g., menu, gameplay, paused, game over).
+ */
 class State {
 protected:
     StateManager& stateManager;
-    /** player score reference for states that need it */
     model::Score& playerScore;
 
 public:

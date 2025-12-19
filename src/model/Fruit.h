@@ -1,12 +1,14 @@
 /**
  * @file Fruit.h
  * @brief Definition of the fruit class representing a collectible item in the game.
+ * When collected, it increases the player's score and triggers a fruit eaten event.
  */
 
 #ifndef PACMAN_FRUIT_H
 #define PACMAN_FRUIT_H
 #include "Collectable.h"
 namespace model {
+/** collectable fruit entity that increases score when collected and triggers event*/
 class Fruit : public Collectable {
 public:
     /** Fruit constructor */

@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 20/11/2025.
-//
-
 #include "ConcreteFactory.h"
 
 view::ConcreteFactory::ConcreteFactory(sf::RenderWindow& window, Camera& camera, int currentLevel)

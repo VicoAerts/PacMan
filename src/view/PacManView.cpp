@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 18/11/2025.
-//
-
 #include "PacManView.h"
 
 #include <iostream>
@@ -47,7 +43,7 @@ void view::entity::PacManView::draw(sf::RenderWindow& window, Camera& camera) {
 
     if (isMoving) {
         // animation update if moving
-        float deltaTime = util::Clock::getInstance()->getDeltaTime();
+        float deltaTime = util::Clock::getInstance().getDeltaTime();
         timer += deltaTime;
 
         if (timer >= 0.0001f) {

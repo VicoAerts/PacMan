@@ -9,11 +9,14 @@
 #include "../util/Vec2D.h"
 #include "Subject.h"
 namespace model {
-/** Forward declaration of World class */
 class World;
 
-/** 2D Vector structure */
-
+/**
+ * @brief Abstract base class for all game entities.
+ *
+ * Inherits from Subject to support the Observer pattern.
+ * This class belongs to the game logic layer and contains no rendering code.
+ */
 class Entity : public Subject {
 
 protected:
@@ -52,7 +55,7 @@ public:
     /** virtual function to set entity scared*/
     virtual void setScared(double duration, World& world) {};
     /** virtual function to get the mode of the entity*/
-    virtual int getCurrentMode() const { return 0; };
+    [[nodiscard]] virtual int getCurrentMode() const { return 0; };
 };
 } // namespace model
 #endif // PACMAN_ENITYMODEL_H

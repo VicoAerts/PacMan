@@ -1,11 +1,9 @@
 
 
 #include "Clock.h"
-util::Clock* util::Clock::_instance = nullptr;
 
-util::Clock* util::Clock::getInstance() {
-    if (!_instance)
-        _instance = new Clock();
+util::Clock& util::Clock::getInstance() {
+    static Clock _instance{};
     return _instance;
 }
 

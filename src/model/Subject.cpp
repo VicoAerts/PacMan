@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 17/11/2025.
-//
-
 #include "Subject.h"
 namespace model {
 void Subject::attach(Observer& observer) { observers.push_back(observer); }

@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 20/11/2025.
-//
-
 #include "GridMap.h"
 
 #include <cmath>

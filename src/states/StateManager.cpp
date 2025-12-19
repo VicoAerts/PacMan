@@ -1,7 +1,3 @@
-//
-// Created by gebruiker on 10/11/2025.
-//
-
 #include "StateManager.h"
 #include "../model/Score.h"
 #include "MenuState.h"

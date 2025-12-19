@@ -14,7 +14,7 @@
 namespace view::entity {
 class PacManView : public EntityView {
 public:
-    /** Constructor initializing the PacMan view with its model */
+    /** Constructor initializing the PacMan view  */
     explicit PacManView(Vec2D startPos, Direction startDir);
     /** notify pacman view about changes in model */
     void onNotify(const events::Event& event, model::Entity& entity) override;

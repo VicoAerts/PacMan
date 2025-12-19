@@ -1,6 +1,7 @@
 /**
  *@file StateManager.h
  *@brief state manager class uses a stack of states to handle different game states (menu, playing, paused, etc.)
+ * this allows implementing the state pattern design pattern.
  */
 
 #ifndef PACMAN_STATEMANAGER_H
@@ -11,6 +12,12 @@
 #include <stack>
 
 namespace view::state {
+/**
+ * @brief StateManager class that manages different game states using a stack.
+ *
+ * The StateManager allows pushing, popping, and switching between different states,
+ * such as menu, gameplay, paused, and gameover states.
+ */
 class StateManager {
     /** stack of states to manage different game states */
     std::stack<std::unique_ptr<State>> statesStack;
