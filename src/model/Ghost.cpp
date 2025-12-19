@@ -228,10 +228,20 @@ Direction model::Ghost::chooseRandomDirection(World& world, double deltaTime) co
         validDirections.erase(std::remove(validDirections.begin(), validDirections.end(), oppositeDir),
                               validDirections.end());
     }
-
     if (validDirections.empty()) {
         // only option is to go back if stuck
         return (m_direction != Direction::None) ? opposite(m_direction) : Direction::None;
+    }
+    // coin flip to continue current direction
+    int coinFlip = util::Random::getInstance().randomInt(0, 1);
+    if (coinFlip == 0 &&
+        std::find(validDirections.begin(), validDirections.end(), m_direction) != validDirections.end()) {
+        return m_direction;
+    }
+    // remove current direction
+    if (validDirections.size() > 1 && m_direction != Direction::None) {
+        validDirections.erase(std::remove(validDirections.begin(), validDirections.end(), m_direction),
+                              validDirections.end());
     }
 
     int randomIndex = util::Random::getInstance().randomInt(0, (int)validDirections.size() - 1);
