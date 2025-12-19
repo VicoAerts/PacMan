@@ -10,8 +10,6 @@ SET(LOGIC_SRC
         src/util/Clock.cpp
         src/util/Clock.h
         config/config.h
-        src/view/Camera.cpp
-        src/view/Camera.h
         src/model/Entity.h
         src/model/Subject.cpp
         src/model/Subject.h
@@ -32,8 +30,6 @@ SET(LOGIC_SRC
         src/model/GridMap.cpp
         src/model/GridMap.h
         src/util/Vec2D.h
-        src/util/TextureManager.cpp
-        src/util/TextureManager.h
         src/util/Direction.h
         src/model/Coin.cpp
         src/model/Coin.h
@@ -75,6 +71,10 @@ SET(VIEW_SRC
         src/view/CoinView.h
         src/view/FruitView.cpp
         src/view/FruitView.h
+        src/view/Camera.cpp
+        src/view/Camera.h
+        src/util/TextureManager.cpp
+        src/util/TextureManager.h
 
 )
 
