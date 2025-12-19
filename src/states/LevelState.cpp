@@ -44,7 +44,7 @@ LevelState::LevelState(StateManager& stateManager, std::shared_ptr<model::Score>
     util::TextureManager::init("level", "../assets/sprites.png");
     // 5. get views to render later
     for (auto& entity : m_factory.getEntityViews()) {
-        m_entityViews.push_back(std::move(const_cast<std::shared_ptr<view::entity::EntityView>&>(entity)));
+        m_entityViews.push_back(entity);
     }
     // 6. setup score text
     util::TextureManager::loadScoreFont();
