@@ -34,6 +34,7 @@ public:
 private:
     sf::Texture backgroundTexture;
     sf::Sprite backgroundSprite;
+    sf::RectangleShape m_startButton;
 };
 } // namespace view::state
 
