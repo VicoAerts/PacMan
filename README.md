@@ -2,8 +2,8 @@
 
 An SFML-based Pac-Man clone with a clear separation between logic (static library) and rendering (executable). The
 project follows the coursework requirements (advanced programming UAntwerp): MVC separation, Observer/Abstract
-Factory/State/Singleton patterns, normalized world coordinates with a camera, and a multi-state flow (menu → level →
-victory/pause/game-over).
+Factory/State/Singleton patterns, normalized world coordinates with a camera, a multi-state flow (menu → level →
+victory/pause/game-over) and the use of smart pointers only.
 
 ## Build & Run
 
@@ -72,12 +72,8 @@ victory/pause/game-over).
 
 - Sprites: `assets/sprites.png`
 - Menu background: `assets/pacmenu.png`
-- Maze: `config/Maze.txt` (duplicate `Maze1.txt` available)
+- Maze: `config/Maze.txt` (2nd maze `Maze1.txt` available)
 - High scores: `config/HighScores.txt` (created/updated on game over)
 
-## Notes for the video/report
 
-- Explicitly mention where each checklist item is implemented (paths above).
-- Show the state transitions: Menu → Level → Victory → Level (next) and Pause/GameOver flows.
-- Highlight normalized coordinates + camera, the logic/view split (CMake), and design patterns usage.
 
