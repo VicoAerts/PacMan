@@ -10,7 +10,9 @@ victory/pause/game-over) and the use of smart pointers only.
 1. Prerequisites: CMake ≥ 3.22, SFML 2.6, C++17 compiler (tested with GCC/Clang from the course environment).
 2. Configure & build:
    ```bash
-   cd cmake-build-debug
+   mkdir build
+   cd build
+   cmake ..
    cmake --build . -j
    ```
 3. Run:
