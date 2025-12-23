@@ -10,12 +10,12 @@ victory/pause/game-over) and the use of smart pointers only.
 1. Prerequisites: CMake ≥ 3.22, SFML 2.6, C++17 compiler (tested with GCC/Clang from the course environment).
 2. Configure & build:
    ```bash
-   cmake -S . -B build
-   cmake --build build
+   cd cmake-build-debug
+   cmake --build . -j
    ```
 3. Run:
    ```bash
-   ./build/Pacman
+   ./Pacman  
    ```
 
 ## Controls
@@ -64,9 +64,6 @@ victory/pause/game-over) and the use of smart pointers only.
   `src/view/ConcreteFactory.*`, `src/util/Clock.cpp`, `src/util/Random.h`).
 - [x] **Camera & normalized coordinates** –grid coordinates, projection to world coordinates in [-1,1], projection to
   pixels on window (`src/view/Camera.*`).
-- [ ] **Documentation & video**
-- [ ] **Bonus features** – Optional: sounds/music, smarter AI (BFS/A*), procedural maps, multithreading, extra patterns.
-  Not implemented yet.
 
 ## Assets & Data
 
