@@ -65,9 +65,9 @@ void view::entity::GhostView::draw(sf::RenderWindow& window, Camera& camera) {
     if (isMoving) {
         float deltaTime = util::Clock::getInstance().getDeltaTime();
         timer += deltaTime;
-        if (timer >= 0.0001f) {
+        if (timer >= 0.12f) {
             // use modulo to cycle through frames
-            timer -= 0.0001f;
+            timer -= 0.12f;
             currentFrameIndex = (currentFrameIndex + 1) % frames.size();
             ghostSprite.setTextureRect(frames[currentFrameIndex]);
         }
