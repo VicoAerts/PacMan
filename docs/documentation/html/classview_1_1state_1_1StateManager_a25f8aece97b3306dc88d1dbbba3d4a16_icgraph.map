@@ -1,7 +1,5 @@
 <map id="view::state::StateManager::switchState" name="view::state::StateManager::switchState">
-<area shape="rect" id="Node000001" title=" " alt="" coords="224,37,416,77"/>
-<area shape="rect" id="Node000002" href="$classview_1_1state_1_1MenuState.html#a5d0b965f649e99eb3c0fa9d8ea0689c8" title=" " alt="" coords="5,5,176,45"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,45,176,40,177,35,211,39"/>
-<area shape="rect" id="Node000003" href="$classview_1_1state_1_1LevelState.html#a8153dd1e4d52beeec34af8042bbe695a" title=" " alt="" coords="5,69,176,109"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="211,75,177,80,176,75,210,70"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="224,5,416,45"/>
+<area shape="rect" id="Node000002" href="$classview_1_1state_1_1LevelState.html#a8153dd1e4d52beeec34af8042bbe695a" title=" " alt="" coords="5,5,176,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="210,28,176,28,176,23,210,23"/>
 </map>

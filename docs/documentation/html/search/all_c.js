@@ -6,6 +6,7 @@ var searchData=
   ['pacmanview_2eh_3',['PacManView.h',['../PacManView_8h.html',1,'']]],
   ['pausedstate_4',['pausedstate',['../classview_1_1state_1_1PausedState.html',1,'view::state::PausedState'],['../classview_1_1state_1_1PausedState.html#a130645f0286974901ceef73b6594d766',1,'view::state::PausedState::PausedState()']]],
   ['pausedstate_2eh_5',['PausedState.h',['../PausedState_8h.html',1,'']]],
-  ['popstate_6',['popState',['../classview_1_1state_1_1StateManager.html#a31a77b2edbf195f43410e32ba0c8ef62',1,'view::state::StateManager']]],
-  ['pushstate_7',['pushState',['../classview_1_1state_1_1StateManager.html#a8f4db4ecf4445d5195c4d784739a3eda',1,'view::state::StateManager']]]
+  ['pop2states_6',['pop2States',['../classview_1_1state_1_1StateManager.html#aed3449a7c187abff6841d385fa193e3d',1,'view::state::StateManager']]],
+  ['popstate_7',['popState',['../classview_1_1state_1_1StateManager.html#a31a77b2edbf195f43410e32ba0c8ef62',1,'view::state::StateManager']]],
+  ['pushstate_8',['pushState',['../classview_1_1state_1_1StateManager.html#a8f4db4ecf4445d5195c4d784739a3eda',1,'view::state::StateManager']]]
 ];

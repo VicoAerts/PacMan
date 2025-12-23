@@ -31,6 +31,8 @@ void \mbox{\hyperlink{classview_1_1state_1_1StateManager_a6583431d66e691862a07e7
 sf\+::\+Render\+Window \& \mbox{\hyperlink{classview_1_1state_1_1StateManager_a5a535af5977bbfb47ec9929636c0bd6b}{get\+Window}} ()
 \item 
 void \mbox{\hyperlink{classview_1_1state_1_1StateManager_ac671fb0991a485c72ba13926ba880e89}{clear\+States}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_aed3449a7c187abff6841d385fa193e3d}{pop2\+States}} ()
 \end{DoxyCompactItemize}
 
 
@@ -87,7 +89,21 @@ get the render window Here is the caller graph for this function\+:\nopagebreak
 \doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
 {\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})}
 
-handle events by delegating to the current state \Hypertarget{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62}\label{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62} 
+handle events by delegating to the current state \Hypertarget{classview_1_1state_1_1StateManager_aed3449a7c187abff6841d385fa193e3d}\label{classview_1_1state_1_1StateManager_aed3449a7c187abff6841d385fa193e3d} 
+\index{view::state::StateManager@{view::state::StateManager}!pop2States@{pop2States}}
+\index{pop2States@{pop2States}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{pop2States()}{pop2States()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::pop2\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+pop 2 states at once Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1StateManager_aed3449a7c187abff6841d385fa193e3d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62}\label{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62} 
 \index{view::state::StateManager@{view::state::StateManager}!popState@{popState}}
 \index{popState@{popState}!view::state::StateManager@{view::state::StateManager}}
 \doxysubsubsection{\texorpdfstring{popState()}{popState()}}
@@ -96,6 +112,14 @@ handle events by delegating to the current state \Hypertarget{classview_1_1state
 pop the current state from the stack \begin{DoxyReturn}{Returns}
 pointer to the removed state 
 \end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62_icgraph}
+\end{center}
+\end{figure}
 \Hypertarget{classview_1_1state_1_1StateManager_a8f4db4ecf4445d5195c4d784739a3eda}\label{classview_1_1state_1_1StateManager_a8f4db4ecf4445d5195c4d784739a3eda} 
 \index{view::state::StateManager@{view::state::StateManager}!pushState@{pushState}}
 \index{pushState@{pushState}!view::state::StateManager@{view::state::StateManager}}
@@ -107,7 +131,8 @@ push a new state onto the stack
 {\em state} & pointer to the new state to be added \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -131,7 +156,8 @@ push a new state and remove the current state
 {\em state} & pointer to the new state to be added \\
 \hline
 \end{DoxyParams}
-Here is the caller graph for this function\+:\nopagebreak
+Here is the caller graph for this function\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

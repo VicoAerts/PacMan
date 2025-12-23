@@ -8,8 +8,11 @@ void view::state::PausedState::handleEvents(const sf::Event& event) {
     if (event.type == sf::Event::KeyPressed) {
         switch (event.key.code) {
         case sf::Keyboard::Escape:
+            stateManager.pop2States();
+            break;
+
+        case sf::Keyboard::Enter:
             stateManager.popState();
-            // continue clock
             break;
         }
     }
@@ -22,8 +25,10 @@ void view::state::PausedState::render(sf::RenderWindow& window) {
     font = util::TextureManager::getScoreFont();
     sf::Text paused("Game Paused", font, 50);
     sf::Text score("current score: " + std::to_string(playerScore->getScore()), font, 20);
-    sf::Text instructions("press esc to resume", font, 10);
+    sf::Text instructions("press enter to resume", font, 10);
+    sf::Text instruction2("press esc to return to menu", font, 10);
     instructions.setFillColor(sf::Color::Cyan);
+    instruction2.setFillColor(sf::Color::Cyan);
     paused.setFillColor(sf::Color::Yellow);
     score.setFillColor(sf::Color::White);
     paused.setPosition(window.getSize().x / 2.f - paused.getLocalBounds().width / 2.f,
@@ -33,8 +38,11 @@ void view::state::PausedState::render(sf::RenderWindow& window) {
                       window.getSize().y / 2.f + paused.getLocalBounds().height / 2.f + 10.f);
     instructions.setPosition(window.getSize().x / 2.f - instructions.getLocalBounds().width / 2.f,
                              window.getSize().y / 2.f + paused.getLocalBounds().height / 2.f + 40.f);
+    instruction2.setPosition(window.getSize().x / 2.f - instruction2.getLocalBounds().width / 2.f,
+                             window.getSize().y / 2.f + paused.getLocalBounds().height / 2.f + 55.f);
     window.draw(score);
     window.draw(paused);
     window.draw(instructions);
+    window.draw(instruction2);
     window.display();
 }

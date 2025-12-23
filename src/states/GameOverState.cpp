@@ -13,7 +13,7 @@ void view::state::GameOverState::handleEvents(const sf::Event& event) {
             // want to play again
             //  reset score
             playerScore->reset();
-            stateManager.switchState(std::make_unique<view::state::MenuState>(stateManager, playerScore));
+            stateManager.popState();
             break;
         case sf::Keyboard::Escape:
             //  close window

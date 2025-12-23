@@ -19,7 +19,7 @@ void MenuState::handleEvents(const sf::Event& event) {
     if (event.type == sf::Event::KeyPressed) {
         if (event.key.code == sf::Keyboard::Enter) {
             // Switch to the playing state when Enter is pressed
-            stateManager.switchState(std::make_unique<LevelState>(stateManager, playerScore));
+            stateManager.pushState(std::make_unique<LevelState>(stateManager, playerScore));
         }
     }
     if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
@@ -29,7 +29,7 @@ void MenuState::handleEvents(const sf::Event& event) {
 
         if (m_startButton.getGlobalBounds().contains(mousePos)) {
             // Switch to the playing state when the button is clicked
-            stateManager.switchState(std::make_unique<LevelState>(stateManager, playerScore));
+            stateManager.pushState(std::make_unique<LevelState>(stateManager, playerScore));
         }
     }
 }

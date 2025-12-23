@@ -14,41 +14,27 @@ void StateManager::popState() {
     if (!statesStack.empty()) {
         statesStack.pop();
     } else {
-        // Handle the case where there are no states to pop
-        // throw exception ofzo
+        throw std::runtime_error("State Stack is empty");
     }
 }
 void StateManager::switchState(std::unique_ptr<State> state) {
     if (!statesStack.empty()) {
         statesStack.pop();
         statesStack.push(std::move(state));
-    } else {
-        // Handle the case where there are no states to switch
-        // throw exception ofzo
     }
 }
 void StateManager::handleEvents(const sf::Event& event) {
     if (!statesStack.empty()) {
         statesStack.top()->handleEvents(event);
-    } else {
-        // Handle the case where there are no states to handle events
-        // throw exception ofzo
-    }
-}
+    }}
 void StateManager::render(sf::RenderWindow& window) {
     if (!statesStack.empty()) {
         statesStack.top()->render(window);
-    } else {
-        // Handle the case where there are no states to render
-        // throw exception ofzo
     }
 }
 void StateManager::update(const double deltaTime) {
     if (!statesStack.empty()) {
         statesStack.top()->update(deltaTime);
-    } else {
-        // Handle the case where there are no states to handle events
-        // throw exception ofzo
     }
 }
 void StateManager::clearStates() {
@@ -59,5 +45,9 @@ void StateManager::clearStates() {
             statesStack.pop();
         }
     }
+}
+void StateManager::pop2States() {
+    popState();
+    popState();
 }
 } // namespace view::state

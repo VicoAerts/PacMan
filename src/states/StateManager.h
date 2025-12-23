@@ -62,6 +62,8 @@ public:
     [[nodiscard]] sf::RenderWindow& getWindow() { return window; }
     /** clear all states from the stack */
     void clearStates();
+    /** pop 2 states at once*/
+    void pop2States();
 };
 } // namespace view::state
 
