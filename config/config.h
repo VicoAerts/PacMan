@@ -18,7 +18,7 @@ constexpr unsigned int UI_RIGHT = 50;
 
 // --- Gameplay ---
 constexpr float pacman_speed = 0.3f;
-constexpr float ghost_base_speed = 0.28f;
+constexpr float ghost_base_speed = 0.25f;
 constexpr double fear_base_duration_s = 6.0;
 
 } // namespace config

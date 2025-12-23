@@ -41,10 +41,10 @@ void model::Ghost::update(const double deltaTime, World& world) {
             m_isFeared = false;
             events::Event event = events::Event{events::EventType::GhostModeChanged};
             notify(event, *this);
-            float mul = 1.0f + 0.05f * (world.getCurrentLevel() - 1);
-            if (mul > 1.2667f)
-                mul = 1.2667f;
-            m_speed = config::ghost_base_speed * mul;
+            int maxLevel = 20;
+            int level = std::min(maxLevel, world.getCurrentLevel());
+            float multiplier = 1.0f + 0.02f * level;
+            m_speed = config::ghost_base_speed * multiplier;
         }
     }
     // handle waiting mode
@@ -421,10 +421,10 @@ void model::Ghost::reset(int currentLevel) {
     setMode(GhostMode::Wait);
     m_isFeared = false;
     m_waiting = true;
-    float mul = 1.0f + 0.05f * (currentLevel - 1);
-    if (mul > 1.2667f)
-        mul = 1.2667f;
-    m_speed = config::ghost_base_speed * mul;
+    int maxLevel = 20;
+    int level = std::min(maxLevel, currentLevel);
+    float multiplier = 1.0f + 0.02f * level;
+    m_speed = config::ghost_base_speed * multiplier;
     m_timeAlive = 0.0;
     last_descision_Tile = {-1.f, -1.f};
 }

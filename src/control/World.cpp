@@ -179,7 +179,7 @@ void World::handlePacManCollisions(const Vec2D& pos) {
             } else if (event.type == events::EventType::FruitEaten) {
                 for (auto& entity : entities) {
                     // calc scared time based on level
-                    double fear = config::fear_base_duration_s - 0.35 * (currentLevel - 1);
+                    double fear = config::fear_base_duration_s - 0.3 * (currentLevel - 1);
                     if (fear < 0.5)
                         fear = 0.5; // min fear time
                     entity->setScared(fear, *this);
