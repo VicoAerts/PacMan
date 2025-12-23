@@ -39,7 +39,7 @@ victory/pause/game-over) and the use of smart pointers only.
 6. Level clear: all collectables eaten → Victory screen → Enter to next level.
 7. Game over: lives exhausted → GameOver screen, high scores saved.
 
-## Evaluation Checklist (from course rubric)
+## Evaluation Checklist (for course)
 
 - [x] **Startup screen + scoreboard** – menu with top 5 scores and start button (`src/states/MenuState.*`).
 - [x] **Maze & collision correctness** – grid-loaded maze, wall collision checks with hitbox corners (`config/Maze.txt`,
