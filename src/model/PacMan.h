@@ -31,7 +31,7 @@ public:
     /** hanlde input for pacman*/
     void handleInput(Direction dir) override;
     /** reset pacman to start position*/
-    void reset() override;
+    void reset(int currentLevel) override;
 
 private:
     Direction m_direction;

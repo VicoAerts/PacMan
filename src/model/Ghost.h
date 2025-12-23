@@ -63,7 +63,7 @@ public:
     /** handle colission with pacman*/
     events::Event onCollideWithPacMan() override;
     /** reset ghost to start position*/
-    void reset() override;
+    void reset(int currentLevel) override;
     /** set ghost to scared mode*/
     void setScared(double duration, World& world) override;
 

@@ -200,9 +200,9 @@ void World::handlePacManCollisions(const Vec2D& pos) {
 Entity& World::getPacMan() const { return *pacMan; }
 void World::resetWorld() {
     for (auto& entity : entities) {
-        entity->reset();
+        entity->reset(getCurrentLevel());
     }
-    pacMan->reset();
+    pacMan->reset(getCurrentLevel());
 }
 bool World::isWorldCleared() const { return m_remainingCollectables <= 0; }
 void World::debugClearCollectables() {

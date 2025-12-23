@@ -70,7 +70,7 @@ void model::PacMan::setDirection(Direction dir) {
 }
 void model::PacMan::setRequestedDirection(Direction direction) { m_requestedDirection = direction; }
 void model::PacMan::handleInput(Direction dir) { setRequestedDirection(dir); }
-void model::PacMan::reset() {
+void model::PacMan::reset(int currentLevel) {
     setPosition(m_startpos);
     setDirection(Direction::None);
     setRequestedDirection(Direction::None);

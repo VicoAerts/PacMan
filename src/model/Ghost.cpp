@@ -415,13 +415,16 @@ events::Event model::Ghost::onCollideWithPacMan() {
         return {events::EventType::None};
     }
 }
-void model::Ghost::reset() {
+void model::Ghost::reset(int currentLevel) {
     setPosition(m_startpos);
     setDirection(Direction::None);
     setMode(GhostMode::Wait);
     m_isFeared = false;
     m_waiting = true;
-    m_speed = config::ghost_base_speed;
+    float mul = 1.0f + 0.05f * (currentLevel - 1);
+    if (mul > 1.2667f)
+        mul = 1.2667f;
+    m_speed = config::ghost_base_speed * mul;
     m_timeAlive = 0.0;
     last_descision_Tile = {-1.f, -1.f};
 }
