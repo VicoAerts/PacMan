@@ -1,0 +1,111 @@
+\doxysection{util\+::Clock Class Reference}
+\hypertarget{classutil_1_1Clock}{}\label{classutil_1_1Clock}\index{util::Clock@{util::Clock}}
+
+
+Singleton clock providing delta time between update ticks.  
+
+
+
+
+{\ttfamily \#include $<$Clock.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classutil_1_1Clock_a4e87f8cf226f9bc1350b4814bf8bf39e}{\texorpdfstring{$\sim$}{\string~}\+Clock}} ()=default
+\item 
+void \mbox{\hyperlink{classutil_1_1Clock_afd922554e7a722b0910ac02eb2a697fa}{start}} ()
+\item 
+void \mbox{\hyperlink{classutil_1_1Clock_a077ae1493c0bda9b56a8816892c9b72f}{tick}} ()
+\item 
+double \mbox{\hyperlink{classutil_1_1Clock_a9d97b3f8cb2c7c93b6c77101db8c56fa}{get\+Delta\+Time}} ()
+\item 
+\mbox{\hyperlink{classutil_1_1Clock_a3b892749a3dbd42276be6c39ef63f156}{Clock}} (const \mbox{\hyperlink{classutil_1_1Clock}{Clock}} \&)=delete
+\item 
+\Hypertarget{classutil_1_1Clock_af798d2c1d70106f2a376faf8216a1bc5}\label{classutil_1_1Clock_af798d2c1d70106f2a376faf8216a1bc5} 
+\mbox{\hyperlink{classutil_1_1Clock}{Clock}} \& {\bfseries operator=} (const \mbox{\hyperlink{classutil_1_1Clock}{Clock}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classutil_1_1Clock}{Clock}} \& \mbox{\hyperlink{classutil_1_1Clock_ae1745c33d16d7cbb7f9879aa96464a0f}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton clock providing delta time between update ticks. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classutil_1_1Clock_a4e87f8cf226f9bc1350b4814bf8bf39e}\label{classutil_1_1Clock_a4e87f8cf226f9bc1350b4814bf8bf39e} 
+\index{util::Clock@{util::Clock}!````~Clock@{\texorpdfstring{$\sim$}{\string~}Clock}}
+\index{````~Clock@{\texorpdfstring{$\sim$}{\string~}Clock}!util::Clock@{util::Clock}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Clock()}{\string~Clock()}}
+{\footnotesize\ttfamily util\+::\+Clock\+::\texorpdfstring{$\sim$}{\string~}\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor \Hypertarget{classutil_1_1Clock_a3b892749a3dbd42276be6c39ef63f156}\label{classutil_1_1Clock_a3b892749a3dbd42276be6c39ef63f156} 
+\index{util::Clock@{util::Clock}!Clock@{Clock}}
+\index{Clock@{Clock}!util::Clock@{util::Clock}}
+\doxysubsubsection{\texorpdfstring{Clock()}{Clock()}}
+{\footnotesize\ttfamily util\+::\+Clock\+::\+Clock (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classutil_1_1Clock}{Clock}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Delete copy constructor and assignment operator to enforce singleton 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classutil_1_1Clock_a9d97b3f8cb2c7c93b6c77101db8c56fa}\label{classutil_1_1Clock_a9d97b3f8cb2c7c93b6c77101db8c56fa} 
+\index{util::Clock@{util::Clock}!getDeltaTime@{getDeltaTime}}
+\index{getDeltaTime@{getDeltaTime}!util::Clock@{util::Clock}}
+\doxysubsubsection{\texorpdfstring{getDeltaTime()}{getDeltaTime()}}
+{\footnotesize\ttfamily double util\+::\+Clock\+::get\+Delta\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the delta time since the last tick Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1Clock_a9d97b3f8cb2c7c93b6c77101db8c56fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1Clock_ae1745c33d16d7cbb7f9879aa96464a0f}\label{classutil_1_1Clock_ae1745c33d16d7cbb7f9879aa96464a0f} 
+\index{util::Clock@{util::Clock}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!util::Clock@{util::Clock}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classutil_1_1Clock}{util\+::\+Clock}} \& util\+::\+Clock\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Get the singleton instance of the \doxylink{classutil_1_1Clock}{Clock} Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1Clock_ae1745c33d16d7cbb7f9879aa96464a0f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1Clock_afd922554e7a722b0910ac02eb2a697fa}\label{classutil_1_1Clock_afd922554e7a722b0910ac02eb2a697fa} 
+\index{util::Clock@{util::Clock}!start@{start}}
+\index{start@{start}!util::Clock@{util::Clock}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void util\+::\+Clock\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Start the clock by recording the current time Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classutil_1_1Clock_afd922554e7a722b0910ac02eb2a697fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1Clock_a077ae1493c0bda9b56a8816892c9b72f}\label{classutil_1_1Clock_a077ae1493c0bda9b56a8816892c9b72f} 
+\index{util::Clock@{util::Clock}!tick@{tick}}
+\index{tick@{tick}!util::Clock@{util::Clock}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void util\+::\+Clock\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Update the clock and calculate delta time since last tick Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classutil_1_1Clock_a077ae1493c0bda9b56a8816892c9b72f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/util/\mbox{\hyperlink{Clock_8h}{Clock.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/util/Clock.\+cpp\end{DoxyCompactItemize}

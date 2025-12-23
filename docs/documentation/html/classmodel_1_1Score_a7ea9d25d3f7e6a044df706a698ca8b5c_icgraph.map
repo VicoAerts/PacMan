@@ -1,0 +1,9 @@
+<map id="model::Score::getLives" name="model::Score::getLives">
+<area shape="rect" id="Node000001" title=" " alt="" coords="487,45,657,70"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1World.html#a306dac4dff810b96be324a40079b01b8" title=" " alt="" coords="228,5,439,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="472,47,438,42,439,37,473,41"/>
+<area shape="rect" id="Node000004" href="$classview_1_1state_1_1LevelState.html#a7a391133c1e524d923a60fed094241f9" title=" " alt="" coords="248,69,419,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="473,73,419,81,419,75,472,68"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1PacMan.html#a68d177237ed9e83c209145fa72e4a706" title=" " alt="" coords="5,13,180,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>

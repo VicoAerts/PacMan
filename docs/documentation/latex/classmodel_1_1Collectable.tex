@@ -1,0 +1,162 @@
+\doxysection{model\+::Collectable Class Reference}
+\hypertarget{classmodel_1_1Collectable}{}\label{classmodel_1_1Collectable}\index{model::Collectable@{model::Collectable}}
+
+
+Abstract class for collectable items in the game.  
+
+
+
+
+{\ttfamily \#include $<$Collectable.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Collectable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classmodel_1_1Collectable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Collectable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classmodel_1_1Collectable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Collectable_a9926c91c375fb09c105b8d1f18eedd9e}{Collectable}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+bool \mbox{\hyperlink{classmodel_1_1Collectable_a265be21751a7041ebfa5135ceab3f72c}{is\+Collected}} () const
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Collectable_a4acf870592db917cdbc53d33301a3927}{collect}} ()=0
+\item 
+void \mbox{\hyperlink{classmodel_1_1Collectable_a1fc3fb847a02109d9a1c3bdeaa43fe48}{update}} (const double, \mbox{\hyperlink{classmodel_1_1World}{World}} \&) override
+\item 
+\mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \mbox{\hyperlink{classmodel_1_1Collectable_aa936a96e48baf5eea8e31580a3508cb5}{on\+Collide\+With\+Pac\+Man}} () override=0
+\item 
+virtual \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} \mbox{\hyperlink{classmodel_1_1Collectable_af214f97120544182abf5bb4c1e9071ad}{get\+Collectable\+Type}} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}{set\+Position}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+virtual \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}{get\+Direction}} () const
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}{reset}} (int current\+Level)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}{set\+Scared}} (double duration, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world)
+\item 
+virtual int \mbox{\hyperlink{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}{get\+Current\+Mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classmodel_1_1Collectable_ae90a12c1345093597572d3b2507c36cf}\label{classmodel_1_1Collectable_ae90a12c1345093597572d3b2507c36cf} 
+bool {\bfseries m\+\_\+collected}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}{m\+\_\+position}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}{Entity}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract class for collectable items in the game. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1Collectable_a9926c91c375fb09c105b8d1f18eedd9e}\label{classmodel_1_1Collectable_a9926c91c375fb09c105b8d1f18eedd9e} 
+\index{model::Collectable@{model::Collectable}!Collectable@{Collectable}}
+\index{Collectable@{Collectable}!model::Collectable@{model::Collectable}}
+\doxysubsubsection{\texorpdfstring{Collectable()}{Collectable()}}
+{\footnotesize\ttfamily model\+::\+Collectable\+::\+Collectable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\doxylink{classmodel_1_1Collectable}{Collectable} constructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Collectable_a4acf870592db917cdbc53d33301a3927}\label{classmodel_1_1Collectable_a4acf870592db917cdbc53d33301a3927} 
+\index{model::Collectable@{model::Collectable}!collect@{collect}}
+\index{collect@{collect}!model::Collectable@{model::Collectable}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily virtual void model\+::\+Collectable\+::collect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the collectable as collected 
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Coin_a3c7bb179c26d0c3a5ff16269e4ab0746}{model\+::\+Coin}}, and \mbox{\hyperlink{classmodel_1_1Fruit_abf680f1e04e745161a95ca13be4600ed}{model\+::\+Fruit}}.
+
+\Hypertarget{classmodel_1_1Collectable_af214f97120544182abf5bb4c1e9071ad}\label{classmodel_1_1Collectable_af214f97120544182abf5bb4c1e9071ad} 
+\index{model::Collectable@{model::Collectable}!getCollectableType@{getCollectableType}}
+\index{getCollectableType@{getCollectableType}!model::Collectable@{model::Collectable}}
+\doxysubsubsection{\texorpdfstring{getCollectableType()}{getCollectableType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} model\+::\+Collectable\+::get\+Collectable\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+virtual collectable type getter 
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Coin_a52b6c60352b6461686fc1f08fc538ebc}{model\+::\+Coin}}, and \mbox{\hyperlink{classmodel_1_1Fruit_ab38846427c58e6a36768779b46462057}{model\+::\+Fruit}}.
+
+\Hypertarget{classmodel_1_1Collectable_a265be21751a7041ebfa5135ceab3f72c}\label{classmodel_1_1Collectable_a265be21751a7041ebfa5135ceab3f72c} 
+\index{model::Collectable@{model::Collectable}!isCollected@{isCollected}}
+\index{isCollected@{isCollected}!model::Collectable@{model::Collectable}}
+\doxysubsubsection{\texorpdfstring{isCollected()}{isCollected()}}
+{\footnotesize\ttfamily bool model\+::\+Collectable\+::is\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Check if the collectable has been collected \Hypertarget{classmodel_1_1Collectable_aa936a96e48baf5eea8e31580a3508cb5}\label{classmodel_1_1Collectable_aa936a96e48baf5eea8e31580a3508cb5} 
+\index{model::Collectable@{model::Collectable}!onCollideWithPacMan@{onCollideWithPacMan}}
+\index{onCollideWithPacMan@{onCollideWithPacMan}!model::Collectable@{model::Collectable}}
+\doxysubsubsection{\texorpdfstring{onCollideWithPacMan()}{onCollideWithPacMan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} model\+::\+Collectable\+::on\+Collide\+With\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+pure virtual on collide with pacman method 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24}{model\+::\+Entity}}.
+
+
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Coin_a5c05d49a0f578625599e1c251849bcb3}{model\+::\+Coin}}, and \mbox{\hyperlink{classmodel_1_1Fruit_aa71a619d57551a0e5a92d66b15408719}{model\+::\+Fruit}}.
+
+\Hypertarget{classmodel_1_1Collectable_a1fc3fb847a02109d9a1c3bdeaa43fe48}\label{classmodel_1_1Collectable_a1fc3fb847a02109d9a1c3bdeaa43fe48} 
+\index{model::Collectable@{model::Collectable}!update@{update}}
+\index{update@{update}!model::Collectable@{model::Collectable}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void model\+::\+Collectable\+::update (\begin{DoxyParamCaption}\item[{const double}]{,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update method for collectable (no-\/op) 
+
+Implements \mbox{\hyperlink{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6}{model\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Collectable_8h}{Collectable.\+h}}\end{DoxyCompactItemize}

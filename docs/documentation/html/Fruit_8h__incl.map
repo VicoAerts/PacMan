@@ -1,0 +1,33 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Fruit.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Fruit.h">
+<area shape="rect" id="Node000001" title="Definition of the fruit class representing a collectible item in the game. When collected,..." alt="" coords="360,5,524,60"/>
+<area shape="rect" id="Node000002" href="$Collectable_8h.html" title="Declaration of the Collectable class representing items that can be collected in the game...." alt="" coords="389,108,495,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="445,60,445,94,439,94,439,60"/>
+<area shape="rect" id="Node000003" href="$Entity_8h.html" title="Base class for all entities in the game model." alt="" coords="355,181,425,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="436,135,409,172,404,169,431,132"/>
+<area shape="rect" id="Node000012" href="$GridMap_8h.html" title="Declaration of the GridMap class holding cells with information representing the game world." alt="" coords="491,181,580,207"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="459,131,511,171,508,175,455,135"/>
+<area shape="rect" id="Node000004" href="$Event_8h.html" title="event class for all custom events used in the game. Supports the observer pattern for notifying entit..." alt="" coords="274,401,405,427"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="389,207,377,255,347,388,342,387,371,254,384,206"/>
+<area shape="rect" id="Node000006" href="$Vec2D_8h.html" title="Defines a simple 2D vector structure and direction conversion utility." alt="" coords="386,255,498,280"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="401,205,428,242,423,245,396,209"/>
+<area shape="rect" id="Node000007" href="$Subject_8h.html" title="Base class for all observable objects in the model." alt="" coords="223,255,306,280"/>
+<area shape="poly" id="edge7_Node000003_Node000007" title=" " alt="" coords="371,209,298,250,296,245,369,204"/>
+<area shape="rect" id="Node000005" href="$Direction_8h.html" title="Defines movement directions and related helper functions." alt="" coords="325,475,455,500"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="350,425,376,462,372,465,346,429"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="444,280,437,344,419,427,405,463,400,461,414,426,432,343,439,280"/>
+<area shape="rect" id="Node000008" href="$Observer_8h.html" title="Declaration of the Observer interface for observer pattern. Observer is gate between Model and View." alt="" coords="219,328,311,353"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="267,280,267,314,262,314,262,280"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,328,92,353"/>
+<area shape="poly" id="edge10_Node000007_Node000009" title=" " alt="" coords="231,283,97,326,96,321,229,277"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="117,328,194,353"/>
+<area shape="poly" id="edge11_Node000007_Node000010" title=" " alt="" coords="249,282,186,323,183,318,246,278"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="492,328,555,353"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="307,277,479,325,478,330,306,283"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="278,351,319,390,315,394,275,355"/>
+<area shape="poly" id="edge14_Node000012_Node000006" title=" " alt="" coords="522,209,470,248,466,244,519,205"/>
+<area shape="poly" id="edge17_Node000012_Node000011" title=" " alt="" coords="537,207,528,315,523,314,532,207"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="573,255,647,280"/>
+<area shape="poly" id="edge15_Node000012_Node000013" title=" " alt="" coords="549,205,590,243,586,247,545,209"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="671,255,730,280"/>
+<area shape="poly" id="edge16_Node000012_Node000014" title=" " alt="" coords="563,204,662,247,660,252,561,209"/>
+</map>

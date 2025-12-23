@@ -1,0 +1,15 @@
+<map id="model::Subject::notify" name="model::Subject::notify">
+<area shape="rect" id="Node000001" title=" " alt="" coords="488,98,652,123"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Coin.html#a3c7bb179c26d0c3a5ff16269e4ab0746" title=" " alt="" coords="271,19,421,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="525,95,439,63,392,47,393,42,441,57,527,90"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1Fruit.html#abf680f1e04e745161a95ca13be4600ed" title=" " alt="" coords="271,73,421,98"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="474,103,421,96,422,91,474,97"/>
+<area shape="rect" id="Node000006" href="$classmodel_1_1PacMan.html#aac263947037904244bfc4c40f9f43db4" title=" " alt="" coords="257,122,435,147"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="474,124,436,128,435,122,474,118"/>
+<area shape="rect" id="Node000007" href="$classmodel_1_1Entity.html#aa05299297606f70a0dc5e855da35d951" title=" " alt="" coords="252,171,440,197"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="525,131,441,161,398,174,396,169,439,156,523,126"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Coin.html#a5c05d49a0f578625599e1c251849bcb3" title=" " alt="" coords="5,5,204,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="257,32,204,31,204,25,257,27"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Fruit.html#aa71a619d57551a0e5a92d66b15408719" title=" " alt="" coords="5,69,204,109"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="257,89,204,90,204,85,257,84"/>
+</map>

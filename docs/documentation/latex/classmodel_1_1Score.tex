@@ -1,0 +1,217 @@
+\doxysection{model\+::Score Class Reference}
+\hypertarget{classmodel_1_1Score}{}\label{classmodel_1_1Score}\index{model::Score@{model::Score}}
+
+
+\doxylink{classmodel_1_1Observer}{Observer} that updates the game score based on received events.  
+
+
+
+
+{\ttfamily \#include $<$Score.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Score\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classmodel_1_1Score__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Score\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classmodel_1_1Score__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_a81a775bcc94fd248fa137634aef2f797}{on\+Notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity) override
+\item 
+int \mbox{\hyperlink{classmodel_1_1Score_a8776dc2a8047cc3c602fcaa02ec29086}{get\+Score}} () const
+\item 
+int \mbox{\hyperlink{classmodel_1_1Score_a7ea9d25d3f7e6a044df706a698ca8b5c}{get\+Lives}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_a369f8282db293c47e786b7b4c63b9c0f}{handle\+Coin\+Collected}} ()
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_a2aa54c4c2b24cbef003d2331d657e889}{hanlde\+Pacman\+Dead}} ()
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_ae80ec0debe2feabf5fd0ee9054993b3b}{handle\+Fruit\+Collected}} ()
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_af18da67d039641107da0c0491ef95b30}{update}} (float delta\+Time)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_acd513bccdf180f281bb41e0001bcbd15}{save\+To\+File}} ()
+\item 
+bool \mbox{\hyperlink{classmodel_1_1Score_a43bad381d6c9125395b6a91372d5aa41}{is\+Game\+Over}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_a42549660787861f9f15e4426274a16e9}{next\+Level\+Set}} ()
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_a5f6af2374ae31c2c15448799e27b6d01}{handle\+Ghost\+Eaten}} ()
+\item 
+int \mbox{\hyperlink{classmodel_1_1Score_a4a23dbb43c327c52d05c5865cdd42061}{get\+Current\+Level}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Score_ad70fcb374855aeb720a9649ccfe76135}{reset}} ()
+\item 
+bool \mbox{\hyperlink{classmodel_1_1Score_a82265674da31e5ce4b0a7976e6c9c06c}{is\+High\+Score}} () const
+\item 
+std\+::vector$<$ int $>$ \mbox{\hyperlink{classmodel_1_1Score_a4dd3f282c488dbd89a8231c95da2cc6d}{get\+High\+Scores}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Observer}{model\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Observer_aa28e156c930472479eec1ae5c9d94719}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classmodel_1_1Observer}{Observer} that updates the game score based on received events. 
+
+Listens to gameplay events such as collecting coins, fruits, eating ghosts, and Pac-\/\+Man deaths. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Score_a4a23dbb43c327c52d05c5865cdd42061}\label{classmodel_1_1Score_a4a23dbb43c327c52d05c5865cdd42061} 
+\index{model::Score@{model::Score}!getCurrentLevel@{getCurrentLevel}}
+\index{getCurrentLevel@{getCurrentLevel}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{getCurrentLevel()}{getCurrentLevel()}}
+{\footnotesize\ttfamily int model\+::\+Score\+::get\+Current\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get current level \Hypertarget{classmodel_1_1Score_a4dd3f282c488dbd89a8231c95da2cc6d}\label{classmodel_1_1Score_a4dd3f282c488dbd89a8231c95da2cc6d} 
+\index{model::Score@{model::Score}!getHighScores@{getHighScores}}
+\index{getHighScores@{getHighScores}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{getHighScores()}{getHighScores()}}
+{\footnotesize\ttfamily std\+::vector$<$ int $>$ model\+::\+Score\+::get\+High\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get high scores from file \Hypertarget{classmodel_1_1Score_a7ea9d25d3f7e6a044df706a698ca8b5c}\label{classmodel_1_1Score_a7ea9d25d3f7e6a044df706a698ca8b5c} 
+\index{model::Score@{model::Score}!getLives@{getLives}}
+\index{getLives@{getLives}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{getLives()}{getLives()}}
+{\footnotesize\ttfamily int model\+::\+Score\+::get\+Lives (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the amount of lives \Hypertarget{classmodel_1_1Score_a8776dc2a8047cc3c602fcaa02ec29086}\label{classmodel_1_1Score_a8776dc2a8047cc3c602fcaa02ec29086} 
+\index{model::Score@{model::Score}!getScore@{getScore}}
+\index{getScore@{getScore}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily int model\+::\+Score\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get current score \Hypertarget{classmodel_1_1Score_a369f8282db293c47e786b7b4c63b9c0f}\label{classmodel_1_1Score_a369f8282db293c47e786b7b4c63b9c0f} 
+\index{model::Score@{model::Score}!handleCoinCollected@{handleCoinCollected}}
+\index{handleCoinCollected@{handleCoinCollected}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{handleCoinCollected()}{handleCoinCollected()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::handle\+Coin\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+handle coin collected event Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Score_a369f8282db293c47e786b7b4c63b9c0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Score_a369f8282db293c47e786b7b4c63b9c0f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Score_ae80ec0debe2feabf5fd0ee9054993b3b}\label{classmodel_1_1Score_ae80ec0debe2feabf5fd0ee9054993b3b} 
+\index{model::Score@{model::Score}!handleFruitCollected@{handleFruitCollected}}
+\index{handleFruitCollected@{handleFruitCollected}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{handleFruitCollected()}{handleFruitCollected()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::handle\+Fruit\+Collected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+handle fruit collected event Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Score_ae80ec0debe2feabf5fd0ee9054993b3b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Score_a5f6af2374ae31c2c15448799e27b6d01}\label{classmodel_1_1Score_a5f6af2374ae31c2c15448799e27b6d01} 
+\index{model::Score@{model::Score}!handleGhostEaten@{handleGhostEaten}}
+\index{handleGhostEaten@{handleGhostEaten}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{handleGhostEaten()}{handleGhostEaten()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::handle\+Ghost\+Eaten (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+handle ghost eaten event Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Score_a5f6af2374ae31c2c15448799e27b6d01_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Score_a2aa54c4c2b24cbef003d2331d657e889}\label{classmodel_1_1Score_a2aa54c4c2b24cbef003d2331d657e889} 
+\index{model::Score@{model::Score}!hanldePacmanDead@{hanldePacmanDead}}
+\index{hanldePacmanDead@{hanldePacmanDead}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{hanldePacmanDead()}{hanldePacmanDead()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::hanlde\+Pacman\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+handle pacman getting eaten Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Score_a2aa54c4c2b24cbef003d2331d657e889_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Score_a43bad381d6c9125395b6a91372d5aa41}\label{classmodel_1_1Score_a43bad381d6c9125395b6a91372d5aa41} 
+\index{model::Score@{model::Score}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily bool model\+::\+Score\+::is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+check if game is over \Hypertarget{classmodel_1_1Score_a82265674da31e5ce4b0a7976e6c9c06c}\label{classmodel_1_1Score_a82265674da31e5ce4b0a7976e6c9c06c} 
+\index{model::Score@{model::Score}!isHighScore@{isHighScore}}
+\index{isHighScore@{isHighScore}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{isHighScore()}{isHighScore()}}
+{\footnotesize\ttfamily bool model\+::\+Score\+::is\+High\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+check if current score is a high score \Hypertarget{classmodel_1_1Score_a42549660787861f9f15e4426274a16e9}\label{classmodel_1_1Score_a42549660787861f9f15e4426274a16e9} 
+\index{model::Score@{model::Score}!nextLevelSet@{nextLevelSet}}
+\index{nextLevelSet@{nextLevelSet}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{nextLevelSet()}{nextLevelSet()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::next\+Level\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+next level set \Hypertarget{classmodel_1_1Score_a81a775bcc94fd248fa137634aef2f797}\label{classmodel_1_1Score_a81a775bcc94fd248fa137634aef2f797} 
+\index{model::Score@{model::Score}!onNotify@{onNotify}}
+\index{onNotify@{onNotify}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{onNotify()}{onNotify()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::on\+Notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&}]{event,  }\item[{\mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+when event occurs , update score accordingly 
+
+Implements \mbox{\hyperlink{classmodel_1_1Observer_aa766d38ecc74c4569b483bfbf07cabcc}{model\+::\+Observer}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Score_a81a775bcc94fd248fa137634aef2f797_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Score_ad70fcb374855aeb720a9649ccfe76135}\label{classmodel_1_1Score_ad70fcb374855aeb720a9649ccfe76135} 
+\index{model::Score@{model::Score}!reset@{reset}}
+\index{reset@{reset}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reset score and lives \Hypertarget{classmodel_1_1Score_acd513bccdf180f281bb41e0001bcbd15}\label{classmodel_1_1Score_acd513bccdf180f281bb41e0001bcbd15} 
+\index{model::Score@{model::Score}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::save\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+save score to file \Hypertarget{classmodel_1_1Score_af18da67d039641107da0c0491ef95b30}\label{classmodel_1_1Score_af18da67d039641107da0c0491ef95b30} 
+\index{model::Score@{model::Score}!update@{update}}
+\index{update@{update}!model::Score@{model::Score}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void model\+::\+Score\+::update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time }\end{DoxyParamCaption})}
+
+update every frame to track time since last coin and subtract 1 coin per second 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Score_8h}{Score.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/Score.\+cpp\end{DoxyCompactItemize}

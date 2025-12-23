@@ -1,0 +1,109 @@
+\doxysection{view\+::state\+::State Class Reference}
+\hypertarget{classview_1_1state_1_1State}{}\label{classview_1_1state_1_1State}\index{view::state::State@{view::state::State}}
+
+
+Abstract base class for all game states.  
+
+
+
+
+{\ttfamily \#include $<$State.\+h$>$}
+
+
+
+Inheritance diagram for view\+::state\+::State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1State__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::state\+::State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classview_1_1state_1_1State__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+virtual \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\texorpdfstring{$\sim$}{\string~}\+State}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{handle\+Events}} (const sf\+::\+Event \&event)=0
+\item 
+virtual void \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{update}} (const double delta\+Time)=0
+\item 
+virtual void \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{render}} (sf\+::\+Render\+Window \&window)=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classview_1_1state_1_1State_a0bb289e30048999d672a80dfa84aa2e3}\label{classview_1_1state_1_1State_a0bb289e30048999d672a80dfa84aa2e3} 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \& {\bfseries state\+Manager}
+\item 
+\Hypertarget{classview_1_1state_1_1State_abc90afc909d82c56f51843275e3bc73d}\label{classview_1_1state_1_1State_abc90afc909d82c56f51843275e3bc73d} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ {\bfseries player\+Score}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all game states. 
+
+Defines the interface for handling events, updating, and rendering in different game states (e.\+g., menu, gameplay, paused, game over). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}\label{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8} 
+\index{view::state::State@{view::state::State}!State@{State}}
+\index{State@{State}!view::state::State@{view::state::State}}
+\doxysubsubsection{\texorpdfstring{State()}{State()}}
+{\footnotesize\ttfamily view\+::state\+::\+State\+::\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+constructor \Hypertarget{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}\label{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f} 
+\index{view::state::State@{view::state::State}!````~State@{\texorpdfstring{$\sim$}{\string~}State}}
+\index{````~State@{\texorpdfstring{$\sim$}{\string~}State}!view::state::State@{view::state::State}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}State()}{\string~State()}}
+{\footnotesize\ttfamily virtual view\+::state\+::\+State\+::\texorpdfstring{$\sim$}{\string~}\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor to ensure proper cleanup of derived classes 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}\label{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca} 
+\index{view::state::State@{view::state::State}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::State@{view::state::State}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily virtual void view\+::state\+::\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function to handle events in the state 
+
+Implemented in \mbox{\hyperlink{classview_1_1state_1_1GameOverState_aaef12389deaf717e5ef81a2f0ecb1e99}{view\+::state\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classview_1_1state_1_1LevelState_a16e2e091912ffdfb96f259188ac2425b}{view\+::state\+::\+Level\+State}}, \mbox{\hyperlink{classview_1_1state_1_1MenuState_a5d0b965f649e99eb3c0fa9d8ea0689c8}{view\+::state\+::\+Menu\+State}}, \mbox{\hyperlink{classview_1_1state_1_1PausedState_a0f766c6059cb1c05df6d0da038c2d39c}{view\+::state\+::\+Paused\+State}}, and \mbox{\hyperlink{classview_1_1state_1_1VictoryState_a1b4a0e037117792ccaa3c143ca0adaa8}{view\+::state\+::\+Victory\+State}}.
+
+\Hypertarget{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}\label{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45} 
+\index{view::state::State@{view::state::State}!render@{render}}
+\index{render@{render}!view::state::State@{view::state::State}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void view\+::state\+::\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function to render the state 
+
+Implemented in \mbox{\hyperlink{classview_1_1state_1_1GameOverState_a344ea41621d30264d4f78cf261f6c541}{view\+::state\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classview_1_1state_1_1LevelState_a7a391133c1e524d923a60fed094241f9}{view\+::state\+::\+Level\+State}}, \mbox{\hyperlink{classview_1_1state_1_1MenuState_ad0e654a4dbd9233afaa5b04c677e9e4d}{view\+::state\+::\+Menu\+State}}, \mbox{\hyperlink{classview_1_1state_1_1PausedState_abd84c7925ffbbf896c05dfbba46c2876}{view\+::state\+::\+Paused\+State}}, and \mbox{\hyperlink{classview_1_1state_1_1VictoryState_a0f471f8f5a07bcdaacb85461acc5e032}{view\+::state\+::\+Victory\+State}}.
+
+\Hypertarget{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}\label{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3} 
+\index{view::state::State@{view::state::State}!update@{update}}
+\index{update@{update}!view::state::State@{view::state::State}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void view\+::state\+::\+State\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+pure virtual function to update the state 
+
+Implemented in \mbox{\hyperlink{classview_1_1state_1_1GameOverState_a3fc716b5f47b09219a83da0f2f57cb27}{view\+::state\+::\+Game\+Over\+State}}, \mbox{\hyperlink{classview_1_1state_1_1LevelState_a8153dd1e4d52beeec34af8042bbe695a}{view\+::state\+::\+Level\+State}}, \mbox{\hyperlink{classview_1_1state_1_1MenuState_a8ffe5f9e74515b024b6f0854e357d25c}{view\+::state\+::\+Menu\+State}}, \mbox{\hyperlink{classview_1_1state_1_1PausedState_ad148a7cdc06def34017196ea3a9b574a}{view\+::state\+::\+Paused\+State}}, and \mbox{\hyperlink{classview_1_1state_1_1VictoryState_ab9c686931f5653fa74292b08e8dd7abe}{view\+::state\+::\+Victory\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{State_8h}{State.\+h}}\end{DoxyCompactItemize}

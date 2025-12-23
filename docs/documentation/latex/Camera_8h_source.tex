@@ -1,0 +1,46 @@
+\doxysection{Camera.\+h}
+\hypertarget{Camera_8h_source}{}\label{Camera_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/Camera.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/Camera.h}}
+\mbox{\hyperlink{Camera_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_CAMERA\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ PACMAN\_CAMERA\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../util/Vec2D.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview}{view}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1Camera}{Camera}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classview_1_1Camera}{Camera}}(\textcolor{keywordtype}{int}\ windowWidth,\ \textcolor{keywordtype}{int}\ windowHeight);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Camera_ac0fb4196cac6dfc3a730ea86ede0dcf9}{setGridSize}}(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00024\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structVec2D}{Vec2D}}\ \mbox{\hyperlink{classview_1_1Camera_a8a03853ce207c09f088ef767165ac5a7}{worldToPixel}}(\textcolor{keywordtype}{float}\ normX,\ \textcolor{keywordtype}{float}\ normY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structVec2D}{Vec2D}}\ \mbox{\hyperlink{classview_1_1Camera_aeaab86a0e5e5d409c27bbf9c871eaf09}{gridToWorld}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structVec2D}{Vec2D}}\ \mbox{\hyperlink{classview_1_1Camera_a96025a4fa88c476d61ae0fdd2f85199e}{gridToPixel}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classview_1_1Camera_a4a613ab873e0cd4071c6e7e289a18e9d}{worldWidthToPixels}}(\textcolor{keywordtype}{float}\ worldWidth)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classview_1_1Camera_ae1461ddfa0d82f5c601e9fd8e4f2d996}{worldHeightToPixels}}(\textcolor{keywordtype}{float}\ worldHeight)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00039\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classview_1_1Camera_a7b63caf99ebadca9c3623575cd7799f3}{getCols}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_cols;\ \}}
+\DoxyCodeLine{00041\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classview_1_1Camera_a8fd7ea2ae1ed0000c03a22fe736e7c6c}{getRows}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_rows;\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classview_1_1Camera_a15836c7c80720fd1eaa61c119baae520}{getTileWidthPixels}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classview_1_1Camera_ae7b9bdf6c8bc3bc670240206e6c1690a}{getTileHeightPixels}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Camera_aaafceda7e8aeb38c4636bda6f320059e}{resizeWindow}}(\textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_windowWidth;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_windowHeight;}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_rows;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_cols;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_playW;}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_playH;}
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ \}\ \textcolor{comment}{//\ namespace\ view}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_CAMERA\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,36 @@
+\doxysection{Grid\+Map.\+h}
+\hypertarget{GridMap_8h_source}{}\label{GridMap_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/GridMap.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/GridMap.h}}
+\mbox{\hyperlink{GridMap_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_GRIDMAP\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_GRIDMAP\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../util/Vec2D.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \{\ EXIT,\ EMPTY,\ WALL,\ COIN,\ FRUIT,\ PACMAN\_START,\ GHOST\_START1,\ GHOST\_START2,\ GHOST\_START3,\ GHOST\_START4\ \};}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGridMap}{GridMap}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classGridMap_a0b7a4399d73eda0f11db80735e5b769d}{GridMap}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classGridMap_ab3bed73a61409f546b38ac054119698d}{\string~GridMap}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGridMap_ab1c0c332b3d4a7afe874805b7a049e0d}{loadMazeFromFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00026\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \mbox{\hyperlink{classGridMap_a028a7abae10a41ddce7cbfa803f09c95}{getCellType}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \mbox{\hyperlink{classGridMap_a028a7abae10a41ddce7cbfa803f09c95}{getCellType}}(\textcolor{keywordtype}{float}\ worldX,\ \textcolor{keywordtype}{float}\ worldY)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGridMap_a428dd039dd926c31adbc2153ec5ed764}{getWidth}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ width;\ \}}
+\DoxyCodeLine{00032\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGridMap_a05cda677fa7480c48bf87beb2c01a11f}{getHeight}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ height;\ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGridMap_af85498118760e14eb3d07f510cfe877d}{setCellType}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ cellType);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGridMap_afba714e73b9d2ee220ea44530847755e}{removeCellType}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col);}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \mbox{\hyperlink{classGridMap_ac46dde76d5b50b7bc92789338e7346ea}{charToCellType}}(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGridMap_a03fb6b9f8864c432480d5842b06fd1d2}{inBounds}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{structVec2D}{Vec2D}}\ \mbox{\hyperlink{classGridMap_ad1e3818101b05cd0bf706de787aa1748}{getExitPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ width,\ height\ =\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ std::vector<std::vector<CellType>>\ grid;}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_GRIDMAP\_H}}
+
+\end{DoxyCode}

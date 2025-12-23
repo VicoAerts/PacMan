@@ -1,0 +1,22 @@
+\doxysection{Wall.\+h}
+\hypertarget{Wall_8h_source}{}\label{Wall_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Wall.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Wall.h}}
+\mbox{\hyperlink{Wall_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_WALL\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_WALL\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Wall}{Wall}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classmodel_1_1Wall_a7951acdedfc6283344214f2c9df27edb}{Wall}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ pos)\ :\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}(pos)\ \{\}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Wall_addc05099b6cba357aeb7371458e06da1}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double},\ \mbox{\hyperlink{classmodel_1_1World}{World}}\&)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ walls\ do\ not\ have\ any\ update\ logic\ \ because\ they\ dont\ move}}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ keep\ it\ for\ posibility\ to\ add\ moving\ walls}}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_WALL\_H}}
+
+\end{DoxyCode}

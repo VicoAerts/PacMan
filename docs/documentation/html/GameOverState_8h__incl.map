@@ -1,0 +1,24 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/GameOverState.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/GameOverState.h">
+<area shape="rect" id="Node000001" title="Declaration of the gameover state class for the Pacman game." alt="" coords="319,5,505,60"/>
+<area shape="rect" id="Node000002" href="$TextureManager_8h.html" title=" " alt="" coords="167,108,342,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="365,62,289,104,287,99,363,58"/>
+<area shape="rect" id="Node000007" href="$State_8h.html" title="Abstract base class for game states." alt="" coords="406,181,474,207"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="419,60,438,167,433,168,414,61"/>
+<area shape="rect" id="Node000009" href="$StateManager_8h.html" title="state manager class uses a stack of states to handle different game states (menu, playing,..." alt="" coords="450,108,574,133"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="444,58,490,97,486,101,441,62"/>
+<area shape="rect" id="Node000003" href="$Direction_8h.html" title="Defines movement directions and related helper functions." alt="" coords="5,181,136,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="226,136,115,179,113,174,224,131"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="201,255,348,280"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="239,136,223,150,207,167,199,186,201,206,218,228,240,245,237,250,214,232,196,208,193,185,203,164,219,146,236,131"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="211,181,298,207"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="257,134,257,168,252,168,252,134"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="323,181,381,207"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="272,131,326,171,323,175,269,136"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="414,209,315,252,313,247,412,204"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="437,255,515,280"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="448,206,466,241,462,244,444,208"/>
+<area shape="poly" id="edge10_Node000009_Node000007" title=" " alt="" coords="502,136,463,174,460,170,498,132"/>
+<area shape="poly" id="edge11_Node000009_Node000008" title=" " alt="" coords="512,134,485,242,480,241,506,133"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="550,181,607,207"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="525,132,560,169,557,173,521,135"/>
+</map>

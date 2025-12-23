@@ -1,0 +1,56 @@
+\doxysection{Ghost.\+h}
+\hypertarget{Ghost_8h_source}{}\label{Ghost_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Ghost.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Ghost.h}}
+\mbox{\hyperlink{Ghost_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_GHOST\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ PACMAN\_GHOST\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../../config/config.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../control/World.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../events/Event.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../util/Direction.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{GhostMode}}\ \{\ Wait,\ Leaving,\ Chase\ \};}
+\DoxyCodeLine{00025\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{GhostType}}\ \{\ Random,\ FacingPacman,\ DirectChase\ \};}
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Ghost}{Ghost}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classmodel_1_1Ghost}{Ghost}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ startpos,\ \textcolor{keywordtype}{float}\ speed,\ \textcolor{keywordtype}{int}\ ghostId);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Ghost_a2426784bc432f3b6f93929a050cc0a65}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime,\ \mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{GhostMode}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a15da04cad2336ee5bae6442e7fabff1f}{getMode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1Ghost_a1fa95bf31b365bda92523850a71b94e5}{getCurrentMode}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Ghost_a49376af6661403d16dd3cb35e951894a}{setMode}}(\mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{GhostMode}}\ mode);}
+\DoxyCodeLine{00044\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{GhostType}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a093d33c5d87388133ceb9a2ec1aa5500}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1Ghost_ac052ef8dcd7e32399fedba97669f0fd5}{getId}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ [[nodiscard]]\ std::vector<Direction>\ \mbox{\hyperlink{classmodel_1_1Ghost_aeda0d1946b4d0a5f2cf34f32a350fde3}{getValidDirections}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a26c9933b3d489c7663b4edcf78b4b717}{chooseRandomDirection}}(\mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world,\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classmodel_1_1Ghost_aa28a313549312e0fb7e6beb036fbc554}{chooseFacingPacmanDirection}}(\mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ pacmanPos,\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Ghost_ab07a955d4d9dcc5ee704ccaab1b9dcc6}{setDirection}}(\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ dir);}
+\DoxyCodeLine{00058\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a272200daf4a7eab820d35c6944f731ea}{getDirection}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a694ce95efc61fffb30f301dd3974eaec}{getDirectionToTarget}}(\mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ targetPos,\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a2840c56815676b7a86a071d641d6474c}{getDirectionAwayFromTarget}}(\mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ targetPos,\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\ \mbox{\hyperlink{classmodel_1_1Ghost_a5e6186d70c024f2be52ec6586051555e}{onCollideWithPacMan}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Ghost_ac320cb15156c7c868c6806fcf01eb7f5}{reset}}(\textcolor{keywordtype}{int}\ currentLevel)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Ghost_a3c5c0294f23ca79c79b21a3f6c495387}{setScared}}(\textcolor{keywordtype}{double}\ duration,\ \mbox{\hyperlink{classmodel_1_1World}{World}}\&\ world)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{GhostMode}}\ m\_mode;}
+\DoxyCodeLine{00072\ \ \ \ \ \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{GhostType}}\ m\_type;}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_speed;}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ m\_direction;}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ m\_startpos;}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_id;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_waiting\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_spawnDelay;}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_timeAlive\ =\ 0.0;}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ last\_descision\_Tile\ =\ \{-\/1.f,\ -\/1.f\};}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{double}\ m\_fearTimeLeft\ =\ 0.0;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_isFeared\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ \};}
+\DoxyCodeLine{00084\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_GHOST\_H}}
+
+\end{DoxyCode}

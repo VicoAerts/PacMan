@@ -1,0 +1,18 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Clock.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Clock.h">
+<area shape="rect" id="Node000001" title="Singleton Clock class to manage time tracking." alt="" coords="193,5,357,60"/>
+<area shape="rect" id="Node000002" href="$Score_8h.html" title="score is an observer that tracks the score of the player" alt="" coords="5,108,169,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,69,138,110,135,105,213,64"/>
+<area shape="rect" id="Node000004" href="$GhostView_8h.html" title="Declaration of the GhostView class which displays ghosts and their changes." alt="" coords="193,108,357,163"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="278,74,278,108,273,108,273,74"/>
+<area shape="rect" id="Node000008" href="$PacManView_8h.html" title="Declaration of the PacManView class which displays pacman and its changes." alt="" coords="381,108,545,163"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="338,64,415,105,413,110,335,69"/>
+<area shape="rect" id="Node000003" href="$Game_8h.html" title="Top&#45;level game class that owns the render window and runs the main loop." alt="" coords="5,211,169,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="90,176,90,211,85,211,85,176"/>
+<area shape="rect" id="Node000005" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="285,211,461,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="312,171,349,209,345,212,308,175"/>
+<area shape="rect" id="Node000006" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="291,313,455,368"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="375,279,375,313,370,313,370,279"/>
+<area shape="rect" id="Node000007" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="291,416,455,471"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="375,382,375,416,370,416,370,382"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="432,175,398,212,394,209,428,171"/>
+</map>

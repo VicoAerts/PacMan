@@ -1,0 +1,81 @@
+\doxysection{view\+::entity\+::Entity\+View Class Reference}
+\hypertarget{classview_1_1entity_1_1EntityView}{}\label{classview_1_1entity_1_1EntityView}\index{view::entity::EntityView@{view::entity::EntityView}}
+
+
+Abstract base class for all entity views.  
+
+
+
+
+{\ttfamily \#include $<$Entity\+View.\+h$>$}
+
+
+
+Inheritance diagram for view\+::entity\+::Entity\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1entity_1_1EntityView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::entity\+::Entity\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classview_1_1entity_1_1EntityView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1entity_1_1EntityView_aff5266036baf0d6e734ab3c6b96c48af}{Entity\+View}} ()=default
+\item 
+virtual \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a4525c35b3f104d961e6a3f18d76065cf}{\texorpdfstring{$\sim$}{\string~}\+Entity\+View}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a3ad1872170ee9d946006a79b25d098bb}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classview_1_1Camera}{Camera}} \&camera)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Observer}{model\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Observer_aa28e156c930472479eec1ae5c9d94719}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Observer_aa766d38ecc74c4569b483bfbf07cabcc}{on\+Notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all entity views. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1entity_1_1EntityView_aff5266036baf0d6e734ab3c6b96c48af}\label{classview_1_1entity_1_1EntityView_aff5266036baf0d6e734ab3c6b96c48af} 
+\index{view::entity::EntityView@{view::entity::EntityView}!EntityView@{EntityView}}
+\index{EntityView@{EntityView}!view::entity::EntityView@{view::entity::EntityView}}
+\doxysubsubsection{\texorpdfstring{EntityView()}{EntityView()}}
+{\footnotesize\ttfamily view\+::entity\+::\+Entity\+View\+::\+Entity\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructor initializing the entity view with its model \Hypertarget{classview_1_1entity_1_1EntityView_a4525c35b3f104d961e6a3f18d76065cf}\label{classview_1_1entity_1_1EntityView_a4525c35b3f104d961e6a3f18d76065cf} 
+\index{view::entity::EntityView@{view::entity::EntityView}!````~EntityView@{\texorpdfstring{$\sim$}{\string~}EntityView}}
+\index{````~EntityView@{\texorpdfstring{$\sim$}{\string~}EntityView}!view::entity::EntityView@{view::entity::EntityView}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EntityView()}{\string~EntityView()}}
+{\footnotesize\ttfamily virtual view\+::entity\+::\+Entity\+View\+::\texorpdfstring{$\sim$}{\string~}\+Entity\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1entity_1_1EntityView_a3ad1872170ee9d946006a79b25d098bb}\label{classview_1_1entity_1_1EntityView_a3ad1872170ee9d946006a79b25d098bb} 
+\index{view::entity::EntityView@{view::entity::EntityView}!draw@{draw}}
+\index{draw@{draw}!view::entity::EntityView@{view::entity::EntityView}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void view\+::entity\+::\+Entity\+View\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classview_1_1Camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Pure virtual draw method to be implemented by derived classes 
+
+Implemented in \mbox{\hyperlink{classview_1_1entity_1_1CoinView_a38da397db838ac160a2cb7b3f8d3c558}{view\+::entity\+::\+Coin\+View}}, \mbox{\hyperlink{classview_1_1entity_1_1FruitView_a6ab107aab80ee438008aeb241598f6e7}{view\+::entity\+::\+Fruit\+View}}, \mbox{\hyperlink{classview_1_1entity_1_1GhostView_ac8a0f0a03db41aed8dcdb16ff1621472}{view\+::entity\+::\+Ghost\+View}}, \mbox{\hyperlink{classview_1_1entity_1_1PacManView_a1b9857b6c2eb72014a87f3f3f2a4fb17}{view\+::entity\+::\+Pac\+Man\+View}}, and \mbox{\hyperlink{classview_1_1entity_1_1WallView_a5e58789aa7203ff432b803fa2f237e8f}{view\+::entity\+::\+Wall\+View}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/\mbox{\hyperlink{EntityView_8h}{Entity\+View.\+h}}\end{DoxyCompactItemize}

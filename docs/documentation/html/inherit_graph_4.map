@@ -1,0 +1,17 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classmodel_1_1Subject.html" title="Subject base class for observer pattern." alt="" coords="5,104,124,129"/>
+<area shape="rect" id="Node000001" href="$classmodel_1_1Entity.html" title="Abstract base class for all game entities." alt="" coords="172,104,281,129"/>
+<area shape="poly" id="edge9_Node000000_Node000001" title=" " alt="" coords="138,114,172,114,172,119,138,119"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Collectable.html" title="Abstract class for collectable items in the game." alt="" coords="329,29,473,55"/>
+<area shape="poly" id="edge10_Node000001_Node000002" title=" " alt="" coords="262,95,328,64,358,52,360,57,330,68,264,100"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Ghost.html" title="Ghost entity with AI movement and fear behavior." alt="" coords="347,79,456,104"/>
+<area shape="poly" id="edge13_Node000001_Node000005" title=" " alt="" coords="295,104,346,97,347,102,295,109"/>
+<area shape="rect" id="Node000006" href="$classmodel_1_1PacMan.html" title="Pac&#45;Man entity controlled by the player." alt="" coords="341,128,462,153"/>
+<area shape="poly" id="edge14_Node000001_Node000006" title=" " alt="" coords="295,123,341,130,340,135,295,129"/>
+<area shape="rect" id="Node000007" href="$classmodel_1_1Wall.html" title="Wall entity representing immovable obstacles in the game world." alt="" coords="352,177,451,203"/>
+<area shape="poly" id="edge15_Node000001_Node000007" title=" " alt="" coords="267,133,330,162,363,175,361,180,328,167,264,138"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Coin.html" title="collectable coin entity that increases score when collected" alt="" coords="521,5,621,31"/>
+<area shape="poly" id="edge11_Node000002_Node000003" title=" " alt="" coords="486,27,521,22,522,28,487,33"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1Fruit.html" title="collectable fruit entity that increases score when collected and triggers event" alt="" coords="521,55,621,80"/>
+<area shape="poly" id="edge12_Node000002_Node000004" title=" " alt="" coords="487,52,522,57,521,63,486,57"/>
+</map>

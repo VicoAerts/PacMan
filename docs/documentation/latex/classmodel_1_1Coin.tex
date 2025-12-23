@@ -1,0 +1,167 @@
+\doxysection{model\+::Coin Class Reference}
+\hypertarget{classmodel_1_1Coin}{}\label{classmodel_1_1Coin}\index{model::Coin@{model::Coin}}
+
+
+collectable coin entity that increases score when collected  
+
+
+
+
+{\ttfamily \#include $<$Coin.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Coin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=188pt]{classmodel_1_1Coin__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Coin\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classmodel_1_1Coin__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Coin_afaf682bea7f3108f370031bdbab46a7b}{Coin}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+\mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} \mbox{\hyperlink{classmodel_1_1Coin_a52b6c60352b6461686fc1f08fc538ebc}{get\+Collectable\+Type}} () const override
+\item 
+void \mbox{\hyperlink{classmodel_1_1Coin_a3c7bb179c26d0c3a5ff16269e4ab0746}{collect}} () override
+\item 
+\mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \mbox{\hyperlink{classmodel_1_1Coin_a5c05d49a0f578625599e1c251849bcb3}{on\+Collide\+With\+Pac\+Man}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Collectable}{model\+::\+Collectable}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Collectable_a9926c91c375fb09c105b8d1f18eedd9e}{Collectable}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+bool \mbox{\hyperlink{classmodel_1_1Collectable_a265be21751a7041ebfa5135ceab3f72c}{is\+Collected}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Collectable_a1fc3fb847a02109d9a1c3bdeaa43fe48}{update}} (const double, \mbox{\hyperlink{classmodel_1_1World}{World}} \&) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}{set\+Position}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+virtual \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}{get\+Direction}} () const
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}{reset}} (int current\+Level)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}{set\+Scared}} (double duration, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world)
+\item 
+virtual int \mbox{\hyperlink{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}{get\+Current\+Mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}{Entity}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Collectable}{model\+::\+Collectable}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries m\+\_\+collected}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}{m\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+collectable coin entity that increases score when collected 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1Coin_afaf682bea7f3108f370031bdbab46a7b}\label{classmodel_1_1Coin_afaf682bea7f3108f370031bdbab46a7b} 
+\index{model::Coin@{model::Coin}!Coin@{Coin}}
+\index{Coin@{Coin}!model::Coin@{model::Coin}}
+\doxysubsubsection{\texorpdfstring{Coin()}{Coin()}}
+{\footnotesize\ttfamily model\+::\+Coin\+::\+Coin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\doxylink{classmodel_1_1Coin}{Coin} constructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Coin_a3c7bb179c26d0c3a5ff16269e4ab0746}\label{classmodel_1_1Coin_a3c7bb179c26d0c3a5ff16269e4ab0746} 
+\index{model::Coin@{model::Coin}!collect@{collect}}
+\index{collect@{collect}!model::Coin@{model::Coin}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily void model\+::\+Coin\+::collect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+collect method override to notify coin eaten event 
+
+Implements \mbox{\hyperlink{classmodel_1_1Collectable_a4acf870592db917cdbc53d33301a3927}{model\+::\+Collectable}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Coin_a3c7bb179c26d0c3a5ff16269e4ab0746_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Coin_a3c7bb179c26d0c3a5ff16269e4ab0746_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Coin_a52b6c60352b6461686fc1f08fc538ebc}\label{classmodel_1_1Coin_a52b6c60352b6461686fc1f08fc538ebc} 
+\index{model::Coin@{model::Coin}!getCollectableType@{getCollectableType}}
+\index{getCollectableType@{getCollectableType}!model::Coin@{model::Coin}}
+\doxysubsubsection{\texorpdfstring{getCollectableType()}{getCollectableType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} model\+::\+Coin\+::get\+Collectable\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Get the type of collectable 
+
+Implements \mbox{\hyperlink{classmodel_1_1Collectable_af214f97120544182abf5bb4c1e9071ad}{model\+::\+Collectable}}.
+
+\Hypertarget{classmodel_1_1Coin_a5c05d49a0f578625599e1c251849bcb3}\label{classmodel_1_1Coin_a5c05d49a0f578625599e1c251849bcb3} 
+\index{model::Coin@{model::Coin}!onCollideWithPacMan@{onCollideWithPacMan}}
+\index{onCollideWithPacMan@{onCollideWithPacMan}!model::Coin@{model::Coin}}
+\doxysubsubsection{\texorpdfstring{onCollideWithPacMan()}{onCollideWithPacMan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} model\+::\+Coin\+::on\+Collide\+With\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+on collide with pacman override to notify coin eaten event 
+
+Implements \mbox{\hyperlink{classmodel_1_1Collectable_aa936a96e48baf5eea8e31580a3508cb5}{model\+::\+Collectable}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Coin_a5c05d49a0f578625599e1c251849bcb3_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Coin_8h}{Coin.\+h}}\end{DoxyCompactItemize}

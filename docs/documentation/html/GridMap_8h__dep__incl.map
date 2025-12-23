@@ -1,0 +1,26 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/GridMap.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/GridMap.h">
+<area shape="rect" id="Node000001" title="Declaration of the GridMap class holding cells with information representing the game world." alt="" coords="145,5,309,60"/>
+<area shape="rect" id="Node000002" href="$World_8h.html" title="holds all entities, orchestration of game logic and interaction between entities" alt="" coords="25,211,189,265"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,73,125,211,120,209,202,70"/>
+<area shape="rect" id="Node000007" href="$Collectable_8h.html" title="Declaration of the Collectable class representing items that can be collected in the game...." alt="" coords="205,108,369,163"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="252,70,273,107,269,109,247,73"/>
+<area shape="rect" id="Node000003" href="$Ghost_8h.html" title="Declaration of the Ghost entity and its AI behavior." alt="" coords="25,313,189,368"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,279,109,313,104,313,104,279"/>
+<area shape="rect" id="Node000005" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="25,519,189,573"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="47,276,28,294,14,315,9,328,8,340,14,367,29,410,48,451,89,517,85,520,44,454,24,412,9,369,3,340,4,327,9,312,24,290,44,272"/>
+<area shape="rect" id="Node000004" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="164,416,340,471"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="157,374,215,414,212,418,154,378"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="204,481,146,521,143,516,201,476"/>
+<area shape="rect" id="Node000006" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="25,621,189,676"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="109,587,109,621,104,621,104,587"/>
+<area shape="poly" id="edge14_Node000007_Node000004" title=" " alt="" coords="267,176,254,211,246,268,245,324,251,416,246,416,239,324,241,267,249,210,262,174"/>
+<area shape="rect" id="Node000008" href="$Coin_8h.html" title="Definition of the Coin class representing a collectible coin item in the game." alt="" coords="265,211,429,265"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="312,173,333,209,329,212,307,176"/>
+<area shape="rect" id="Node000010" href="$Fruit_8h.html" title="Definition of the fruit class representing a collectible item in the game. When collected,..." alt="" coords="503,313,667,368"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="364,166,441,208,509,261,562,311,558,315,505,265,438,213,361,171"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="325,278,305,314,263,417,258,415,300,312,320,276"/>
+<area shape="rect" id="Node000009" href="$CoinView_8h_source.html" title=" " alt="" coords="315,313,479,368"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="368,276,386,312,382,314,363,279"/>
+<area shape="poly" id="edge10_Node000009_Node000004" title=" " alt="" coords="349,378,291,418,288,414,346,374"/>
+<area shape="poly" id="edge13_Node000010_Node000004" title=" " alt="" coords="490,373,339,419,338,413,489,368"/>
+</map>

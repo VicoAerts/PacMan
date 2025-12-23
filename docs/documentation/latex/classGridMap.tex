@@ -1,0 +1,216 @@
+\doxysection{Grid\+Map Class Reference}
+\hypertarget{classGridMap}{}\label{classGridMap}\index{GridMap@{GridMap}}
+
+
+\doxylink{classGridMap}{Grid\+Map} class representing the game world as a grid of cells with a specific character representing a celltype.  
+
+
+
+
+{\ttfamily \#include $<$Grid\+Map.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGridMap_a0b7a4399d73eda0f11db80735e5b769d}{Grid\+Map}} ()=default
+\item 
+\mbox{\hyperlink{classGridMap_ab3bed73a61409f546b38ac054119698d}{\texorpdfstring{$\sim$}{\string~}\+Grid\+Map}} ()=default
+\item 
+void \mbox{\hyperlink{classGridMap_ab1c0c332b3d4a7afe874805b7a049e0d}{load\+Maze\+From\+File}} (const std\+::string \&filename)
+\item 
+\mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} \mbox{\hyperlink{classGridMap_a028a7abae10a41ddce7cbfa803f09c95}{get\+Cell\+Type}} (int row, int col) const
+\item 
+\mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} \mbox{\hyperlink{classGridMap_a1ae8cd4791b84fb5aba322c6ca9ef35a}{get\+Cell\+Type}} (float worldX, float worldY) const
+\item 
+int \mbox{\hyperlink{classGridMap_a428dd039dd926c31adbc2153ec5ed764}{get\+Width}} () const
+\item 
+int \mbox{\hyperlink{classGridMap_a05cda677fa7480c48bf87beb2c01a11f}{get\+Height}} () const
+\item 
+void \mbox{\hyperlink{classGridMap_af85498118760e14eb3d07f510cfe877d}{set\+Cell\+Type}} (int row, int col, \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} cell\+Type)
+\item 
+void \mbox{\hyperlink{classGridMap_afba714e73b9d2ee220ea44530847755e}{remove\+Cell\+Type}} (int row, int col)
+\item 
+\mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} \mbox{\hyperlink{classGridMap_ac46dde76d5b50b7bc92789338e7346ea}{char\+To\+Cell\+Type}} (char c)
+\item 
+bool \mbox{\hyperlink{classGridMap_a03fb6b9f8864c432480d5842b06fd1d2}{in\+Bounds}} (int row, int col) const
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classGridMap_ad1e3818101b05cd0bf706de787aa1748}{get\+Exit\+Position}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classGridMap}{Grid\+Map} class representing the game world as a grid of cells with a specific character representing a celltype. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGridMap_a0b7a4399d73eda0f11db80735e5b769d}\label{classGridMap_a0b7a4399d73eda0f11db80735e5b769d} 
+\index{GridMap@{GridMap}!GridMap@{GridMap}}
+\index{GridMap@{GridMap}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{GridMap()}{GridMap()}}
+{\footnotesize\ttfamily Grid\+Map\+::\+Grid\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Default constructor \Hypertarget{classGridMap_ab3bed73a61409f546b38ac054119698d}\label{classGridMap_ab3bed73a61409f546b38ac054119698d} 
+\index{GridMap@{GridMap}!````~GridMap@{\texorpdfstring{$\sim$}{\string~}GridMap}}
+\index{````~GridMap@{\texorpdfstring{$\sim$}{\string~}GridMap}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GridMap()}{\string~GridMap()}}
+{\footnotesize\ttfamily Grid\+Map\+::\texorpdfstring{$\sim$}{\string~}\+Grid\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGridMap_ac46dde76d5b50b7bc92789338e7346ea}\label{classGridMap_ac46dde76d5b50b7bc92789338e7346ea} 
+\index{GridMap@{GridMap}!charToCellType@{charToCellType}}
+\index{charToCellType@{charToCellType}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{charToCellType()}{charToCellType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} Grid\+Map\+::char\+To\+Cell\+Type (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+Convert character from maze to Cell\+Type, used in load maze from file Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_ac46dde76d5b50b7bc92789338e7346ea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_a1ae8cd4791b84fb5aba322c6ca9ef35a}\label{classGridMap_a1ae8cd4791b84fb5aba322c6ca9ef35a} 
+\index{GridMap@{GridMap}!getCellType@{getCellType}}
+\index{getCellType@{getCellType}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{getCellType()}{getCellType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} Grid\+Map\+::get\+Cell\+Type (\begin{DoxyParamCaption}\item[{float}]{worldX,  }\item[{float}]{worldY }\end{DoxyParamCaption}) const}
+
+Get cell type at given world coordinates Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classGridMap_a1ae8cd4791b84fb5aba322c6ca9ef35a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_a028a7abae10a41ddce7cbfa803f09c95}\label{classGridMap_a028a7abae10a41ddce7cbfa803f09c95} 
+\index{GridMap@{GridMap}!getCellType@{getCellType}}
+\index{getCellType@{getCellType}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{getCellType()}{getCellType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}} Grid\+Map\+::get\+Cell\+Type (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+Get cell type at given row and column Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classGridMap_a028a7abae10a41ddce7cbfa803f09c95_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_a028a7abae10a41ddce7cbfa803f09c95_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_ad1e3818101b05cd0bf706de787aa1748}\label{classGridMap_ad1e3818101b05cd0bf706de787aa1748} 
+\index{GridMap@{GridMap}!getExitPosition@{getExitPosition}}
+\index{getExitPosition@{getExitPosition}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{getExitPosition()}{getExitPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVec2D}{Vec2D}} Grid\+Map\+::get\+Exit\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Get the exit position of the ghost house in world coordinates Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_ad1e3818101b05cd0bf706de787aa1748_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_a05cda677fa7480c48bf87beb2c01a11f}\label{classGridMap_a05cda677fa7480c48bf87beb2c01a11f} 
+\index{GridMap@{GridMap}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily int Grid\+Map\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get height of the grid Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_a05cda677fa7480c48bf87beb2c01a11f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_a428dd039dd926c31adbc2153ec5ed764}\label{classGridMap_a428dd039dd926c31adbc2153ec5ed764} 
+\index{GridMap@{GridMap}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily int Grid\+Map\+::get\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get width of the grid Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_a428dd039dd926c31adbc2153ec5ed764_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_a03fb6b9f8864c432480d5842b06fd1d2}\label{classGridMap_a03fb6b9f8864c432480d5842b06fd1d2} 
+\index{GridMap@{GridMap}!inBounds@{inBounds}}
+\index{inBounds@{inBounds}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{inBounds()}{inBounds()}}
+{\footnotesize\ttfamily bool Grid\+Map\+::in\+Bounds (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+Check if given row and column are within bounds Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_a03fb6b9f8864c432480d5842b06fd1d2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_ab1c0c332b3d4a7afe874805b7a049e0d}\label{classGridMap_ab1c0c332b3d4a7afe874805b7a049e0d} 
+\index{GridMap@{GridMap}!loadMazeFromFile@{loadMazeFromFile}}
+\index{loadMazeFromFile@{loadMazeFromFile}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{loadMazeFromFile()}{loadMazeFromFile()}}
+{\footnotesize\ttfamily void Grid\+Map\+::load\+Maze\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+Load maze from file Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_ab1c0c332b3d4a7afe874805b7a049e0d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_ab1c0c332b3d4a7afe874805b7a049e0d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_afba714e73b9d2ee220ea44530847755e}\label{classGridMap_afba714e73b9d2ee220ea44530847755e} 
+\index{GridMap@{GridMap}!removeCellType@{removeCellType}}
+\index{removeCellType@{removeCellType}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{removeCellType()}{removeCellType()}}
+{\footnotesize\ttfamily void Grid\+Map\+::remove\+Cell\+Type (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+Remove cell type (set to EMPTY) at given row and column Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_afba714e73b9d2ee220ea44530847755e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGridMap_af85498118760e14eb3d07f510cfe877d}\label{classGridMap_af85498118760e14eb3d07f510cfe877d} 
+\index{GridMap@{GridMap}!setCellType@{setCellType}}
+\index{setCellType@{setCellType}!GridMap@{GridMap}}
+\doxysubsubsection{\texorpdfstring{setCellType()}{setCellType()}}
+{\footnotesize\ttfamily void Grid\+Map\+::set\+Cell\+Type (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{\mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{Cell\+Type}}}]{cell\+Type }\end{DoxyParamCaption})}
+
+Set cell type at given row and column Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classGridMap_af85498118760e14eb3d07f510cfe877d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGridMap_af85498118760e14eb3d07f510cfe877d_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{GridMap_8h}{Grid\+Map.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/Grid\+Map.\+cpp\end{DoxyCompactItemize}

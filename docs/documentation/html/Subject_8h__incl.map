@@ -1,0 +1,15 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Subject.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Subject.h">
+<area shape="rect" id="Node000001" title="Base class for all observable objects in the model." alt="" coords="155,5,319,60"/>
+<area shape="rect" id="Node000002" href="$Observer_8h.html" title="Declaration of the Observer interface for observer pattern. Observer is gate between Model and View." alt="" coords="25,108,117,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,62,106,104,104,99,185,58"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="141,108,227,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="223,61,201,98,196,95,219,59"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="252,108,329,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="256,59,278,95,274,98,251,61"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="354,108,417,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="284,58,355,99,352,103,281,62"/>
+<area shape="rect" id="Node000003" href="$Event_8h.html" title="event class for all custom events used in the game. Supports the observer pattern for notifying entit..." alt="" coords="5,181,136,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="73,134,73,168,68,168,68,134"/>
+<area shape="rect" id="Node000004" href="$Direction_8h.html" title="Defines movement directions and related helper functions." alt="" coords="5,255,136,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="73,207,73,241,68,241,68,207"/>
+</map>

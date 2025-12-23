@@ -1,0 +1,15 @@
+<map id="view::entity::EntityView" name="view::entity::EntityView">
+<area shape="rect" id="Node000001" title="Abstract base class for all entity views." alt="" coords="184,104,359,129"/>
+<area shape="rect" id="Node000003" href="$classview_1_1entity_1_1CoinView.html" title="View class for rendering Coin entities." alt="" coords="417,5,583,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="302,94,350,66,406,40,440,28,441,33,408,44,352,71,305,99"/>
+<area shape="rect" id="Node000004" href="$classview_1_1entity_1_1FruitView.html" title="View class for rendering Fruit entities." alt="" coords="417,55,583,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="344,98,440,77,441,83,345,104"/>
+<area shape="rect" id="Node000005" href="$classview_1_1entity_1_1GhostView.html" title="View class for rendering Ghost entities." alt="" coords="413,104,587,129"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="372,114,412,114,412,119,372,119"/>
+<area shape="rect" id="Node000006" href="$classview_1_1entity_1_1PacManView.html" title="PacManView class responsible for rendering PacMan entity." alt="" coords="407,153,593,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="345,130,441,151,440,156,344,135"/>
+<area shape="rect" id="Node000007" href="$classview_1_1entity_1_1WallView.html" title="WallView class responsible for rendering Wall entity." alt="" coords="417,203,583,228"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="305,134,352,162,408,189,441,200,440,205,406,194,350,167,302,139"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Observer.html" title="Observer interface for receiving game events." alt="" coords="5,104,136,129"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,114,184,114,184,119,150,119"/>
+</map>

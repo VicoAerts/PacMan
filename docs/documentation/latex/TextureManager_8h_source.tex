@@ -1,0 +1,40 @@
+\doxysection{Texture\+Manager.\+h}
+\hypertarget{TextureManager_8h_source}{}\label{TextureManager_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/TextureManager.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/TextureManager.h}}
+\mbox{\hyperlink{TextureManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_TEXTUREMANAGER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_TEXTUREMANAGER\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../util/Direction.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{TextureManager_8h_a7f188ea46f766d3b957111b2aceb2941}{spriteType}}\ \{\ PACMAN,\ GHOST,\ COIN,\ FRUIT,\ WALL\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceutil}{util}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classutil_1_1TextureManager}{TextureManager}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutil_1_1TextureManager_aef2dd90984b3a90f2f42ba592d051d6c}{init}}(\textcolor{keyword}{const}\ std::string\&\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ sf::Sprite\ \mbox{\hyperlink{classutil_1_1TextureManager_a1a232353688ac1fc91356d36ed708b42}{getSprite}}(\mbox{\hyperlink{TextureManager_8h_a7f188ea46f766d3b957111b2aceb2941}{spriteType}}\ type,\ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ dir\ =\ Direction::None,\ \textcolor{keywordtype}{int}\ ghostId\ =\ 0);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<sf::IntRect>\ \mbox{\hyperlink{classutil_1_1TextureManager_a892757a5fc831f22700caaafed3c48a8}{getPacManFrames}}(\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ dir\ =\ Direction::None);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<sf::IntRect>\ \mbox{\hyperlink{classutil_1_1TextureManager_acbd6f53f5028a1569dcfcc1b767919ac}{getGhostFrames}}(\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ dir\ =\ Direction::None,\ \textcolor{keywordtype}{int}\ ghostId\ =\ 1,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mode\ =\ 2);\ \textcolor{comment}{//\ 2\ is\ chase\ mode}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutil_1_1TextureManager_a198656d4df65e7dc30c5e53435348be6}{loadScoreFont}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ sf::Font\&\ \mbox{\hyperlink{classutil_1_1TextureManager_afc1acd896ab2f5a88259989eab8e93a1}{getScoreFont}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ sf::Texture\ textureSheet;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{static}\ sf::Font\ scoreFont;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ TileSize\ =\ 50;}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \}\ \textcolor{comment}{//\ namespace\ util}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_TEXTUREMANAGER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,14 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/StateManager.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/StateManager.h">
+<area shape="rect" id="Node000001" title="state manager class uses a stack of states to handle different game states (menu, playing,..." alt="" coords="333,5,505,60"/>
+<area shape="rect" id="Node000002" href="$GameOverState_8h.html" title="Declaration of the gameover state class for the Pacman game." alt="" coords="5,108,192,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="323,67,183,110,181,105,322,62"/>
+<area shape="rect" id="Node000003" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="217,108,381,163"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="379,71,332,110,328,106,375,67"/>
+<area shape="rect" id="Node000004" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="277,211,441,265"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="416,74,408,117,396,164,375,212,370,210,391,162,403,116,411,73"/>
+<area shape="rect" id="Node000005" href="$PausedState_8h.html" title="Definition of the PausedState class representing the paused state in the game." alt="" coords="457,108,621,163"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="462,67,509,106,506,110,459,71"/>
+<area shape="rect" id="Node000006" href="$Game_8h.html" title="Top&#45;level game class that owns the render window and runs the main loop." alt="" coords="645,108,809,163"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="513,62,647,105,646,110,511,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="324,173,345,209,341,212,319,176"/>
+</map>

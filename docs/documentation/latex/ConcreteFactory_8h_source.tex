@@ -1,0 +1,55 @@
+\doxysection{Concrete\+Factory.\+h}
+\hypertarget{ConcreteFactory_8h_source}{}\label{ConcreteFactory_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/ConcreteFactory.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/ConcreteFactory.h}}
+\mbox{\hyperlink{ConcreteFactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_CONCRETEFACTORY\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PACMAN\_CONCRETEFACTORY\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../../config/config.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../model/AbstractFactory.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../model/Coin.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}../model/Collectable.h"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}../model/Entity.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../model/Fruit.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../model/Ghost.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}../model/PacMan.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}../model/Wall.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}../util/Vec2D.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Camera_8h}{Camera.h}}"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}CoinView.h"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityView_8h}{EntityView.h}}"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}FruitView.h"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GhostView_8h}{GhostView.h}}"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{PacManView_8h}{PacManView.h}}"{}}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{WallView_8h}{WallView.h}}"{}}}
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview}{view}}\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1ConcreteFactory}{ConcreteFactory}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model::AbstractFactory}}\ \{}
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ sf::RenderWindow\&\ window;}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera;}
+\DoxyCodeLine{00042\ \ \ \ \ std::vector<std::shared\_ptr<entity::EntityView>>\ entityViews;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ keep\ track\ of\ current\ level\ to\ make\ levels\ harder}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{int}\ currentLevel;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1ConcreteFactory}{ConcreteFactory}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera,\ \textcolor{keywordtype}{int}\ currentLevel);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classview_1_1ConcreteFactory_aa7d7e499c01f130670c5a4b1a60fd6b7}{\string~ConcreteFactory}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00054\ \ \ \ \ std::unique\_ptr<model::PacMan>\ \mbox{\hyperlink{classview_1_1ConcreteFactory_a96e7a9a2c201955cfae23f4aa68a2182}{createPacman}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ \ \ \ \ std::unique\_ptr<model::Entity>\ createGhost(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{int}\ ghostId)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ \ \ \ \ std::unique\_ptr<model::Entity>\ createCoin(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ \ \ \ \ std::unique\_ptr<model::Entity>\ createFruit(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \ \ \ \ std::unique\_ptr<model::Entity>\ createWall(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00061\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ std::vector<std::shared\_ptr<entity::EntityView>>\&\ \mbox{\hyperlink{classview_1_1ConcreteFactory_a29b3d271a2bed3b68fb90a71cad550a0}{getEntityViews}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ entityViews;\ \}}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ \}\ \textcolor{comment}{//\ namespace\ view}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_CONCRETEFACTORY\_H}}
+
+\end{DoxyCode}

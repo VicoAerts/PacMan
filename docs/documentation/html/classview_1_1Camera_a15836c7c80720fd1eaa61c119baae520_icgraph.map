@@ -1,0 +1,9 @@
+<map id="view::Camera::getTileWidthPixels" name="view::Camera::getTileWidthPixels">
+<area shape="rect" id="Node000001" title=" " alt="" coords="220,69,423,109"/>
+<area shape="rect" id="Node000002" href="$classview_1_1entity_1_1CoinView.html#a38da397db838ac160a2cb7b3f8d3c558" title=" " alt="" coords="5,5,172,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,68,161,48,163,43,235,63"/>
+<area shape="rect" id="Node000003" href="$classview_1_1entity_1_1FruitView.html#a6ab107aab80ee438008aeb241598f6e7" title=" " alt="" coords="5,69,172,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,92,172,92,172,87,206,87"/>
+<area shape="rect" id="Node000004" href="$classview_1_1entity_1_1WallView.html#a5e58789aa7203ff432b803fa2f237e8f" title=" " alt="" coords="6,133,171,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="235,116,163,136,161,131,234,110"/>
+</map>

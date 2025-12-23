@@ -1,0 +1,56 @@
+\doxysection{/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/events/\+Event.h File Reference}
+\hypertarget{Event_8h}{}\label{Event_8h}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/events/Event.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/events/Event.h}}
+
+
+event class for all custom events used in the game. Supports the observer pattern for notifying entities about events.  
+
+
+{\ttfamily \#include "{}../util/\+Direction.\+h"{}}\newline
+Include dependency graph for Event.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{Event_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Event_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classevents_1_1Event}{Event} class definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemodel}{model}}
+\begin{DoxyCompactList}\small\item\em Contains all classes related to the game model and logic. This namespace is responsible for the core functionality of the game, including entities, game rules, and state management. It does not contain any rendering code, which is handled in the view namespace. \end{DoxyCompactList}\item 
+namespace \mbox{\hyperlink{namespaceevents}{events}}
+\begin{DoxyCompactList}\small\item\em Namespace for all event-\/related classes and enumerations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespaceevents_a3168767751360f862364e6b277509061}{events\+::\+Event\+Type}} \{ \newline
+{\bfseries Tick}
+, {\bfseries Position\+Changed}
+, {\bfseries Direction\+Changed}
+, {\bfseries Coin\+Eaten}
+, \newline
+{\bfseries Fruit\+Eaten}
+, {\bfseries Pac\+Man\+Died}
+, {\bfseries Ghost\+Mode\+Changed}
+, {\bfseries Ghost\+Eaten}
+, \newline
+{\bfseries None}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+event class for all custom events used in the game. Supports the observer pattern for notifying entities about events. 
+

@@ -1,0 +1,19 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Score.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Score.h">
+<area shape="rect" id="Node000001" title="score is an observer that tracks the score of the player" alt="" coords="214,5,378,60"/>
+<area shape="rect" id="Node000002" href="$Clock_8h.html" title="Singleton Clock class to manage time tracking." alt="" coords="5,108,112,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="224,63,104,106,102,101,223,58"/>
+<area shape="rect" id="Node000004" href="$Observer_8h.html" title="Declaration of the Observer interface for observer pattern. Observer is gate between Model and View." alt="" coords="137,108,229,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,62,211,102,208,97,260,58"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="253,108,339,133"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="299,60,299,94,293,94,293,60"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="363,108,437,133"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="329,58,377,97,374,101,326,62"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="461,108,523,133"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="357,58,454,100,452,105,355,63"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="25,181,92,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="61,134,61,168,56,168,56,134"/>
+<area shape="rect" id="Node000005" href="$Event_8h.html" title="event class for all custom events used in the game. Supports the observer pattern for notifying entit..." alt="" coords="117,181,248,207"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="185,134,185,168,180,168,180,134"/>
+<area shape="rect" id="Node000006" href="$Direction_8h.html" title="Defines movement directions and related helper functions." alt="" coords="117,255,248,280"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="185,207,185,241,180,241,180,207"/>
+</map>

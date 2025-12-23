@@ -1,0 +1,80 @@
+\doxysection{util\+::Random Class Reference}
+\hypertarget{classutil_1_1Random}{}\label{classutil_1_1Random}\index{util::Random@{util::Random}}
+
+
+Pseudo-\/random number generator wrapper using singleton pattern.  
+
+
+
+
+{\ttfamily \#include $<$Random.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classutil_1_1Random_ad72e4c975f08d21feca8e0efbbeefafe}{Random}} (const \mbox{\hyperlink{classutil_1_1Random}{Random}} \&)=delete
+\item 
+\Hypertarget{classutil_1_1Random_aff239c44bfcf81023da80e454d38d501}\label{classutil_1_1Random_aff239c44bfcf81023da80e454d38d501} 
+\mbox{\hyperlink{classutil_1_1Random}{Random}} \& {\bfseries operator=} (const \mbox{\hyperlink{classutil_1_1Random}{Random}} \&)=delete
+\item 
+\Hypertarget{classutil_1_1Random_adeaa1a70ee7a8bd20fc17bb6ba5e91eb}\label{classutil_1_1Random_adeaa1a70ee7a8bd20fc17bb6ba5e91eb} 
+{\bfseries Random} (\mbox{\hyperlink{classutil_1_1Random}{Random}} \&\&)=delete
+\item 
+\Hypertarget{classutil_1_1Random_a68b9790feeb3e05a9d1c351472e8d1f8}\label{classutil_1_1Random_a68b9790feeb3e05a9d1c351472e8d1f8} 
+\mbox{\hyperlink{classutil_1_1Random}{Random}} \& {\bfseries operator=} (\mbox{\hyperlink{classutil_1_1Random}{Random}} \&\&)=delete
+\item 
+int \mbox{\hyperlink{classutil_1_1Random_a36819aebe41151000289bbf7eb640fb0}{random\+Int}} (int min, int max)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classutil_1_1Random}{Random}} \& \mbox{\hyperlink{classutil_1_1Random_acc483a1d2795007e8c589fb5d5c9183a}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pseudo-\/random number generator wrapper using singleton pattern. 
+
+Uses a Mersenne Twister engine seeded with std\+::random\+\_\+device. Intended for general-\/purpose randomness within the game logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classutil_1_1Random_ad72e4c975f08d21feca8e0efbbeefafe}\label{classutil_1_1Random_ad72e4c975f08d21feca8e0efbbeefafe} 
+\index{util::Random@{util::Random}!Random@{Random}}
+\index{Random@{Random}!util::Random@{util::Random}}
+\doxysubsubsection{\texorpdfstring{Random()}{Random()}}
+{\footnotesize\ttfamily util\+::\+Random\+::\+Random (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classutil_1_1Random}{Random}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Delete copy \& move semantics 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classutil_1_1Random_acc483a1d2795007e8c589fb5d5c9183a}\label{classutil_1_1Random_acc483a1d2795007e8c589fb5d5c9183a} 
+\index{util::Random@{util::Random}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!util::Random@{util::Random}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classutil_1_1Random}{Random}} \& util\+::\+Random\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Get the singleton instance of the \doxylink{classutil_1_1Random}{Random} class Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1Random_acc483a1d2795007e8c589fb5d5c9183a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1Random_a36819aebe41151000289bbf7eb640fb0}\label{classutil_1_1Random_a36819aebe41151000289bbf7eb640fb0} 
+\index{util::Random@{util::Random}!randomInt@{randomInt}}
+\index{randomInt@{randomInt}!util::Random@{util::Random}}
+\doxysubsubsection{\texorpdfstring{randomInt()}{randomInt()}}
+{\footnotesize\ttfamily int util\+::\+Random\+::random\+Int (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Generate a random integer in the range \mbox{[}min, max\mbox{]} Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1Random_a36819aebe41151000289bbf7eb640fb0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/util/\mbox{\hyperlink{Random_8h}{Random.\+h}}\end{DoxyCompactItemize}

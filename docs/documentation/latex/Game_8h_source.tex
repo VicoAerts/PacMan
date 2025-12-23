@@ -1,0 +1,41 @@
+\doxysection{Game.\+h}
+\hypertarget{Game_8h_source}{}\label{Game_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/Game.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/Game.h}}
+\mbox{\hyperlink{Game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_GAME\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_GAME\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../model/Score.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../states/StateManager.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview}{view}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1Game}{Game}}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ std::unique\_ptr<sf::RenderWindow>\ window;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ std::unique\_ptr<state::StateManager>\ stateManager;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<model::Score>\ playerScore;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classview_1_1Game_af0b1a6101f33ac1675c6a950f3cf14a3}{Game}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898}{\string~Game}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Game_a5e94523753515799e610a90f4cacb68e}{run}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754}{close}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Game_abb19bf0ee40f125467f1e9a78180cdb1}{handleEvents}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114}{render}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1Game_a66c285b630919c082d92be2157fac643}{update}}(\textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ \}\ \textcolor{comment}{//\ namespace\ view}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_GAME\_H}}
+
+\end{DoxyCode}

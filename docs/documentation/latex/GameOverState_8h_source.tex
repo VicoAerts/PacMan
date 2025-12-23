@@ -1,0 +1,24 @@
+\doxysection{Game\+Over\+State.\+h}
+\hypertarget{GameOverState_8h_source}{}\label{GameOverState_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/GameOverState.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/GameOverState.h}}
+\mbox{\hyperlink{GameOverState_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_GAMEOVERSTATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PACMAN\_GAMEOVERSTATE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../util/TextureManager.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{State_8h}{State.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{StateManager_8h}{StateManager.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1state}{view::state}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1state_1_1GameOverState}{GameOverState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1state_1_1State}{State}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1state_1_1GameOverState}{GameOverState}}(\mbox{\hyperlink{classview_1_1state_1_1StateManager}{StateManager}}\&\ stateManager,\ std::shared\_ptr<model::Score>\ playerScore);}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classview_1_1state_1_1GameOverState_abbfb196cb48e60adce2e7142cc5984f2}{\string~GameOverState}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1GameOverState_aaef12389deaf717e5ef81a2f0ecb1e99}{handleEvents}}(\textcolor{keyword}{const}\ sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1GameOverState_a3fc716b5f47b09219a83da0f2f57cb27}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1GameOverState_a344ea41621d30264d4f78cf261f6c541}{render}}(sf::RenderWindow\&\ window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ \}\ \textcolor{comment}{//\ namespace\ view::state}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_GAMEOVERSTATE\_H}}
+
+\end{DoxyCode}

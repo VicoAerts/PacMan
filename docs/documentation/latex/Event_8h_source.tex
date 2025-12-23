@@ -1,0 +1,40 @@
+\doxysection{Event.\+h}
+\hypertarget{Event_8h_source}{}\label{Event_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/events/Event.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/events/Event.h}}
+\mbox{\hyperlink{Event_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_EVENT\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_EVENT\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../util/Direction.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Entity;}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceevents}{events}}\ \{}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{namespaceevents_a3168767751360f862364e6b277509061}{EventType}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ Tick,}
+\DoxyCodeLine{00021\ \ \ \ \ PositionChanged,}
+\DoxyCodeLine{00022\ \ \ \ \ DirectionChanged,}
+\DoxyCodeLine{00023\ \ \ \ \ CoinEaten,}
+\DoxyCodeLine{00024\ \ \ \ \ FruitEaten,}
+\DoxyCodeLine{00025\ \ \ \ \ PacManDied,}
+\DoxyCodeLine{00026\ \ \ \ \ GhostModeChanged,}
+\DoxyCodeLine{00027\ \ \ \ \ GhostEaten,}
+\DoxyCodeLine{00028\ \ \ \ \ None}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classevents_1_1Event}{Event}}\ \{}
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{namespaceevents_a3168767751360f862364e6b277509061}{EventType}}\ \mbox{\hyperlink{classevents_1_1Event_a3549f64f70f5273e1d06614d9e435f76}{type}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classevents_1_1Event_aec21e3de2cff3be405b55519e87c4d7d}{direction}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classevents_1_1Event_ac159f320124c23fe71fbb4b8ec1cbbb7}{Event}}(\mbox{\hyperlink{namespaceevents_a3168767751360f862364e6b277509061}{EventType}}\ t,\ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ \mbox{\hyperlink{classevents_1_1Event_aec21e3de2cff3be405b55519e87c4d7d}{direction}}\ =\ Direction::None)\ :\ \mbox{\hyperlink{classevents_1_1Event_a3549f64f70f5273e1d06614d9e435f76}{type}}(t),\ \mbox{\hyperlink{classevents_1_1Event_aec21e3de2cff3be405b55519e87c4d7d}{direction}}(\mbox{\hyperlink{classevents_1_1Event_aec21e3de2cff3be405b55519e87c4d7d}{direction}})\{\};}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \}\ \textcolor{comment}{//\ namespace\ events}}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_EVENT\_H}}
+
+\end{DoxyCode}

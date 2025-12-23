@@ -1,0 +1,123 @@
+\doxysection{view\+::state\+::Victory\+State Class Reference}
+\hypertarget{classview_1_1state_1_1VictoryState}{}\label{classview_1_1state_1_1VictoryState}\index{view::state::VictoryState@{view::state::VictoryState}}
+
+
+\doxylink{classview_1_1state_1_1VictoryState}{Victory\+State} class representing the victory screen state.  
+
+
+
+
+{\ttfamily \#include $<$Victory\+State.\+h$>$}
+
+
+
+Inheritance diagram for view\+::state\+::Victory\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classview_1_1state_1_1VictoryState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::state\+::Victory\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classview_1_1state_1_1VictoryState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1VictoryState_a48c484c383f618c8a5a23265a8f93eeb}{Victory\+State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1VictoryState_aa1db5fb06b6b323869cf36a0b709a046}{\texorpdfstring{$\sim$}{\string~}\+Victory\+State}} () override=default
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1VictoryState_a1b4a0e037117792ccaa3c143ca0adaa8}{handle\+Events}} (const sf\+::\+Event \&event) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1VictoryState_ab9c686931f5653fa74292b08e8dd7abe}{update}} (const double delta\+Time) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1VictoryState_a0f471f8f5a07bcdaacb85461acc5e032}{render}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+virtual \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\texorpdfstring{$\sim$}{\string~}\+State}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \& {\bfseries state\+Manager}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ {\bfseries player\+Score}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1state_1_1VictoryState}{Victory\+State} class representing the victory screen state. 
+
+Inherits from the \doxylink{classview_1_1state_1_1State}{State} base class and handles events, updates, and rendering specific to the victory screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1VictoryState_a48c484c383f618c8a5a23265a8f93eeb}\label{classview_1_1state_1_1VictoryState_a48c484c383f618c8a5a23265a8f93eeb} 
+\index{view::state::VictoryState@{view::state::VictoryState}!VictoryState@{VictoryState}}
+\index{VictoryState@{VictoryState}!view::state::VictoryState@{view::state::VictoryState}}
+\doxysubsubsection{\texorpdfstring{VictoryState()}{VictoryState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Victory\+State\+::\+Victory\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for \doxylink{classview_1_1state_1_1VictoryState}{Victory\+State} \Hypertarget{classview_1_1state_1_1VictoryState_aa1db5fb06b6b323869cf36a0b709a046}\label{classview_1_1state_1_1VictoryState_aa1db5fb06b6b323869cf36a0b709a046} 
+\index{view::state::VictoryState@{view::state::VictoryState}!````~VictoryState@{\texorpdfstring{$\sim$}{\string~}VictoryState}}
+\index{````~VictoryState@{\texorpdfstring{$\sim$}{\string~}VictoryState}!view::state::VictoryState@{view::state::VictoryState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}VictoryState()}{\string~VictoryState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Victory\+State\+::\texorpdfstring{$\sim$}{\string~}\+Victory\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destructor for \doxylink{classview_1_1state_1_1VictoryState}{Victory\+State} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1VictoryState_a1b4a0e037117792ccaa3c143ca0adaa8}\label{classview_1_1state_1_1VictoryState_a1b4a0e037117792ccaa3c143ca0adaa8} 
+\index{view::state::VictoryState@{view::state::VictoryState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::VictoryState@{view::state::VictoryState}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Victory\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle events specific to the victory state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{view\+::state\+::\+State}}.
+
+\Hypertarget{classview_1_1state_1_1VictoryState_a0f471f8f5a07bcdaacb85461acc5e032}\label{classview_1_1state_1_1VictoryState_a0f471f8f5a07bcdaacb85461acc5e032} 
+\index{view::state::VictoryState@{view::state::VictoryState}!render@{render}}
+\index{render@{render}!view::state::VictoryState@{view::state::VictoryState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Victory\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render the victory state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1VictoryState_a0f471f8f5a07bcdaacb85461acc5e032_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1VictoryState_ab9c686931f5653fa74292b08e8dd7abe}\label{classview_1_1state_1_1VictoryState_ab9c686931f5653fa74292b08e8dd7abe} 
+\index{view::state::VictoryState@{view::state::VictoryState}!update@{update}}
+\index{update@{update}!view::state::VictoryState@{view::state::VictoryState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Victory\+State\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the victory state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{view\+::state\+::\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{VictoryState_8h}{Victory\+State.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/Victory\+State.\+cpp\end{DoxyCompactItemize}

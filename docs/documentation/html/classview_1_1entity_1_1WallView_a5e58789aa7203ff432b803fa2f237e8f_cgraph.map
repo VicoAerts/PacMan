@@ -1,0 +1,9 @@
+<map id="view::entity::WallView::draw" name="view::entity::WallView::draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,171,109"/>
+<area shape="rect" id="Node000002" href="$classview_1_1Camera.html#ae7b9bdf6c8bc3bc670240206e6c1690a" title=" " alt="" coords="219,5,425,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,67,234,46,236,52,163,72"/>
+<area shape="rect" id="Node000003" href="$classview_1_1Camera.html#a15836c7c80720fd1eaa61c119baae520" title=" " alt="" coords="221,69,423,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="171,87,207,87,207,92,171,92"/>
+<area shape="rect" id="Node000004" href="$classview_1_1Camera.html#a8a03853ce207c09f088ef767165ac5a7" title=" " alt="" coords="222,134,422,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,107,257,128,256,133,170,112"/>
+</map>

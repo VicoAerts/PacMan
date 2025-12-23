@@ -1,0 +1,13 @@
+<map id="util::Clock::getInstance" name="util::Clock::getInstance">
+<area shape="rect" id="Node000001" title=" " alt="" coords="460,109,631,134"/>
+<area shape="rect" id="Node000002" href="$classview_1_1entity_1_1GhostView.html#ac8a0f0a03db41aed8dcdb16ff1621472" title=" " alt="" coords="231,5,405,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,105,411,60,380,48,382,43,413,55,509,100"/>
+<area shape="rect" id="Node000003" href="$classview_1_1entity_1_1PacManView.html#a1b9857b6c2eb72014a87f3f3f2a4fb17" title=" " alt="" coords="225,69,411,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="446,110,411,105,412,100,447,105"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1Score.html#a369f8282db293c47e786b7b4c63b9c0f" title=" " alt="" coords="224,133,412,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="447,138,412,143,412,137,446,133"/>
+<area shape="rect" id="Node000006" href="$classview_1_1Game.html#a5e94523753515799e610a90f4cacb68e" title=" " alt="" coords="254,198,382,223"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="510,143,413,188,373,201,371,195,411,183,508,138"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Score.html#a81a775bcc94fd248fa137634aef2f797" title=" " alt="" coords="5,141,176,166"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="211,156,176,156,176,151,211,151"/>
+</map>

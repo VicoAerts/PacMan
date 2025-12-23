@@ -1,0 +1,123 @@
+\doxysection{view\+::state\+::Paused\+State Class Reference}
+\hypertarget{classview_1_1state_1_1PausedState}{}\label{classview_1_1state_1_1PausedState}\index{view::state::PausedState@{view::state::PausedState}}
+
+
+\doxylink{classview_1_1state_1_1PausedState}{Paused\+State} class representing the paused state of the game.  
+
+
+
+
+{\ttfamily \#include $<$Paused\+State.\+h$>$}
+
+
+
+Inheritance diagram for view\+::state\+::Paused\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classview_1_1state_1_1PausedState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::state\+::Paused\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classview_1_1state_1_1PausedState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1PausedState_a130645f0286974901ceef73b6594d766}{Paused\+State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1PausedState_a9059923077bb1491df43bc713bc1d602}{\texorpdfstring{$\sim$}{\string~}\+Paused\+State}} () override=default
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1PausedState_a0f766c6059cb1c05df6d0da038c2d39c}{handle\+Events}} (const sf\+::\+Event \&event) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1PausedState_ad148a7cdc06def34017196ea3a9b574a}{update}} (const double delta\+Time) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1PausedState_abd84c7925ffbbf896c05dfbba46c2876}{render}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+virtual \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\texorpdfstring{$\sim$}{\string~}\+State}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \& {\bfseries state\+Manager}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ {\bfseries player\+Score}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1state_1_1PausedState}{Paused\+State} class representing the paused state of the game. 
+
+Inherits from the \doxylink{classview_1_1state_1_1State}{State} base class and handles events, updates, and rendering specific to the paused state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1PausedState_a130645f0286974901ceef73b6594d766}\label{classview_1_1state_1_1PausedState_a130645f0286974901ceef73b6594d766} 
+\index{view::state::PausedState@{view::state::PausedState}!PausedState@{PausedState}}
+\index{PausedState@{PausedState}!view::state::PausedState@{view::state::PausedState}}
+\doxysubsubsection{\texorpdfstring{PausedState()}{PausedState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Paused\+State\+::\+Paused\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for \doxylink{classview_1_1state_1_1PausedState}{Paused\+State} \Hypertarget{classview_1_1state_1_1PausedState_a9059923077bb1491df43bc713bc1d602}\label{classview_1_1state_1_1PausedState_a9059923077bb1491df43bc713bc1d602} 
+\index{view::state::PausedState@{view::state::PausedState}!````~PausedState@{\texorpdfstring{$\sim$}{\string~}PausedState}}
+\index{````~PausedState@{\texorpdfstring{$\sim$}{\string~}PausedState}!view::state::PausedState@{view::state::PausedState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}PausedState()}{\string~PausedState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Paused\+State\+::\texorpdfstring{$\sim$}{\string~}\+Paused\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destructor for \doxylink{classview_1_1state_1_1PausedState}{Paused\+State} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1PausedState_a0f766c6059cb1c05df6d0da038c2d39c}\label{classview_1_1state_1_1PausedState_a0f766c6059cb1c05df6d0da038c2d39c} 
+\index{view::state::PausedState@{view::state::PausedState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::PausedState@{view::state::PausedState}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Paused\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle events specific to the paused state esc returns to levelstate 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{view\+::state\+::\+State}}.
+
+\Hypertarget{classview_1_1state_1_1PausedState_abd84c7925ffbbf896c05dfbba46c2876}\label{classview_1_1state_1_1PausedState_abd84c7925ffbbf896c05dfbba46c2876} 
+\index{view::state::PausedState@{view::state::PausedState}!render@{render}}
+\index{render@{render}!view::state::PausedState@{view::state::PausedState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Paused\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render the paused state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1PausedState_abd84c7925ffbbf896c05dfbba46c2876_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1PausedState_ad148a7cdc06def34017196ea3a9b574a}\label{classview_1_1state_1_1PausedState_ad148a7cdc06def34017196ea3a9b574a} 
+\index{view::state::PausedState@{view::state::PausedState}!update@{update}}
+\index{update@{update}!view::state::PausedState@{view::state::PausedState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Paused\+State\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the paused state is unused 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{view\+::state\+::\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{PausedState_8h}{Paused\+State.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/Paused\+State.\+cpp\end{DoxyCompactItemize}

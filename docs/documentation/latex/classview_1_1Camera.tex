@@ -1,0 +1,167 @@
+\doxysection{view\+::Camera Class Reference}
+\hypertarget{classview_1_1Camera}{}\label{classview_1_1Camera}\index{view::Camera@{view::Camera}}
+
+
+\doxylink{classview_1_1Camera}{Camera} class for converting grid coordinates to world coordinates to screen coordinates and vice versa.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1Camera_a7b75ed9b80468577ec9ece7092469a04}{Camera}} (int window\+Width, int window\+Height)
+\item 
+void \mbox{\hyperlink{classview_1_1Camera_ac0fb4196cac6dfc3a730ea86ede0dcf9}{set\+Grid\+Size}} (int rows, int cols)
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classview_1_1Camera_a8a03853ce207c09f088ef767165ac5a7}{world\+To\+Pixel}} (float normX, float normY) const
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classview_1_1Camera_aeaab86a0e5e5d409c27bbf9c871eaf09}{grid\+To\+World}} (int row, int col) const
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classview_1_1Camera_a96025a4fa88c476d61ae0fdd2f85199e}{grid\+To\+Pixel}} (int row, int col) const
+\item 
+float \mbox{\hyperlink{classview_1_1Camera_a4a613ab873e0cd4071c6e7e289a18e9d}{world\+Width\+To\+Pixels}} (float world\+Width) const
+\item 
+float \mbox{\hyperlink{classview_1_1Camera_ae1461ddfa0d82f5c601e9fd8e4f2d996}{world\+Height\+To\+Pixels}} (float world\+Height) const
+\item 
+int \mbox{\hyperlink{classview_1_1Camera_a7b63caf99ebadca9c3623575cd7799f3}{get\+Cols}} () const
+\item 
+int \mbox{\hyperlink{classview_1_1Camera_a8fd7ea2ae1ed0000c03a22fe736e7c6c}{get\+Rows}} () const
+\item 
+float \mbox{\hyperlink{classview_1_1Camera_a15836c7c80720fd1eaa61c119baae520}{get\+Tile\+Width\+Pixels}} () const
+\item 
+float \mbox{\hyperlink{classview_1_1Camera_ae7b9bdf6c8bc3bc670240206e6c1690a}{get\+Tile\+Height\+Pixels}} () const
+\item 
+void \mbox{\hyperlink{classview_1_1Camera_aaafceda7e8aeb38c4636bda6f320059e}{resize\+Window}} (int width, int height)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1Camera}{Camera} class for converting grid coordinates to world coordinates to screen coordinates and vice versa. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1Camera_a7b75ed9b80468577ec9ece7092469a04}\label{classview_1_1Camera_a7b75ed9b80468577ec9ece7092469a04} 
+\index{view::Camera@{view::Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily view\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{int}]{window\+Width,  }\item[{int}]{window\+Height }\end{DoxyParamCaption})}
+
+camera constructor using window width and height Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Camera_a7b75ed9b80468577ec9ece7092469a04_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1Camera_a7b63caf99ebadca9c3623575cd7799f3}\label{classview_1_1Camera_a7b63caf99ebadca9c3623575cd7799f3} 
+\index{view::Camera@{view::Camera}!getCols@{getCols}}
+\index{getCols@{getCols}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{getCols()}{getCols()}}
+{\footnotesize\ttfamily int view\+::\+Camera\+::get\+Cols (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get columns \Hypertarget{classview_1_1Camera_a8fd7ea2ae1ed0000c03a22fe736e7c6c}\label{classview_1_1Camera_a8fd7ea2ae1ed0000c03a22fe736e7c6c} 
+\index{view::Camera@{view::Camera}!getRows@{getRows}}
+\index{getRows@{getRows}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{getRows()}{getRows()}}
+{\footnotesize\ttfamily int view\+::\+Camera\+::get\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get rows \Hypertarget{classview_1_1Camera_ae7b9bdf6c8bc3bc670240206e6c1690a}\label{classview_1_1Camera_ae7b9bdf6c8bc3bc670240206e6c1690a} 
+\index{view::Camera@{view::Camera}!getTileHeightPixels@{getTileHeightPixels}}
+\index{getTileHeightPixels@{getTileHeightPixels}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{getTileHeightPixels()}{getTileHeightPixels()}}
+{\footnotesize\ttfamily float view\+::\+Camera\+::get\+Tile\+Height\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get tile height in pixels Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Camera_ae7b9bdf6c8bc3bc670240206e6c1690a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1Camera_a15836c7c80720fd1eaa61c119baae520}\label{classview_1_1Camera_a15836c7c80720fd1eaa61c119baae520} 
+\index{view::Camera@{view::Camera}!getTileWidthPixels@{getTileWidthPixels}}
+\index{getTileWidthPixels@{getTileWidthPixels}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{getTileWidthPixels()}{getTileWidthPixels()}}
+{\footnotesize\ttfamily float view\+::\+Camera\+::get\+Tile\+Width\+Pixels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get tile width in pixels Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Camera_a15836c7c80720fd1eaa61c119baae520_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1Camera_a96025a4fa88c476d61ae0fdd2f85199e}\label{classview_1_1Camera_a96025a4fa88c476d61ae0fdd2f85199e} 
+\index{view::Camera@{view::Camera}!gridToPixel@{gridToPixel}}
+\index{gridToPixel@{gridToPixel}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{gridToPixel()}{gridToPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVec2D}{Vec2D}} view\+::\+Camera\+::grid\+To\+Pixel (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+gridmap to pixel converts grid coordinates to pixel coordinates \Hypertarget{classview_1_1Camera_aeaab86a0e5e5d409c27bbf9c871eaf09}\label{classview_1_1Camera_aeaab86a0e5e5d409c27bbf9c871eaf09} 
+\index{view::Camera@{view::Camera}!gridToWorld@{gridToWorld}}
+\index{gridToWorld@{gridToWorld}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{gridToWorld()}{gridToWorld()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVec2D}{Vec2D}} view\+::\+Camera\+::grid\+To\+World (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption}) const}
+
+grid\+To\+World converts grid coordinates to world normalised coordinates \Hypertarget{classview_1_1Camera_aaafceda7e8aeb38c4636bda6f320059e}\label{classview_1_1Camera_aaafceda7e8aeb38c4636bda6f320059e} 
+\index{view::Camera@{view::Camera}!resizeWindow@{resizeWindow}}
+\index{resizeWindow@{resizeWindow}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{resizeWindow()}{resizeWindow()}}
+{\footnotesize\ttfamily void view\+::\+Camera\+::resize\+Window (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+resize window Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Camera_aaafceda7e8aeb38c4636bda6f320059e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1Camera_ac0fb4196cac6dfc3a730ea86ede0dcf9}\label{classview_1_1Camera_ac0fb4196cac6dfc3a730ea86ede0dcf9} 
+\index{view::Camera@{view::Camera}!setGridSize@{setGridSize}}
+\index{setGridSize@{setGridSize}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{setGridSize()}{setGridSize()}}
+{\footnotesize\ttfamily void view\+::\+Camera\+::set\+Grid\+Size (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})}
+
+set world size (for example when level is changed) Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Camera_ac0fb4196cac6dfc3a730ea86ede0dcf9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1Camera_ae1461ddfa0d82f5c601e9fd8e4f2d996}\label{classview_1_1Camera_ae1461ddfa0d82f5c601e9fd8e4f2d996} 
+\index{view::Camera@{view::Camera}!worldHeightToPixels@{worldHeightToPixels}}
+\index{worldHeightToPixels@{worldHeightToPixels}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{worldHeightToPixels()}{worldHeightToPixels()}}
+{\footnotesize\ttfamily float view\+::\+Camera\+::world\+Height\+To\+Pixels (\begin{DoxyParamCaption}\item[{float}]{world\+Height }\end{DoxyParamCaption}) const}
+
+world height in pixels to calculate the size of sprites \Hypertarget{classview_1_1Camera_a8a03853ce207c09f088ef767165ac5a7}\label{classview_1_1Camera_a8a03853ce207c09f088ef767165ac5a7} 
+\index{view::Camera@{view::Camera}!worldToPixel@{worldToPixel}}
+\index{worldToPixel@{worldToPixel}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{worldToPixel()}{worldToPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVec2D}{Vec2D}} view\+::\+Camera\+::world\+To\+Pixel (\begin{DoxyParamCaption}\item[{float}]{normX,  }\item[{float}]{normY }\end{DoxyParamCaption}) const}
+
+convert world normalised coords to pixels Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Camera_a8a03853ce207c09f088ef767165ac5a7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1Camera_a4a613ab873e0cd4071c6e7e289a18e9d}\label{classview_1_1Camera_a4a613ab873e0cd4071c6e7e289a18e9d} 
+\index{view::Camera@{view::Camera}!worldWidthToPixels@{worldWidthToPixels}}
+\index{worldWidthToPixels@{worldWidthToPixels}!view::Camera@{view::Camera}}
+\doxysubsubsection{\texorpdfstring{worldWidthToPixels()}{worldWidthToPixels()}}
+{\footnotesize\ttfamily float view\+::\+Camera\+::world\+Width\+To\+Pixels (\begin{DoxyParamCaption}\item[{float}]{world\+Width }\end{DoxyParamCaption}) const}
+
+world width in pixels to calculate the size of sprites 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/\mbox{\hyperlink{Camera_8h}{Camera.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/Camera.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,69 @@
+\doxysection{model\+::Subject Class Reference}
+\hypertarget{classmodel_1_1Subject}{}\label{classmodel_1_1Subject}\index{model::Subject@{model::Subject}}
+
+
+\doxylink{classmodel_1_1Subject}{Subject} base class for observer pattern.  
+
+
+
+
+{\ttfamily \#include $<$Subject.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Subject\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Subject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classmodel_1_1Subject}{Subject} base class for observer pattern. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}\label{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb} 
+\index{model::Subject@{model::Subject}!attach@{attach}}
+\index{attach@{attach}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void model\+::\+Subject\+::attach (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$}]{observer }\end{DoxyParamCaption})}
+
+attach observer to subject \Hypertarget{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}\label{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e} 
+\index{model::Subject@{model::Subject}!detach@{detach}}
+\index{detach@{detach}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void model\+::\+Subject\+::detach (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$}]{observer }\end{DoxyParamCaption})}
+
+detach observer from subject \Hypertarget{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}\label{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b} 
+\index{model::Subject@{model::Subject}!notify@{notify}}
+\index{notify@{notify}!model::Subject@{model::Subject}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void model\+::\+Subject\+::notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&}]{event,  }\item[{\mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+notify observer about event Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Subject_8h}{Subject.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/Subject.\+cpp\end{DoxyCompactItemize}

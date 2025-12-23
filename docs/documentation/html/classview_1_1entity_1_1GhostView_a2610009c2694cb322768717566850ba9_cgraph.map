@@ -1,0 +1,9 @@
+<map id="view::entity::GhostView::onNotify" name="view::entity::GhostView::onNotify">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,180,95"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Entity.html#a4c4ebfff43fd71b11a675bc441e145aa" title=" " alt="" coords="228,5,449,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,53,227,41,268,31,270,36,229,46,178,58"/>
+<area shape="rect" id="Node000003" href="$classutil_1_1TextureManager.html#acbd6f53f5028a1569dcfcc1b767919ac" title=" " alt="" coords="261,55,417,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,73,247,73,247,78,180,78"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1Entity.html#ae4206058515c6ef6ba4b73e4629950a6" title=" " alt="" coords="244,120,433,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,93,229,105,270,114,268,119,227,110,177,98"/>
+</map>

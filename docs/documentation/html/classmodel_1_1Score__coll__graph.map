@@ -1,0 +1,5 @@
+<map id="model::Score" name="model::Score">
+<area shape="rect" id="Node000001" title="Observer that updates the game score based on received events." alt="" coords="17,79,124,104"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Observer.html" title="Observer interface for receiving game events." alt="" coords="5,5,136,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,44,73,79,68,79,68,44"/>
+</map>

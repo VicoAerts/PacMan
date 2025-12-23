@@ -1,0 +1,123 @@
+\doxysection{view\+::state\+::Game\+Over\+State Class Reference}
+\hypertarget{classview_1_1state_1_1GameOverState}{}\label{classview_1_1state_1_1GameOverState}\index{view::state::GameOverState@{view::state::GameOverState}}
+
+
+\doxylink{classview_1_1state_1_1GameOverState}{Game\+Over\+State} class representing the game over screen state.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Over\+State.\+h$>$}
+
+
+
+Inheritance diagram for view\+::state\+::Game\+Over\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classview_1_1state_1_1GameOverState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::state\+::Game\+Over\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classview_1_1state_1_1GameOverState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1GameOverState_a186846a27aa12485a500371c2b80348e}{Game\+Over\+State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1GameOverState_abbfb196cb48e60adce2e7142cc5984f2}{\texorpdfstring{$\sim$}{\string~}\+Game\+Over\+State}} () override=default
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1GameOverState_aaef12389deaf717e5ef81a2f0ecb1e99}{handle\+Events}} (const sf\+::\+Event \&event) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1GameOverState_a3fc716b5f47b09219a83da0f2f57cb27}{update}} (const double delta\+Time) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1GameOverState_a344ea41621d30264d4f78cf261f6c541}{render}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+virtual \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\texorpdfstring{$\sim$}{\string~}\+State}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \& {\bfseries state\+Manager}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ {\bfseries player\+Score}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1state_1_1GameOverState}{Game\+Over\+State} class representing the game over screen state. 
+
+Inherits from the \doxylink{classview_1_1state_1_1State}{State} base class and handles events, updates, and rendering specific to the game over screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1GameOverState_a186846a27aa12485a500371c2b80348e}\label{classview_1_1state_1_1GameOverState_a186846a27aa12485a500371c2b80348e} 
+\index{view::state::GameOverState@{view::state::GameOverState}!GameOverState@{GameOverState}}
+\index{GameOverState@{GameOverState}!view::state::GameOverState@{view::state::GameOverState}}
+\doxysubsubsection{\texorpdfstring{GameOverState()}{GameOverState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Game\+Over\+State\+::\+Game\+Over\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for \doxylink{classview_1_1state_1_1GameOverState}{Game\+Over\+State} \Hypertarget{classview_1_1state_1_1GameOverState_abbfb196cb48e60adce2e7142cc5984f2}\label{classview_1_1state_1_1GameOverState_abbfb196cb48e60adce2e7142cc5984f2} 
+\index{view::state::GameOverState@{view::state::GameOverState}!````~GameOverState@{\texorpdfstring{$\sim$}{\string~}GameOverState}}
+\index{````~GameOverState@{\texorpdfstring{$\sim$}{\string~}GameOverState}!view::state::GameOverState@{view::state::GameOverState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}GameOverState()}{\string~GameOverState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Game\+Over\+State\+::\texorpdfstring{$\sim$}{\string~}\+Game\+Over\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destructor for \doxylink{classview_1_1state_1_1GameOverState}{Game\+Over\+State} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1GameOverState_aaef12389deaf717e5ef81a2f0ecb1e99}\label{classview_1_1state_1_1GameOverState_aaef12389deaf717e5ef81a2f0ecb1e99} 
+\index{view::state::GameOverState@{view::state::GameOverState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::GameOverState@{view::state::GameOverState}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Game\+Over\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle events specific to the game over state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{view\+::state\+::\+State}}.
+
+\Hypertarget{classview_1_1state_1_1GameOverState_a344ea41621d30264d4f78cf261f6c541}\label{classview_1_1state_1_1GameOverState_a344ea41621d30264d4f78cf261f6c541} 
+\index{view::state::GameOverState@{view::state::GameOverState}!render@{render}}
+\index{render@{render}!view::state::GameOverState@{view::state::GameOverState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Game\+Over\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render the game over state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1GameOverState_a344ea41621d30264d4f78cf261f6c541_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1GameOverState_a3fc716b5f47b09219a83da0f2f57cb27}\label{classview_1_1state_1_1GameOverState_a3fc716b5f47b09219a83da0f2f57cb27} 
+\index{view::state::GameOverState@{view::state::GameOverState}!update@{update}}
+\index{update@{update}!view::state::GameOverState@{view::state::GameOverState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Game\+Over\+State\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the game over state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{view\+::state\+::\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{GameOverState_8h}{Game\+Over\+State.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/Game\+Over\+State.\+cpp\end{DoxyCompactItemize}

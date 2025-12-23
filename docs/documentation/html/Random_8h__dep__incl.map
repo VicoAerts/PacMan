@@ -1,0 +1,14 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Random.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Random.h">
+<area shape="rect" id="Node000001" title="Declaration of the Random class. Utility for generating random numbers." alt="" coords="74,5,238,60"/>
+<area shape="rect" id="Node000002" href="$World_8h.html" title="holds all entities, orchestration of game logic and interaction between entities" alt="" coords="74,108,238,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,74,159,108,153,108,153,74"/>
+<area shape="rect" id="Node000003" href="$Ghost_8h.html" title="Declaration of the Ghost entity and its AI behavior." alt="" coords="14,211,178,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,176,114,212,109,209,131,173"/>
+<area shape="rect" id="Node000005" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="74,416,238,471"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="180,174,193,210,203,254,207,289,205,325,196,369,187,394,175,417,171,415,182,392,191,367,199,324,201,289,198,255,188,211,175,176"/>
+<area shape="rect" id="Node000004" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="5,313,181,368"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="98,279,97,313,91,313,92,279"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="119,378,142,414,137,417,115,381"/>
+<area shape="rect" id="Node000006" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="74,519,238,573"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="159,484,159,519,153,519,153,484"/>
+</map>

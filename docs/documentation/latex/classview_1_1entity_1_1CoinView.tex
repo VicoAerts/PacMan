@@ -1,0 +1,105 @@
+\doxysection{view\+::entity\+::Coin\+View Class Reference}
+\hypertarget{classview_1_1entity_1_1CoinView}{}\label{classview_1_1entity_1_1CoinView}\index{view::entity::CoinView@{view::entity::CoinView}}
+
+
+View class for rendering Coin entities.  
+
+
+
+
+{\ttfamily \#include $<$Coin\+View.\+h$>$}
+
+
+
+Inheritance diagram for view\+::entity\+::Coin\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classview_1_1entity_1_1CoinView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::entity\+::Coin\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classview_1_1entity_1_1CoinView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1entity_1_1CoinView_ab17823806b7f86dcca79b41422908ad1}{Coin\+View}} (\mbox{\hyperlink{structVec2D}{Vec2D}} start\+Pos)
+\item 
+void \mbox{\hyperlink{classview_1_1entity_1_1CoinView_ae5a651d2c94269b454a44a0edd909034}{on\+Notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} \&entity) override
+\item 
+void \mbox{\hyperlink{classview_1_1entity_1_1CoinView_a38da397db838ac160a2cb7b3f8d3c558}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classview_1_1Camera}{Camera}} \&camera) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{view\+::entity\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1entity_1_1EntityView_aff5266036baf0d6e734ab3c6b96c48af}{Entity\+View}} ()=default
+\item 
+virtual \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a4525c35b3f104d961e6a3f18d76065cf}{\texorpdfstring{$\sim$}{\string~}\+Entity\+View}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Observer}{model\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Observer_aa28e156c930472479eec1ae5c9d94719}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View class for rendering Coin entities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1entity_1_1CoinView_ab17823806b7f86dcca79b41422908ad1}\label{classview_1_1entity_1_1CoinView_ab17823806b7f86dcca79b41422908ad1} 
+\index{view::entity::CoinView@{view::entity::CoinView}!CoinView@{CoinView}}
+\index{CoinView@{CoinView}!view::entity::CoinView@{view::entity::CoinView}}
+\doxysubsubsection{\texorpdfstring{CoinView()}{CoinView()}}
+{\footnotesize\ttfamily view\+::entity\+::\+Coin\+View\+::\+Coin\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVec2D}{Vec2D}}}]{start\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor initializing the Coin view Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1entity_1_1CoinView_ab17823806b7f86dcca79b41422908ad1_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1entity_1_1CoinView_a38da397db838ac160a2cb7b3f8d3c558}\label{classview_1_1entity_1_1CoinView_a38da397db838ac160a2cb7b3f8d3c558} 
+\index{view::entity::CoinView@{view::entity::CoinView}!draw@{draw}}
+\index{draw@{draw}!view::entity::CoinView@{view::entity::CoinView}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void view\+::entity\+::\+Coin\+View\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classview_1_1Camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+draw coin on screen 
+
+Implements \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a3ad1872170ee9d946006a79b25d098bb}{view\+::entity\+::\+Entity\+View}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1entity_1_1CoinView_a38da397db838ac160a2cb7b3f8d3c558_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1entity_1_1CoinView_ae5a651d2c94269b454a44a0edd909034}\label{classview_1_1entity_1_1CoinView_ae5a651d2c94269b454a44a0edd909034} 
+\index{view::entity::CoinView@{view::entity::CoinView}!onNotify@{onNotify}}
+\index{onNotify@{onNotify}!view::entity::CoinView@{view::entity::CoinView}}
+\doxysubsubsection{\texorpdfstring{onNotify()}{onNotify()}}
+{\footnotesize\ttfamily void view\+::entity\+::\+Coin\+View\+::on\+Notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&}]{event,  }\item[{\mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+notify coin view about changes in model 
+
+Implements \mbox{\hyperlink{classmodel_1_1Observer_aa766d38ecc74c4569b483bfbf07cabcc}{model\+::\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/Coin\+View.\+h\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/Coin\+View.\+cpp\end{DoxyCompactItemize}

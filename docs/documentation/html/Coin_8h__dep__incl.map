@@ -1,0 +1,12 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Coin.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Coin.h">
+<area shape="rect" id="Node000001" title="Definition of the Coin class representing a collectible coin item in the game." alt="" coords="65,5,229,60"/>
+<area shape="rect" id="Node000002" href="$CoinView_8h_source.html" title=" " alt="" coords="5,108,169,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,73,105,109,101,107,122,70"/>
+<area shape="rect" id="Node000003" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="59,211,235,265"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="172,71,185,107,189,135,185,163,176,189,165,212,161,209,171,187,179,162,183,135,179,109,167,73"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,173,134,209,129,212,108,176"/>
+<area shape="rect" id="Node000004" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="65,313,229,368"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="150,279,150,313,145,313,145,279"/>
+<area shape="rect" id="Node000005" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="65,416,229,471"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="150,382,150,416,145,416,145,382"/>
+</map>

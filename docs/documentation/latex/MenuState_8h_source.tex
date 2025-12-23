@@ -1,0 +1,31 @@
+\doxysection{Menu\+State.\+h}
+\hypertarget{MenuState_8h_source}{}\label{MenuState_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/MenuState.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/MenuState.h}}
+\mbox{\hyperlink{MenuState_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_MENUSTATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PACMAN\_MENUSTATE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{LevelState_8h}{LevelState.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{State_8h}{State.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{StateManager_8h}{StateManager.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1state}{view::state}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1state_1_1MenuState}{MenuState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1state_1_1State}{State}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1state_1_1MenuState}{MenuState}}(\mbox{\hyperlink{classview_1_1state_1_1StateManager}{StateManager}}\&\ stateManager,\ std::shared\_ptr<model::Score>\ playerScore);}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classview_1_1state_1_1MenuState_a4333011e88b98b712f9691b57bc354b6}{\string~MenuState}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1MenuState_a5d0b965f649e99eb3c0fa9d8ea0689c8}{handleEvents}}(\textcolor{keyword}{const}\ sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1MenuState_a8ffe5f9e74515b024b6f0854e357d25c}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1MenuState_ad0e654a4dbd9233afaa5b04c677e9e4d}{render}}(sf::RenderWindow\&\ window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ sf::Texture\ backgroundTexture;}
+\DoxyCodeLine{00036\ \ \ \ \ sf::Sprite\ backgroundSprite;}
+\DoxyCodeLine{00037\ \ \ \ \ sf::RectangleShape\ m\_startButton;}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ \}\ \textcolor{comment}{//\ namespace\ view::state}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_MENUSTATE\_H}}
+
+\end{DoxyCode}

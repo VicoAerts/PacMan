@@ -1,0 +1,216 @@
+\doxysection{model\+::World Class Reference}
+\hypertarget{classmodel_1_1World}{}\label{classmodel_1_1World}\index{model::World@{model::World}}
+
+
+\doxylink{classmodel_1_1World}{World} class that holds all entities and game logic.  
+
+
+
+
+{\ttfamily \#include $<$World.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1World_a8c459ab07b6740d93489cc6a9f9d7511}{World}} (const \mbox{\hyperlink{classGridMap}{Grid\+Map}} \&map, \mbox{\hyperlink{classmodel_1_1AbstractFactory}{Abstract\+Factory}} \&factory, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+void \mbox{\hyperlink{classmodel_1_1World_aeb35b9b74450efccc04ca59e361f7f5e}{update}} (double delta\+Time)
+\item 
+const \mbox{\hyperlink{classGridMap}{Grid\+Map}} \& \mbox{\hyperlink{classmodel_1_1World_ab8214a37fe923edcb342628dd2f21d7a}{get\+Grid\+Map}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1World_ab9f23f79386d5a4a516e193040e4c876}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+bool \mbox{\hyperlink{classmodel_1_1World_a300894a65294812d096f37a02f8a51c7}{is\+Move\+Valid}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&position, const \mbox{\hyperlink{structVec2D}{Vec2D}} \&step, const \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity) const
+\item 
+void \mbox{\hyperlink{classmodel_1_1World_a205500858db36ff3bb997b5764383fc3}{snap\+To\+Corridor}} (\mbox{\hyperlink{structVec2D}{Vec2D}} \&pos, const \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir) const
+\item 
+void \mbox{\hyperlink{classmodel_1_1World_a306dac4dff810b96be324a40079b01b8}{handle\+Pac\+Man\+Collisions}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \& \mbox{\hyperlink{classmodel_1_1World_ae6db877b944f5981122a0f98fae000d6}{get\+Pac\+Man}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1World_aef8fa2b1bbf57897426244e203e2ca44}{reset\+World}} ()
+\item 
+bool \mbox{\hyperlink{classmodel_1_1World_a1dc612fb07d8733b6c1aa5f1cd6415b6}{is\+World\+Cleared}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1World_ab0246bc06a42c8609ef094ad1277c2a2}{debug\+Clear\+Collectables}} ()
+\item 
+int \mbox{\hyperlink{classmodel_1_1World_ab0c0505718f109cf90ccf2f9feb14a12}{get\+Current\+Level}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classmodel_1_1World}{World} class that holds all entities and game logic. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1World_a8c459ab07b6740d93489cc6a9f9d7511}\label{classmodel_1_1World_a8c459ab07b6740d93489cc6a9f9d7511} 
+\index{model::World@{model::World}!World@{World}}
+\index{World@{World}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{World()}{World()}}
+{\footnotesize\ttfamily model\+::\+World\+::\+World (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGridMap}{Grid\+Map}} \&}]{map,  }\item[{\mbox{\hyperlink{classmodel_1_1AbstractFactory}{Abstract\+Factory}} \&}]{factory,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})}
+
+constructor for world taking a gridmap and a factory to spawn entities Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a8c459ab07b6740d93489cc6a9f9d7511_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1World_ab0246bc06a42c8609ef094ad1277c2a2}\label{classmodel_1_1World_ab0246bc06a42c8609ef094ad1277c2a2} 
+\index{model::World@{model::World}!debugClearCollectables@{debugClearCollectables}}
+\index{debugClearCollectables@{debugClearCollectables}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{debugClearCollectables()}{debugClearCollectables()}}
+{\footnotesize\ttfamily void model\+::\+World\+::debug\+Clear\+Collectables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+debug clear all collectables Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_ab0246bc06a42c8609ef094ad1277c2a2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_ab0c0505718f109cf90ccf2f9feb14a12}\label{classmodel_1_1World_ab0c0505718f109cf90ccf2f9feb14a12} 
+\index{model::World@{model::World}!getCurrentLevel@{getCurrentLevel}}
+\index{getCurrentLevel@{getCurrentLevel}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{getCurrentLevel()}{getCurrentLevel()}}
+{\footnotesize\ttfamily int model\+::\+World\+::get\+Current\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get current level Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_ab0c0505718f109cf90ccf2f9feb14a12_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_ab8214a37fe923edcb342628dd2f21d7a}\label{classmodel_1_1World_ab8214a37fe923edcb342628dd2f21d7a} 
+\index{model::World@{model::World}!getGridMap@{getGridMap}}
+\index{getGridMap@{getGridMap}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{getGridMap()}{getGridMap()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classGridMap}{Grid\+Map}} \& model\+::\+World\+::get\+Grid\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the gridmap of the world Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_ab8214a37fe923edcb342628dd2f21d7a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_ae6db877b944f5981122a0f98fae000d6}\label{classmodel_1_1World_ae6db877b944f5981122a0f98fae000d6} 
+\index{model::World@{model::World}!getPacMan@{getPacMan}}
+\index{getPacMan@{getPacMan}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{getPacMan()}{getPacMan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \& model\+::\+World\+::get\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get pacman entity Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_ae6db877b944f5981122a0f98fae000d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_ab9f23f79386d5a4a516e193040e4c876}\label{classmodel_1_1World_ab9f23f79386d5a4a516e193040e4c876} 
+\index{model::World@{model::World}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void model\+::\+World\+::handle\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+handle input for pacman \Hypertarget{classmodel_1_1World_a306dac4dff810b96be324a40079b01b8}\label{classmodel_1_1World_a306dac4dff810b96be324a40079b01b8} 
+\index{model::World@{model::World}!handlePacManCollisions@{handlePacManCollisions}}
+\index{handlePacManCollisions@{handlePacManCollisions}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{handlePacManCollisions()}{handlePacManCollisions()}}
+{\footnotesize\ttfamily void model\+::\+World\+::handle\+Pac\+Man\+Collisions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos }\end{DoxyParamCaption})}
+
+collect collectable at position Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a306dac4dff810b96be324a40079b01b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a306dac4dff810b96be324a40079b01b8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_a300894a65294812d096f37a02f8a51c7}\label{classmodel_1_1World_a300894a65294812d096f37a02f8a51c7} 
+\index{model::World@{model::World}!isMoveValid@{isMoveValid}}
+\index{isMoveValid@{isMoveValid}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{isMoveValid()}{isMoveValid()}}
+{\footnotesize\ttfamily bool model\+::\+World\+::is\+Move\+Valid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{position,  }\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{step,  }\item[{const \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&}]{entity }\end{DoxyParamCaption}) const}
+
+check if move is valid in the gridmap Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a300894a65294812d096f37a02f8a51c7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a300894a65294812d096f37a02f8a51c7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_a1dc612fb07d8733b6c1aa5f1cd6415b6}\label{classmodel_1_1World_a1dc612fb07d8733b6c1aa5f1cd6415b6} 
+\index{model::World@{model::World}!isWorldCleared@{isWorldCleared}}
+\index{isWorldCleared@{isWorldCleared}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{isWorldCleared()}{isWorldCleared()}}
+{\footnotesize\ttfamily bool model\+::\+World\+::is\+World\+Cleared (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+is\+World\+Cleared \Hypertarget{classmodel_1_1World_aef8fa2b1bbf57897426244e203e2ca44}\label{classmodel_1_1World_aef8fa2b1bbf57897426244e203e2ca44} 
+\index{model::World@{model::World}!resetWorld@{resetWorld}}
+\index{resetWorld@{resetWorld}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{resetWorld()}{resetWorld()}}
+{\footnotesize\ttfamily void model\+::\+World\+::reset\+World (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+reset world if pacman loses a life Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_aef8fa2b1bbf57897426244e203e2ca44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_aef8fa2b1bbf57897426244e203e2ca44_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_a205500858db36ff3bb997b5764383fc3}\label{classmodel_1_1World_a205500858db36ff3bb997b5764383fc3} 
+\index{model::World@{model::World}!snapToCorridor@{snapToCorridor}}
+\index{snapToCorridor@{snapToCorridor}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{snapToCorridor()}{snapToCorridor()}}
+{\footnotesize\ttfamily void model\+::\+World\+::snap\+To\+Corridor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos,  }\item[{const \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption}) const}
+
+let snap to corridor/center of tile Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a205500858db36ff3bb997b5764383fc3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1World_a205500858db36ff3bb997b5764383fc3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1World_aeb35b9b74450efccc04ca59e361f7f5e}\label{classmodel_1_1World_aeb35b9b74450efccc04ca59e361f7f5e} 
+\index{model::World@{model::World}!update@{update}}
+\index{update@{update}!model::World@{model::World}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void model\+::\+World\+::update (\begin{DoxyParamCaption}\item[{double}]{delta\+Time }\end{DoxyParamCaption})}
+
+update all entities in the world 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/control/\mbox{\hyperlink{World_8h}{World.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/control/World.\+cpp\end{DoxyCompactItemize}

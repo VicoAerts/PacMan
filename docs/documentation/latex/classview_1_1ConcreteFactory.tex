@@ -1,0 +1,143 @@
+\doxysection{view\+::Concrete\+Factory Class Reference}
+\hypertarget{classview_1_1ConcreteFactory}{}\label{classview_1_1ConcreteFactory}\index{view::ConcreteFactory@{view::ConcreteFactory}}
+
+
+Concrete Factory class for creating game entities and their views.  
+
+
+
+
+{\ttfamily \#include $<$Concrete\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for view\+::Concrete\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classview_1_1ConcreteFactory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::Concrete\+Factory\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classview_1_1ConcreteFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1ConcreteFactory_a036d3bb6f1aa87dee46af7bb93e22a26}{Concrete\+Factory}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classview_1_1Camera}{Camera}} \&camera, int current\+Level)
+\item 
+\mbox{\hyperlink{classview_1_1ConcreteFactory_aa7d7e499c01f130670c5a4b1a60fd6b7}{\texorpdfstring{$\sim$}{\string~}\+Concrete\+Factory}} () override=default
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1PacMan}{model\+::\+Pac\+Man}} $>$ \mbox{\hyperlink{classview_1_1ConcreteFactory_a96e7a9a2c201955cfae23f4aa68a2182}{create\+Pacman}} (int row, int col) override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ \mbox{\hyperlink{classview_1_1ConcreteFactory_afc18700f37282968df48aa2cc39c9cd9}{create\+Ghost}} (int row, int col, int ghost\+Id) override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ \mbox{\hyperlink{classview_1_1ConcreteFactory_ae3784bdf3e1b8e48cbbeca3e959b7a02}{create\+Coin}} (int row, int col) override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ \mbox{\hyperlink{classview_1_1ConcreteFactory_ab3cc2495ca3017b0e85376404105d060}{create\+Fruit}} (int row, int col) override
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ \mbox{\hyperlink{classview_1_1ConcreteFactory_a933665c48bd5862e16855dd918ce8d0b}{create\+Wall}} (int row, int col) override
+\item 
+const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{entity\+::\+Entity\+View}} $>$ $>$ \& \mbox{\hyperlink{classview_1_1ConcreteFactory_a29b3d271a2bed3b68fb90a71cad550a0}{get\+Entity\+Views}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model\+::\+Abstract\+Factory}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1AbstractFactory_ade099ed90fdb12cdf158a1184d8bf265}{\texorpdfstring{$\sim$}{\string~}\+Abstract\+Factory}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Factory class for creating game entities and their views. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1ConcreteFactory_a036d3bb6f1aa87dee46af7bb93e22a26}\label{classview_1_1ConcreteFactory_a036d3bb6f1aa87dee46af7bb93e22a26} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!ConcreteFactory@{ConcreteFactory}}
+\index{ConcreteFactory@{ConcreteFactory}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{ConcreteFactory()}{ConcreteFactory()}}
+{\footnotesize\ttfamily view\+::\+Concrete\+Factory\+::\+Concrete\+Factory (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classview_1_1Camera}{Camera}} \&}]{camera,  }\item[{int}]{current\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+constructor \Hypertarget{classview_1_1ConcreteFactory_aa7d7e499c01f130670c5a4b1a60fd6b7}\label{classview_1_1ConcreteFactory_aa7d7e499c01f130670c5a4b1a60fd6b7} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!````~ConcreteFactory@{\texorpdfstring{$\sim$}{\string~}ConcreteFactory}}
+\index{````~ConcreteFactory@{\texorpdfstring{$\sim$}{\string~}ConcreteFactory}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ConcreteFactory()}{\string~ConcreteFactory()}}
+{\footnotesize\ttfamily view\+::\+Concrete\+Factory\+::\texorpdfstring{$\sim$}{\string~}\+Concrete\+Factory (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destructor of the Entity\+Factory 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1ConcreteFactory_ae3784bdf3e1b8e48cbbeca3e959b7a02}\label{classview_1_1ConcreteFactory_ae3784bdf3e1b8e48cbbeca3e959b7a02} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!createCoin@{createCoin}}
+\index{createCoin@{createCoin}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createCoin()}{createCoin()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ view\+::\+Concrete\+Factory\+::create\+Coin (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model\+::\+Abstract\+Factory}}.
+
+\Hypertarget{classview_1_1ConcreteFactory_ab3cc2495ca3017b0e85376404105d060}\label{classview_1_1ConcreteFactory_ab3cc2495ca3017b0e85376404105d060} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!createFruit@{createFruit}}
+\index{createFruit@{createFruit}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createFruit()}{createFruit()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ view\+::\+Concrete\+Factory\+::create\+Fruit (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model\+::\+Abstract\+Factory}}.
+
+\Hypertarget{classview_1_1ConcreteFactory_afc18700f37282968df48aa2cc39c9cd9}\label{classview_1_1ConcreteFactory_afc18700f37282968df48aa2cc39c9cd9} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!createGhost@{createGhost}}
+\index{createGhost@{createGhost}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createGhost()}{createGhost()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ view\+::\+Concrete\+Factory\+::create\+Ghost (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{ghost\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model\+::\+Abstract\+Factory}}.
+
+\Hypertarget{classview_1_1ConcreteFactory_a96e7a9a2c201955cfae23f4aa68a2182}\label{classview_1_1ConcreteFactory_a96e7a9a2c201955cfae23f4aa68a2182} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!createPacman@{createPacman}}
+\index{createPacman@{createPacman}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createPacman()}{createPacman()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1PacMan}{model\+::\+Pac\+Man}} $>$ view\+::\+Concrete\+Factory\+::create\+Pacman (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+override all creations from Abstract\+Factory 
+
+Implements \mbox{\hyperlink{classmodel_1_1AbstractFactory_a6e865e8abead2a432ffbe4f68d79344f}{model\+::\+Abstract\+Factory}}.
+
+\Hypertarget{classview_1_1ConcreteFactory_a933665c48bd5862e16855dd918ce8d0b}\label{classview_1_1ConcreteFactory_a933665c48bd5862e16855dd918ce8d0b} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!createWall@{createWall}}
+\index{createWall@{createWall}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{createWall()}{createWall()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} $>$ view\+::\+Concrete\+Factory\+::create\+Wall (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classmodel_1_1AbstractFactory}{model\+::\+Abstract\+Factory}}.
+
+\Hypertarget{classview_1_1ConcreteFactory_a29b3d271a2bed3b68fb90a71cad550a0}\label{classview_1_1ConcreteFactory_a29b3d271a2bed3b68fb90a71cad550a0} 
+\index{view::ConcreteFactory@{view::ConcreteFactory}!getEntityViews@{getEntityViews}}
+\index{getEntityViews@{getEntityViews}!view::ConcreteFactory@{view::ConcreteFactory}}
+\doxysubsubsection{\texorpdfstring{getEntityViews()}{getEntityViews()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{entity\+::\+Entity\+View}} $>$ $>$ \& view\+::\+Concrete\+Factory\+::get\+Entity\+Views (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get all entity views created by this factory Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1ConcreteFactory_a29b3d271a2bed3b68fb90a71cad550a0_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/\mbox{\hyperlink{ConcreteFactory_8h}{Concrete\+Factory.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/Concrete\+Factory.\+cpp\end{DoxyCompactItemize}

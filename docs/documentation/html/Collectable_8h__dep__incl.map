@@ -1,0 +1,18 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Collectable.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Collectable.h">
+<area shape="rect" id="Node000001" title="Declaration of the Collectable class representing items that can be collected in the game...." alt="" coords="176,5,340,60"/>
+<area shape="rect" id="Node000002" href="$Coin_8h.html" title="Definition of the Coin class representing a collectible coin item in the game." alt="" coords="56,108,220,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,71,171,110,168,106,214,67"/>
+<area shape="rect" id="Node000004" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="145,313,321,368"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="257,74,238,313,232,313,252,73"/>
+<area shape="rect" id="Node000007" href="$Fruit_8h.html" title="Definition of the fruit class representing a collectible item in the game. When collected,..." alt="" coords="296,211,460,265"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="283,70,365,209,360,211,278,73"/>
+<area shape="rect" id="Node000003" href="$CoinView_8h_source.html" title=" " alt="" coords="5,211,169,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="121,176,103,212,98,209,116,174"/>
+<area shape="poly" id="edge6_Node000002_Node000004" title=" " alt="" coords="164,173,184,210,226,312,221,314,180,212,160,176"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="138,271,196,311,193,315,135,275"/>
+<area shape="rect" id="Node000005" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="151,416,315,471"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,382,235,416,230,416,230,382"/>
+<area shape="rect" id="Node000006" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="151,519,315,573"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="235,484,235,519,230,519,230,484"/>
+<area shape="poly" id="edge8_Node000007_Node000004" title=" " alt="" coords="330,275,272,315,269,311,327,271"/>
+</map>

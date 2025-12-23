@@ -1,0 +1,9 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Fruit.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Fruit.h">
+<area shape="rect" id="Node000001" title="Definition of the fruit class representing a collectible item in the game. When collected,..." alt="" coords="11,5,175,60"/>
+<area shape="rect" id="Node000002" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="5,108,181,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,74,96,108,91,108,91,74"/>
+<area shape="rect" id="Node000003" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="11,211,175,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="96,176,96,211,91,211,91,176"/>
+<area shape="rect" id="Node000004" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="11,313,175,368"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="96,279,96,313,91,313,91,279"/>
+</map>

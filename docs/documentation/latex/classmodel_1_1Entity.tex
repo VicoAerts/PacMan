@@ -1,0 +1,222 @@
+\doxysection{model\+::Entity Class Reference}
+\hypertarget{classmodel_1_1Entity}{}\label{classmodel_1_1Entity}\index{model::Entity@{model::Entity}}
+
+
+Abstract base class for all game entities.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Entity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Entity\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classmodel_1_1Entity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6}{update}} (const double delta\+Time, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world)=0
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}{set\+Position}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+virtual \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}{get\+Direction}} () const
+\item 
+virtual \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \mbox{\hyperlink{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24}{on\+Collide\+With\+Pac\+Man}} ()
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}{reset}} (int current\+Level)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}{set\+Scared}} (double duration, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world)
+\item 
+virtual int \mbox{\hyperlink{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}{get\+Current\+Mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}{Entity}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}{m\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for all game entities. 
+
+Inherits from \doxylink{classmodel_1_1Subject}{Subject} to support the \doxylink{classmodel_1_1Observer}{Observer} pattern. This class belongs to the game logic layer and contains no rendering code. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}\label{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df} 
+\index{model::Entity@{model::Entity}!Entity@{Entity}}
+\index{Entity@{Entity}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{Entity()}{Entity()}}
+{\footnotesize\ttfamily model\+::\+Entity\+::\+Entity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Constructor to initialize entity on position \Hypertarget{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}\label{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789} 
+\index{model::Entity@{model::Entity}!````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}}
+\index{````~Entity@{\texorpdfstring{$\sim$}{\string~}Entity}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Entity()}{\string~Entity()}}
+{\footnotesize\ttfamily virtual model\+::\+Entity\+::\texorpdfstring{$\sim$}{\string~}\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+\doxylink{classmodel_1_1Entity}{Entity} destructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}\label{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa} 
+\index{model::Entity@{model::Entity}!getCurrentMode@{getCurrentMode}}
+\index{getCurrentMode@{getCurrentMode}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{getCurrentMode()}{getCurrentMode()}}
+{\footnotesize\ttfamily virtual int model\+::\+Entity\+::get\+Current\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+virtual function to get the mode of the entity 
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Ghost_a1fa95bf31b365bda92523850a71b94e5}{model\+::\+Ghost}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}\label{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b} 
+\index{model::Entity@{model::Entity}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Entity\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+virtual function to get direction 
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Ghost_a272200daf4a7eab820d35c6944f731ea}{model\+::\+Ghost}}, and \mbox{\hyperlink{classmodel_1_1PacMan_aaaff06d786cecc06bace8b9e830e3e94}{model\+::\+Pac\+Man}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}\label{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6} 
+\index{model::Entity@{model::Entity}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVec2D}{Vec2D}} model\+::\+Entity\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+get position of entity Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}\label{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c} 
+\index{model::Entity@{model::Entity}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily virtual void model\+::\+Entity\+::handle\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+virtual function to help input handling 
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1PacMan_a0a16aaf1c766a6844c0ef7e5eb76d9c3}{model\+::\+Pac\+Man}}.
+
+\Hypertarget{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24}\label{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24} 
+\index{model::Entity@{model::Entity}!onCollideWithPacMan@{onCollideWithPacMan}}
+\index{onCollideWithPacMan@{onCollideWithPacMan}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{onCollideWithPacMan()}{onCollideWithPacMan()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} model\+::\+Entity\+::on\+Collide\+With\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+virtual function for collisions 
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Coin_a5c05d49a0f578625599e1c251849bcb3}{model\+::\+Coin}}, \mbox{\hyperlink{classmodel_1_1Fruit_aa71a619d57551a0e5a92d66b15408719}{model\+::\+Fruit}}, \mbox{\hyperlink{classmodel_1_1Ghost_a5e6186d70c024f2be52ec6586051555e}{model\+::\+Ghost}}, and \mbox{\hyperlink{classmodel_1_1Collectable_aa936a96e48baf5eea8e31580a3508cb5}{model\+::\+Collectable}}.
+
+\Hypertarget{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}\label{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d} 
+\index{model::Entity@{model::Entity}!reset@{reset}}
+\index{reset@{reset}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void model\+::\+Entity\+::reset (\begin{DoxyParamCaption}\item[{int}]{current\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+virtual reset function to place entity back to start pos 
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Ghost_ac320cb15156c7c868c6806fcf01eb7f5}{model\+::\+Ghost}}, and \mbox{\hyperlink{classmodel_1_1PacMan_a94a8b62da51190ffc88f4911d181bbf0}{model\+::\+Pac\+Man}}.
+
+\Hypertarget{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}\label{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951} 
+\index{model::Entity@{model::Entity}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void model\+::\+Entity\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+set position of entity Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}\label{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c} 
+\index{model::Entity@{model::Entity}!setScared@{setScared}}
+\index{setScared@{setScared}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{setScared()}{setScared()}}
+{\footnotesize\ttfamily virtual void model\+::\+Entity\+::set\+Scared (\begin{DoxyParamCaption}\item[{double}]{duration,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+virtual function to set entity scared 
+
+Reimplemented in \mbox{\hyperlink{classmodel_1_1Ghost_a3c5c0294f23ca79c79b21a3f6c495387}{model\+::\+Ghost}}.
+
+\Hypertarget{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6}\label{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6} 
+\index{model::Entity@{model::Entity}!update@{update}}
+\index{update@{update}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void model\+::\+Entity\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+update entity 
+
+Implemented in \mbox{\hyperlink{classmodel_1_1Ghost_a2426784bc432f3b6f93929a050cc0a65}{model\+::\+Ghost}}, \mbox{\hyperlink{classmodel_1_1PacMan_a68d177237ed9e83c209145fa72e4a706}{model\+::\+Pac\+Man}}, \mbox{\hyperlink{classmodel_1_1Collectable_a1fc3fb847a02109d9a1c3bdeaa43fe48}{model\+::\+Collectable}}, and \mbox{\hyperlink{classmodel_1_1Wall_addc05099b6cba357aeb7371458e06da1}{model\+::\+Wall}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}\label{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf} 
+\index{model::Entity@{model::Entity}!m\_position@{m\_position}}
+\index{m\_position@{m\_position}!model::Entity@{model::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_position}{m\_position}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structVec2D}{Vec2D}} model\+::\+Entity\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}
+
+Position of the entity itself so member position in 2D space ~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Entity_8h}{Entity.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,30 @@
+\doxysection{Abstract\+Factory.\+h}
+\hypertarget{AbstractFactory_8h_source}{}\label{AbstractFactory_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/AbstractFactory.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/AbstractFactory.h}}
+\mbox{\hyperlink{AbstractFactory_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_ABSTRACTFACTORY\_H}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#define\ PACMAN\_ABSTRACTFACTORY\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }Entity;}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }PacMan;}
+\DoxyCodeLine{00018\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1AbstractFactory}{AbstractFactory}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classmodel_1_1AbstractFactory_ade099ed90fdb12cdf158a1184d8bf265}{\string~AbstractFactory}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<PacMan>\ \mbox{\hyperlink{classmodel_1_1AbstractFactory_a6e865e8abead2a432ffbe4f68d79344f}{createPacman}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ =\ 0;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Entity>\ createGhost(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col,\ \textcolor{keywordtype}{int}\ ghostId)\ =\ 0;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Entity>\ createCoin(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Entity>\ createFruit(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ =\ 0;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Entity>\ createWall(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ col)\ =\ 0;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_ABSTRACTFACTORY\_H}}
+
+\end{DoxyCode}

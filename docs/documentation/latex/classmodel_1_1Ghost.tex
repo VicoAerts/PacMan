@@ -1,0 +1,292 @@
+\doxysection{model\+::Ghost Class Reference}
+\hypertarget{classmodel_1_1Ghost}{}\label{classmodel_1_1Ghost}\index{model::Ghost@{model::Ghost}}
+
+
+\doxylink{classmodel_1_1Ghost}{Ghost} entity with AI movement and fear behavior.  
+
+
+
+
+{\ttfamily \#include $<$Ghost.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Ghost\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classmodel_1_1Ghost__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Ghost\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classmodel_1_1Ghost__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Ghost_a69279f72287aed03aa334fea0c19df7d}{Ghost}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&startpos, float speed, int ghost\+Id)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Ghost_a2426784bc432f3b6f93929a050cc0a65}{update}} (const double delta\+Time, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world) override
+\item 
+\mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{Ghost\+Mode}} \mbox{\hyperlink{classmodel_1_1Ghost_a15da04cad2336ee5bae6442e7fabff1f}{get\+Mode}} () const
+\item 
+int \mbox{\hyperlink{classmodel_1_1Ghost_a1fa95bf31b365bda92523850a71b94e5}{get\+Current\+Mode}} () const override
+\item 
+void \mbox{\hyperlink{classmodel_1_1Ghost_a49376af6661403d16dd3cb35e951894a}{set\+Mode}} (\mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{Ghost\+Mode}} mode)
+\item 
+\mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{Ghost\+Type}} \mbox{\hyperlink{classmodel_1_1Ghost_a093d33c5d87388133ceb9a2ec1aa5500}{get\+Type}} () const
+\item 
+int \mbox{\hyperlink{classmodel_1_1Ghost_ac052ef8dcd7e32399fedba97669f0fd5}{get\+Id}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} $>$ \mbox{\hyperlink{classmodel_1_1Ghost_aeda0d1946b4d0a5f2cf34f32a350fde3}{get\+Valid\+Directions}} (const \mbox{\hyperlink{classmodel_1_1World}{World}} \&world) const
+\item 
+\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Ghost_a26c9933b3d489c7663b4edcf78b4b717}{choose\+Random\+Direction}} (\mbox{\hyperlink{classmodel_1_1World}{World}} \&world, double delta\+Time) const
+\item 
+\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Ghost_aa28a313549312e0fb7e6beb036fbc554}{choose\+Facing\+Pacman\+Direction}} (\mbox{\hyperlink{classmodel_1_1World}{World}} \&world, const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pacman\+Pos, double delta\+Time) const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Ghost_ab07a955d4d9dcc5ee704ccaab1b9dcc6}{set\+Direction}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Ghost_a272200daf4a7eab820d35c6944f731ea}{get\+Direction}} () const override
+\item 
+\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Ghost_a694ce95efc61fffb30f301dd3974eaec}{get\+Direction\+To\+Target}} (\mbox{\hyperlink{classmodel_1_1World}{World}} \&world, const \mbox{\hyperlink{structVec2D}{Vec2D}} \&target\+Pos, double delta\+Time) const
+\item 
+\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Ghost_a2840c56815676b7a86a071d641d6474c}{get\+Direction\+Away\+From\+Target}} (\mbox{\hyperlink{classmodel_1_1World}{World}} \&world, const \mbox{\hyperlink{structVec2D}{Vec2D}} \&target\+Pos, double delta\+Time) const
+\item 
+\mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \mbox{\hyperlink{classmodel_1_1Ghost_a5e6186d70c024f2be52ec6586051555e}{on\+Collide\+With\+Pac\+Man}} () override
+\item 
+void \mbox{\hyperlink{classmodel_1_1Ghost_ac320cb15156c7c868c6806fcf01eb7f5}{reset}} (int current\+Level) override
+\item 
+void \mbox{\hyperlink{classmodel_1_1Ghost_a3c5c0294f23ca79c79b21a3f6c495387}{set\+Scared}} (double duration, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}{set\+Position}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}{Entity}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}{m\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classmodel_1_1Ghost}{Ghost} entity with AI movement and fear behavior. 
+
+Part of the game logic layer (no rendering code). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1Ghost_a69279f72287aed03aa334fea0c19df7d}\label{classmodel_1_1Ghost_a69279f72287aed03aa334fea0c19df7d} 
+\index{model::Ghost@{model::Ghost}!Ghost@{Ghost}}
+\index{Ghost@{Ghost}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{Ghost()}{Ghost()}}
+{\footnotesize\ttfamily model\+::\+Ghost\+::\+Ghost (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{startpos,  }\item[{float}]{speed,  }\item[{int}]{ghost\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+current mode of the ghost 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Ghost_aa28a313549312e0fb7e6beb036fbc554}\label{classmodel_1_1Ghost_aa28a313549312e0fb7e6beb036fbc554} 
+\index{model::Ghost@{model::Ghost}!chooseFacingPacmanDirection@{chooseFacingPacmanDirection}}
+\index{chooseFacingPacmanDirection@{chooseFacingPacmanDirection}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{chooseFacingPacmanDirection()}{chooseFacingPacmanDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Ghost\+::choose\+Facing\+Pacman\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pacman\+Pos,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption}) const}
+
+Choose a new direction for the ghost to face Pacman Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_aa28a313549312e0fb7e6beb036fbc554_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Ghost_a26c9933b3d489c7663b4edcf78b4b717}\label{classmodel_1_1Ghost_a26c9933b3d489c7663b4edcf78b4b717} 
+\index{model::Ghost@{model::Ghost}!chooseRandomDirection@{chooseRandomDirection}}
+\index{chooseRandomDirection@{chooseRandomDirection}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{chooseRandomDirection()}{chooseRandomDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Ghost\+::choose\+Random\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption}) const}
+
+Choose a new direction for the ghost at random Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_a26c9933b3d489c7663b4edcf78b4b717_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Ghost_a1fa95bf31b365bda92523850a71b94e5}\label{classmodel_1_1Ghost_a1fa95bf31b365bda92523850a71b94e5} 
+\index{model::Ghost@{model::Ghost}!getCurrentMode@{getCurrentMode}}
+\index{getCurrentMode@{getCurrentMode}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getCurrentMode()}{getCurrentMode()}}
+{\footnotesize\ttfamily int model\+::\+Ghost\+::get\+Current\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+get current mode of the ghost as int 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1Ghost_a272200daf4a7eab820d35c6944f731ea}\label{classmodel_1_1Ghost_a272200daf4a7eab820d35c6944f731ea} 
+\index{model::Ghost@{model::Ghost}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Ghost\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+get current direction of the ghost 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1Ghost_a2840c56815676b7a86a071d641d6474c}\label{classmodel_1_1Ghost_a2840c56815676b7a86a071d641d6474c} 
+\index{model::Ghost@{model::Ghost}!getDirectionAwayFromTarget@{getDirectionAwayFromTarget}}
+\index{getDirectionAwayFromTarget@{getDirectionAwayFromTarget}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getDirectionAwayFromTarget()}{getDirectionAwayFromTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Ghost\+::get\+Direction\+Away\+From\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{target\+Pos,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption}) const}
+
+choose direction away from target position Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_a2840c56815676b7a86a071d641d6474c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Ghost_a694ce95efc61fffb30f301dd3974eaec}\label{classmodel_1_1Ghost_a694ce95efc61fffb30f301dd3974eaec} 
+\index{model::Ghost@{model::Ghost}!getDirectionToTarget@{getDirectionToTarget}}
+\index{getDirectionToTarget@{getDirectionToTarget}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getDirectionToTarget()}{getDirectionToTarget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Ghost\+::get\+Direction\+To\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world,  }\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{target\+Pos,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption}) const}
+
+get direction to target position Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_a694ce95efc61fffb30f301dd3974eaec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Ghost_ac052ef8dcd7e32399fedba97669f0fd5}\label{classmodel_1_1Ghost_ac052ef8dcd7e32399fedba97669f0fd5} 
+\index{model::Ghost@{model::Ghost}!getId@{getId}}
+\index{getId@{getId}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int model\+::\+Ghost\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get ghost id \Hypertarget{classmodel_1_1Ghost_a15da04cad2336ee5bae6442e7fabff1f}\label{classmodel_1_1Ghost_a15da04cad2336ee5bae6442e7fabff1f} 
+\index{model::Ghost@{model::Ghost}!getMode@{getMode}}
+\index{getMode@{getMode}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getMode()}{getMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{model\+::\+Ghost\+Mode}} model\+::\+Ghost\+::get\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get current mode of the ghost \Hypertarget{classmodel_1_1Ghost_a093d33c5d87388133ceb9a2ec1aa5500}\label{classmodel_1_1Ghost_a093d33c5d87388133ceb9a2ec1aa5500} 
+\index{model::Ghost@{model::Ghost}!getType@{getType}}
+\index{getType@{getType}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{model\+::\+Ghost\+Type}} model\+::\+Ghost\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+get ghost type \Hypertarget{classmodel_1_1Ghost_aeda0d1946b4d0a5f2cf34f32a350fde3}\label{classmodel_1_1Ghost_aeda0d1946b4d0a5f2cf34f32a350fde3} 
+\index{model::Ghost@{model::Ghost}!getValidDirections@{getValidDirections}}
+\index{getValidDirections@{getValidDirections}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{getValidDirections()}{getValidDirections()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} $>$ model\+::\+Ghost\+::get\+Valid\+Directions (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption}) const}
+
+get valid directions for the ghost to move in Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_aeda0d1946b4d0a5f2cf34f32a350fde3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Ghost_a5e6186d70c024f2be52ec6586051555e}\label{classmodel_1_1Ghost_a5e6186d70c024f2be52ec6586051555e} 
+\index{model::Ghost@{model::Ghost}!onCollideWithPacMan@{onCollideWithPacMan}}
+\index{onCollideWithPacMan@{onCollideWithPacMan}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{onCollideWithPacMan()}{onCollideWithPacMan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} model\+::\+Ghost\+::on\+Collide\+With\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+handle colission with pacman 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1Ghost_ac320cb15156c7c868c6806fcf01eb7f5}\label{classmodel_1_1Ghost_ac320cb15156c7c868c6806fcf01eb7f5} 
+\index{model::Ghost@{model::Ghost}!reset@{reset}}
+\index{reset@{reset}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void model\+::\+Ghost\+::reset (\begin{DoxyParamCaption}\item[{int}]{current\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+reset ghost to start position 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1Ghost_ab07a955d4d9dcc5ee704ccaab1b9dcc6}\label{classmodel_1_1Ghost_ab07a955d4d9dcc5ee704ccaab1b9dcc6} 
+\index{model::Ghost@{model::Ghost}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void model\+::\+Ghost\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+set current direction of the ghost \Hypertarget{classmodel_1_1Ghost_a49376af6661403d16dd3cb35e951894a}\label{classmodel_1_1Ghost_a49376af6661403d16dd3cb35e951894a} 
+\index{model::Ghost@{model::Ghost}!setMode@{setMode}}
+\index{setMode@{setMode}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{setMode()}{setMode()}}
+{\footnotesize\ttfamily void model\+::\+Ghost\+::set\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{Ghost\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+set current mode of the ghost \Hypertarget{classmodel_1_1Ghost_a3c5c0294f23ca79c79b21a3f6c495387}\label{classmodel_1_1Ghost_a3c5c0294f23ca79c79b21a3f6c495387} 
+\index{model::Ghost@{model::Ghost}!setScared@{setScared}}
+\index{setScared@{setScared}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{setScared()}{setScared()}}
+{\footnotesize\ttfamily void model\+::\+Ghost\+::set\+Scared (\begin{DoxyParamCaption}\item[{double}]{duration,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+set ghost to scared mode 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}{model\+::\+Entity}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_a3c5c0294f23ca79c79b21a3f6c495387_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classmodel_1_1Ghost_a2426784bc432f3b6f93929a050cc0a65}\label{classmodel_1_1Ghost_a2426784bc432f3b6f93929a050cc0a65} 
+\index{model::Ghost@{model::Ghost}!update@{update}}
+\index{update@{update}!model::Ghost@{model::Ghost}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void model\+::\+Ghost\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update ghost position and state 
+
+Implements \mbox{\hyperlink{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6}{model\+::\+Entity}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1Ghost_a2426784bc432f3b6f93929a050cc0a65_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Ghost_8h}{Ghost.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/Ghost.\+cpp\end{DoxyCompactItemize}

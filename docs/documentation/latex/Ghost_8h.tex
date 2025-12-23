@@ -1,0 +1,55 @@
+\doxysection{/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\+Ghost.h File Reference}
+\hypertarget{Ghost_8h}{}\label{Ghost_8h}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Ghost.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Ghost.h}}
+
+
+Declaration of the Ghost entity and its AI behavior.  
+
+
+{\ttfamily \#include "{}../../config/config.\+h"{}}\newline
+{\ttfamily \#include "{}../control/\+World.\+h"{}}\newline
+{\ttfamily \#include "{}../events/\+Event.\+h"{}}\newline
+{\ttfamily \#include "{}../util/\+Direction.\+h"{}}\newline
+{\ttfamily \#include "{}Entity.\+h"{}}\newline
+Include dependency graph for Ghost.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Ghost_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{Ghost_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmodel_1_1Ghost}{model\+::\+Ghost}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Ghost}{Ghost} entity with AI movement and fear behavior. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacemodel}{model}}
+\begin{DoxyCompactList}\small\item\em Contains all classes related to the game model and logic. This namespace is responsible for the core functionality of the game, including entities, game rules, and state management. It does not contain any rendering code, which is handled in the view namespace. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{model\+::\+Ghost\+Mode}} \{ {\bfseries Wait}
+, {\bfseries Leaving}
+, {\bfseries Chase}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{model\+::\+Ghost\+Type}} \{ {\bfseries Random}
+, {\bfseries Facing\+Pacman}
+, {\bfseries Direct\+Chase}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declaration of the Ghost entity and its AI behavior. 
+
+Ghosts have movement modes (Wait, Leaving, Chase) and can additionally enter a temporary fear state when Pac-\/\+Man eats a fruit. 

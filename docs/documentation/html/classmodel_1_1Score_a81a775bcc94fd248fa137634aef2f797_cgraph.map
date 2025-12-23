@@ -1,0 +1,15 @@
+<map id="model::Score::onNotify" name="model::Score::onNotify">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,125,176,151"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Score.html#a369f8282db293c47e786b7b4c63b9c0f" title=" " alt="" coords="252,22,440,62"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,123,163,97,223,72,246,64,248,69,225,76,165,102,116,128"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Score.html#ae80ec0debe2feabf5fd0ee9054993b3b" title=" " alt="" coords="252,86,440,126"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="176,125,238,117,239,122,176,130"/>
+<area shape="rect" id="Node000006" href="$classmodel_1_1Score.html#a5f6af2374ae31c2c15448799e27b6d01" title=" " alt="" coords="247,150,445,190"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="176,146,234,153,233,159,176,151"/>
+<area shape="rect" id="Node000007" href="$classmodel_1_1Score.html#a2aa54c4c2b24cbef003d2331d657e889" title=" " alt="" coords="224,215,468,240"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="115,148,165,174,225,199,258,209,256,214,223,205,162,179,113,153"/>
+<area shape="rect" id="Node000003" href="$classutil_1_1Clock.html#a9d97b3f8cb2c7c93b6c77101db8c56fa" title=" " alt="" coords="516,5,700,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="440,31,502,25,503,30,440,36"/>
+<area shape="rect" id="Node000004" href="$classutil_1_1Clock.html#ae1745c33d16d7cbb7f9879aa96464a0f" title=" " alt="" coords="523,55,693,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="440,48,509,55,509,60,440,54"/>
+</map>

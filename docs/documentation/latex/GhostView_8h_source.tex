@@ -1,0 +1,37 @@
+\doxysection{Ghost\+View.\+h}
+\hypertarget{GhostView_8h_source}{}\label{GhostView_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/GhostView.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/GhostView.h}}
+\mbox{\hyperlink{GhostView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_GHOSTVIEW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PACMAN\_GHOSTVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../util/Clock.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityView_8h}{EntityView.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1entity}{view::entity}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1entity_1_1GhostView}{GhostView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{EntityView}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1entity_1_1GhostView}{GhostView}}(\mbox{\hyperlink{structVec2D}{Vec2D}}\ startPos,\ \textcolor{keywordtype}{int}\ ghostId);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1GhostView_a2610009c2694cb322768717566850ba9}{onNotify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\&\ event,\ \mbox{\hyperlink{classmodel_1_1Entity}{model::Entity}}\&\ entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1GhostView_ac8a0f0a03db41aed8dcdb16ff1621472}{draw}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ currentPos;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ previousPos;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ ghostId;}
+\DoxyCodeLine{00025\ \ \ \ \ sf::Sprite\ ghostSprite;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ needsUpdate\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ currentDir\ =\ Direction::None;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFeared\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ track\ animation}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInitialized\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<sf::IntRect>\ frames;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ currentFrameIndex\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{float}\ timer\ =\ 0.f;}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ \}\ \textcolor{comment}{//\ namespace\ view::entity}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_GHOSTVIEW\_H}}
+
+\end{DoxyCode}

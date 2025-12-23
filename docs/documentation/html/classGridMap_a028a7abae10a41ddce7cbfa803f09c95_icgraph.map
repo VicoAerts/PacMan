@@ -1,0 +1,15 @@
+<map id="GridMap::getCellType" name="GridMap::getCellType">
+<area shape="rect" id="Node000001" title=" " alt="" coords="512,95,673,121"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1World.html#ab0246bc06a42c8609ef094ad1277c2a2" title=" " alt="" coords="251,5,441,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="548,92,463,60,425,48,426,43,465,55,550,87"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Ghost.html#aeda0d1946b4d0a5f2cf34f32a350fde3" title=" " alt="" coords="228,70,464,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="498,101,464,97,465,92,499,96"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1World.html#a300894a65294812d096f37a02f8a51c7" title=" " alt="" coords="249,119,443,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="499,120,444,125,443,120,498,115"/>
+<area shape="rect" id="Node000007" href="$classmodel_1_1World.html#a8c459ab07b6740d93489cc6a9f9d7511" title=" " alt="" coords="269,169,423,194"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="550,128,465,159,415,171,414,166,463,153,548,123"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Ghost.html#a2426784bc432f3b6f93929a050cc0a65" title=" " alt="" coords="11,94,174,119"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="235,124,174,117,174,112,235,118"/>
+<area shape="rect" id="Node000006" href="$classmodel_1_1PacMan.html#a68d177237ed9e83c209145fa72e4a706" title=" " alt="" coords="5,143,180,169"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="235,145,180,150,180,145,235,140"/>
+</map>

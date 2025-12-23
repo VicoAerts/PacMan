@@ -1,0 +1,50 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/PacManView.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/PacManView.h">
+<area shape="rect" id="Node000001" title="Declaration of the PacManView class which displays pacman and its changes." alt="" coords="506,5,670,60"/>
+<area shape="rect" id="Node000002" href="$PacMan_8h.html" title="Declaration of the PacMan class representing the PacMan entity in the game." alt="" coords="265,108,407,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="512,63,384,106,382,101,510,58"/>
+<area shape="rect" id="Node000012" href="$Clock_8h.html" title="Singleton Clock class to manage time tracking." alt="" coords="1037,108,1144,133"/>
+<area shape="poly" id="edge15_Node000001_Node000012" title=" " alt="" coords="671,45,1024,105,1023,111,670,51"/>
+<area shape="rect" id="Node000014" href="$Camera_8h.html" title="camera class will translate world coordinates and sizes to screen coordinates and vice versa we will ..." alt="" coords="408,181,493,207"/>
+<area shape="poly" id="edge17_Node000001_Node000014" title=" " alt="" coords="567,62,472,173,468,169,563,58"/>
+<area shape="rect" id="Node000015" href="$EntityView_8h.html" title="Base class for all entity views in the game." alt="" coords="537,108,639,133"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="591,60,591,94,585,94,585,60"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="867,255,1013,280"/>
+<area shape="poly" id="edge28_Node000001_Node000017" title=" " alt="" coords="671,36,747,49,832,75,874,93,913,117,948,145,977,180,983,196,980,214,963,245,958,242,975,212,977,197,972,183,944,149,910,121,871,98,830,80,746,54,670,42"/>
+<area shape="rect" id="Node000003" href="$Direction_8h.html" title="Defines movement directions and related helper functions." alt="" coords="407,475,537,500"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,125,184,134,141,143,100,157,63,175,34,199,15,229,8,266,8,342,11,356,19,368,49,393,94,414,150,432,277,459,394,475,393,481,276,464,149,437,92,419,46,397,15,372,6,358,3,342,3,266,10,227,30,195,60,170,98,152,139,138,183,129,265,120"/>
+<area shape="rect" id="Node000004" href="$Vec2D_8h.html" title="Defines a simple 2D vector structure and direction conversion utility." alt="" coords="379,255,491,280"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="346,132,421,242,417,245,342,135"/>
+<area shape="rect" id="Node000005" href="$Entity_8h.html" title="Base class for all entities in the game model." alt="" coords="262,181,333,207"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="332,135,312,171,308,168,327,132"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="455,278,480,298,500,327,509,354,511,376,501,427,488,463,483,461,496,426,505,376,504,355,495,329,476,302,452,282"/>
+<area shape="poly" id="edge8_Node000005_Node000004" title=" " alt="" coords="321,204,401,246,399,251,318,209"/>
+<area shape="rect" id="Node000006" href="$Event_8h.html" title="event class for all custom events used in the game. Supports the observer pattern for notifying entit..." alt="" coords="356,401,487,427"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="263,207,194,229,122,263,94,283,76,305,72,316,72,327,75,339,83,352,100,364,124,375,191,392,269,402,343,408,342,413,268,408,190,397,122,380,97,369,79,355,70,341,66,328,67,315,71,302,90,279,119,258,192,224,261,202"/>
+<area shape="rect" id="Node000007" href="$Subject_8h.html" title="Base class for all observable objects in the model." alt="" coords="256,255,339,280"/>
+<area shape="poly" id="edge9_Node000005_Node000007" title=" " alt="" coords="300,207,300,241,295,241,295,207"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="432,425,458,462,454,465,428,429"/>
+<area shape="rect" id="Node000008" href="$Observer_8h.html" title="Declaration of the Observer interface for observer pattern. Observer is gate between Model and View." alt="" coords="394,328,486,353"/>
+<area shape="poly" id="edge10_Node000007_Node000008" title=" " alt="" coords="321,278,406,319,403,324,319,282"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="94,328,181,353"/>
+<area shape="poly" id="edge12_Node000007_Node000009" title=" " alt="" coords="273,282,177,325,175,320,271,278"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="205,328,283,353"/>
+<area shape="poly" id="edge13_Node000007_Node000010" title=" " alt="" coords="291,282,263,319,259,316,286,279"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="307,328,370,353"/>
+<area shape="poly" id="edge14_Node000007_Node000011" title=" " alt="" coords="306,279,327,315,323,317,302,282"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="439,354,430,389,425,388,434,353"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1057,181,1124,207"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="1093,134,1093,168,1088,168,1088,134"/>
+<area shape="poly" id="edge18_Node000014_Node000004" title=" " alt="" coords="451,208,443,242,438,241,445,206"/>
+<area shape="poly" id="edge20_Node000015_Node000005" title=" " alt="" coords="542,136,347,183,345,178,541,131"/>
+<area shape="poly" id="edge26_Node000015_Node000014" title=" " alt="" coords="567,136,486,177,484,173,565,131"/>
+<area shape="rect" id="Node000016" href="$TextureManager_8h.html" title=" " alt="" coords="518,181,693,207"/>
+<area shape="poly" id="edge21_Node000015_Node000016" title=" " alt="" coords="593,133,602,168,597,169,588,134"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="717,181,963,207"/>
+<area shape="poly" id="edge27_Node000015_Node000020" title=" " alt="" coords="629,131,787,175,785,180,628,136"/>
+<area shape="poly" id="edge22_Node000016_Node000003" title=" " alt="" coords="605,208,578,301,554,365,524,428,495,466,491,463,519,425,549,363,573,300,600,206"/>
+<area shape="poly" id="edge23_Node000016_Node000017" title=" " alt="" coords="660,204,873,249,872,254,659,209"/>
+<area shape="rect" id="Node000018" title=" " alt="" coords="613,255,699,280"/>
+<area shape="poly" id="edge24_Node000016_Node000018" title=" " alt="" coords="616,205,642,242,638,245,612,209"/>
+<area shape="rect" id="Node000019" title=" " alt="" coords="724,255,783,280"/>
+<area shape="poly" id="edge25_Node000016_Node000019" title=" " alt="" coords="630,204,718,246,716,251,628,209"/>
+</map>

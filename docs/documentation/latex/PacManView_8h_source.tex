@@ -1,0 +1,37 @@
+\doxysection{Pac\+Man\+View.\+h}
+\hypertarget{PacManView_8h_source}{}\label{PacManView_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/PacManView.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/PacManView.h}}
+\mbox{\hyperlink{PacManView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_PACMANVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_PACMANVIEW\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../model/PacMan.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../util/Clock.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Camera_8h}{Camera.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityView_8h}{EntityView.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1entity}{view::entity}}\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1entity_1_1PacManView}{PacManView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{EntityView}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1entity_1_1PacManView}{PacManView}}(\mbox{\hyperlink{structVec2D}{Vec2D}}\ startPos,\ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ startDir);}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1PacManView_ace41294d160db3eafcafa26392ae6274}{onNotify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\&\ event,\ \mbox{\hyperlink{classmodel_1_1Entity}{model::Entity}}\&\ entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1PacManView_a1b9857b6c2eb72014a87f3f3f2a4fb17}{draw}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ currentPos;}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ previousPos;}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ currentDir\ =\ Direction::None;}
+\DoxyCodeLine{00029\ \ \ \ \ sf::Sprite\ pacmanSprite;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{bool}\ needsUpdate\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ track\ animation}}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<sf::IntRect>\ frames;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{int}\ currentFrameIndex\ =\ 0;}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInitialized\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ timer\ =\ 0.f;}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ \}\ \textcolor{comment}{//\ namespace\ view::entity}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_PACMANVIEW\_H}}
+
+\end{DoxyCode}

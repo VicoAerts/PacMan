@@ -1,0 +1,66 @@
+\doxysection{model Namespace Reference}
+\hypertarget{namespacemodel}{}\label{namespacemodel}\index{model@{model}}
+
+
+Contains all classes related to the game model and logic. This namespace is responsible for the core functionality of the game, including entities, game rules, and state management. It does not contain any rendering code, which is handled in the view namespace.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classmodel_1_1AbstractFactory}{Abstract\+Factory}}
+\begin{DoxyCompactList}\small\item\em Abstract factory class for creating game entities. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Coin}{Coin}}
+\begin{DoxyCompactList}\small\item\em collectable coin entity that increases score when collected \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Collectable}{Collectable}}
+\begin{DoxyCompactList}\small\item\em Abstract class for collectable items in the game. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for all game entities. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Fruit}{Fruit}}
+\begin{DoxyCompactList}\small\item\em collectable fruit entity that increases score when collected and triggers event \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Ghost}{Ghost}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Ghost}{Ghost} entity with AI movement and fear behavior. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Observer}{Observer}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Observer}{Observer} interface for receiving game events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1PacMan}{Pac\+Man}}
+\begin{DoxyCompactList}\small\item\em Pac-\/\+Man entity controlled by the player. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Score}{Score}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Observer}{Observer} that updates the game score based on received events. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Subject}{Subject}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Subject}{Subject} base class for observer pattern. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1Wall}{Wall}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1Wall}{Wall} entity representing immovable obstacles in the game world. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classmodel_1_1World}{World}}
+\begin{DoxyCompactList}\small\item\em \doxylink{classmodel_1_1World}{World} class that holds all entities and game logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{Ghost\+Mode}} \{ {\bfseries Wait}
+, {\bfseries Leaving}
+, {\bfseries Chase}
+ \}
+\item 
+enum class \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{Ghost\+Type}} \{ {\bfseries Random}
+, {\bfseries Facing\+Pacman}
+, {\bfseries Direct\+Chase}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contains all classes related to the game model and logic. This namespace is responsible for the core functionality of the game, including entities, game rules, and state management. It does not contain any rendering code, which is handled in the view namespace. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}\label{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6} 
+\index{model@{model}!GhostMode@{GhostMode}}
+\index{GhostMode@{GhostMode}!model@{model}}
+\doxysubsubsection{\texorpdfstring{GhostMode}{GhostMode}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacemodel_af77f632d6121bfd9ed58f7f868acc9c6}{model\+::\+Ghost\+Mode}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumeration for ghost movement modes \Hypertarget{namespacemodel_ae9c22d03c23335919b01a3b770971311}\label{namespacemodel_ae9c22d03c23335919b01a3b770971311} 
+\index{model@{model}!GhostType@{GhostType}}
+\index{GhostType@{GhostType}!model@{model}}
+\doxysubsubsection{\texorpdfstring{GhostType}{GhostType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{namespacemodel_ae9c22d03c23335919b01a3b770971311}{model\+::\+Ghost\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+Enumeration for ghost AI types where facing pacman tries to cut pacman off and direct chase goes straight towards pacman 

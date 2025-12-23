@@ -1,0 +1,58 @@
+\doxysection{Score.\+h}
+\hypertarget{Score_8h_source}{}\label{Score_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Score.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Score.h}}
+\mbox{\hyperlink{Score_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_SCORE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_SCORE\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../util/Clock.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Observer_8h}{Observer.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Score}{Score}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}}\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_score\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ timeSinceLastCoin\ =\ 0.f;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ lives\ =\ 3;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ gameOver\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ amountOfGhostsEaten\ =\ 0;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ currentLevel\ =\ 1;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_a81a775bcc94fd248fa137634aef2f797}{onNotify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\&\ event,\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\&\ entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00035\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1Score_a8776dc2a8047cc3c602fcaa02ec29086}{getScore}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_score;\ \}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1Score_a7ea9d25d3f7e6a044df706a698ca8b5c}{getLives}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ lives;\ \}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_a369f8282db293c47e786b7b4c63b9c0f}{handleCoinCollected}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_a2aa54c4c2b24cbef003d2331d657e889}{hanldePacmanDead}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_ae80ec0debe2feabf5fd0ee9054993b3b}{handleFruitCollected}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_af18da67d039641107da0c0491ef95b30}{update}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_acd513bccdf180f281bb41e0001bcbd15}{saveToFile}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00056\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1Score_a43bad381d6c9125395b6a91372d5aa41}{isGameOver}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_a42549660787861f9f15e4426274a16e9}{nextLevelSet}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_a5f6af2374ae31c2c15448799e27b6d01}{handleGhostEaten}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1Score_a4a23dbb43c327c52d05c5865cdd42061}{getCurrentLevel}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ currentLevel;\ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Score_ad70fcb374855aeb720a9649ccfe76135}{reset}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00070\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1Score_a82265674da31e5ce4b0a7976e6c9c06c}{isHighScore}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00073\ \ \ \ \ [[nodiscard]]\ std::vector<int>\ \mbox{\hyperlink{classmodel_1_1Score_a4dd3f282c488dbd89a8231c95da2cc6d}{getHighScores}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_SCORE\_H}}
+
+\end{DoxyCode}

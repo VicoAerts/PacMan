@@ -1,0 +1,30 @@
+\doxysection{Collectable.\+h}
+\hypertarget{Collectable_8h_source}{}\label{Collectable_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Collectable.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Collectable.h}}
+\mbox{\hyperlink{Collectable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_COLLECTABLE\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PACMAN\_COLLECTABLE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Entity_8h}{Entity.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{GridMap_8h}{GridMap.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Collectable}{Collectable}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_collected;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classmodel_1_1Collectable_a9926c91c375fb09c105b8d1f18eedd9e}{Collectable}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ pos)\ :\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}(pos),\ m\_collected(false)\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1Collectable_a265be21751a7041ebfa5135ceab3f72c}{isCollected}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ m\_collected;\ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Collectable_a4acf870592db917cdbc53d33301a3927}{collect}}()\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Collectable_a1fc3fb847a02109d9a1c3bdeaa43fe48}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double},\ \mbox{\hyperlink{classmodel_1_1World}{World}}\&)\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Coins\ do\ not\ have\ any\ update\ logic\ as\ they\ are\ static\ collectibles.}}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\ \mbox{\hyperlink{classmodel_1_1Collectable_aa936a96e48baf5eea8e31580a3508cb5}{onCollideWithPacMan}}()\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \mbox{\hyperlink{classmodel_1_1Collectable_af214f97120544182abf5bb4c1e9071ad}{getCollectableType}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00034\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_COLLECTABLE\_H}}
+
+\end{DoxyCode}

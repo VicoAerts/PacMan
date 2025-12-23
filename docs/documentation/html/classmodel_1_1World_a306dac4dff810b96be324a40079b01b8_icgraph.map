@@ -1,0 +1,5 @@
+<map id="model::World::handlePacManCollisions" name="model::World::handlePacManCollisions">
+<area shape="rect" id="Node000001" title=" " alt="" coords="228,5,439,45"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1PacMan.html#a68d177237ed9e83c209145fa72e4a706" title=" " alt="" coords="5,13,180,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,28,180,28,180,23,214,23"/>
+</map>

@@ -1,0 +1,32 @@
+\doxysection{Coin\+View.\+h}
+\hypertarget{CoinView_8h_source}{}\label{CoinView_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/CoinView.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/CoinView.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *@file\ CoinView.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *@brief\ Declaration\ of\ the\ CoinView\ class\ which\ displays\ the\ coins.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_COINVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_COINVIEW\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../model/Coin.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Camera_8h}{Camera.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityView_8h}{EntityView.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1entity}{view::entity}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1entity_1_1CoinView}{CoinView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{EntityView}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1entity_1_1CoinView}{CoinView}}(\mbox{\hyperlink{structVec2D}{Vec2D}}\ startPos);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1CoinView_ae5a651d2c94269b454a44a0edd909034}{onNotify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\&\ event,\ \mbox{\hyperlink{classmodel_1_1Entity}{model::Entity}}\&\ entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1CoinView_a38da397db838ac160a2cb7b3f8d3c558}{draw}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ pos;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ isCollected\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00026\ \ \ \ \ sf::Sprite\ coinSprite;}
+\DoxyCodeLine{00027\ \};}
+\DoxyCodeLine{00028\ \}\ \textcolor{comment}{//\ namespace\ view::entity}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_COINVIEW\_H}}
+
+\end{DoxyCode}

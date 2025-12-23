@@ -1,0 +1,7 @@
+<map id="view::entity::PacManView" name="view::entity::PacManView">
+<area shape="rect" id="Node000001" title="PacManView class responsible for rendering PacMan entity." alt="" coords="5,152,192,177"/>
+<area shape="rect" id="Node000002" href="$classview_1_1entity_1_1EntityView.html" title="Abstract base class for all entity views." alt="" coords="11,79,186,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,118,101,152,96,152,96,118"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Observer.html" title="Observer interface for receiving game events." alt="" coords="33,5,164,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,44,101,79,96,79,96,44"/>
+</map>

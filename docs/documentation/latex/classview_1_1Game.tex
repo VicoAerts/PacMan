@@ -1,0 +1,95 @@
+\doxysection{view\+::Game Class Reference}
+\hypertarget{classview_1_1Game}{}\label{classview_1_1Game}\index{view::Game@{view::Game}}
+
+
+Manages the main game loop and delegates logic to the active State.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1Game_af0b1a6101f33ac1675c6a950f3cf14a3}{Game}} ()
+\item 
+\mbox{\hyperlink{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1Game_a5e94523753515799e610a90f4cacb68e}{run}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754}{close}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1Game_abb19bf0ee40f125467f1e9a78180cdb1}{handle\+Events}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114}{render}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1Game_a66c285b630919c082d92be2157fac643}{update}} (double delta\+Time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the main game loop and delegates logic to the active State. 
+
+Creates the SFML window, initializes the State\+Manager, and forwards input, update ticks, and rendering to the current state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1Game_af0b1a6101f33ac1675c6a950f3cf14a3}\label{classview_1_1Game_af0b1a6101f33ac1675c6a950f3cf14a3} 
+\index{view::Game@{view::Game}!Game@{Game}}
+\index{Game@{Game}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily view\+::\+Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructs the game and initializes window and initial state. \Hypertarget{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898}\label{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898} 
+\index{view::Game@{view::Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily view\+::\+Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+destructor of the game 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754}\label{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754} 
+\index{view::Game@{view::Game}!close@{close}}
+\index{close@{close}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void view\+::\+Game\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+close the game window \Hypertarget{classview_1_1Game_abb19bf0ee40f125467f1e9a78180cdb1}\label{classview_1_1Game_abb19bf0ee40f125467f1e9a78180cdb1} 
+\index{view::Game@{view::Game}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::\+Game\+::handle\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+handle events \Hypertarget{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114}\label{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114} 
+\index{view::Game@{view::Game}!render@{render}}
+\index{render@{render}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::\+Game\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+render the game \Hypertarget{classview_1_1Game_a5e94523753515799e610a90f4cacb68e}\label{classview_1_1Game_a5e94523753515799e610a90f4cacb68e} 
+\index{view::Game@{view::Game}!run@{run}}
+\index{run@{run}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void view\+::\+Game\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+runs the main game loop Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1Game_a5e94523753515799e610a90f4cacb68e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1Game_a66c285b630919c082d92be2157fac643}\label{classview_1_1Game_a66c285b630919c082d92be2157fac643} 
+\index{view::Game@{view::Game}!update@{update}}
+\index{update@{update}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::\+Game\+::update (\begin{DoxyParamCaption}\item[{double}]{delta\+Time }\end{DoxyParamCaption})}
+
+update the game ~\newline
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/\mbox{\hyperlink{Game_8h}{Game.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/Game.\+cpp\end{DoxyCompactItemize}

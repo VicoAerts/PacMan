@@ -1,0 +1,25 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/EntityView.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/EntityView.h">
+<area shape="rect" id="Node000001" title="Base class for all entity views in the game." alt="" coords="274,5,438,60"/>
+<area shape="rect" id="Node000002" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="94,313,258,368"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,45,191,54,120,67,60,86,38,97,24,110,10,136,10,163,19,191,36,219,60,246,86,271,138,311,135,315,82,275,56,249,32,222,14,193,4,164,5,135,20,106,35,93,58,81,119,62,190,49,260,39"/>
+<area shape="rect" id="Node000004" href="$CoinView_8h_source.html" title=" " alt="" coords="34,108,198,163"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="283,68,180,110,178,105,281,63"/>
+<area shape="rect" id="Node000005" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="268,211,444,265"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="297,70,278,88,264,109,256,135,264,161,283,188,308,208,305,212,279,191,259,164,251,135,259,107,274,85,294,67"/>
+<area shape="rect" id="Node000006" href="$FruitView_8h_source.html" title=" " alt="" coords="274,108,438,163"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="359,74,359,108,354,108,354,74"/>
+<area shape="rect" id="Node000007" href="$GhostView_8h.html" title="Declaration of the GhostView class which displays ghosts and their changes." alt="" coords="462,108,626,163"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="419,64,496,105,494,110,416,69"/>
+<area shape="rect" id="Node000008" href="$PacManView_8h.html" title="Declaration of the PacManView class which displays pacman and its changes." alt="" coords="650,108,814,163"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="453,56,640,105,651,108,649,114,638,111,451,61"/>
+<area shape="rect" id="Node000009" href="$WallView_8h.html" title="Declaration of the WallView class which displays the walls." alt="" coords="838,108,1002,163"/>
+<area shape="poly" id="edge13_Node000001_Node000009" title=" " alt="" coords="453,43,628,68,828,105,839,108,837,113,826,111,627,74,452,48"/>
+<area shape="rect" id="Node000003" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="94,416,258,471"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="179,382,179,416,174,416,174,382"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="192,165,295,208,293,213,190,170"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="299,274,225,315,222,311,296,270"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="359,176,359,211,354,211,354,176"/>
+<area shape="poly" id="edge10_Node000007_Node000005" title=" " alt="" coords="485,171,407,213,404,208,482,167"/>
+<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="637,166,446,216,444,211,636,161"/>
+<area shape="poly" id="edge14_Node000009_Node000005" title=" " alt="" coords="825,166,617,204,445,229,444,223,617,198,825,160"/>
+</map>

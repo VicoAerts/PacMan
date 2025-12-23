@@ -1,0 +1,31 @@
+\doxysection{Fruit.\+h}
+\hypertarget{Fruit_8h_source}{}\label{Fruit_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Fruit.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Fruit.h}}
+\mbox{\hyperlink{Fruit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_FRUIT\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PACMAN\_FRUIT\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Collectable_8h}{Collectable.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Fruit}{Fruit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Collectable}{Collectable}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classmodel_1_1Fruit_ac476c068270f1c276de5042d76f76a66}{Fruit}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ pos)\ :\ \mbox{\hyperlink{classmodel_1_1Collectable}{Collectable}}(pos)\ \{\}}
+\DoxyCodeLine{00017\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{GridMap_8h_a268ae74e98bc01a0e35f5e215580bcb4}{CellType}}\ \mbox{\hyperlink{classmodel_1_1Fruit_ab38846427c58e6a36768779b46462057}{getCollectableType}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ FRUIT;\ \}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Fruit_abf680f1e04e745161a95ca13be4600ed}{collect}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ m\_collected\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\ \textcolor{keyword}{event}\{events::EventType::FruitEaten\};}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}}(event,\ *\textcolor{keyword}{this});}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\ \mbox{\hyperlink{classmodel_1_1Fruit_aa71a619d57551a0e5a92d66b15408719}{onCollideWithPacMan}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_collected)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classmodel_1_1Fruit_abf680f1e04e745161a95ca13be4600ed}{collect}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{events::EventType::FruitEaten\};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{events::EventType::None\};}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_FRUIT\_H}}
+
+\end{DoxyCode}

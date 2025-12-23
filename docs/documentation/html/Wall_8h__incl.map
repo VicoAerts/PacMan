@@ -1,0 +1,23 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Wall.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Wall.h">
+<area shape="rect" id="Node000001" title="Declaration of the Wall class representing wall entities in the game." alt="" coords="30,5,194,60"/>
+<area shape="rect" id="Node000002" href="$Entity_8h.html" title="Base class for all entities in the game model." alt="" coords="77,108,147,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,60,115,94,109,94,109,60"/>
+<area shape="rect" id="Node000003" href="$Event_8h.html" title="event class for all custom events used in the game. Supports the observer pattern for notifying entit..." alt="" coords="141,328,272,353"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,133,116,198,124,240,140,279,157,301,177,318,174,322,153,304,135,281,119,241,111,199,109,134"/>
+<area shape="rect" id="Node000005" href="$Vec2D_8h.html" title="Defines a simple 2D vector structure and direction conversion utility." alt="" coords="5,328,117,353"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="110,134,96,182,68,315,63,314,91,181,105,133"/>
+<area shape="rect" id="Node000006" href="$Subject_8h.html" title="Base class for all observable objects in the model." alt="" coords="241,181,324,207"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="140,131,243,174,241,178,138,136"/>
+<area shape="rect" id="Node000004" href="$Direction_8h.html" title="Defines movement directions and related helper functions." alt="" coords="68,401,199,427"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="196,356,157,394,153,390,193,352"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="75,352,114,390,110,394,71,356"/>
+<area shape="rect" id="Node000007" href="$Observer_8h.html" title="Declaration of the Observer interface for observer pattern. Observer is gate between Model and View." alt="" coords="338,255,430,280"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="300,204,358,244,355,249,297,209"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="454,255,541,280"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="318,204,450,248,449,253,316,209"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="149,255,227,280"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="269,209,216,248,213,244,266,205"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="251,255,314,280"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="285,207,285,241,280,241,280,207"/>
+<area shape="poly" id="edge8_Node000007_Node000003" title=" " alt="" coords="356,282,249,325,247,320,355,278"/>
+</map>

@@ -1,0 +1,48 @@
+\doxysection{World.\+h}
+\hypertarget{World_8h_source}{}\label{World_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/control/World.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/control/World.h}}
+\mbox{\hyperlink{World_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_WORLD\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_WORLD\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../model/AbstractFactory.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../model/Entity.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}../model/GridMap.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}../model/PacMan.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../util/Direction.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../util/Random.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }Score;}
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1World}{World}}\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classmodel_1_1World}{World}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classGridMap}{GridMap}}\&\ map,\ \mbox{\hyperlink{classmodel_1_1AbstractFactory}{AbstractFactory}}\&\ factory,\ std::shared\_ptr<model::Score>\ playerScore);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_aeb35b9b74450efccc04ca59e361f7f5e}{update}}(\textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00035\ \ \ \ \ [[nodiscard]]\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classGridMap}{GridMap}}\&\ \mbox{\hyperlink{classmodel_1_1World_ab8214a37fe923edcb342628dd2f21d7a}{getGridMap}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ worldGrid;\ \}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_ab9f23f79386d5a4a516e193040e4c876}{handleInput}}(\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ dir);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1World_a300894a65294812d096f37a02f8a51c7}{isMoveValid}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ position,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ step,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\&\ entity)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_a205500858db36ff3bb997b5764383fc3}{snapToCorridor}}(\mbox{\hyperlink{structVec2D}{Vec2D}}\&\ pos,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\ dir)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_a306dac4dff810b96be324a40079b01b8}{handlePacManCollisions}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structVec2D}{Vec2D}}\&\ pos);}
+\DoxyCodeLine{00045\ \ \ \ \ [[nodiscard]]\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\&\ \mbox{\hyperlink{classmodel_1_1World_ae6db877b944f5981122a0f98fae000d6}{getPacMan}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_aef8fa2b1bbf57897426244e203e2ca44}{resetWorld}}();}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classmodel_1_1World_a1dc612fb07d8733b6c1aa5f1cd6415b6}{isWorldCleared}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1World_ab0246bc06a42c8609ef094ad1277c2a2}{debugClearCollectables}}();}
+\DoxyCodeLine{00053\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classmodel_1_1World_ab0c0505718f109cf90ccf2f9feb14a12}{getCurrentLevel}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ currentLevel;\ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classGridMap}{GridMap}}\ worldGrid;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{comment}{//\ Other\ members\ like\ entities,\ score,\ lives,\ etc.}}
+\DoxyCodeLine{00058\ \ \ \ \ std::vector<std::unique\_ptr<Entity>>\ entities;}
+\DoxyCodeLine{00059\ \ \ \ \ std::unique\_ptr<PacMan>\ pacMan;}
+\DoxyCodeLine{00060\ \ \ \ \ std::shared\_ptr<model::Score>\ score;}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_remainingCollectables;}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{int}\ currentLevel;}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ spawnEntities(\mbox{\hyperlink{classmodel_1_1AbstractFactory}{AbstractFactory}}\&\ factory);}
+\DoxyCodeLine{00064\ \};}
+\DoxyCodeLine{00065\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_WORLD\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,137 @@
+\doxysection{view\+::state\+::Menu\+State Class Reference}
+\hypertarget{classview_1_1state_1_1MenuState}{}\label{classview_1_1state_1_1MenuState}\index{view::state::MenuState@{view::state::MenuState}}
+
+
+\doxylink{classview_1_1state_1_1MenuState}{Menu\+State} class representing the main menu state.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+State.\+h$>$}
+
+
+
+Inheritance diagram for view\+::state\+::Menu\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classview_1_1state_1_1MenuState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::state\+::Menu\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classview_1_1state_1_1MenuState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1MenuState_acda839efff671c311363b842ac4ebb19}{Menu\+State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1MenuState_a4333011e88b98b712f9691b57bc354b6}{\texorpdfstring{$\sim$}{\string~}\+Menu\+State}} () override=default
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1MenuState_a5d0b965f649e99eb3c0fa9d8ea0689c8}{handle\+Events}} (const sf\+::\+Event \&event) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1MenuState_a8ffe5f9e74515b024b6f0854e357d25c}{update}} (const double delta\+Time) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1MenuState_ad0e654a4dbd9233afaa5b04c677e9e4d}{render}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+virtual \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\texorpdfstring{$\sim$}{\string~}\+State}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \& {\bfseries state\+Manager}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ {\bfseries player\+Score}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1state_1_1MenuState}{Menu\+State} class representing the main menu state. 
+
+Inherits from the \doxylink{classview_1_1state_1_1State}{State} base class and handles events, updates, and rendering specific to the main menu screen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1MenuState_acda839efff671c311363b842ac4ebb19}\label{classview_1_1state_1_1MenuState_acda839efff671c311363b842ac4ebb19} 
+\index{view::state::MenuState@{view::state::MenuState}!MenuState@{MenuState}}
+\index{MenuState@{MenuState}!view::state::MenuState@{view::state::MenuState}}
+\doxysubsubsection{\texorpdfstring{MenuState()}{MenuState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Menu\+State\+::\+Menu\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for \doxylink{classview_1_1state_1_1MenuState}{Menu\+State} Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1MenuState_acda839efff671c311363b842ac4ebb19_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1MenuState_a4333011e88b98b712f9691b57bc354b6}\label{classview_1_1state_1_1MenuState_a4333011e88b98b712f9691b57bc354b6} 
+\index{view::state::MenuState@{view::state::MenuState}!````~MenuState@{\texorpdfstring{$\sim$}{\string~}MenuState}}
+\index{````~MenuState@{\texorpdfstring{$\sim$}{\string~}MenuState}!view::state::MenuState@{view::state::MenuState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MenuState()}{\string~MenuState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Menu\+State\+::\texorpdfstring{$\sim$}{\string~}\+Menu\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destructor for \doxylink{classview_1_1state_1_1MenuState}{Menu\+State} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1MenuState_a5d0b965f649e99eb3c0fa9d8ea0689c8}\label{classview_1_1state_1_1MenuState_a5d0b965f649e99eb3c0fa9d8ea0689c8} 
+\index{view::state::MenuState@{view::state::MenuState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::MenuState@{view::state::MenuState}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Menu\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle events specific to the menu state more specifically enter starts game 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1MenuState_a5d0b965f649e99eb3c0fa9d8ea0689c8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1MenuState_ad0e654a4dbd9233afaa5b04c677e9e4d}\label{classview_1_1state_1_1MenuState_ad0e654a4dbd9233afaa5b04c677e9e4d} 
+\index{view::state::MenuState@{view::state::MenuState}!render@{render}}
+\index{render@{render}!view::state::MenuState@{view::state::MenuState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Menu\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render the menu state 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1MenuState_ad0e654a4dbd9233afaa5b04c677e9e4d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1MenuState_a8ffe5f9e74515b024b6f0854e357d25c}\label{classview_1_1state_1_1MenuState_a8ffe5f9e74515b024b6f0854e357d25c} 
+\index{view::state::MenuState@{view::state::MenuState}!update@{update}}
+\index{update@{update}!view::state::MenuState@{view::state::MenuState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Menu\+State\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the menu state is unused 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{view\+::state\+::\+State}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{MenuState_8h}{Menu\+State.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/Menu\+State.\+cpp\end{DoxyCompactItemize}

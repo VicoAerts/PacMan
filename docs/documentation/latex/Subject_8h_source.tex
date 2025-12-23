@@ -1,0 +1,31 @@
+\doxysection{Subject.\+h}
+\hypertarget{Subject_8h_source}{}\label{Subject_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Subject.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/model/Subject.h}}
+\mbox{\hyperlink{Subject_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_SUBJECT\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ PACMAN\_SUBJECT\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Observer_8h}{Observer.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }Entity;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmodel_1_1Subject}{Subject}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ std::vector<std::weak\_ptr<Observer>>\ observers;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}}(std::shared\_ptr<Observer>\ observer);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}}(std::shared\_ptr<Observer>\ observer);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\&\ event,\ \mbox{\hyperlink{classmodel_1_1Entity}{Entity}}\&\ entity);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ \}\ \textcolor{comment}{//\ namespace\ model}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_SUBJECT\_H}}
+
+\end{DoxyCode}

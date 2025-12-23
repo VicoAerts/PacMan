@@ -1,0 +1,110 @@
+\doxysection{model\+::Wall Class Reference}
+\hypertarget{classmodel_1_1Wall}{}\label{classmodel_1_1Wall}\index{model::Wall@{model::Wall}}
+
+
+\doxylink{classmodel_1_1Wall}{Wall} entity representing immovable obstacles in the game world.  
+
+
+
+
+{\ttfamily \#include $<$Wall.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Wall\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{classmodel_1_1Wall__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Wall\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classmodel_1_1Wall__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Wall_a7951acdedfc6283344214f2c9df27edb}{Wall}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Wall_addc05099b6cba357aeb7371458e06da1}{update}} (const double, \mbox{\hyperlink{classmodel_1_1World}{World}} \&) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}{set\+Position}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+virtual \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}{get\+Direction}} () const
+\item 
+virtual \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \mbox{\hyperlink{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24}{on\+Collide\+With\+Pac\+Man}} ()
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}{reset}} (int current\+Level)
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}{set\+Scared}} (double duration, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world)
+\item 
+virtual int \mbox{\hyperlink{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}{get\+Current\+Mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}{Entity}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}{m\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classmodel_1_1Wall}{Wall} entity representing immovable obstacles in the game world. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1Wall_a7951acdedfc6283344214f2c9df27edb}\label{classmodel_1_1Wall_a7951acdedfc6283344214f2c9df27edb} 
+\index{model::Wall@{model::Wall}!Wall@{Wall}}
+\index{Wall@{Wall}!model::Wall@{model::Wall}}
+\doxysubsubsection{\texorpdfstring{Wall()}{Wall()}}
+{\footnotesize\ttfamily model\+::\+Wall\+::\+Wall (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\doxylink{classmodel_1_1Wall}{Wall} constructor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1Wall_addc05099b6cba357aeb7371458e06da1}\label{classmodel_1_1Wall_addc05099b6cba357aeb7371458e06da1} 
+\index{model::Wall@{model::Wall}!update@{update}}
+\index{update@{update}!model::Wall@{model::Wall}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void model\+::\+Wall\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update entity 
+
+Implements \mbox{\hyperlink{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6}{model\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{Wall_8h}{Wall.\+h}}\end{DoxyCompactItemize}

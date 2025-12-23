@@ -1,0 +1,117 @@
+\doxysection{util\+::Texture\+Manager Class Reference}
+\hypertarget{classutil_1_1TextureManager}{}\label{classutil_1_1TextureManager}\index{util::TextureManager@{util::TextureManager}}
+
+
+\doxylink{classutil_1_1TextureManager}{Texture\+Manager} class for loading and managing game textures.  
+
+
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classutil_1_1TextureManager_aef2dd90984b3a90f2f42ba592d051d6c}{init}} (const std\+::string \&id, const std\+::string \&filename)
+\item 
+static sf\+::\+Sprite \mbox{\hyperlink{classutil_1_1TextureManager_a1a232353688ac1fc91356d36ed708b42}{get\+Sprite}} (\mbox{\hyperlink{TextureManager_8h_a7f188ea46f766d3b957111b2aceb2941}{sprite\+Type}} type, \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir=Direction\+::\+None, int ghost\+Id=0)
+\item 
+static std\+::vector$<$ sf\+::\+Int\+Rect $>$ \mbox{\hyperlink{classutil_1_1TextureManager_a892757a5fc831f22700caaafed3c48a8}{get\+Pac\+Man\+Frames}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir=Direction\+::\+None)
+\item 
+static std\+::vector$<$ sf\+::\+Int\+Rect $>$ \mbox{\hyperlink{classutil_1_1TextureManager_acbd6f53f5028a1569dcfcc1b767919ac}{get\+Ghost\+Frames}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir=Direction\+::\+None, int ghost\+Id=1, int mode=2)
+\item 
+static void \mbox{\hyperlink{classutil_1_1TextureManager_a198656d4df65e7dc30c5e53435348be6}{load\+Score\+Font}} ()
+\item 
+static const sf\+::\+Font \& \mbox{\hyperlink{classutil_1_1TextureManager_afc1acd896ab2f5a88259989eab8e93a1}{get\+Score\+Font}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classutil_1_1TextureManager}{Texture\+Manager} class for loading and managing game textures. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classutil_1_1TextureManager_acbd6f53f5028a1569dcfcc1b767919ac}\label{classutil_1_1TextureManager_acbd6f53f5028a1569dcfcc1b767919ac} 
+\index{util::TextureManager@{util::TextureManager}!getGhostFrames@{getGhostFrames}}
+\index{getGhostFrames@{getGhostFrames}!util::TextureManager@{util::TextureManager}}
+\doxysubsubsection{\texorpdfstring{getGhostFrames()}{getGhostFrames()}}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Int\+Rect $>$ util\+::\+Texture\+Manager\+::get\+Ghost\+Frames (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir = {\ttfamily Direction\+:\+:None},  }\item[{int}]{ghost\+Id = {\ttfamily 1},  }\item[{int}]{mode = {\ttfamily 2} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get Ghost animation frames ~\newline
+ Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1TextureManager_acbd6f53f5028a1569dcfcc1b767919ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1TextureManager_a892757a5fc831f22700caaafed3c48a8}\label{classutil_1_1TextureManager_a892757a5fc831f22700caaafed3c48a8} 
+\index{util::TextureManager@{util::TextureManager}!getPacManFrames@{getPacManFrames}}
+\index{getPacManFrames@{getPacManFrames}!util::TextureManager@{util::TextureManager}}
+\doxysubsubsection{\texorpdfstring{getPacManFrames()}{getPacManFrames()}}
+{\footnotesize\ttfamily std\+::vector$<$ sf\+::\+Int\+Rect $>$ util\+::\+Texture\+Manager\+::get\+Pac\+Man\+Frames (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir = {\ttfamily Direction\+:\+:None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get animation frames for pac\+Man Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1TextureManager_a892757a5fc831f22700caaafed3c48a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1TextureManager_afc1acd896ab2f5a88259989eab8e93a1}\label{classutil_1_1TextureManager_afc1acd896ab2f5a88259989eab8e93a1} 
+\index{util::TextureManager@{util::TextureManager}!getScoreFont@{getScoreFont}}
+\index{getScoreFont@{getScoreFont}!util::TextureManager@{util::TextureManager}}
+\doxysubsubsection{\texorpdfstring{getScoreFont()}{getScoreFont()}}
+{\footnotesize\ttfamily const sf\+::\+Font \& util\+::\+Texture\+Manager\+::get\+Score\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get the score font Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1TextureManager_afc1acd896ab2f5a88259989eab8e93a1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1TextureManager_a1a232353688ac1fc91356d36ed708b42}\label{classutil_1_1TextureManager_a1a232353688ac1fc91356d36ed708b42} 
+\index{util::TextureManager@{util::TextureManager}!getSprite@{getSprite}}
+\index{getSprite@{getSprite}!util::TextureManager@{util::TextureManager}}
+\doxysubsubsection{\texorpdfstring{getSprite()}{getSprite()}}
+{\footnotesize\ttfamily sf\+::\+Sprite util\+::\+Texture\+Manager\+::get\+Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{TextureManager_8h_a7f188ea46f766d3b957111b2aceb2941}{sprite\+Type}}}]{type,  }\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir = {\ttfamily Direction\+:\+:None},  }\item[{int}]{ghost\+Id = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+get textures ghost id and direction are default for textures who dont need these features Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1TextureManager_a1a232353688ac1fc91356d36ed708b42_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1TextureManager_aef2dd90984b3a90f2f42ba592d051d6c}\label{classutil_1_1TextureManager_aef2dd90984b3a90f2f42ba592d051d6c} 
+\index{util::TextureManager@{util::TextureManager}!init@{init}}
+\index{init@{init}!util::TextureManager@{util::TextureManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void util\+::\+Texture\+Manager\+::init (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Load all textures from sprite sheet Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1TextureManager_aef2dd90984b3a90f2f42ba592d051d6c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classutil_1_1TextureManager_a198656d4df65e7dc30c5e53435348be6}\label{classutil_1_1TextureManager_a198656d4df65e7dc30c5e53435348be6} 
+\index{util::TextureManager@{util::TextureManager}!loadScoreFont@{loadScoreFont}}
+\index{loadScoreFont@{loadScoreFont}!util::TextureManager@{util::TextureManager}}
+\doxysubsubsection{\texorpdfstring{loadScoreFont()}{loadScoreFont()}}
+{\footnotesize\ttfamily void util\+::\+Texture\+Manager\+::load\+Score\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+load the score font Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classutil_1_1TextureManager_a198656d4df65e7dc30c5e53435348be6_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/util/\mbox{\hyperlink{TextureManager_8h}{Texture\+Manager.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/util/Texture\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,27 @@
+\doxysection{Wall\+View.\+h}
+\hypertarget{WallView_8h_source}{}\label{WallView_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/WallView.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/WallView.h}}
+\mbox{\hyperlink{WallView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_WALLVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_WALLVIEW\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../model/Wall.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Camera_8h}{Camera.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{EntityView_8h}{EntityView.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1entity}{view::entity}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1entity_1_1WallView}{WallView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{EntityView}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1entity_1_1WallView}{WallView}}(\mbox{\hyperlink{structVec2D}{Vec2D}}\ pos);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1WallView_a25860cb6d36120b7308f2b15c684dbe1}{onNotify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classevents_1_1Event}{events::Event}}\&\ event,\ \mbox{\hyperlink{classmodel_1_1Entity}{model::Entity}}\&\ entity)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1WallView_a5e58789aa7203ff432b803fa2f237e8f}{draw}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{structVec2D}{Vec2D}}\ pos;}
+\DoxyCodeLine{00025\ \ \ \ \ sf::RectangleShape\ wallRect;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ \}\ \textcolor{comment}{//\ namespace\ view::entity}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_WALLVIEW\_H}}
+
+\end{DoxyCode}

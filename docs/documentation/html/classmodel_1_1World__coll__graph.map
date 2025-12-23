@@ -1,0 +1,5 @@
+<map id="model::World" name="model::World">
+<area shape="rect" id="Node000001" title="World class that holds all entities and game logic." alt="" coords="5,93,113,119"/>
+<area shape="rect" id="Node000002" href="$classutil_1_1Random.html" title="Pseudo&#45;random number generator wrapper." alt="" coords="7,5,112,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,45,62,93,57,93,57,45"/>
+</map>

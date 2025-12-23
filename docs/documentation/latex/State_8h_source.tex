@@ -1,0 +1,35 @@
+\doxysection{State.\+h}
+\hypertarget{State_8h_source}{}\label{State_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/State.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/State.h}}
+\mbox{\hyperlink{State_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_STATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PACMAN\_STATE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacemodel}{model}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }Score;}
+\DoxyCodeLine{00012\ \}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1state}{view::state}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }StateManager;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1state_1_1State}{State}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classview_1_1state_1_1StateManager}{StateManager}}\&\ stateManager;}
+\DoxyCodeLine{00028\ \ \ \ \ std::shared\_ptr<model::Score>\ playerScore;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}}(\mbox{\hyperlink{classview_1_1state_1_1StateManager}{StateManager}}\&\ stateManager,\ std::shared\_ptr<model::Score>\ playerScore)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ :\ stateManager(stateManager),\ playerScore(playerScore)\ \{\}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\string~State}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{handleEvents}}(\textcolor{keyword}{const}\ sf::Event\&\ event)\ =\ 0;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime)\ =\ 0;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{render}}(sf::RenderWindow\&\ window)\ =\ 0;}
+\DoxyCodeLine{00045\ \};}
+\DoxyCodeLine{00046\ \}\ \textcolor{comment}{//\ namespace\ view::state}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_STATE\_H}}
+
+\end{DoxyCode}

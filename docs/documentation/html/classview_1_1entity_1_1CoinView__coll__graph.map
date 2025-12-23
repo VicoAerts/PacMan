@@ -1,0 +1,7 @@
+<map id="view::entity::CoinView" name="view::entity::CoinView">
+<area shape="rect" id="Node000001" title="View class for rendering Coin entities." alt="" coords="9,152,176,177"/>
+<area shape="rect" id="Node000002" href="$classview_1_1entity_1_1EntityView.html" title="Abstract base class for all entity views." alt="" coords="5,79,180,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,118,95,152,90,152,90,118"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Observer.html" title="Observer interface for receiving game events." alt="" coords="27,5,158,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,44,95,79,90,79,90,44"/>
+</map>

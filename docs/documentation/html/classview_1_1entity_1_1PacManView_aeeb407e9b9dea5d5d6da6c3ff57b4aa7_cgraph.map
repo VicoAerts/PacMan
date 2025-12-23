@@ -1,0 +1,5 @@
+<map id="view::entity::PacManView::PacManView" name="view::entity::PacManView::PacManView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$classutil_1_1TextureManager.html#a892757a5fc831f22700caaafed3c48a8" title=" " alt="" coords="240,5,396,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,23,226,23,226,28,193,28"/>
+</map>

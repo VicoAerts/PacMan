@@ -1,0 +1,5 @@
+<map id="view::state::State" name="view::state::State">
+<area shape="rect" id="Node000001" title="Abstract base class for all game states." alt="" coords="34,93,169,119"/>
+<area shape="rect" id="Node000002" href="$classview_1_1state_1_1StateManager.html" title="StateManager class that manages different game states using a stack." alt="" coords="5,5,197,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,45,104,93,99,93,99,45"/>
+</map>

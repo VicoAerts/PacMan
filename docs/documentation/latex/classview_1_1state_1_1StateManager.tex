@@ -1,0 +1,152 @@
+\doxysection{view\+::state\+::State\+Manager Class Reference}
+\hypertarget{classview_1_1state_1_1StateManager}{}\label{classview_1_1state_1_1StateManager}\index{view::state::StateManager@{view::state::StateManager}}
+
+
+\doxylink{classview_1_1state_1_1StateManager}{State\+Manager} class that manages different game states using a stack.  
+
+
+
+
+{\ttfamily \#include $<$State\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager_abf099e7029f3577fbd96d0de32242cb6}{State\+Manager}} (sf\+::\+Render\+Window \&window, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager_ace6b0871510ba3d28d98854cd09ac3e7}{\texorpdfstring{$\sim$}{\string~}\+State\+Manager}} ()=default
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_a8f4db4ecf4445d5195c4d784739a3eda}{push\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1state_1_1State}{State}} $>$ state)
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62}{pop\+State}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_a25f8aece97b3306dc88d1dbbba3d4a16}{switch\+State}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1state_1_1State}{State}} $>$ state)
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_aa45d8caafc96600e8cff9a9e9cfabcb8}{handle\+Events}} (const sf\+::\+Event \&event)
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_a9ef8078fbba3c0d6b393e73d09d63f74}{render}} (sf\+::\+Render\+Window \&window)
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_a6583431d66e691862a07e7c99a3afe36}{update}} (const double delta\+Time)
+\item 
+sf\+::\+Render\+Window \& \mbox{\hyperlink{classview_1_1state_1_1StateManager_a5a535af5977bbfb47ec9929636c0bd6b}{get\+Window}} ()
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1StateManager_ac671fb0991a485c72ba13926ba880e89}{clear\+States}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1state_1_1StateManager}{State\+Manager} class that manages different game states using a stack. 
+
+The \doxylink{classview_1_1state_1_1StateManager}{State\+Manager} allows pushing, popping, and switching between different states, such as menu, gameplay, paused, and gameover states. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1StateManager_abf099e7029f3577fbd96d0de32242cb6}\label{classview_1_1state_1_1StateManager_abf099e7029f3577fbd96d0de32242cb6} 
+\index{view::state::StateManager@{view::state::StateManager}!StateManager@{StateManager}}
+\index{StateManager@{StateManager}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{StateManager()}{StateManager()}}
+{\footnotesize\ttfamily view\+::state\+::\+State\+Manager\+::\+State\+Manager (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+constructor of statemanager that starts of with the menustate Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1StateManager_abf099e7029f3577fbd96d0de32242cb6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1StateManager_ace6b0871510ba3d28d98854cd09ac3e7}\label{classview_1_1state_1_1StateManager_ace6b0871510ba3d28d98854cd09ac3e7} 
+\index{view::state::StateManager@{view::state::StateManager}!````~StateManager@{\texorpdfstring{$\sim$}{\string~}StateManager}}
+\index{````~StateManager@{\texorpdfstring{$\sim$}{\string~}StateManager}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StateManager()}{\string~StateManager()}}
+{\footnotesize\ttfamily view\+::state\+::\+State\+Manager\+::\texorpdfstring{$\sim$}{\string~}\+State\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+destructor of statemanager that cleans up all states 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1StateManager_ac671fb0991a485c72ba13926ba880e89}\label{classview_1_1state_1_1StateManager_ac671fb0991a485c72ba13926ba880e89} 
+\index{view::state::StateManager@{view::state::StateManager}!clearStates@{clearStates}}
+\index{clearStates@{clearStates}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{clearStates()}{clearStates()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::clear\+States (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+clear all states from the stack \Hypertarget{classview_1_1state_1_1StateManager_a5a535af5977bbfb47ec9929636c0bd6b}\label{classview_1_1state_1_1StateManager_a5a535af5977bbfb47ec9929636c0bd6b} 
+\index{view::state::StateManager@{view::state::StateManager}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily sf\+::\+Render\+Window \& view\+::state\+::\+State\+Manager\+::get\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+get the render window Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1StateManager_a5a535af5977bbfb47ec9929636c0bd6b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1StateManager_aa45d8caafc96600e8cff9a9e9cfabcb8}\label{classview_1_1state_1_1StateManager_aa45d8caafc96600e8cff9a9e9cfabcb8} 
+\index{view::state::StateManager@{view::state::StateManager}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})}
+
+handle events by delegating to the current state \Hypertarget{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62}\label{classview_1_1state_1_1StateManager_a31a77b2edbf195f43410e32ba0c8ef62} 
+\index{view::state::StateManager@{view::state::StateManager}!popState@{popState}}
+\index{popState@{popState}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{popState()}{popState()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::pop\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+pop the current state from the stack \begin{DoxyReturn}{Returns}
+pointer to the removed state 
+\end{DoxyReturn}
+\Hypertarget{classview_1_1state_1_1StateManager_a8f4db4ecf4445d5195c4d784739a3eda}\label{classview_1_1state_1_1StateManager_a8f4db4ecf4445d5195c4d784739a3eda} 
+\index{view::state::StateManager@{view::state::StateManager}!pushState@{pushState}}
+\index{pushState@{pushState}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{pushState()}{pushState()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::push\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1state_1_1State}{State}} $>$}]{state }\end{DoxyParamCaption})}
+
+push a new state onto the stack 
+\begin{DoxyParams}{Parameters}
+{\em state} & pointer to the new state to be added \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1StateManager_a8f4db4ecf4445d5195c4d784739a3eda_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1StateManager_a9ef8078fbba3c0d6b393e73d09d63f74}\label{classview_1_1state_1_1StateManager_a9ef8078fbba3c0d6b393e73d09d63f74} 
+\index{view::state::StateManager@{view::state::StateManager}!render@{render}}
+\index{render@{render}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})}
+
+render the current state \Hypertarget{classview_1_1state_1_1StateManager_a25f8aece97b3306dc88d1dbbba3d4a16}\label{classview_1_1state_1_1StateManager_a25f8aece97b3306dc88d1dbbba3d4a16} 
+\index{view::state::StateManager@{view::state::StateManager}!switchState@{switchState}}
+\index{switchState@{switchState}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{switchState()}{switchState()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::switch\+State (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classview_1_1state_1_1State}{State}} $>$}]{state }\end{DoxyParamCaption})}
+
+push a new state and remove the current state 
+\begin{DoxyParams}{Parameters}
+{\em state} & pointer to the new state to be added \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1StateManager_a25f8aece97b3306dc88d1dbbba3d4a16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1StateManager_a6583431d66e691862a07e7c99a3afe36}\label{classview_1_1state_1_1StateManager_a6583431d66e691862a07e7c99a3afe36} 
+\index{view::state::StateManager@{view::state::StateManager}!update@{update}}
+\index{update@{update}!view::state::StateManager@{view::state::StateManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::state\+::\+State\+Manager\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})}
+
+update the current state 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{StateManager_8h}{State\+Manager.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/State\+Manager.\+cpp\end{DoxyCompactItemize}

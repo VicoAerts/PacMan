@@ -1,0 +1,9 @@
+<map id="model::Ghost" name="model::Ghost">
+<area shape="rect" id="Node000001" title="Ghost entity with AI movement and fear behavior." alt="" coords="67,168,177,193"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Entity.html" title="Abstract base class for all game entities." alt="" coords="67,93,177,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,133,125,168,119,168,119,133"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Subject.html" title="Subject base class for observer pattern." alt="" coords="5,5,124,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="82,41,116,91,112,94,78,44"/>
+<area shape="rect" id="Node000004" href="$structVec2D.html" title="Simple 2D vector used for positions and directions." alt="" coords="148,5,211,31"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="166,44,132,94,128,91,162,41"/>
+</map>

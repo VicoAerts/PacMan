@@ -1,0 +1,98 @@
+\doxysection{view\+::entity\+::Wall\+View Class Reference}
+\hypertarget{classview_1_1entity_1_1WallView}{}\label{classview_1_1entity_1_1WallView}\index{view::entity::WallView@{view::entity::WallView}}
+
+
+\doxylink{classview_1_1entity_1_1WallView}{Wall\+View} class responsible for rendering Wall entity.  
+
+
+
+
+{\ttfamily \#include $<$Wall\+View.\+h$>$}
+
+
+
+Inheritance diagram for view\+::entity\+::Wall\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classview_1_1entity_1_1WallView__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::entity\+::Wall\+View\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classview_1_1entity_1_1WallView__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1entity_1_1WallView_a00581c534f57fe40078af02bfeaede90}{Wall\+View}} (\mbox{\hyperlink{structVec2D}{Vec2D}} pos)
+\item 
+void \mbox{\hyperlink{classview_1_1entity_1_1WallView_a25860cb6d36120b7308f2b15c684dbe1}{on\+Notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} \&entity) override
+\item 
+void \mbox{\hyperlink{classview_1_1entity_1_1WallView_a5e58789aa7203ff432b803fa2f237e8f}{draw}} (sf\+::\+Render\+Window \&window, \mbox{\hyperlink{classview_1_1Camera}{Camera}} \&camera) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1entity_1_1EntityView}{view\+::entity\+::\+Entity\+View}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1entity_1_1EntityView_aff5266036baf0d6e734ab3c6b96c48af}{Entity\+View}} ()=default
+\item 
+virtual \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a4525c35b3f104d961e6a3f18d76065cf}{\texorpdfstring{$\sim$}{\string~}\+Entity\+View}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Observer}{model\+::\+Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Observer_aa28e156c930472479eec1ae5c9d94719}{\texorpdfstring{$\sim$}{\string~}\+Observer}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classview_1_1entity_1_1WallView}{Wall\+View} class responsible for rendering Wall entity. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1entity_1_1WallView_a00581c534f57fe40078af02bfeaede90}\label{classview_1_1entity_1_1WallView_a00581c534f57fe40078af02bfeaede90} 
+\index{view::entity::WallView@{view::entity::WallView}!WallView@{WallView}}
+\index{WallView@{WallView}!view::entity::WallView@{view::entity::WallView}}
+\doxysubsubsection{\texorpdfstring{WallView()}{WallView()}}
+{\footnotesize\ttfamily view\+::entity\+::\+Wall\+View\+::\+Wall\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVec2D}{Vec2D}}}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor initializing the Wall view with its model 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1entity_1_1WallView_a5e58789aa7203ff432b803fa2f237e8f}\label{classview_1_1entity_1_1WallView_a5e58789aa7203ff432b803fa2f237e8f} 
+\index{view::entity::WallView@{view::entity::WallView}!draw@{draw}}
+\index{draw@{draw}!view::entity::WallView@{view::entity::WallView}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void view\+::entity\+::\+Wall\+View\+::draw (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window,  }\item[{\mbox{\hyperlink{classview_1_1Camera}{Camera}} \&}]{camera }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+draw wall on screen 
+
+Implements \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a3ad1872170ee9d946006a79b25d098bb}{view\+::entity\+::\+Entity\+View}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1entity_1_1WallView_a5e58789aa7203ff432b803fa2f237e8f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1entity_1_1WallView_a25860cb6d36120b7308f2b15c684dbe1}\label{classview_1_1entity_1_1WallView_a25860cb6d36120b7308f2b15c684dbe1} 
+\index{view::entity::WallView@{view::entity::WallView}!onNotify@{onNotify}}
+\index{onNotify@{onNotify}!view::entity::WallView@{view::entity::WallView}}
+\doxysubsubsection{\texorpdfstring{onNotify()}{onNotify()}}
+{\footnotesize\ttfamily void view\+::entity\+::\+Wall\+View\+::on\+Notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&}]{event,  }\item[{\mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}} \&}]{entity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+notify wall view about changes in model currently not used 
+
+Implements \mbox{\hyperlink{classmodel_1_1Observer_aa766d38ecc74c4569b483bfbf07cabcc}{model\+::\+Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/\mbox{\hyperlink{WallView_8h}{Wall\+View.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/view/Wall\+View.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+\doxysection{Paused\+State.\+h}
+\hypertarget{PausedState_8h_source}{}\label{PausedState_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/PausedState.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/states/PausedState.h}}
+\mbox{\hyperlink{PausedState_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_PAUSEDSTATE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ PACMAN\_PAUSEDSTATE\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}../util/TextureManager.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{State_8h}{State.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{StateManager_8h}{StateManager.h}}"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1state}{view::state}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1state_1_1PausedState}{PausedState}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classview_1_1state_1_1State}{State}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classview_1_1state_1_1PausedState}{PausedState}}(\mbox{\hyperlink{classview_1_1state_1_1StateManager}{StateManager}}\&\ stateManager,\ std::shared\_ptr<model::Score>\ playerScore);}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classview_1_1state_1_1PausedState_a9059923077bb1491df43bc713bc1d602}{\string~PausedState}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1PausedState_a0f766c6059cb1c05df6d0da038c2d39c}{handleEvents}}(\textcolor{keyword}{const}\ sf::Event\&\ event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1PausedState_ad148a7cdc06def34017196ea3a9b574a}{update}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1state_1_1PausedState_abd84c7925ffbbf896c05dfbba46c2876}{render}}(sf::RenderWindow\&\ window)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ \}\ \textcolor{comment}{//\ namespace\ view::state}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_PAUSEDSTATE\_H}}
+
+\end{DoxyCode}

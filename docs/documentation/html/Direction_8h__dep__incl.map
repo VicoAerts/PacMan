@@ -1,0 +1,95 @@
+<map id="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Direction.h" name="/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Direction.h">
+<area shape="rect" id="Node000001" title="Defines movement directions and related helper functions." alt="" coords="449,5,613,60"/>
+<area shape="rect" id="Node000002" href="$World_8h.html" title="holds all entities, orchestration of game logic and interaction between entities" alt="" coords="145,621,309,676"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="507,73,487,106,468,147,454,191,448,237,448,342,445,410,437,438,421,472,388,519,348,561,307,596,269,623,266,619,303,592,344,557,384,516,416,469,432,436,440,409,443,342,443,237,448,190,463,145,482,104,502,70"/>
+<area shape="rect" id="Node000003" href="$Ghost_8h.html" title="Declaration of the Ghost entity and its AI behavior." alt="" coords="1707,724,1871,779"/>
+<area shape="poly" id="edge45_Node000001_Node000003" title=" " alt="" coords="627,30,789,33,1001,43,1237,65,1357,83,1474,105,1535,114,1596,117,1708,121,1754,130,1774,139,1791,150,1805,165,1815,184,1822,208,1824,237,1824,547,1821,597,1815,646,1799,725,1794,723,1810,645,1816,596,1819,547,1819,237,1817,209,1811,186,1801,168,1788,154,1772,143,1753,135,1707,126,1596,123,1534,120,1473,111,1356,88,1237,71,1000,48,789,38,627,36"/>
+<area shape="rect" id="Node000007" href="$Event_8h.html" title="event class for all custom events used in the game. Supports the observer pattern for notifying entit..." alt="" coords="747,108,911,163"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="622,62,752,105,751,110,620,67"/>
+<area shape="rect" id="Node000013" href="$PacMan_8h.html" title="Declaration of the PacMan class representing the PacMan entity in the game." alt="" coords="98,519,262,573"/>
+<area shape="poly" id="edge46_Node000001_Node000013" title=" " alt="" coords="436,47,345,66,299,82,255,102,216,126,185,157,165,193,157,237,157,342,165,439,177,518,172,519,159,440,152,342,152,236,160,192,181,154,212,122,252,97,297,77,344,61,435,41"/>
+<area shape="rect" id="Node000024" href="$TextureManager_8h.html" title=" " alt="" coords="1414,519,1581,573"/>
+<area shape="poly" id="edge47_Node000001_Node000024" title=" " alt="" coords="627,38,917,61,1097,79,1279,102,1449,128,1590,159,1644,177,1686,195,1713,215,1720,225,1723,236,1723,342,1719,374,1707,403,1690,429,1668,453,1616,492,1564,521,1561,516,1613,488,1664,449,1685,426,1702,400,1713,372,1717,342,1717,237,1715,227,1709,218,1683,200,1642,182,1588,165,1448,134,1279,107,1096,84,916,66,626,43"/>
+<area shape="rect" id="Node000027" href="$Vec2D_8h.html" title="Defines a simple 2D vector structure and direction conversion utility." alt="" coords="243,313,407,368"/>
+<area shape="poly" id="edge52_Node000001_Node000027" title=" " alt="" coords="473,70,449,88,429,110,394,162,367,219,347,272,334,314,329,313,342,270,362,217,389,159,425,106,446,85,470,66"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="323,657,524,673,789,689,996,698,1203,706,1468,721,1707,740,1707,745,1468,727,1202,712,996,703,789,695,524,679,323,662"/>
+<area shape="rect" id="Node000005" href="$LevelState_8h.html" title="Declaration of the LevelState class representing the state of a game level." alt="" coords="958,929,1122,984"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="134,681,105,700,84,725,76,740,73,752,75,764,83,777,109,801,144,822,187,841,236,859,352,888,482,911,617,927,747,939,958,950,958,956,747,944,617,933,482,916,351,893,235,864,185,846,141,827,106,805,79,780,70,766,68,752,71,738,79,723,102,696,131,677"/>
+<area shape="rect" id="Node000004" href="$ConcreteFactory_8h.html" title="Concrete Factory for creating views and game entities." alt="" coords="679,827,855,881"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1694,773,1638,781,1417,806,1198,826,855,850,854,845,1198,821,1417,801,1637,776,1693,768"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="851,883,970,927,968,932,849,888"/>
+<area shape="rect" id="Node000006" href="$MenuState_8h.html" title="Declaration of the MenuState class for the Pacman game." alt="" coords="958,1032,1122,1087"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1043,998,1043,1032,1037,1032,1037,998"/>
+<area shape="poly" id="edge39_Node000007_Node000003" title=" " alt="" coords="926,159,1081,207,1176,241,1278,282,1383,330,1487,385,1588,447,1682,517,1705,539,1725,565,1755,622,1776,678,1787,723,1782,724,1771,680,1751,624,1720,568,1701,543,1678,521,1585,451,1485,389,1380,335,1276,287,1174,246,1079,212,924,164"/>
+<area shape="rect" id="Node000008" href="$Entity_8h.html" title="Base class for all entities in the game model." alt="" coords="713,416,877,471"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="788,174,773,192,762,212,750,254,747,288,753,323,763,367,771,392,781,415,777,417,766,394,757,369,747,324,742,288,744,253,758,210,769,189,784,171"/>
+<area shape="rect" id="Node000020" href="$Observer_8h.html" title="Declaration of the Observer interface for observer pattern. Observer is gate between Model and View." alt="" coords="773,211,937,265"/>
+<area shape="poly" id="edge40_Node000007_Node000020" title=" " alt="" coords="842,175,851,210,845,211,837,177"/>
+<area shape="poly" id="edge9_Node000008_Node000002" title=" " alt="" coords="699,454,642,463,580,476,517,495,457,521,440,533,429,547,418,561,400,576,353,602,304,624,302,619,350,598,397,571,414,557,425,543,436,529,455,516,515,490,579,471,642,457,699,449"/>
+<area shape="poly" id="edge18_Node000008_Node000003" title=" " alt="" coords="891,460,948,468,1016,472,1101,472,1300,470,1401,472,1495,478,1577,492,1610,503,1639,516,1656,530,1674,551,1714,608,1778,723,1774,725,1709,611,1670,555,1652,534,1636,521,1608,508,1575,498,1495,484,1401,477,1300,475,1101,478,1016,477,948,473,890,465"/>
+<area shape="poly" id="edge28_Node000008_Node000004" title=" " alt="" coords="891,460,948,468,1072,472,1278,476,1386,480,1481,488,1554,499,1579,507,1594,517,1619,552,1631,589,1630,626,1620,663,1600,698,1572,729,1538,758,1498,781,1446,800,1375,815,1290,828,1198,837,1011,849,855,854,855,849,1011,844,1198,832,1290,822,1374,810,1444,795,1496,776,1535,753,1568,726,1596,694,1615,661,1625,626,1625,590,1614,555,1590,521,1576,512,1553,504,1480,493,1385,485,1278,481,1072,477,948,473,890,465"/>
+<area shape="rect" id="Node000009" href="$Collectable_8h.html" title="Declaration of the Collectable class representing items that can be collected in the game...." alt="" coords="469,519,633,573"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="720,478,615,521,613,516,718,473"/>
+<area shape="poly" id="edge19_Node000008_Node000013" title=" " alt="" coords="699,463,263,534,262,529,698,458"/>
+<area shape="rect" id="Node000015" href="$Wall_8h.html" title="Declaration of the Wall class representing wall entities in the game." alt="" coords="1017,621,1181,676"/>
+<area shape="poly" id="edge24_Node000008_Node000015" title=" " alt="" coords="846,476,1061,619,1058,623,843,480"/>
+<area shape="rect" id="Node000017" href="$EntityView_8h.html" title="Base class for all entity views in the game." alt="" coords="777,621,941,676"/>
+<area shape="poly" id="edge29_Node000008_Node000017" title=" " alt="" coords="819,482,835,518,849,572,858,621,853,622,844,574,829,520,814,484"/>
+<area shape="poly" id="edge17_Node000009_Node000004" title=" " alt="" coords="496,583,438,623,378,673,342,705,324,725,314,753,316,765,323,777,346,794,381,809,424,821,473,830,580,843,679,848,678,854,580,848,473,836,423,826,379,814,343,799,319,780,311,766,309,752,319,723,338,701,374,669,434,619,493,579"/>
+<area shape="rect" id="Node000010" href="$Coin_8h.html" title="Definition of the Coin class representing a collectible coin item in the game." alt="" coords="537,621,701,676"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="578,583,603,620,599,623,574,586"/>
+<area shape="rect" id="Node000012" href="$Fruit_8h.html" title="Definition of the fruit class representing a collectible item in the game. When collected,..." alt="" coords="94,724,258,779"/>
+<area shape="poly" id="edge15_Node000009_Node000012" title=" " alt="" coords="464,581,421,600,380,624,363,637,351,650,322,678,279,704,237,726,234,722,277,700,318,674,347,646,359,633,377,619,419,596,461,576"/>
+<area shape="poly" id="edge14_Node000010_Node000004" title=" " alt="" coords="608,690,603,734,606,757,614,777,627,793,643,807,680,828,677,833,640,811,623,797,610,780,600,758,597,734,603,689"/>
+<area shape="rect" id="Node000011" href="$CoinView_8h_source.html" title=" " alt="" coords="625,724,789,779"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="653,685,686,722,682,726,649,688"/>
+<area shape="poly" id="edge13_Node000011_Node000004" title=" " alt="" coords="732,789,753,825,749,828,727,792"/>
+<area shape="poly" id="edge16_Node000012_Node000004" title=" " alt="" coords="272,775,278,776,493,814,679,839,678,845,493,819,277,781,271,780"/>
+<area shape="poly" id="edge20_Node000013_Node000002" title=" " alt="" coords="200,585,217,620,212,622,196,587"/>
+<area shape="poly" id="edge21_Node000013_Node000004" title=" " alt="" coords="145,585,109,628,78,679,69,705,65,731,70,755,83,777,112,791,167,805,329,825,517,839,679,847,678,852,516,844,328,831,166,810,110,796,80,781,65,757,60,731,63,704,73,677,104,625,141,582"/>
+<area shape="rect" id="Node000014" href="$PacManView_8h.html" title="Declaration of the PacManView class which displays pacman and its changes." alt="" coords="334,724,498,779"/>
+<area shape="poly" id="edge22_Node000013_Node000014" title=" " alt="" coords="150,586,137,608,128,631,126,654,134,674,159,687,209,702,335,731,333,737,207,708,157,692,130,678,120,655,122,630,132,605,146,583"/>
+<area shape="poly" id="edge23_Node000014_Node000004" title=" " alt="" coords="512,777,679,825,677,830,510,782"/>
+<area shape="poly" id="edge25_Node000015_Node000004" title=" " alt="" coords="1195,673,1309,688,1416,700,1457,710,1483,725,1489,736,1489,749,1483,764,1470,781,1458,789,1438,797,1381,810,1214,831,1021,845,855,852,855,847,1020,840,1213,826,1380,805,1437,792,1455,784,1466,777,1478,761,1484,748,1484,737,1479,729,1455,715,1415,705,1308,693,1194,679"/>
+<area shape="rect" id="Node000016" href="$WallView_8h.html" title="Declaration of the WallView class which displays the walls." alt="" coords="1293,724,1457,779"/>
+<area shape="poly" id="edge26_Node000015_Node000016" title=" " alt="" coords="1184,678,1304,721,1302,726,1182,683"/>
+<area shape="poly" id="edge27_Node000016_Node000004" title=" " alt="" coords="1279,772,1228,781,855,842,854,836,1228,776,1279,767"/>
+<area shape="poly" id="edge32_Node000017_Node000004" title=" " alt="" coords="844,689,781,827,776,825,839,687"/>
+<area shape="poly" id="edge30_Node000017_Node000005" title=" " alt="" coords="955,675,1024,680,1105,685,1180,697,1210,707,1230,722,1245,751,1245,781,1233,811,1212,840,1184,867,1152,891,1090,931,1088,927,1149,887,1180,863,1208,836,1229,808,1240,780,1240,753,1226,726,1207,712,1179,702,1105,691,1023,686,954,680"/>
+<area shape="poly" id="edge31_Node000017_Node000011" title=" " alt="" coords="809,686,748,726,745,722,806,681"/>
+<area shape="poly" id="edge37_Node000017_Node000014" title=" " alt="" coords="764,674,499,734,498,729,762,669"/>
+<area shape="poly" id="edge38_Node000017_Node000016" title=" " alt="" coords="955,672,961,673,1048,689,1117,697,1186,706,1274,721,1293,726,1292,731,1273,727,1185,711,1116,703,1047,694,959,679,954,677"/>
+<area shape="rect" id="Node000018" href="$FruitView_8h_source.html" title=" " alt="" coords="865,724,1029,779"/>
+<area shape="poly" id="edge33_Node000017_Node000018" title=" " alt="" coords="893,685,926,722,922,726,889,688"/>
+<area shape="rect" id="Node000019" href="$GhostView_8h.html" title="Declaration of the GhostView class which displays ghosts and their changes." alt="" coords="1053,724,1217,779"/>
+<area shape="poly" id="edge35_Node000017_Node000019" title=" " alt="" coords="944,678,1064,721,1062,726,942,683"/>
+<area shape="poly" id="edge34_Node000018_Node000004" title=" " alt="" coords="889,788,815,829,813,824,886,783"/>
+<area shape="poly" id="edge36_Node000019_Node000004" title=" " alt="" coords="1040,781,855,831,854,826,1039,776"/>
+<area shape="rect" id="Node000021" href="$Score_8h.html" title="score is an observer that tracks the score of the player" alt="" coords="961,313,1125,368"/>
+<area shape="poly" id="edge41_Node000020_Node000021" title=" " alt="" coords="917,269,995,311,992,315,914,274"/>
+<area shape="rect" id="Node000023" href="$Subject_8h.html" title="Base class for all observable objects in the model." alt="" coords="773,313,937,368"/>
+<area shape="poly" id="edge43_Node000020_Node000023" title=" " alt="" coords="857,279,857,313,852,313,852,279"/>
+<area shape="rect" id="Node000022" href="$Game_8h.html" title="Top&#45;level game class that owns the render window and runs the main loop." alt="" coords="961,416,1125,471"/>
+<area shape="poly" id="edge42_Node000021_Node000022" title=" " alt="" coords="1045,382,1045,416,1040,416,1040,382"/>
+<area shape="poly" id="edge44_Node000023_Node000008" title=" " alt="" coords="834,381,813,417,808,415,830,378"/>
+<area shape="poly" id="edge49_Node000024_Node000005" title=" " alt="" coords="1560,580,1579,598,1594,620,1604,647,1604,671,1598,692,1585,712,1547,747,1499,781,1403,836,1302,880,1205,914,1123,938,1121,933,1204,909,1300,875,1401,831,1496,776,1544,743,1581,709,1593,690,1599,670,1598,648,1590,623,1575,602,1556,584"/>
+<area shape="poly" id="edge51_Node000024_Node000017" title=" " alt="" coords="1401,564,1004,624,941,635,940,630,1004,619,1400,558"/>
+<area shape="rect" id="Node000025" href="$GameOverState_8h.html" title="Declaration of the gameover state class for the Pacman game." alt="" coords="1205,621,1392,676"/>
+<area shape="poly" id="edge48_Node000024_Node000025" title=" " alt="" coords="1435,582,1352,624,1349,619,1432,577"/>
+<area shape="rect" id="Node000026" href="$PausedState_8h.html" title="Definition of the PausedState class representing the paused state in the game." alt="" coords="1417,621,1581,676"/>
+<area shape="poly" id="edge50_Node000024_Node000026" title=" " alt="" coords="1501,587,1501,621,1496,621,1495,587"/>
+<area shape="poly" id="edge64_Node000027_Node000004" title=" " alt="" coords="231,363,156,387,119,403,84,423,53,447,29,475,14,508,8,545,8,650,9,691,16,723,31,750,60,776,93,789,151,801,320,821,513,836,679,846,678,851,513,841,320,826,151,806,91,794,57,781,27,753,11,725,4,691,3,650,3,544,9,506,25,472,50,444,81,419,116,399,154,382,229,358"/>
+<area shape="poly" id="edge53_Node000027_Node000008" title=" " alt="" coords="422,360,713,422,712,427,420,365"/>
+<area shape="poly" id="edge57_Node000027_Node000013" title=" " alt="" coords="273,378,252,397,233,418,217,443,205,470,188,519,183,518,200,468,212,440,229,414,248,393,270,374"/>
+<area shape="rect" id="Node000028" href="$GridMap_8h.html" title="Declaration of the GridMap class holding cells with information representing the game world." alt="" coords="243,416,407,471"/>
+<area shape="poly" id="edge54_Node000027_Node000028" title=" " alt="" coords="328,382,328,416,323,416,323,382"/>
+<area shape="rect" id="Node000029" href="$Camera_8h.html" title="camera class will translate world coordinates and sizes to screen coordinates and vice versa we will ..." alt="" coords="657,519,821,573"/>
+<area shape="poly" id="edge58_Node000027_Node000029" title=" " alt="" coords="392,372,686,516,684,521,389,376"/>
+<area shape="poly" id="edge55_Node000028_Node000002" title=" " alt="" coords="314,485,276,575,247,623,242,620,271,572,309,483"/>
+<area shape="poly" id="edge56_Node000028_Node000009" title=" " alt="" coords="397,474,493,516,491,521,395,479"/>
+<area shape="poly" id="edge60_Node000029_Node000004" title=" " alt="" coords="644,577,567,603,540,614,526,623,520,636,519,647,527,675,538,708,552,732,570,753,596,777,637,804,682,824,679,829,635,808,593,781,566,757,547,736,534,711,521,677,513,648,514,634,522,620,537,609,565,598,642,572"/>
+<area shape="poly" id="edge59_Node000029_Node000011" title=" " alt="" coords="735,587,714,724,708,723,730,586"/>
+<area shape="poly" id="edge62_Node000029_Node000014" title=" " alt="" coords="644,576,481,624,461,646,445,673,425,725,420,723,440,670,456,643,479,619,643,571"/>
+<area shape="poly" id="edge63_Node000029_Node000016" title=" " alt="" coords="835,567,895,589,954,619,970,634,980,648,989,661,1005,674,1042,691,1075,702,1134,709,1196,711,1274,721,1293,726,1292,731,1273,727,1196,716,1134,715,1074,707,1040,696,1003,678,985,665,975,651,966,637,950,624,893,594,833,572"/>
+<area shape="poly" id="edge61_Node000029_Node000017" title=" " alt="" coords="782,580,829,619,826,623,779,584"/>
+</map>

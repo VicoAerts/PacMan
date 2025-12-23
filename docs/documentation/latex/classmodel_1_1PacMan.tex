@@ -1,0 +1,173 @@
+\doxysection{model\+::Pac\+Man Class Reference}
+\hypertarget{classmodel_1_1PacMan}{}\label{classmodel_1_1PacMan}\index{model::PacMan@{model::PacMan}}
+
+
+Pac-\/\+Man entity controlled by the player.  
+
+
+
+
+{\ttfamily \#include $<$Pac\+Man.\+h$>$}
+
+
+
+Inheritance diagram for model\+::Pac\+Man\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classmodel_1_1PacMan__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for model\+::Pac\+Man\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classmodel_1_1PacMan__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1PacMan_aac263947037904244bfc4c40f9f43db4}{Pac\+Man}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&startpos, float speed)
+\item 
+void \mbox{\hyperlink{classmodel_1_1PacMan_a68d177237ed9e83c209145fa72e4a706}{update}} (const double delta\+Time, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world) override
+\item 
+\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} \mbox{\hyperlink{classmodel_1_1PacMan_aaaff06d786cecc06bace8b9e830e3e94}{get\+Direction}} () const override
+\item 
+void \mbox{\hyperlink{classmodel_1_1PacMan_a1396568fb30d8c4b65141737a988030a}{set\+Direction}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir)
+\item 
+void \mbox{\hyperlink{classmodel_1_1PacMan_aa7df0f4586f83974585cb3b08fcb779e}{set\+Requested\+Direction}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} direction)
+\item 
+void \mbox{\hyperlink{classmodel_1_1PacMan_a0a16aaf1c766a6844c0ef7e5eb76d9c3}{handle\+Input}} (\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} dir) override
+\item 
+void \mbox{\hyperlink{classmodel_1_1PacMan_a94a8b62da51190ffc88f4911d181bbf0}{reset}} (int current\+Level) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classmodel_1_1Entity_ae46f70f26381331ce56ef453b6167789}{\texorpdfstring{$\sim$}{\string~}\+Entity}} ()=default
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_ae4206058515c6ef6ba4b73e4629950a6}{get\+Position}} () const
+\item 
+void \mbox{\hyperlink{classmodel_1_1Entity_aa05299297606f70a0dc5e855da35d951}{set\+Position}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\item 
+virtual \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \mbox{\hyperlink{classmodel_1_1Entity_af6c817a1be43e22f27a2f53a6b7c0a24}{on\+Collide\+With\+Pac\+Man}} ()
+\item 
+virtual void \mbox{\hyperlink{classmodel_1_1Entity_ae0f23d746d98cb6f6185d27d3422980c}{set\+Scared}} (double duration, \mbox{\hyperlink{classmodel_1_1World}{World}} \&world)
+\item 
+virtual int \mbox{\hyperlink{classmodel_1_1Entity_a4c4ebfff43fd71b11a675bc441e145aa}{get\+Current\+Mode}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ab814d64fec2fd17c5027e8999f8ed0fb}{attach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_ac790c2bab3d91605af8a3090b165631e}{detach}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Observer}{Observer}} $>$ observer)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmodel_1_1Entity_af1d9119d51730d9a5130e1c987a763df}{Entity}} (const \mbox{\hyperlink{structVec2D}{Vec2D}} \&pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classmodel_1_1Subject}{model\+::\+Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmodel_1_1Subject_a1966127d7886934ab1df0f062a7a399b}{notify}} (const \mbox{\hyperlink{classevents_1_1Event}{events\+::\+Event}} \&event, \mbox{\hyperlink{classmodel_1_1Entity}{Entity}} \&entity)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classmodel_1_1Entity}{model\+::\+Entity}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structVec2D}{Vec2D}} \mbox{\hyperlink{classmodel_1_1Entity_a229fc18cb83c7f08a901720bb989c5bf}{m\+\_\+position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Pac-\/\+Man entity controlled by the player. 
+
+Contains movement logic and collision handling. Part of the game logic layer (no rendering code). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classmodel_1_1PacMan_aac263947037904244bfc4c40f9f43db4}\label{classmodel_1_1PacMan_aac263947037904244bfc4c40f9f43db4} 
+\index{model::PacMan@{model::PacMan}!PacMan@{PacMan}}
+\index{PacMan@{PacMan}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{PacMan()}{PacMan()}}
+{\footnotesize\ttfamily model\+::\+Pac\+Man\+::\+Pac\+Man (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structVec2D}{Vec2D}} \&}]{startpos,  }\item[{float}]{speed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+pacman constructor Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1PacMan_aac263947037904244bfc4c40f9f43db4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classmodel_1_1PacMan_aaaff06d786cecc06bace8b9e830e3e94}\label{classmodel_1_1PacMan_aaaff06d786cecc06bace8b9e830e3e94} 
+\index{model::PacMan@{model::PacMan}!getDirection@{getDirection}}
+\index{getDirection@{getDirection}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{getDirection()}{getDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} model\+::\+Pac\+Man\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+get current direction of pacman 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_a8844e1927e15e6f4bfcb3ca10b29213b}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1PacMan_a0a16aaf1c766a6844c0ef7e5eb76d9c3}\label{classmodel_1_1PacMan_a0a16aaf1c766a6844c0ef7e5eb76d9c3} 
+\index{model::PacMan@{model::PacMan}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void model\+::\+Pac\+Man\+::handle\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+hanlde input for pacman 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_a6839422789b36623b9b2cedc92d5378c}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1PacMan_a94a8b62da51190ffc88f4911d181bbf0}\label{classmodel_1_1PacMan_a94a8b62da51190ffc88f4911d181bbf0} 
+\index{model::PacMan@{model::PacMan}!reset@{reset}}
+\index{reset@{reset}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void model\+::\+Pac\+Man\+::reset (\begin{DoxyParamCaption}\item[{int}]{current\+Level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+reset pacman to start position 
+
+Reimplemented from \mbox{\hyperlink{classmodel_1_1Entity_a78fbea47f6e7842d2d36efdaf9e57d2d}{model\+::\+Entity}}.
+
+\Hypertarget{classmodel_1_1PacMan_a1396568fb30d8c4b65141737a988030a}\label{classmodel_1_1PacMan_a1396568fb30d8c4b65141737a988030a} 
+\index{model::PacMan@{model::PacMan}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void model\+::\+Pac\+Man\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{dir }\end{DoxyParamCaption})}
+
+set current direction of pacman \Hypertarget{classmodel_1_1PacMan_aa7df0f4586f83974585cb3b08fcb779e}\label{classmodel_1_1PacMan_aa7df0f4586f83974585cb3b08fcb779e} 
+\index{model::PacMan@{model::PacMan}!setRequestedDirection@{setRequestedDirection}}
+\index{setRequestedDirection@{setRequestedDirection}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{setRequestedDirection()}{setRequestedDirection()}}
+{\footnotesize\ttfamily void model\+::\+Pac\+Man\+::set\+Requested\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Direction_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}}]{direction }\end{DoxyParamCaption})}
+
+set requested direction of pacman \Hypertarget{classmodel_1_1PacMan_a68d177237ed9e83c209145fa72e4a706}\label{classmodel_1_1PacMan_a68d177237ed9e83c209145fa72e4a706} 
+\index{model::PacMan@{model::PacMan}!update@{update}}
+\index{update@{update}!model::PacMan@{model::PacMan}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void model\+::\+Pac\+Man\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time,  }\item[{\mbox{\hyperlink{classmodel_1_1World}{World}} \&}]{world }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+update pacman position and state 
+
+Implements \mbox{\hyperlink{classmodel_1_1Entity_a91796b9d0f6dd5dbb15d893966a846a6}{model\+::\+Entity}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classmodel_1_1PacMan_a68d177237ed9e83c209145fa72e4a706_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/\mbox{\hyperlink{PacMan_8h}{Pac\+Man.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/model/Pac\+Man.\+cpp\end{DoxyCompactItemize}

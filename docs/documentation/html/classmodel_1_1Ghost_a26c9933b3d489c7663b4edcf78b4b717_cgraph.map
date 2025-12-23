@@ -1,0 +1,9 @@
+<map id="model::Ghost::chooseRandomDirection" name="model::Ghost::chooseRandomDirection">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,47,223,87"/>
+<area shape="rect" id="Node000002" href="$classutil_1_1Random.html#acc483a1d2795007e8c589fb5d5c9183a" title=" " alt="" coords="271,5,460,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,45,286,31,287,36,217,50"/>
+<area shape="rect" id="Node000003" href="$Direction_8h.html#a25a1e0c28ad6f1a4cfb7f57c18c7d2e1" title="Returns the opposite of a given direction." alt="" coords="326,55,405,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="223,65,312,65,312,70,223,70"/>
+<area shape="rect" id="Node000004" href="$classutil_1_1Random.html#a36819aebe41151000289bbf7eb640fb0" title=" " alt="" coords="275,104,455,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="217,85,287,99,286,104,216,90"/>
+</map>

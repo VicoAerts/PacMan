@@ -1,0 +1,25 @@
+\doxysection{Entity\+View.\+h}
+\hypertarget{EntityView_8h_source}{}\label{EntityView_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/EntityView.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/view/EntityView.h}}
+\mbox{\hyperlink{EntityView_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_ENTITYVIEW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ PACMAN\_ENTITYVIEW\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../model/Entity.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../util/TextureManager.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Camera_8h}{Camera.h}}"{}}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/RenderWindow.hpp>}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceview_1_1entity}{view::entity}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classview_1_1entity_1_1EntityView}{EntityView}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classmodel_1_1Observer}{model::Observer}}\ \{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classview_1_1entity_1_1EntityView_aff5266036baf0d6e734ab3c6b96c48af}{EntityView}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a4525c35b3f104d961e6a3f18d76065cf}{\string~EntityView}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classview_1_1entity_1_1EntityView_a3ad1872170ee9d946006a79b25d098bb}{draw}}(sf::RenderWindow\&\ window,\ \mbox{\hyperlink{classview_1_1Camera}{Camera}}\&\ camera)\ =\ 0;}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ \}\ \textcolor{comment}{//\ namespace\ view::entity}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_ENTITYVIEW\_H}}
+
+\end{DoxyCode}

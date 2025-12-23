@@ -1,0 +1,30 @@
+\doxysection{Clock.\+h}
+\hypertarget{Clock_8h_source}{}\label{Clock_8h_source}\index{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Clock.h@{/home/gebruiker/UNIF/Jaar3/AP/PacMan/src/util/Clock.h}}
+\mbox{\hyperlink{Clock_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ PACMAN\_CLOCK\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ PACMAN\_CLOCK\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceutil}{util}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classutil_1_1Clock}{Clock}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classutil_1_1Clock}{Clock}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::chrono::time\_point<std::chrono::steady\_clock>\ time;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{double}\ deltaTime\ =\ 0.0;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classutil_1_1Clock}{Clock}}\&\ \mbox{\hyperlink{classutil_1_1Clock_ae1745c33d16d7cbb7f9879aa96464a0f}{getInstance}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classutil_1_1Clock_a4e87f8cf226f9bc1350b4814bf8bf39e}{\string~Clock}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutil_1_1Clock_afd922554e7a722b0910ac02eb2a697fa}{start}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classutil_1_1Clock_a077ae1493c0bda9b56a8816892c9b72f}{tick}}();}
+\DoxyCodeLine{00036\ \ \ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classutil_1_1Clock_a9d97b3f8cb2c7c93b6c77101db8c56fa}{getDeltaTime}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classutil_1_1Clock_a3b892749a3dbd42276be6c39ef63f156}{Clock}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classutil_1_1Clock}{Clock}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classutil_1_1Clock}{Clock}}\&\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classutil_1_1Clock}{Clock}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ \}\ \textcolor{comment}{//\ namespace\ util}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PACMAN\_CLOCK\_H}}
+
+\end{DoxyCode}

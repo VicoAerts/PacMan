@@ -1,0 +1,144 @@
+\doxysection{view\+::state\+::Level\+State Class Reference}
+\hypertarget{classview_1_1state_1_1LevelState}{}\label{classview_1_1state_1_1LevelState}\index{view::state::LevelState@{view::state::LevelState}}
+
+
+Gameplay state for a single level.  
+
+
+
+
+{\ttfamily \#include $<$Level\+State.\+h$>$}
+
+
+
+Inheritance diagram for view\+::state\+::Level\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classview_1_1state_1_1LevelState__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for view\+::state\+::Level\+State\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classview_1_1state_1_1LevelState__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1LevelState_a68a0b6807a835b2979f20f495b3ffc16}{Level\+State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1LevelState_a41f7a129b57c15b973284635c4add5cb}{\texorpdfstring{$\sim$}{\string~}\+Level\+State}} () override=default
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1LevelState_a16e2e091912ffdfb96f259188ac2425b}{handle\+Events}} (const sf\+::\+Event \&event) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1LevelState_a8153dd1e4d52beeec34af8042bbe695a}{update}} (const double delta\+Time) override
+\item 
+void \mbox{\hyperlink{classview_1_1state_1_1LevelState_a7a391133c1e524d923a60fed094241f9}{render}} (sf\+::\+Render\+Window \&window) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1State_ab9d92cfc289153d31566e33d4ac077c8}{State}} (\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&state\+Manager, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ player\+Score)
+\item 
+virtual \mbox{\hyperlink{classview_1_1state_1_1State_a93df1a85a03a14855268912b854ce91f}{\texorpdfstring{$\sim$}{\string~}\+State}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classview_1_1state_1_1State}{view\+::state\+::\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \& {\bfseries state\+Manager}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$ {\bfseries player\+Score}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gameplay state for a single level. 
+
+Creates a new World when entered, keeps it alive while the level is active, and transitions to other states (pause, victory, game over) via the \doxylink{classview_1_1state_1_1StateManager}{State\+Manager}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classview_1_1state_1_1LevelState_a68a0b6807a835b2979f20f495b3ffc16}\label{classview_1_1state_1_1LevelState_a68a0b6807a835b2979f20f495b3ffc16} 
+\index{view::state::LevelState@{view::state::LevelState}!LevelState@{LevelState}}
+\index{LevelState@{LevelState}!view::state::LevelState@{view::state::LevelState}}
+\doxysubsubsection{\texorpdfstring{LevelState()}{LevelState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Level\+State\+::\+Level\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classview_1_1state_1_1StateManager}{State\+Manager}} \&}]{state\+Manager,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classmodel_1_1Score}{model\+::\+Score}} $>$}]{player\+Score }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for \doxylink{classview_1_1state_1_1LevelState}{Level\+State} sets up everything that is needed to run the level including loading the maze, creating the world, setting up the camera, and preparing entity views for rendering. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1LevelState_a68a0b6807a835b2979f20f495b3ffc16_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1LevelState_a41f7a129b57c15b973284635c4add5cb}\label{classview_1_1state_1_1LevelState_a41f7a129b57c15b973284635c4add5cb} 
+\index{view::state::LevelState@{view::state::LevelState}!````~LevelState@{\texorpdfstring{$\sim$}{\string~}LevelState}}
+\index{````~LevelState@{\texorpdfstring{$\sim$}{\string~}LevelState}!view::state::LevelState@{view::state::LevelState}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}LevelState()}{\string~LevelState()}}
+{\footnotesize\ttfamily view\+::state\+::\+Level\+State\+::\texorpdfstring{$\sim$}{\string~}\+Level\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destructor for \doxylink{classview_1_1state_1_1LevelState}{Level\+State} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classview_1_1state_1_1LevelState_a16e2e091912ffdfb96f259188ac2425b}\label{classview_1_1state_1_1LevelState_a16e2e091912ffdfb96f259188ac2425b} 
+\index{view::state::LevelState@{view::state::LevelState}!handleEvents@{handleEvents}}
+\index{handleEvents@{handleEvents}!view::state::LevelState@{view::state::LevelState}}
+\doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Level\+State\+::handle\+Events (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Handle events specific to the level state including input from pacman and pausing the game. 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_ac1a6e34b208fd676509484aa5daa8eca}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1LevelState_a16e2e091912ffdfb96f259188ac2425b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1LevelState_a7a391133c1e524d923a60fed094241f9}\label{classview_1_1state_1_1LevelState_a7a391133c1e524d923a60fed094241f9} 
+\index{view::state::LevelState@{view::state::LevelState}!render@{render}}
+\index{render@{render}!view::state::LevelState@{view::state::LevelState}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Level\+State\+::render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Render the level state draws all entity views and UI elements to the window. 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_af44a40e2a79826f0fa64c64b7c35ed45}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1LevelState_a7a391133c1e524d923a60fed094241f9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classview_1_1state_1_1LevelState_a8153dd1e4d52beeec34af8042bbe695a}\label{classview_1_1state_1_1LevelState_a8153dd1e4d52beeec34af8042bbe695a} 
+\index{view::state::LevelState@{view::state::LevelState}!update@{update}}
+\index{update@{update}!view::state::LevelState@{view::state::LevelState}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void view\+::state\+::\+Level\+State\+::update (\begin{DoxyParamCaption}\item[{const double}]{delta\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Update the level state updates the world and camera, checks for level completion or game over conditions, and updates UI elements like score, lives, and level text. 
+
+Implements \mbox{\hyperlink{classview_1_1state_1_1State_a51ac5e138072d38b7693ce28c586c8a3}{view\+::state\+::\+State}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classview_1_1state_1_1LevelState_a8153dd1e4d52beeec34af8042bbe695a_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/\mbox{\hyperlink{LevelState_8h}{Level\+State.\+h}}\item 
+/home/gebruiker/\+UNIF/\+Jaar3/\+AP/\+Pac\+Man/src/states/Level\+State.\+cpp\end{DoxyCompactItemize}

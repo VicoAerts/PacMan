@@ -1,0 +1,17 @@
+<map id="model::Entity" name="model::Entity">
+<area shape="rect" id="Node000001" title="Abstract base class for all game entities." alt="" coords="282,79,391,104"/>
+<area shape="rect" id="Node000003" href="$classmodel_1_1Collectable.html" title="Abstract class for collectable items in the game." alt="" coords="45,152,189,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="289,111,153,154,151,149,287,106"/>
+<area shape="rect" id="Node000006" href="$classmodel_1_1Ghost.html" title="Ghost entity with AI movement and fear behavior." alt="" coords="213,152,322,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="318,116,280,154,277,150,314,112"/>
+<area shape="rect" id="Node000007" href="$classmodel_1_1PacMan.html" title="Pac&#45;Man entity controlled by the player." alt="" coords="347,152,468,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="360,112,398,150,394,154,356,116"/>
+<area shape="rect" id="Node000008" href="$classmodel_1_1Wall.html" title="Wall entity representing immovable obstacles in the game world." alt="" coords="493,152,591,177"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="383,106,510,149,508,154,382,111"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Subject.html" title="Subject base class for observer pattern." alt="" coords="277,5,396,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="339,44,339,79,334,79,334,44"/>
+<area shape="rect" id="Node000004" href="$classmodel_1_1Coin.html" title="collectable coin entity that increases score when collected" alt="" coords="5,225,105,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="100,190,67,227,63,223,96,186"/>
+<area shape="rect" id="Node000005" href="$classmodel_1_1Fruit.html" title="collectable fruit entity that increases score when collected and triggers event" alt="" coords="129,225,229,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="138,186,171,223,167,227,134,189"/>
+</map>

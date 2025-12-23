@@ -1,0 +1,17 @@
+<map id="model::Observer" name="model::Observer">
+<area shape="rect" id="Node000001" title="Observer interface for receiving game events." alt="" coords="5,80,136,105"/>
+<area shape="rect" id="Node000002" href="$classmodel_1_1Score.html" title="Observer that updates the game score based on received events." alt="" coords="218,55,325,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="149,80,218,71,218,77,150,85"/>
+<area shape="rect" id="Node000003" href="$classview_1_1entity_1_1EntityView.html" title="Abstract base class for all entity views." alt="" coords="184,104,359,129"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,99,184,104,183,109,149,105"/>
+<area shape="rect" id="Node000004" href="$classview_1_1entity_1_1CoinView.html" title="View class for rendering Coin entities." alt="" coords="417,5,583,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="342,97,357,89,372,77,380,65,390,52,405,40,431,28,433,33,408,44,394,56,385,68,375,81,360,94,345,101"/>
+<area shape="rect" id="Node000005" href="$classview_1_1entity_1_1FruitView.html" title="View class for rendering Fruit entities." alt="" coords="417,55,583,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="344,98,440,77,441,83,345,104"/>
+<area shape="rect" id="Node000006" href="$classview_1_1entity_1_1GhostView.html" title="View class for rendering Ghost entities." alt="" coords="413,104,587,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="372,114,412,114,412,119,372,119"/>
+<area shape="rect" id="Node000007" href="$classview_1_1entity_1_1PacManView.html" title="PacManView class responsible for rendering PacMan entity." alt="" coords="407,153,593,179"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="345,130,441,151,440,156,344,135"/>
+<area shape="rect" id="Node000008" href="$classview_1_1entity_1_1WallView.html" title="WallView class responsible for rendering Wall entity." alt="" coords="417,203,583,228"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="305,134,353,161,408,188,445,200,444,205,406,192,350,166,303,139"/>
+</map>
