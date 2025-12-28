@@ -22,7 +22,7 @@ namespace view {
 class Game {
     /**
      * game window using sfml
-     * can be shared with entityviews to change the view
+     * can be shared by reference but game is only owner
      */
     std::unique_ptr<sf::RenderWindow> window;
 
@@ -38,6 +38,16 @@ public:
 
     /** destructor of the game*/
     ~Game();
+    /**
+     * Explicitly deleted copy constructor we dont allow copying of game
+     */
+    Game(const Game&) = delete;
+
+    /**
+     * Explicitly deleted copy assignment operator
+     *  No copy assignment is allowed
+     */
+    Game& operator=(const Game&) = delete;
 
     /** runs the main game loop */
     void run();

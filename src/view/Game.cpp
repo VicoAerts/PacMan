@@ -10,7 +10,7 @@ view::Game::Game() {
     playerScore = std::make_shared<model::Score>();
     stateManager = std::make_unique<view::state::StateManager>(*window, playerScore);
 }
-view::Game::~Game() {}
+view::Game::~Game() { window->close(); }
 
 void view::Game::run() {
     util::Clock::getInstance().start();

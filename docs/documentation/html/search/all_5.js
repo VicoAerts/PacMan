@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['game_0',['game',['../classview_1_1Game.html',1,'view::Game'],['../classview_1_1Game.html#af0b1a6101f33ac1675c6a950f3cf14a3',1,'view::Game::Game()']]],
+  ['game_0',['game',['../classview_1_1Game.html',1,'view::Game'],['../classview_1_1Game.html#ad4445230c4ede2c0bfe27c00d9790e98',1,'view::Game::Game(const Game &amp;)=delete'],['../classview_1_1Game.html#af0b1a6101f33ac1675c6a950f3cf14a3',1,'view::Game::Game()']]],
   ['game_2eh_1',['Game.h',['../Game_8h.html',1,'']]],
   ['gameoverstate_2',['gameoverstate',['../classview_1_1state_1_1GameOverState.html',1,'view::state::GameOverState'],['../classview_1_1state_1_1GameOverState.html#a186846a27aa12485a500371c2b80348e',1,'view::state::GameOverState::GameOverState()']]],
   ['gameoverstate_2eh_3',['GameOverState.h',['../GameOverState_8h.html',1,'']]],
-  ['getcelltype_4',['getcelltype',['../classGridMap.html#a028a7abae10a41ddce7cbfa803f09c95',1,'GridMap::getCellType(int row, int col) const'],['../classGridMap.html#a1ae8cd4791b84fb5aba322c6ca9ef35a',1,'GridMap::getCellType(float worldX, float worldY) const']]],
-  ['getcollectabletype_5',['getcollectabletype',['../classmodel_1_1Coin.html#a52b6c60352b6461686fc1f08fc538ebc',1,'model::Coin::getCollectableType()'],['../classmodel_1_1Collectable.html#af214f97120544182abf5bb4c1e9071ad',1,'model::Collectable::getCollectableType()'],['../classmodel_1_1Fruit.html#ab38846427c58e6a36768779b46462057',1,'model::Fruit::getCollectableType()']]],
+  ['getcelltype_4',['getcelltype',['../classGridMap.html#a1ae8cd4791b84fb5aba322c6ca9ef35a',1,'GridMap::getCellType(float worldX, float worldY) const'],['../classGridMap.html#a028a7abae10a41ddce7cbfa803f09c95',1,'GridMap::getCellType(int row, int col) const']]],
+  ['getcollectabletype_5',['getcollectabletype',['../classmodel_1_1Coin.html#a52b6c60352b6461686fc1f08fc538ebc',1,'model::Coin::getCollectableType()'],['../classmodel_1_1Fruit.html#ab38846427c58e6a36768779b46462057',1,'model::Fruit::getCollectableType()'],['../classmodel_1_1Collectable.html#af214f97120544182abf5bb4c1e9071ad',1,'model::Collectable::getCollectableType()']]],
   ['getcols_6',['getCols',['../classview_1_1Camera.html#a7b63caf99ebadca9c3623575cd7799f3',1,'view::Camera']]],
   ['getcurrentlevel_7',['getcurrentlevel',['../classmodel_1_1World.html#ab0c0505718f109cf90ccf2f9feb14a12',1,'model::World::getCurrentLevel()'],['../classmodel_1_1Score.html#a4a23dbb43c327c52d05c5865cdd42061',1,'model::Score::getCurrentLevel()']]],
   ['getcurrentmode_8',['getcurrentmode',['../classmodel_1_1Entity.html#a4c4ebfff43fd71b11a675bc441e145aa',1,'model::Entity::getCurrentMode()'],['../classmodel_1_1Ghost.html#a1fa95bf31b365bda92523850a71b94e5',1,'model::Ghost::getCurrentMode()']]],

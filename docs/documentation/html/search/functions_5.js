@@ -1,14 +1,14 @@
 var searchData=
 [
-  ['game_0',['Game',['../classview_1_1Game.html#af0b1a6101f33ac1675c6a950f3cf14a3',1,'view::Game']]],
+  ['game_0',['game',['../classview_1_1Game.html#ad4445230c4ede2c0bfe27c00d9790e98',1,'view::Game::Game(const Game &amp;)=delete'],['../classview_1_1Game.html#af0b1a6101f33ac1675c6a950f3cf14a3',1,'view::Game::Game()']]],
   ['gameoverstate_1',['GameOverState',['../classview_1_1state_1_1GameOverState.html#a186846a27aa12485a500371c2b80348e',1,'view::state::GameOverState']]],
-  ['getcelltype_2',['getcelltype',['../classGridMap.html#a1ae8cd4791b84fb5aba322c6ca9ef35a',1,'GridMap::getCellType(float worldX, float worldY) const'],['../classGridMap.html#a028a7abae10a41ddce7cbfa803f09c95',1,'GridMap::getCellType(int row, int col) const']]],
+  ['getcelltype_2',['getcelltype',['../classGridMap.html#a028a7abae10a41ddce7cbfa803f09c95',1,'GridMap::getCellType(int row, int col) const'],['../classGridMap.html#a1ae8cd4791b84fb5aba322c6ca9ef35a',1,'GridMap::getCellType(float worldX, float worldY) const']]],
   ['getcollectabletype_3',['getcollectabletype',['../classmodel_1_1Coin.html#a52b6c60352b6461686fc1f08fc538ebc',1,'model::Coin::getCollectableType()'],['../classmodel_1_1Collectable.html#af214f97120544182abf5bb4c1e9071ad',1,'model::Collectable::getCollectableType()'],['../classmodel_1_1Fruit.html#ab38846427c58e6a36768779b46462057',1,'model::Fruit::getCollectableType()']]],
   ['getcols_4',['getCols',['../classview_1_1Camera.html#a7b63caf99ebadca9c3623575cd7799f3',1,'view::Camera']]],
   ['getcurrentlevel_5',['getcurrentlevel',['../classmodel_1_1World.html#ab0c0505718f109cf90ccf2f9feb14a12',1,'model::World::getCurrentLevel()'],['../classmodel_1_1Score.html#a4a23dbb43c327c52d05c5865cdd42061',1,'model::Score::getCurrentLevel()']]],
   ['getcurrentmode_6',['getcurrentmode',['../classmodel_1_1Entity.html#a4c4ebfff43fd71b11a675bc441e145aa',1,'model::Entity::getCurrentMode()'],['../classmodel_1_1Ghost.html#a1fa95bf31b365bda92523850a71b94e5',1,'model::Ghost::getCurrentMode()']]],
   ['getdeltatime_7',['getDeltaTime',['../classutil_1_1Clock.html#a9d97b3f8cb2c7c93b6c77101db8c56fa',1,'util::Clock']]],
-  ['getdirection_8',['getdirection',['../classmodel_1_1Entity.html#a8844e1927e15e6f4bfcb3ca10b29213b',1,'model::Entity::getDirection()'],['../classmodel_1_1PacMan.html#aaaff06d786cecc06bace8b9e830e3e94',1,'model::PacMan::getDirection()'],['../classmodel_1_1Ghost.html#a272200daf4a7eab820d35c6944f731ea',1,'model::Ghost::getDirection() const override']]],
+  ['getdirection_8',['getdirection',['../classmodel_1_1Entity.html#a8844e1927e15e6f4bfcb3ca10b29213b',1,'model::Entity::getDirection()'],['../classmodel_1_1Ghost.html#a272200daf4a7eab820d35c6944f731ea',1,'model::Ghost::getDirection()'],['../classmodel_1_1PacMan.html#aaaff06d786cecc06bace8b9e830e3e94',1,'model::PacMan::getDirection()']]],
   ['getdirectionawayfromtarget_9',['getDirectionAwayFromTarget',['../classmodel_1_1Ghost.html#a2840c56815676b7a86a071d641d6474c',1,'model::Ghost']]],
   ['getdirectiontotarget_10',['getDirectionToTarget',['../classmodel_1_1Ghost.html#a694ce95efc61fffb30f301dd3974eaec',1,'model::Ghost']]],
   ['getentityviews_11',['getEntityViews',['../classview_1_1ConcreteFactory.html#a29b3d271a2bed3b68fb90a71cad550a0',1,'view::ConcreteFactory']]],

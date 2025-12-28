@@ -16,6 +16,10 @@ Manages the main game loop and delegates logic to the active State.
 \item 
 \mbox{\hyperlink{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()
 \item 
+\mbox{\hyperlink{classview_1_1Game_ad4445230c4ede2c0bfe27c00d9790e98}{Game}} (const \mbox{\hyperlink{classview_1_1Game}{Game}} \&)=delete
+\item 
+\mbox{\hyperlink{classview_1_1Game}{Game}} \& \mbox{\hyperlink{classview_1_1Game_a52b98c9dc7b6c78e31587f4b008eb498}{operator=}} (const \mbox{\hyperlink{classview_1_1Game}{Game}} \&)=delete
+\item 
 void \mbox{\hyperlink{classview_1_1Game_a5e94523753515799e610a90f4cacb68e}{run}} ()
 \item 
 void \mbox{\hyperlink{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754}{close}} ()
@@ -37,7 +41,7 @@ Creates the SFML window, initializes the State\+Manager, and forwards input, upd
 \Hypertarget{classview_1_1Game_af0b1a6101f33ac1675c6a950f3cf14a3}\label{classview_1_1Game_af0b1a6101f33ac1675c6a950f3cf14a3} 
 \index{view::Game@{view::Game}!Game@{Game}}
 \index{Game@{Game}!view::Game@{view::Game}}
-\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily view\+::\+Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Constructs the game and initializes window and initial state. \Hypertarget{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898}\label{classview_1_1Game_a263c5ce4d3246ebde203825813c6e898} 
@@ -46,7 +50,13 @@ Constructs the game and initializes window and initial state. \Hypertarget{class
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
 {\footnotesize\ttfamily view\+::\+Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-destructor of the game 
+destructor of the game \Hypertarget{classview_1_1Game_ad4445230c4ede2c0bfe27c00d9790e98}\label{classview_1_1Game_ad4445230c4ede2c0bfe27c00d9790e98} 
+\index{view::Game@{view::Game}!Game@{Game}}
+\index{Game@{Game}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily view\+::\+Game\+::\+Game (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classview_1_1Game}{Game}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Explicitly deleted copy constructor we dont allow copying of game 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754}\label{classview_1_1Game_a47df79f1182c0a97cc92aa49fd4ce754} 
@@ -61,7 +71,13 @@ close the game window \Hypertarget{classview_1_1Game_abb19bf0ee40f125467f1e9a781
 \doxysubsubsection{\texorpdfstring{handleEvents()}{handleEvents()}}
 {\footnotesize\ttfamily void view\+::\+Game\+::handle\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-handle events \Hypertarget{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114}\label{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114} 
+handle events \Hypertarget{classview_1_1Game_a52b98c9dc7b6c78e31587f4b008eb498}\label{classview_1_1Game_a52b98c9dc7b6c78e31587f4b008eb498} 
+\index{view::Game@{view::Game}!operator=@{operator=}}
+\index{operator=@{operator=}!view::Game@{view::Game}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classview_1_1Game}{Game}} \& view\+::\+Game\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classview_1_1Game}{Game}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Explicitly deleted copy assignment operator No copy assignment is allowed \Hypertarget{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114}\label{classview_1_1Game_a9bed4dfea86cdff5686f7f260798c114} 
 \index{view::Game@{view::Game}!render@{render}}
 \index{render@{render}!view::Game@{view::Game}}
 \doxysubsubsection{\texorpdfstring{render()}{render()}}
