@@ -73,6 +73,16 @@ victory/pause/game-over) and the use of smart pointers only.
 - Menu background: `assets/pacmenu.png`
 - Maze: `config/Maze.txt` (2nd maze `Maze1.txt` available)
 - High scores: `config/HighScores.txt` (created/updated on game over)
+## Defence Video
+
+The defence video provides a short gameplay demonstration followed by an explanation of the main design and
+architectural choices of the project. The focus lies on the applied design patterns, MVC separation, ownership and
+lifetime management using smart pointers, and the overall code structure.
+
+▶️ https://youtu.be/52VKaClNPug  
+
+*My apologies that the video is slightly longer than intended.*
+
 
 
 
