@@ -1,4 +1,4 @@
-# PacMan (SFML, C++) (s0230569)
+# PacMan (SFML, C++) (20230569)
 
 An SFML-based Pac-Man clone with a clear separation between logic (static library) and rendering (executable). The
 project follows the coursework requirements (advanced programming UAntwerp): MVC separation, Observer/Abstract
